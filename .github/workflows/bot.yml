@@ -39,9 +39,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      # 完整 pipeline：fetch → pool → window → idempotency → predict → output
-      # DRY_RUN=true → log-only（不送 Telegram、不需 TG secrets）。
-      # 最終上線驗收時改 DRY_RUN=false 並加入 TG_TOKEN / TG_CHAT secrets。
       - name: Runtime tick
         env:
           DRY_RUN: "false"
@@ -51,14 +48,12 @@ jobs:
           TG_CHAT: ${{ secrets.TG_CHAT }}
         run: python src/sports_prediction.py push
 
-      # commit-back（repo as DB）：僅當狀態有變更才 commit，絕不 empty commit。
-      # if: always() → 即使前一步異常，已落盤的 cooldown / flags 仍持久化。
       - name: Commit back state
         if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add flags.json weekly_games.json key_state.json predictions.json verified_history.csv
+          for f in flags.json weekly_games.json key_state.json predictions.json verified_history.csv; do [ -f "$f" ] && git add "$f" || true; done
           if git diff --staged --quiet; then
             echo "No state changes; skip commit."
           else
