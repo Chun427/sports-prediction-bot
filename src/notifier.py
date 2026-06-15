@@ -375,17 +375,28 @@ def render_pregame_lite(prediction: dict) -> str:
         else:
             out.append(f"{medals[i]} N/A")
 
-    # 模型方向（V1-style：MC argmax）── additive：僅方向提示，非 +EV 投注建議。
-    # 只在 mc 實際存在的 key 取 argmax → NBA（只有 home/away）不會誤加假和局。
-    if use_v1_decision() and mc:
-        _d = max(mc, key=mc.get)
-        _dlabel = {"home": f"{home} 主勝", "away": f"{away} 客勝", "draw": "和局"}.get(_d, "N/A")
-        _mc_dir_line = f"🧭【模型方向】{_dlabel}（MC {mc[_d] * 100:.1f}%）"
-    else:
-        _mc_dir_line = "🧭【模型方向】N/A"
+    # 台灣運彩方向 + 勝率排序（V1-style：MC argmax / 由高到低排序）── additive、純顯示。
+    # 只用 mc 實際存在的 key（NBA 只有 home/away，不補假和局）；不影響 best_pick / Kelly / edge。
+    def _dir_zh(_k: str) -> str:
+        return {"home": f"{home} 主勝", "away": f"{away} 客勝", "draw": "和局"}.get(_k, "N/A")
 
-    pick = prediction.get("best_pick")
-    main = f"獨贏 → {_team_label(prediction, pick['outcome'])}（@ {pick['odds']}）" if pick else "N/A"
+    def _dir_team(_k: str) -> str:
+        return {"home": home, "away": away, "draw": "和局"}.get(_k, "N/A")
+
+    if use_v1_decision() and mc:
+        _ordered = sorted(mc.items(), key=lambda kv: kv[1], reverse=True)
+        _top_k, _top_p = _ordered[0]
+        _ranks = ["1️⃣", "2️⃣", "3️⃣"]
+        _rank_lines = ["📈 勝率排序"] + [
+            f"{_ranks[i]} {_dir_zh(_k)} {_p * 100:.1f}%" for i, (_k, _p) in enumerate(_ordered)
+        ]
+        # 主推顯示邏輯與 V1 一致：MC argmax → 獨贏方向（純顯示，不改 best_pick / Kelly / edge）
+        main = "獨贏盤 → 和局" if _top_k == "draw" else f"獨贏盤 → {_dir_team(_top_k)} 勝出"
+    else:
+        _rank_lines = ["📈 勝率排序", "N/A"]
+        pick = prediction.get("best_pick")
+        main = (f"獨贏 → {_team_label(prediction, pick['outcome'])}（@ {pick['odds']}）"
+                if pick else "N/A")
     out += [
         _DREAM_DIV, "📊 盤口深度分析",
         f"讓分盤口     {spread_label}",
@@ -397,8 +408,9 @@ def render_pregame_lite(prediction: dict) -> str:
         f"🔮【主推】{main}",
         "💎【次要】N/A",
         "⭐【備選】N/A",
-        _mc_dir_line,
-        "（🧭 模型方向＝MC 最看好的一邊，僅供參考，非 +EV 投注建議；下注比例見風控）",
+        _DREAM_DIV,
+        *_rank_lines,
+        "（🎯 主推＝MC 模型方向；📈 為模型勝率排序。僅供參考，非 +EV 投注建議；下注比例見風控）",
         _DREAM_DIV, "📊 風控資訊",
         f"- Kelly：{kfrac * 100:.1f}%",
         f"- Risk Level：{risk_zh}",
