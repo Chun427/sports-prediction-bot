@@ -24,6 +24,7 @@ from constants import (
     PREGAME_TEMPLATE_TAG, POSTGAME_TEMPLATE_TAG, TELEGRAM_API_BASE, TG_RETRY,
     PREGAME_WINDOW_MIN, EARLY_WINDOW_MIN,
 )
+from constants import use_v1_decision
 
 
 # ── render（純函式，Output Contract pregame_v1）──────
@@ -374,6 +375,15 @@ def render_pregame_lite(prediction: dict) -> str:
         else:
             out.append(f"{medals[i]} N/A")
 
+    # 模型方向（V1-style：MC argmax）── additive：僅方向提示，非 +EV 投注建議。
+    # 只在 mc 實際存在的 key 取 argmax → NBA（只有 home/away）不會誤加假和局。
+    if use_v1_decision() and mc:
+        _d = max(mc, key=mc.get)
+        _dlabel = {"home": f"{home} 主勝", "away": f"{away} 客勝", "draw": "和局"}.get(_d, "N/A")
+        _mc_dir_line = f"🧭【模型方向】{_dlabel}（MC {mc[_d] * 100:.1f}%）"
+    else:
+        _mc_dir_line = "🧭【模型方向】N/A"
+
     pick = prediction.get("best_pick")
     main = f"獨贏 → {_team_label(prediction, pick['outcome'])}（@ {pick['odds']}）" if pick else "N/A"
     out += [
@@ -387,6 +397,8 @@ def render_pregame_lite(prediction: dict) -> str:
         f"🔮【主推】{main}",
         "💎【次要】N/A",
         "⭐【備選】N/A",
+        _mc_dir_line,
+        "（🧭 模型方向＝MC 最看好的一邊，僅供參考，非 +EV 投注建議；下注比例見風控）",
         _DREAM_DIV, "📊 風控資訊",
         f"- Kelly：{kfrac * 100:.1f}%",
         f"- Risk Level：{risk_zh}",
