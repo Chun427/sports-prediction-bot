@@ -22,7 +22,7 @@ import obs
 import kelly as _kelly
 from constants import (
     PREGAME_TEMPLATE_TAG, POSTGAME_TEMPLATE_TAG, TELEGRAM_API_BASE, TG_RETRY,
-    PREGAME_WINDOW_MIN,
+    PREGAME_WINDOW_MIN, EARLY_WINDOW_MIN,
 )
 
 
@@ -395,3 +395,13 @@ def render_pregame_lite(prediction: dict) -> str:
         "⚠️ 請理性投注。",
     ]
     return "\n".join(out)
+
+
+def render_pregame_early(prediction: dict) -> str:
+    """早期推播（賽前約 12 小時）：沿用 render_pregame_lite 的固定契約，
+    僅在最上方加註 EARLY 橫幅。純 additive：不修改 render_pregame_lite。
+    早期訊號為初步資料（賠率為上次刷新快照），標明供參考。"""
+    hours = EARLY_WINDOW_MIN // 60
+    banner = (f"🕐【EARLY】早期預測（賽前約 {hours} 小時・初步訊號）\n"
+              f"（賠率為當前快照，最終建議以賽前 {PREGAME_WINDOW_MIN} 分鐘推播為準）")
+    return banner + "\n" + render_pregame_lite(prediction)
