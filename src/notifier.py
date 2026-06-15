@@ -316,9 +316,10 @@ def _team_label(prediction: dict, key: str) -> str:
     return "和局"
 
 
-def render_pregame_lite(prediction: dict) -> str:
+def render_pregame_lite(prediction: dict, header_kind: str = "final") -> str:
     """固定 UI contract（pregame）：版面恆定、每 section 必存在；
-    有資料給真值、無資料給 N/A（不隱藏 section、不捏造數字）。"""
+    有資料給真值、無資料給 N/A（不隱藏 section、不捏造數字）。
+    header_kind: 'final'(預設)→⚡ 賽前 40 分鐘；'early'→🕐 賽前 12小時預測。"""
     fp = prediction.get("fair_prob") or {}
     odds = prediction.get("best_odds") or {}
     edge = prediction.get("edge") or {}
@@ -345,9 +346,17 @@ def render_pregame_lite(prediction: dict) -> str:
     spread_label = (f"{home} {(-score['supremacy']):+.1f}"
                     if isinstance(score.get("supremacy"), (int, float)) else "N/A")
 
+    # 標題：early=🕐 12小時、final=⚡ 40分鐘（純顯示，不改任何邏輯）
+    _title2 = ("🕐 量化預測模型（賽前 12小時預測）" if header_kind == "early"
+               else f"⚡ 量化預測模型（賽前 {PREGAME_WINDOW_MIN} 分鐘）")
+    # 次要/備選：顯示模型的總分線 / 讓分盤（有資料才填，否則 N/A）。
+    # 註：V3 模型以盤口線為參數，無獨立大小/讓分方向 → 只列線值，不捏造「大/小・蓋牌」pick。
+    total_pick = f"總分大小 → 盤口 {total_label}" if total_label != "N/A" else "N/A"
+    hcap_pick = f"讓分盤 → {spread_label}" if spread_label != "N/A" else "N/A"
+
     out = [
         "🎯 精算師預測系統",
-        f"⚡ 量化預測模型（賽前 {PREGAME_WINDOW_MIN} 分鐘）",
+        _title2,
         _DREAM_DIV,
         f"📅 台灣時間 {_fmt_dt_tw(prediction.get('start_time', ''))}",
         f"{_SPORT_EMOJI.get(sport, '🏟')} {sport}",
@@ -406,8 +415,8 @@ def render_pregame_lite(prediction: dict) -> str:
         f"{home}:{_od(odds.get('home'))}",
         _DREAM_DIV, "💰 台灣運彩實戰建議",
         f"🔮【主推】{main}",
-        "💎【次要】N/A",
-        "⭐【備選】N/A",
+        f"💎【次要】{total_pick}",
+        f"⭐【備選】{hcap_pick}",
         _DREAM_DIV,
         *_rank_lines,
         "（🎯 主推＝MC 模型方向；📈 為模型勝率排序。僅供參考，非 +EV 投注建議；下注比例見風控）",
@@ -422,10 +431,7 @@ def render_pregame_lite(prediction: dict) -> str:
 
 
 def render_pregame_early(prediction: dict) -> str:
-    """早期推播（賽前約 12 小時）：沿用 render_pregame_lite 的固定契約，
-    僅在最上方加註 EARLY 橫幅。純 additive：不修改 render_pregame_lite。
-    早期訊號為初步資料（賠率為上次刷新快照），標明供參考。"""
-    hours = EARLY_WINDOW_MIN // 60
-    banner = (f"🕐【EARLY】早期預測（賽前約 {hours} 小時・初步訊號）\n"
-              f"（賠率為當前快照，最終建議以賽前 {PREGAME_WINDOW_MIN} 分鐘推播為準）")
-    return banner + "\n" + render_pregame_lite(prediction)
+    """早期推播（賽前 12 小時）：與最終推播同內容與資料來源，
+    僅標題用 12 小時版（🕐 量化預測模型（賽前 12小時預測），不顯示 ⚡）。
+    純顯示：不改任何預測 / Kelly / Edge / MC / 抓盤邏輯。"""
+    return render_pregame_lite(prediction, header_kind="early")
