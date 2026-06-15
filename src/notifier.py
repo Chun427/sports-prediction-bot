@@ -112,6 +112,7 @@ def render_postgame(verification: dict, prediction: dict, result: dict) -> str:
 
     # 累積方向命中率（含本場）：讀 verified_history（guarded，失敗不影響推播）
     rate_line = "方向命中率：N/A"
+    hit_count_line = "命中結果：N/A"
     try:
         rows = _dm.read_verified()
         h = sum(1 for r in rows if str(r.get("pick_hit", "")).strip().lower() == "true")
@@ -120,7 +121,9 @@ def render_postgame(verification: dict, prediction: dict, result: dict) -> str:
             t += 1
             h += 1 if hit else 0
         if t > 0:
-            rate_line = f"方向命中率：{h} / {t}（{h / t * 100:.0f}%）"
+            _pct = h / t * 100
+            hit_count_line = f"命中結果：{h} / {t}（{_pct:.0f}%）"
+            rate_line = f"方向命中率：{h} / {t}（{_pct:.0f}%）"
     except Exception:  # noqa: BLE001 — 統計失敗不可中斷推播
         pass
 
@@ -137,6 +140,7 @@ def render_postgame(verification: dict, prediction: dict, result: dict) -> str:
         f"實際：{actual_label}",
         result_line,
         "━━━━━━━━━━━━━━━",
+        hit_count_line,
         rate_line,
         "━━━━━━━━━━━━━━━",
         f"獨贏：{ml_result}",
