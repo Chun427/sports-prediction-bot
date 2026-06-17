@@ -12,10 +12,9 @@
 
 -----
 
-## 📱 推播畫面
+## 📱 推播畫面（全部）
 
 ### ① 賽前 40 分鐘（最終投注參考）
-
 ```
 🎯 精算師預測系統
 ⚡ 量化預測模型（賽前 40 分鐘）
@@ -30,10 +29,6 @@ Houston Astros  ██████░░░░  60.7%
 蒙特卡羅模擬勝率
 Detroit Tigers  ██░░░░░░░░  24.4%
 Houston Astros  ██████░░░░  63.1%
-━━━━━━━━━━━━━━━━
-📊 Edge（模型優勢）
-Detroit Tigers -2.5%
-Houston Astros -2.3%
 ━━━━━━━━━━━━━━━━
 🏆 最可能出現的比分
 🥇 Detroit Tigers 3–4 Houston Astros（3.8%）
@@ -56,19 +51,15 @@ Houston Astros:1.61
 📡 數據來源：AI模型+真實數據+賠率
 ⚠️ 請理性投注。
 ```
-
 > 註：**「⚽ 總進球數預測」只會出現在足球（FIFA）推播**；棒球（MLB）、籃球（NBA）不顯示（如上方 MLB 範例即無此區塊）。
 
 ### ② 賽前 12 小時（早盤觀察）
-
 與 40 分鐘版**逐字相同**，僅標題不同：
-
 ```
 🕐 量化預測模型（賽前 12小時預測）
 ```
 
 ### ③ 賽後結果（event-driven，逐場）
-
 ```
 📊 賽後結果
 📅 台灣時間 06/17
@@ -92,11 +83,9 @@ Detroit Tigers vs Houston Astros
 ────────────────
 📌 預測模式：量化分析
 ```
-
 > 驗證的是「賽前主推方向」（MC argmax，與賽前 🔮主推同源）。未命中 → `結果：❌ 未命中`。精準比分／讓分／大小分目前一律 N/A（未獨立驗證，不捏造）。
 
 ### ④ FIFA 世界盃批次彙整（每 4 場已驗證 FIFA）
-
 ```
 🏆 FIFA 世界盃戰況（批次彙整）
 📦 第 1 批（每 4 場已驗證）
@@ -112,7 +101,6 @@ f4 ❌
 ━━━━━━━━━━━━━━━━
 📌 資料來源：verified_history（賽後驗證真實結果）
 ```
-
 > 仍在賽事池中的場會補上隊名，否則顯示 game_id（資料中無隊名時不捏造）。
 
 -----
@@ -148,11 +136,11 @@ commit-back 狀態檔（[skip ci] update bot state）
 建立賽事池 → 去Vig → Poisson/常態 比分模型 → 蒙特卡羅 → Edge → Truth Gate → Render → Telegram → save_prediction →（賽後）逐場 Verify → Postgame Push
 ```
 
-|段別         |觸發                             |標題         |
-|-----------|-------------------------------|-----------|
-|Early 早推   |賽前 12h（`EARLY_WINDOW_MIN=720`） |🕐 賽前 12小時預測|
-|Pregame 最終 |賽前 40m（`PREGAME_WINDOW_MIN=40`）|⚡ 賽前 40 分鐘 |
-|Postgame 賽後|賽果 `completed=true`（逐場即時）      |📊 賽後結果     |
+| 段別 | 觸發 | 標題 |
+|---|---|---|
+| Early 早推 | 賽前 12h（`EARLY_WINDOW_MIN=720`） | 🕐 賽前 12小時預測 |
+| Pregame 最終 | 賽前 40m（`PREGAME_WINDOW_MIN=40`） | ⚡ 賽前 40 分鐘 |
+| Postgame 賽後 | 賽果 `completed=true`（逐場即時） | 📊 賽後結果 |
 
 賽前兩推成功皆 `save_prediction` 落盤 → 賽後驗證不依賴 40m 窄窗命中。
 
@@ -167,23 +155,23 @@ commit-back 狀態檔（[skip ci] update bot state）
 
 ## 📂 狀態檔（repo as DB）
 
-|檔案                    |功能                         |
-|----------------------|---------------------------|
-|`weekly_games.json`   |48h 賽事池 + 三盤口賠率快取          |
-|`flags.json`          |推播狀態（每場 early / pre / post）|
-|`predictions.json`    |預測快照（賽後驗證唯一素材來源）           |
-|`verified_history.csv`|賽後驗證紀錄（累積命中率）              |
-|`key_state.json`      |Odds API 金鑰輪替 / cooldown   |
-|`worldcup_state.json` |WorldCup batch 已處理場數（冪等）   |
+| 檔案 | 功能 |
+|---|---|
+| `weekly_games.json` | 48h 賽事池 + 三盤口賠率快取 |
+| `flags.json` | 推播狀態（每場 early / pre / post） |
+| `predictions.json` | 預測快照（賽後驗證唯一素材來源） |
+| `verified_history.csv` | 賽後驗證紀錄（累積命中率） |
+| `key_state.json` | Odds API 金鑰輪替 / cooldown |
+| `worldcup_state.json` | WorldCup batch 已處理場數（冪等） |
 
 -----
 
 ## 🛡️ Recovery（為什麼不會漏）
 
 1. **tick 全掃描**：每次掃全部賽事，補齊「在窗內、未推」的場。
-1. **冪等**：`is_pushed(gid, phase)` 防重複（重複 tick ≠ 重複推播）。
-1. **scheduler 失敗自癒**：某次沒跑，下次 tick 補齊。
-1. **賽後保底**：early 成功即落盤 → 不依賴 40m 窄窗。
+2. **冪等**：`is_pushed(gid, phase)` 防重複（重複 tick ≠ 重複推播）。
+3. **scheduler 失敗自癒**：某次沒跑，下次 tick 補齊。
+4. **賽後保底**：early 成功即落盤 → 不依賴 40m 窄窗。
 
 > 可靠性瓶頸不在邏輯（已是冪等狀態機），而在「tick 是否被準時執行」→ 由 scheduler 解決。
 
