@@ -426,6 +426,17 @@ def main(argv: list[str] | None = None) -> int:
                   scores_fetcher=scores_fetcher, post_pusher=post_pusher,
                   early_pusher=early_pusher)
     obs.info("runtime.tick_done", pushed=len(pushed), dry_run=dry_run)
+
+    # ── FIFA 世界盃批次彙整（addon layer，guarded）──
+    # 獨立於 match push / tick 核心：只讀 verified_history，每 4 場 FIFA 推一批。
+    # try/except 包覆：此層任何錯誤都不影響核心 tick 結果。
+    try:
+        import worldcup_batch
+        wc_pusher = notifier.make_pusher(dry_run, renderer=lambda m: m, **tg)
+        worldcup_batch.run_worldcup_batch(wc_pusher)
+    except Exception as exc:  # noqa: BLE001 — addon 不得影響核心
+        obs.error("worldcup.error", err=str(exc))
+
     return 0
 
 
