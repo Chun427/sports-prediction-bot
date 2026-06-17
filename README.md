@@ -1,4 +1,4 @@
-# 🎯全自動體育賽事預測系統 sports-prediction-bot
+# 🎯全自動體育賽事預測系統sports-prediction-bot
 
 全自動體育賽事預測機器人。透過 GitHub Actions 定期（每 5 分鐘）自動執行：建立賽事池 → 統計／機率模型預測（去Vig + Poisson/常態 + 蒙特卡羅）→ 推播 Telegram → 賽後逐場驗證命中 → 累積賽後驗證紀錄（verified_history）。
 
@@ -24,11 +24,11 @@
 Detroit Tigers 🆚 Houston Astros
 ━━━━━━━━━━━━━━━━
 📐 去Vig真實勝率
-Detroit Tigers  ████░░░░░░  39.3%
 Houston Astros  ██████░░░░  60.7%
+Detroit Tigers  ████░░░░░░  39.3%
 蒙特卡羅模擬勝率
-Detroit Tigers  ██░░░░░░░░  24.4%
 Houston Astros  ██████░░░░  63.1%
+Detroit Tigers  ██░░░░░░░░  24.4%
 ━━━━━━━━━━━━━━━━
 🏆 最可能出現的比分
 🥇 Detroit Tigers 3–4 Houston Astros（3.8%）
@@ -46,7 +46,7 @@ Houston Astros  ██████░░░░  63.1%
 ```
 > 註：**「⚽ 總進球數預測」只會出現在足球（FIFA）推播**；棒球（MLB）、籃球（NBA）不顯示（如上方 MLB 範例即無此區塊）。
 >
-> 註：**勝率區塊**——足球（FIFA）顯示**三路**（客勝｜平手｜主勝）；棒球（MLB）、籃球（NBA）顯示**兩路**（客勝｜主勝），不顯示平手。全畫面一律「客隊在前（左）、主隊在後（右）」。
+> 註：**勝率區塊**——足球（FIFA）顯示**三路**（主勝｜平手｜客勝）；棒球（MLB）、籃球（NBA）顯示**兩路**（主勝｜客勝），不顯示平手。
 
 ### ② 賽前 12 小時（早盤觀察）
 與 40 分鐘版**逐字相同**，僅標題不同：
