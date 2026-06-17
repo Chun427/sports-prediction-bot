@@ -1,4 +1,4 @@
-# 🎯全自動體育賽事預測系統sports-prediction-bot
+# 🎯全自動體育賽事預測系統 sports-prediction-bot
 
 全自動體育賽事預測機器人。透過 GitHub Actions 定期（每 5 分鐘）自動執行：建立賽事池 → 統計／機率模型預測（去Vig + Poisson/常態 + 蒙特卡羅）→ 推播 Telegram → 賽後逐場驗證命中 → 累積賽後驗證紀錄（verified_history）。
 
@@ -12,7 +12,7 @@
 
 -----
 
-## 📱 推播畫面（全部）
+## 📱 推播畫面
 
 ### ① 賽前 40 分鐘（最終投注參考）
 ```
@@ -145,6 +145,17 @@ commit-back 狀態檔（[skip ci] update bot state）
 
 - **⚽ 總進球數（單場）**：只讀既有 `lambda_home/away`，Poisson(λ_total) 分桶，依機率排序顯示。**僅足球（FIFA）顯示**；棒球（MLB）、籃球（NBA）不顯示（總進球分布僅對足球有意義）。不改 score_model/MC/Edge。
 - **🌍 WorldCup Batch**：每 4 場已驗證 FIFA 推一則彙整（命中率/平均報酬/冷門數）；只讀 verified_history；冪等（`worldcup_state.json`）；掛 `main()` tick 之後，不碰逐場賽後。
+- **📊 Audit Engine（V4 Phase 2 · 可觀測層）**：唯讀 KPI 報表（依運動/盤口分組命中率、平均報酬、樣本不足警示）；只讀 `normalized_verified_view()`，**不碰核心、不寫狀態、不進推播路徑**。
+
+-----
+
+## 🧠 V4 資料回饋層（Feedback / Observability）
+
+V3 是執行層、已凍結；V4 在其上**加一層唯讀的資料回饋與觀測**，不碰任何核心模型：
+
+- **Phase 1 — 資料合約層（truth）**：`verified_history.csv` 擴充為 **21 欄完整回饋事件**（ML / AH / OU / 比分 / 總進球 / 信心 / Edge / 預期vs實際總分 / phase…），由 `verified_enrich.py` 在賽後驗證時補寫（additive、缺值留空、不 backfill）。`normalized_verified_view()` 為分析**唯一入口**（統一 schema、缺值＝None）。
+- **Phase 2 — 智能/觀測層（analysis）**：`audit_engine.py` 為 baseline KPI；`bias_detector / calibration_tracker / learning_signal` 為設計就緒、**待資料累積（每運動 ≥100 場）才實作**。
+- **治理**：所有分析只讀不改；任何模型調整需 Audit→回測→人工確認（詳見 `V4_FEEDBACK_DESIGN.md`、`V4_PHASE2_ARCHITECTURE.md`）。
 
 -----
 
@@ -155,7 +166,7 @@ commit-back 狀態檔（[skip ci] update bot state）
 | `weekly_games.json` | 48h 賽事池 + 三盤口賠率快取 |
 | `flags.json` | 推播狀態（每場 early / pre / post） |
 | `predictions.json` | 預測快照（賽後驗證唯一素材來源） |
-| `verified_history.csv` | 賽後驗證紀錄（累積命中率） |
+| `verified_history.csv` | 賽後完整回饋紀錄（**V4：21 欄 truth layer**；分析經 `normalized_verified_view()`） |
 | `key_state.json` | Odds API 金鑰輪替 / cooldown |
 | `worldcup_state.json` | WorldCup batch 已處理場數（冪等） |
 
