@@ -75,6 +75,19 @@ def test_market_handicap_and_total_verified():
     assert "大小（O/U）（大（線2.5））：✅ 命中" in msg
 
 
+def test_mlb_has_scoreline_but_no_total_goals():
+    """棒球：保留比分5組，但不顯示總進球（總進球僅足球）。"""
+    mlb = {"sport": "MLB", "home": "Houston Astros", "away": "Detroit Tigers",
+           "start_time": "2026-06-17T08:11:00+08:00",
+           "model_score": {"type": "poisson", "lambda_home": 4.5, "lambda_away": 4.0,
+                           "expected_total": 8.5,
+                           "top_scorelines": [{"home": 5, "away": 3, "prob": 0.04}]}}
+    msg = notifier.render_postgame_eval(_v(), mlb, _r(5, 3))
+    assert "🥅 比分預測" in msg          # 比分仍有
+    assert "⚽ 總進球數" not in msg       # 總進球不顯示
+    assert "總進球命中" not in msg
+
+
 def test_nba_no_scoreline_no_total():
     nba = {"sport": "NBA", "home": "Lakers", "away": "Celtics",
            "start_time": "2026-06-17T09:00:00+08:00"}  # 無 model_score
