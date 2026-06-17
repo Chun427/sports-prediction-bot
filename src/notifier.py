@@ -478,10 +478,6 @@ def render_pregame_lite(prediction: dict, header_kind: str = "final") -> str:
         _wp(away, mc.get("away")),
         _wp(home, mc.get("home")),
         _DREAM_DIV,
-        "📊 Edge（模型優勢）",
-        f"{away} {_epct(edge.get('away'))}",
-        f"{home} {_epct(edge.get('home'))}",
-        _DREAM_DIV,
         "🏆 最可能出現的比分",
     ]
     medals = ["🥇", "🥈", "🥉", "4️⃣", "5️⃣"]
@@ -541,9 +537,6 @@ def render_pregame_lite(prediction: dict, header_kind: str = "final") -> str:
         f"🔮【主推】{main}",
         f"💎【次要】{ou_pick}",
         f"⭐【備選】{hcap_pick}",
-        _DREAM_DIV, "📊 風控資訊",
-        f"- Kelly：{kfrac * 100:.1f}%",
-        f"- Risk Level：{risk_zh}",
         _DREAM_DIV,
         "📡 數據來源：AI模型+真實數據+賠率",
         "⚠️ 請理性投注。",
