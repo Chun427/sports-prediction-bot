@@ -1934,5 +1934,116 @@
       }
     },
     "pre_pushed_at": "2026-06-17T21:50:53+08:00"
+  },
+  "22083e7a8e5362c711bc05c1e1319a1f": {
+    "prediction": {
+      "game_id": "22083e7a8e5362c711bc05c1e1319a1f",
+      "sport": "FIFA",
+      "home": "Uzbekistan",
+      "away": "Colombia",
+      "start_time": "2026-06-18T10:00:00+08:00",
+      "market": {
+        "asian_handicap": 1.5,
+        "over_under": 2.5,
+        "odds_source": "the-odds-api/consensus",
+        "timestamp": "2026-06-17T14:33:04.437581+00:00"
+      },
+      "bookmaker_count": 9,
+      "fair_prob": {
+        "home": 0.1021,
+        "draw": 0.2,
+        "away": 0.6979
+      },
+      "best_odds": {
+        "home": 9.75,
+        "away": 1.38,
+        "draw": 4.9
+      },
+      "edge": {
+        "home": -0.0047,
+        "draw": -0.02,
+        "away": -0.0369
+      },
+      "best_pick": null,
+      "avg_overround": 0.0485,
+      "model": "market_implied_v1",
+      "generated_at": "2026-06-17T22:33:02+08:00",
+      "model_score": {
+        "type": "poisson",
+        "sport": "FIFA",
+        "lambda_home": 0.5,
+        "lambda_away": 2.0,
+        "expected_total": 2.5,
+        "supremacy": -1.5,
+        "outcome_probs": {
+          "home": 0.0819,
+          "draw": 0.1871,
+          "away": 0.731
+        },
+        "top_scorelines": [
+          {
+            "home": 0,
+            "away": 1,
+            "prob": 0.1642
+          },
+          {
+            "home": 0,
+            "away": 2,
+            "prob": 0.1642
+          },
+          {
+            "home": 0,
+            "away": 3,
+            "prob": 0.1094
+          },
+          {
+            "home": 0,
+            "away": 0,
+            "prob": 0.0821
+          },
+          {
+            "home": 1,
+            "away": 1,
+            "prob": 0.0821
+          }
+        ]
+      },
+      "model_mc": {
+        "n": 20000,
+        "win_prob": {
+          "home": 0.0805,
+          "draw": 0.1903,
+          "away": 0.7291
+        },
+        "top_scorelines": [
+          {
+            "home": 0,
+            "away": 1,
+            "prob": 0.1656
+          },
+          {
+            "home": 0,
+            "away": 2,
+            "prob": 0.1631
+          },
+          {
+            "home": 0,
+            "away": 3,
+            "prob": 0.1091
+          },
+          {
+            "home": 1,
+            "away": 1,
+            "prob": 0.0862
+          },
+          {
+            "home": 0,
+            "away": 0,
+            "prob": 0.0826
+          }
+        ]
+      }
+    },
+    "pre_pushed_at": "2026-06-17T22:33:04+08:00"
   }
 }
