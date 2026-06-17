@@ -35,10 +35,9 @@ def test_all_fixed_sections_present():
     out = nf.render_pregame_lite(PRED_2WAY)
     for header in [
         "🎯 精算師預測系統", "⚡ 量化預測模型", "📐 去Vig真實勝率", "蒙特卡羅模擬勝率",
-        "📊 Edge（模型優勢）", "🏆 最可能出現的比分", "📊 盤口深度分析",
+        "🏆 最可能出現的比分", "📊 盤口深度分析",
         "讓分盤口", "總分大小", "獨贏賠率", "💰 台灣運彩實戰建議",
         "🔮【主推】", "💎【次要】", "⭐【備選】",
-        "📊 風控資訊",
         "📡 數據來源：AI模型+真實數據+賠率", "⚠️ 請理性投注。",
     ]:
         assert header in out, f"缺少固定 section: {header}"
@@ -51,9 +50,9 @@ def test_devig_real_values():
     assert "█" in out and "░" in out
 
 
-def test_edge_real_values():
+def test_edge_not_displayed():
     out = nf.render_pregame_lite(PRED_2WAY)
-    assert "+3.3%" in out and "-3.3%" in out
+    assert "📊 Edge" not in out and "模型優勢" not in out
 
 
 def test_odds_real_values():
@@ -86,9 +85,10 @@ def test_secondary_alt_are_na():
     assert "⭐【備選】N/A" in out
 
 
-def test_kelly_and_risk_present():
+def test_kelly_and_risk_not_displayed():
     out = nf.render_pregame_lite(PRED_2WAY)
-    assert "Kelly：" in out and "Risk Level：" in out
+    assert "Kelly：" not in out and "Risk Level：" not in out
+    assert "📊 Edge" not in out
 
 
 def test_make_pusher_real_uses_renderer():
@@ -102,7 +102,7 @@ def test_make_pusher_real_uses_renderer():
                             renderer=nf.render_pregame_lite)
     assert pusher({"id": "g1", "prediction": PRED_2WAY}) is True
     assert "量化預測模型" in sent["text"]
-    assert "Kelly：" in sent["text"]
+    assert "📡 數據來源" in sent["text"]
 
 
 def test_make_pusher_dry_run_previews(capsys):
