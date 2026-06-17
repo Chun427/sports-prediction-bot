@@ -15,6 +15,17 @@ import math
 _BUCKETS = [("0–1", 0, 1), ("2–3", 2, 3), ("4–5", 4, 5), ("6+", 6, None)]
 
 
+def bucket_label_of_total(total: int) -> str:
+    """實際總分落在哪一桶（邊界與 _BUCKETS 完全一致）；賽後對答案用。"""
+    for label, lo, hi in _BUCKETS:
+        if hi is None:
+            if total >= lo:
+                return label
+        elif lo <= total <= hi:
+            return label
+    return _BUCKETS[-1][0]
+
+
 def _poisson_pmf(k: int, lam: float) -> float:
     return math.exp(-lam) * lam ** k / math.factorial(k)
 
