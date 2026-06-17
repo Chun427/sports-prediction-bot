@@ -1502,5 +1502,221 @@
       }
     },
     "pre_pushed_at": "2026-06-17T19:21:30+08:00"
+  },
+  "4d8279537f3ea7c4d1d53160da26d2c6": {
+    "prediction": {
+      "game_id": "4d8279537f3ea7c4d1d53160da26d2c6",
+      "sport": "MLB",
+      "home": "Milwaukee Brewers",
+      "away": "Cleveland Guardians",
+      "start_time": "2026-06-18T07:41:00+08:00",
+      "market": {
+        "asian_handicap": -1.5,
+        "over_under": 7.5,
+        "odds_source": "the-odds-api/consensus",
+        "timestamp": "2026-06-17T12:14:48.835373+00:00"
+      },
+      "bookmaker_count": 9,
+      "fair_prob": {
+        "home": 0.5296,
+        "away": 0.4704
+      },
+      "best_odds": {
+        "home": 1.85,
+        "away": 2.11
+      },
+      "edge": {
+        "home": -0.0202,
+        "away": -0.0075
+      },
+      "best_pick": null,
+      "avg_overround": 0.0376,
+      "model": "market_implied_v1",
+      "generated_at": "2026-06-17T20:14:47+08:00",
+      "model_score": {
+        "type": "poisson",
+        "sport": "MLB",
+        "lambda_home": 4.5,
+        "lambda_away": 3.0,
+        "expected_total": 7.5,
+        "supremacy": 1.5,
+        "outcome_probs": {
+          "home": 0.641,
+          "draw": 0.1289,
+          "away": 0.23
+        },
+        "top_scorelines": [
+          {
+            "home": 4,
+            "away": 2,
+            "prob": 0.0426
+          },
+          {
+            "home": 4,
+            "away": 3,
+            "prob": 0.0426
+          },
+          {
+            "home": 5,
+            "away": 2,
+            "prob": 0.0383
+          },
+          {
+            "home": 5,
+            "away": 3,
+            "prob": 0.0383
+          },
+          {
+            "home": 3,
+            "away": 2,
+            "prob": 0.0378
+          }
+        ]
+      },
+      "model_mc": {
+        "n": 20000,
+        "win_prob": {
+          "home": 0.6389,
+          "draw": 0.1323,
+          "away": 0.2288
+        },
+        "top_scorelines": [
+          {
+            "home": 4,
+            "away": 3,
+            "prob": 0.0452
+          },
+          {
+            "home": 4,
+            "away": 2,
+            "prob": 0.0408
+          },
+          {
+            "home": 5,
+            "away": 3,
+            "prob": 0.0396
+          },
+          {
+            "home": 3,
+            "away": 2,
+            "prob": 0.0387
+          },
+          {
+            "home": 3,
+            "away": 3,
+            "prob": 0.0382
+          }
+        ]
+      }
+    },
+    "pre_pushed_at": "2026-06-17T20:14:48+08:00"
+  },
+  "3c667b5e84c7e18c7697c0f83852679a": {
+    "prediction": {
+      "game_id": "3c667b5e84c7e18c7697c0f83852679a",
+      "sport": "MLB",
+      "home": "Chicago Cubs",
+      "away": "Colorado Rockies",
+      "start_time": "2026-06-18T08:06:00+08:00",
+      "market": {
+        "asian_handicap": -1.5,
+        "over_under": 10.0,
+        "odds_source": "the-odds-api/consensus",
+        "timestamp": "2026-06-17T12:14:49.552226+00:00"
+      },
+      "bookmaker_count": 9,
+      "fair_prob": {
+        "home": 0.6246,
+        "away": 0.3754
+      },
+      "best_odds": {
+        "home": 1.56,
+        "away": 2.62
+      },
+      "edge": {
+        "home": -0.0256,
+        "away": -0.0166
+      },
+      "best_pick": null,
+      "avg_overround": 0.0382,
+      "model": "market_implied_v1",
+      "generated_at": "2026-06-17T20:14:48+08:00",
+      "model_score": {
+        "type": "poisson",
+        "sport": "MLB",
+        "lambda_home": 5.75,
+        "lambda_away": 4.25,
+        "expected_total": 10.0,
+        "supremacy": 1.5,
+        "outcome_probs": {
+          "home": 0.6211,
+          "draw": 0.1156,
+          "away": 0.2632
+        },
+        "top_scorelines": [
+          {
+            "home": 5,
+            "away": 4,
+            "prob": 0.0325
+          },
+          {
+            "home": 6,
+            "away": 4,
+            "prob": 0.0312
+          },
+          {
+            "home": 5,
+            "away": 3,
+            "prob": 0.0306
+          },
+          {
+            "home": 6,
+            "away": 3,
+            "prob": 0.0294
+          },
+          {
+            "home": 4,
+            "away": 4,
+            "prob": 0.0283
+          }
+        ]
+      },
+      "model_mc": {
+        "n": 20000,
+        "win_prob": {
+          "home": 0.6211,
+          "draw": 0.1179,
+          "away": 0.261
+        },
+        "top_scorelines": [
+          {
+            "home": 6,
+            "away": 4,
+            "prob": 0.0321
+          },
+          {
+            "home": 5,
+            "away": 4,
+            "prob": 0.0306
+          },
+          {
+            "home": 5,
+            "away": 3,
+            "prob": 0.0294
+          },
+          {
+            "home": 4,
+            "away": 4,
+            "prob": 0.0289
+          },
+          {
+            "home": 6,
+            "away": 3,
+            "prob": 0.0274
+          }
+        ]
+      }
+    },
+    "pre_pushed_at": "2026-06-17T20:14:49+08:00"
   }
 }
