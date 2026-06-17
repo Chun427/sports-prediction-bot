@@ -173,10 +173,47 @@ def remove_prediction(game_id: str) -> None:
 
 # ── verified_history.csv — 已驗證賽果（git tracked）──
 # C-4 學習資料：固定 schema，append-only。Tournament Engine 未來以此為唯一資料源。
-VERIFIED_FIELDS = [
+# V4 Phase 1：schema 版本標記（防 future PR 偷改欄位造成 silent break）
+VERIFIED_SCHEMA_VERSION = 2
+
+# 舊版（V3）欄位 — 必須保持為 VERIFIED_FIELDS 的「前綴」，舊 CSV 才能無痛升級。
+_LEGACY_VERIFIED_FIELDS = [
     "verified_at", "game_id", "sport", "winner", "pick_outcome",
     "pick_hit", "moneyline_hit", "realized_return", "fair_prob_winner", "model",
 ]
+
+VERIFIED_FIELDS = _LEGACY_VERIFIED_FIELDS + [
+    # V4 Phase 1 — additive 回饋欄位（舊列自動補空，不 backfill 數值）
+    "ah_hit", "ou_hit", "scoreline_hit", "total_goals_hit",
+    "edge", "confidence", "model_winprob", "devig_winprob",
+    "expected_total", "actual_total", "phase",
+]
+
+# Schema guard：舊欄位必須是新 schema 的前綴（順序/名稱不得被改），否則升級會 silent break。
+assert VERIFIED_FIELDS[:len(_LEGACY_VERIFIED_FIELDS)] == _LEGACY_VERIFIED_FIELDS, \
+    "verified_history schema drift：legacy 欄位被更動，將破壞舊資料相容性"
+
+
+def _migrate_verified_header_if_needed(path: str) -> None:
+    """一次性、原子式表頭升級（temp + os.replace；中途失敗原檔完好，不 backfill 數值）。
+
+    只在『既有表頭 ≠ 目前 VERIFIED_FIELDS』時觸發；升級後表頭相符 → 不再觸發。
+    不做 in-place 覆寫（避免崩潰時半寫毀檔），改寫到暫存檔再原子改名。
+    """
+    if not (os.path.exists(path) and os.path.getsize(path) > 0):
+        return
+    with open(path, "r", newline="", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        if (reader.fieldnames or []) == VERIFIED_FIELDS:
+            return  # 已是最新 schema
+        rows = list(reader)
+    tmp = path + ".tmp"
+    with open(tmp, "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=VERIFIED_FIELDS)
+        writer.writeheader()
+        for r in rows:
+            writer.writerow({k: r.get(k, "") for k in VERIFIED_FIELDS})  # 缺新欄＝空，原值保留
+    os.replace(tmp, path)  # 原子操作：要嘛全成功、要嘛原檔不動
 
 
 def append_verified(record: dict[str, Any]) -> None:
@@ -186,6 +223,7 @@ def append_verified(record: dict[str, Any]) -> None:
         row["verified_at"] = _now()
     path = VERIFIED_HISTORY_CSV
     os.makedirs(os.path.dirname(os.path.abspath(path)), exist_ok=True)
+    _migrate_verified_header_if_needed(path)
     file_exists = os.path.exists(path) and os.path.getsize(path) > 0
     with open(path, "a", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=VERIFIED_FIELDS)
@@ -200,6 +238,21 @@ def read_verified() -> list[dict[str, str]]:
         return []
     with open(VERIFIED_HISTORY_CSV, "r", newline="", encoding="utf-8") as f:
         return list(csv.DictReader(f))
+
+
+def normalized_verified_view() -> list[dict]:
+    """V4 分析層統一輸出（給 Phase 2 audit / calibration / bias 用）。
+
+    規則：
+      • 每列一律含 VERIFIED_FIELDS 全部 key（FIFA/MLB/NBA 統一 schema）。
+      • 缺值或空字串 → None（不可猜、不推論、不轉型）。
+    這是「唯讀視圖」，不改檔案、不影響既有 read_verified（後者保持原樣供舊模組使用）。
+    """
+    out: list[dict] = []
+    for row in read_verified():
+        out.append({k: (row.get(k) if (row.get(k) not in (None, "")) else None)
+                    for k in VERIFIED_FIELDS})
+    return out
 
 
 def verified_count() -> int:
