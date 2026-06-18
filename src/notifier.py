@@ -398,9 +398,8 @@ _DREAM_DIV = "━━━━━━━━━━━━━━━━"
 _SPORT_EMOJI = {"NBA": "🏀", "MLB": "⚾", "FIFA": "⚽"}
 
 
-def _bar10(p: float) -> str:
-    filled = max(0, min(10, round(p * 10)))
-    return "█" * filled + "░" * (10 - filled)
+def _wp_pct(val) -> str:
+    return f"{val * 100:.1f}%" if isinstance(val, (int, float)) else "N/A"
 
 
 def _fmt_dt_tw(iso: str) -> str:
@@ -444,7 +443,7 @@ def render_pregame_lite(prediction: dict, header_kind: str = "final") -> str:
     obs.info("kelly.computed", kelly_zero=(kfrac == 0.0))
 
     def _wp(team, val):
-        return f"{team}  {_bar10(val)}  {val * 100:.1f}%" if isinstance(val, (int, float)) else f"{team}  N/A"
+        return f"{team} {_wp_pct(val)}"
 
     def _epct(val):
         return f"{val * 100:+.1f}%" if isinstance(val, (int, float)) else "N/A"
@@ -472,6 +471,9 @@ def render_pregame_lite(prediction: dict, header_kind: str = "final") -> str:
         rows.append(_wp(away, probs.get("away")))
         return rows
 
+    def _wp_line(probs):
+        return " / ".join(_wp_rows(probs))
+
     out = [
         "🎯 精算師預測系統",
         _title2,
@@ -480,10 +482,13 @@ def render_pregame_lite(prediction: dict, header_kind: str = "final") -> str:
         f"{_SPORT_EMOJI.get(sport, '🏟')} {sport}",
         f"{away} 🆚 {home}",
         _DREAM_DIV,
-        "📐 去Vig真實勝率",
-        *_wp_rows(fp),
+        "📊 勝率分析",
+        "",
+        "去Vig真實勝率",
+        _wp_line(fp),
+        "",
         "蒙特卡羅模擬勝率",
-        *_wp_rows(mc),
+        _wp_line(mc),
         _DREAM_DIV,
         "🏆 最可能出現的比分",
     ]
