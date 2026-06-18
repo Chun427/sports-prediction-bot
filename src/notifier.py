@@ -161,8 +161,8 @@ def render_postgame(verification: dict, prediction: dict, result: dict) -> str:
 
 def render_postgame_eval(verification: dict, prediction: dict, result: dict) -> str:
     """賽果驗收型 UI（單場）：只對答案——比分5組命中 / 總進球命中 / 台彩三項命中。
-    不顯示 confidence / MC / 主推 / 累積KPI。投注結果只用「中／❌」（命中→中、未中或走盤→❌）；
-    缺資料的投注項目直接略過（不捏造、不顯示走盤/退/術語/盤口線）。
+    不顯示 confidence / MC / 主推 / 累積KPI。投注結果用 ✅/❌（命中→✅、未中或走盤→❌）並標盤口；
+    缺資料的投注項目直接略過（不捏造）。
     比分僅 Poisson 類（FIFA/MLB）有；總進球僅足球（FIFA）；NBA 等無 → 整段略過。"""
     home = prediction.get("home", "")
     away = prediction.get("away", "")
@@ -205,17 +205,17 @@ def render_postgame_eval(verification: dict, prediction: dict, result: dict) -> 
         out.append(f"👉 {'命中 ✅' if tg_ok else '未中 ❌'}")
         tg_hit_line = f"總進球命中：{'✅' if tg_ok else '❌'}"
 
-    # 3. 台彩投注（實戰三項）：只用「中 / ❌」（命中→中、未中或走盤→❌）；不顯示走盤/退/線/術語/賠率。
-    out += [_DREAM_DIV, "💰 台彩投注（實戰三項）"]
+    # 3. 台灣運彩投注：✅/❌（命中→✅、未中或走盤→❌）；顯示盤口標籤（如 主-0.2 / 線2.0）。無盤口的列略過。
+    out += [_DREAM_DIV, "💰 台灣運彩投注"]
 
     def _verdict(ok):
-        return "中" if ok is True else "❌"   # 命中→中；未中或走盤→❌（依規則不顯示「退」「走盤」）
+        return "✅" if ok is True else "❌"   # 命中→✅；未中或走盤→❌
 
     ml_sum = None
     if pick:
-        v = "中" if hit else "❌"
+        v = "✅" if hit else "❌"
         out.append(f"獨贏（ML）：{v}")
-        ml_sum = f"獨贏（ML）：{v}"
+        ml_sum = f"獨贏命中：{v}"
 
     market = prediction.get("market")
     ah_res = _market.verify_handicap(market, hs, aws) if market else None
@@ -223,13 +223,12 @@ def render_postgame_eval(verification: dict, prediction: dict, result: dict) -> 
 
     ah_sum = ou_sum = None
     if ah_res is not None:
-        v = _verdict(ah_res[1])
-        out.append(f"讓分（AH）：{v}")
-        ah_sum = f"讓分（AH）：{v}"
+        label, ok = ah_res
+        out.append(f"讓分（AH）（{label}）：{_verdict(ok)}")
+        ah_sum = f"讓分（AH）：{_verdict(ok)}"
     if ou_res is not None:
-        v = _verdict(ou_res[1])
-        out.append(f"大小（O/U）：{v}")
-        ou_sum = f"大小（O/U）：{v}"
+        out.append(f"大小（O/U）（線{market.get('over_under')}）：{_verdict(ou_res[1])}")
+        ou_sum = f"大小（O/U）：{_verdict(ou_res[1])}"
 
     # 單場結論（同樣只用 中/錯/退；無資料列略過）
     out += [_DREAM_DIV, "📌 單場結論"]
