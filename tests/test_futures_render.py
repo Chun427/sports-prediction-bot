@@ -46,3 +46,19 @@ def test_json_roundtrips():
     back = json.loads(s)
     assert back["capability"] == "Champion" and back["available"] is True
     assert back["ranked"][0]["outcome"] == "Spain"
+
+
+def test_render_awards_mixed_available_and_na():
+    results = [
+        {"capability": "Champion", "title": "🏆 冠軍預測", "available": True,
+         "ranked": [{"outcome": "Brazil", "fair_probability": 0.184},
+                    {"outcome": "France", "fair_probability": 0.152}]},
+        {"capability": "GoldenBoot", "title": "👟 金靴獎", "available": False, "na_reason": "待 API"},
+        {"capability": "GoldenGlove", "title": "🧤 金手套獎", "available": False, "na_reason": "無盤"},
+    ]
+    txt = fr.render_awards(results, header="🏆 World Cup 獎項")
+    assert "🏆 World Cup 獎項" in txt
+    assert "🥇 Brazil 18.4%" in txt and "🥈 France 15.2%" in txt
+    assert "👟 金靴獎" in txt and "（暫無盤口資料）" in txt        # N/A 不捏造
+    assert "🧤 金手套獎" in txt
+    assert "數據來源：AI模型+真實數據+賠率" in txt and "請理性投注" in txt   # 固定 footer
