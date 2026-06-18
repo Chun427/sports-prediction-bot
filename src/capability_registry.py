@@ -22,6 +22,7 @@ _REGISTRY: dict[str, Capability] = {
     "Qualified":     Capability("Qualified", False, None, "待 API 實測確認"),
     "TopGoalscorer": Capability("TopGoalscorer", False, None, "Odds API 未確認提供，待 key 實測"),
     "GoldenBoot":    Capability("GoldenBoot", False, None, "同 TopGoalscorer outright，待實測"),
+    "GoldenGlove":   Capability("GoldenGlove", False, None, "Odds API 罕有最佳門將盤 → 待實測，多半永久 N/A"),
     "BallonDor":     Capability("BallonDor", False, None, "Odds API 不涵蓋此獎項 → 永久 N/A"),
 }
 
