@@ -14,13 +14,10 @@ import capability_registry as registry
 import futures_devig
 import futures_fetcher
 import futures_render
+from futures_validation import validate_outright_key
 
 # orchestrator 決定每個能力對應的 outright sport key（Rule 3：由 orchestrator 決定抓哪些）。
 # key 未確認/錯誤/當下無賠率 → 最終 render N/A（永不捏造）。WC/NBA/MLB 之後在此擴充即可。
-_OUTRIGHT_KEYS: dict[str, str] = {
-    "Champion": "soccer_fifa_world_cup_winner",  # 待 API 實測確認
-}
-
 _TITLES: dict[str, str] = {
     "Champion": "🏆 冠軍預測",
     "TopGoalscorer": "👟 射手榜",
@@ -49,20 +46,24 @@ def _consensus_odds(books: list[dict]) -> dict[str, float]:
 
 
 def build(capability: str, *, getter=None) -> dict:
-    """產生某能力的 futures 結果（給 renderer 的已備妥 data）。所有判斷都在這裡。"""
+    """產生某能力的 futures 結果（給 renderer 的已備妥 data）。所有判斷都在這裡。
+
+    可用與否＝runtime 市場驗證：registry 提供候選 key → fetch → validate_outright_key。
+    不再依賴寫死的 supported 旗標（market 是唯一真相）。
+    """
     title = _TITLES.get(capability, capability)
     cap = registry.get(capability)
     if cap is None:
         return _na(capability, title, "unknown capability")
-    if not cap.supported:                                   # 查 registry，不寫死能力
-        return _na(capability, title, cap.reason_if_na)
-    key = _OUTRIGHT_KEYS.get(capability)
+    if cap.permanent_na:                                    # 市場根本不存在 → 不 fetch
+        return _na(capability, title, cap.permanent_na)
+    key = cap.outright_key                                  # key 來自 registry（單一真相）
     if not key:
-        return _na(capability, title, "無對應 outright key")
+        return _na(capability, title, "無對應 outright key（待 API）")
 
     books = futures_fetcher.fetch(key, getter=getter)       # 只解析
-    if not books:
-        return _na(capability, title, "目前無 outright 盤口")
+    if not validate_outright_key(books):                    # ← runtime 驗證市場是否真的存在
+        return _na(capability, title, "市場不存在或無有效盤口")
 
     dv = futures_devig.devig(_consensus_odds(books))        # 機率數學（唯一處）
     if not dv:
