@@ -35,3 +35,37 @@ def render_text(data: dict | None) -> str:
 
 def render_json(data: dict | None) -> str:
     return json.dumps(data or {}, ensure_ascii=False)
+
+
+# ── 合併獎項呈現（render only：Rule 2，不排序/不判 N/A/不抓 API）────
+_MEDALS = ["🥇", "🥈", "🥉", "4️⃣", "5️⃣"]
+_DIV = "━━━━━━━━━━━━━━━━"
+_FOOTER = ["📡 數據來源：AI模型+真實數據+賠率", "⚠️ 請理性投注。"]
+
+
+def render_awards(results: list | None, *, header: str | None = None) -> str:
+    """把多個 build() 結果（Champion/GoldenBoot/GoldenGlove…）渲染成合併推播。
+
+    available → Top5（🥇..5️⃣ + 機率）；否則 →「（暫無盤口資料）」。固定 footer。
+    嚴禁排序/判斷能力/捏造——只格式化傳入的已備妥資料。
+    """
+    blocks = []
+    for data in results or []:
+        d = data or {}
+        lines = [d.get("title") or d.get("capability") or "Futures"]
+        if not d.get("available"):
+            lines.append("（暫無盤口資料）")
+        else:
+            for i, r in enumerate((d.get("ranked") or [])[:5]):
+                prob = r.get("fair_probability")
+                pct = f"{prob * 100:.1f}%" if isinstance(prob, (int, float)) else "—"
+                lines.append(f"{_MEDALS[i]} {r.get('outcome', '—')} {pct}")
+        blocks.append("\n".join(lines))
+
+    parts = []
+    if header:
+        parts.append(header)
+    if blocks:
+        parts.append(("\n" + _DIV + "\n").join(blocks))
+    parts.append(_DIV + "\n" + "\n".join(_FOOTER))
+    return "\n".join(parts)
