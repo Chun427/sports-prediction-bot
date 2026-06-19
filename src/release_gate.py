@@ -35,7 +35,7 @@ def _check_pipeline() -> tuple[bool, list[str]]:
         for fn in _CORE_PUSH:
             if f"def {fn}" not in sp:
                 blockers.append(f"push route 缺失：{fn}")
-        for token in (*_CORE_PUSH, "worldcup_batch.run_worldcup_batch"):
+        for token in (*_CORE_PUSH, "daily_report.run_daily_report"):
             if token not in sp:
                 blockers.append(f"push pipeline 未接線：{token}")
     except Exception as exc:  # noqa: BLE001
