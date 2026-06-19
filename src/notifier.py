@@ -176,74 +176,94 @@ def render_postgame_eval(verification: dict, prediction: dict, result: dict) -> 
     out = [
         "📊 比賽結果驗證（單場）",
         f"📅 台灣時間 {_fmt_date_tw(prediction.get('start_time', '') or verification.get('verified_at', ''))}",
-        f"{away} vs {home}",
+        f"🏆 {prediction.get('sport', '')}",
+        f"{home} 🆚 {away}",
     ]
 
     # 1. 比分 5 組（僅 Poisson 類有；非 Poisson（NBA）整段略過，不顯示 N/A）
     sl = (score.get("top_scorelines") or [])[:5]
-    score_hit_line = None
-    if sl and has_score:
+    score_hit = score_total = 0
+    score_available = bool(sl and has_score)
+    if score_available:
         score_total = len(sl)
         score_hit = sum(1 for s in sl if s.get("home") == hs and s.get("away") == aws)
         s_pct = round(score_hit / score_total * 100) if score_total else 0
-        out += [_DREAM_DIV, "🥅 比分預測（5組）", f"🎯命中：{score_hit}/{score_total}（{s_pct}%）"]
+        out += [_DREAM_DIV, "🥅 比分預測", f"🎯命中：{score_hit}/{score_total} （{s_pct}%）", ""]
         for i, s in enumerate(sl):
             sh, sa = s.get("home"), s.get("away")
             ok = (sh == hs and sa == aws)
             out.append(f"{medals[i]} {away} {sa}–{sh} {home} {'✅' if ok else '❌'}")
-        score_hit_line = f"比分命中：{score_hit}/{score_total}（{s_pct}%）"
 
-    # 2. 總進球數（僅足球 FIFA 顯示；棒球/籃球等不顯示）
-    g = _total_goals.goal_buckets(score) if str(prediction.get("sport", "")).upper() == "FIFA" else None
-    tg_hit_line = None
-    if g and has_score:
-        out += [_DREAM_DIV, "⚽ 總進球數"]
-        total = hs + aws
-        tg_ok = (_total_goals.bucket_label_of_total(total) == g["most_likely"])
-        out.append(f"預測範圍：{g['most_likely']} 球")
-        out.append(f"實際結果：{total} 球")
-        out.append(f"👉 {'命中 ✅' if tg_ok else '未中 ❌'}")
-        tg_hit_line = f"總進球命中：{'✅' if tg_ok else '❌'}"
-
-    # 3. 台灣運彩投注：✅/❌（命中→✅、未中或走盤→❌）；顯示盤口標籤（如 主-0.2 / 線2.0）。無盤口的列略過。
+    # 2. 台灣運彩投注：ML / AH / OU（OU 與 verified_enrich 同一推薦規則，確保畫面與寫入一致）
     market = prediction.get("market")
     ah_res = _market.verify_handicap(market, hs, aws) if market else None
-    ou_res = _market.verify_total(market, score, hs, aws) if market else None
+
+    def _ou_rec_hit():
+        # 同 verified_enrich：大分 if expected_total > market_total else 小分；以盤線 over_under 結算；走盤→None
+        if not isinstance(market, dict) or not has_score:
+            return None
+        ou = market.get("over_under")
+        et = score.get("expected_total")
+        if ou is None or not isinstance(et, (int, float)):
+            return None
+        total = hs + aws
+        if total == ou:
+            return None
+        lean_over = et > score.get("market_total", et)
+        return lean_over == (total > ou)
+
+    ou_hit = _ou_rec_hit()
+    ou_available = isinstance(market, dict) and market.get("over_under") is not None and has_score
 
     def _verdict(ok):
         return "✅" if ok is True else "❌"   # 命中→✅；未中或走盤→❌
 
-    # 市場命中：只統計「有盤口」的投注項（ML/AH/OU），走盤(None)以未中計
+    # 市場命中：只統計「有盤口」的投注項（ML/AH/OU）
     market_flags = []
     if pick:
         market_flags.append(hit is True)
     if ah_res is not None:
         market_flags.append(ah_res[1] is True)
-    if ou_res is not None:
-        market_flags.append(ou_res[1] is True)
+    if ou_available:
+        market_flags.append(ou_hit is True)
     m_total = len(market_flags)
     m_hit = sum(market_flags)
     m_pct = round(m_hit / m_total * 100) if m_total else 0
 
     out += [_DREAM_DIV, "💰 台灣運彩投注"]
     if m_total:
-        out.append(f"🎯命中：{m_hit}/{m_total}（{m_pct}%）")
+        out.append(f"🎯命中：{m_hit}/{m_total} （{m_pct}%）")
     if pick:
         out.append(f"獨贏（ML）：{'✅' if hit else '❌'}")
     if ah_res is not None:
         label, ok = ah_res
         out.append(f"讓分（AH）（{label}）：{_verdict(ok)}")
-    if ou_res is not None:
-        out.append(f"大小（O/U）（線{market.get('over_under')}）：{_verdict(ou_res[1])}")
+    if ou_available:
+        out.append(f"大小（O/U）（線{market.get('over_under')}）：{_verdict(ou_hit)}")
 
-    # 單場結論：模型準度（比分）與投注準度（市場）分層呈現，刻意不混成單一 overall。
+    # 3. 單場結論：overall = 各「類別」是否命中（比分視為 1 類：≥1 組中即算命中）÷ 可用類別數。
+    #    比分(5 組打包成 1 類) 與 3 個市場盤口難度不同，混為單一 overall 僅供概覽；
+    #    下方仍保留「比分命中 X/5」「市場命中 X/3」分層真值，避免誤讀。
+    cats = []
+    if score_available:
+        cats.append(score_hit >= 1)
+    if pick:
+        cats.append(hit is True)
+    if ah_res is not None:
+        cats.append(ah_res[1] is True)
+    if ou_available:
+        cats.append(ou_hit is True)
+    o_total = len(cats)
+    o_hit = sum(cats)
+    o_pct = round(o_hit / o_total * 100) if o_total else 0
+
     out += [_DREAM_DIV, "📌 單場結論"]
-    if score_hit_line:
-        out.append(score_hit_line)
-    if tg_hit_line:
-        out.append(tg_hit_line)
+    if o_total:
+        out.append(f"🎯命中：{o_hit}/{o_total} （{o_pct}%）")
+    if score_available:
+        out.append(f"比分命中：{score_hit}/{score_total}")
     if m_total:
-        out.append(f"市場命中：{m_hit}/{m_total}（{m_pct}%）")
+        out.append(f"市場命中：{m_hit}/{m_total}")
     return "\n".join(out)
 
 
@@ -461,9 +481,9 @@ def render_pregame_lite(prediction: dict, header_kind: str = "final") -> str:
     spread_label = (f"{home} {(-score['supremacy']):+.1f}"
                     if isinstance(score.get("supremacy"), (int, float)) else "N/A")
 
-    # 標題：early=🕐 12小時、final=⚡ 40分鐘（純顯示，不改任何邏輯）
-    _title2 = ("🕐 量化預測模型（賽前 12小時預測）" if header_kind == "early"
-               else f"⚡ 量化預測模型（賽前 {PREGAME_WINDOW_MIN} 分鐘）")
+    # 標題：依使用者新版 UI，兩者皆 🕐；early=12小時、final=40分鐘（純顯示，不改任何邏輯）
+    _title2 = ("🕐 量化預測模型（賽前 12小時 預測）" if header_kind == "early"
+               else f"🕐 量化預測模型（賽前 {PREGAME_WINDOW_MIN}分鐘 預測）")
 
     # 勝率列：FIFA 三路（主勝／平手／客勝）；MLB/NBA 兩路（主勝／客勝），不顯示和局。
     # 依監督者指定順序＝主先（與標題/比分列的客先順序不同）；純顯示，不碰任何機率計算。
@@ -484,11 +504,10 @@ def render_pregame_lite(prediction: dict, header_kind: str = "final") -> str:
         _title2,
         _DREAM_DIV,
         f"📅 台灣時間 {_fmt_dt_tw(prediction.get('start_time', ''))}",
-        f"{_SPORT_EMOJI.get(sport, '🏟')} {sport}",
-        f"{away} 🆚 {home}",
+        f"🏆 {sport}",
+        f"{home} 🆚 {away}",
         _DREAM_DIV,
         "📊 勝率分析",
-        "",
         "去Vig真實勝率",
         _wp_line(fp),
         "",
