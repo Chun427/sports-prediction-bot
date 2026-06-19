@@ -6,7 +6,7 @@
 ![Python](https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white)
 ![Telegram](https://img.shields.io/badge/Telegram-Bot-26A5E4?logo=telegram&logoColor=white)
 
-> 狀態：**Release Candidate**（核心完成；overlay bundle 待合併 + scheduler 待上線 → Production Ready）。測試 **178 passed**。
+> 狀態：**Production（已封版，進入 observation mode）**。核心 / 三推播 / 每日戰報 / 驗證流程皆完成且運行。測試 **230 passed**。
 > 支援：⚾ MLB · 🏀 NBA · ⚽ FIFA。
 > 註：`xgboost` 列於 requirements 但**目前未啟用**（保留為未來擴充），現行預測不依賴它。
 
@@ -227,7 +227,7 @@ V3 是執行層、已凍結；V4 在其上**加一層唯讀的資料回饋與觀
 
 ## 🧪 測試 & 部署
 
-- `pytest -q` → **178 passed**；CI 必須全綠才可 merge。
+- `pytest -q` → **230 passed**；CI 必須全綠才可 merge。
 - **Secrets**：`ODDS_API_KEY_1`(必)、`ODDS_API_KEY_2`、`TG_TOKEN`(必)、`TG_CHAT`(必)；`bot.yml` 須 `DRY_RUN: "false"`（未設預設 true＝只 log）。
 - **Overlay bundle**（新分支 + PR，CI 綠才 merge）：
   `src/notifier.py`(覆蓋)、`src/sports_prediction.py`(覆蓋)、`src/total_goals.py`(新)、`src/worldcup_batch.py`(新)、`tests/test_total_goals.py`(新)、`tests/test_worldcup_batch.py`(新)、`tests/test_postgame.py`(保留)。
