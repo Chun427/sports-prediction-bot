@@ -193,7 +193,7 @@ def render_postgame_eval(verification: dict, prediction: dict, result: dict) -> 
         for i, s in enumerate(sl):
             sh, sa = s.get("home"), s.get("away")
             ok = (sh == hs and sa == aws)
-            out.append(f"{medals[i]} {away} {sa}–{sh} {home} {'✅' if ok else '❌'}")
+            out.append(f"{medals[i]} {home} {sh}-{sa} {away} {'✅' if ok else '❌'}")
 
     # 2. 台灣運彩投注：ML / AH / OU（OU 與 verified_enrich 同一推薦規則，確保畫面與寫入一致）
     market = prediction.get("market")
@@ -421,7 +421,7 @@ def render_weekly_report(report: dict) -> str:
 # 在 Stage A 不存在 → 完全不渲染（不留標題、不留 placeholder、不偽造）。
 # 「賽前 N 分鐘」動態讀取 PREGAME_WINDOW_MIN，與常數同步（目前 40），不硬編碼。
 _DREAM_DIV = "━━━━━━━━━━━━━━━━"
-_SPORT_EMOJI = {"NBA": "🏀", "MLB": "⚾", "FIFA": "⚽"}
+_SPORT_EMOJI = {"NBA": "🏀", "MLB": "⚾️", "FIFA": "⚽️"}
 
 
 def _wp_pct(val) -> str:
@@ -507,7 +507,7 @@ def render_pregame_lite(prediction: dict, header_kind: str = "final") -> str:
         _title2,
         _DREAM_DIV,
         f"📅 台灣時間 {_fmt_dt_tw(prediction.get('start_time', ''))}",
-        f"🏆 {sport}",
+        f"{_SPORT_EMOJI.get(sport, '🏟')} {sport}",
         f"{home} 🆚 {away}",
         _DREAM_DIV,
         "📊 勝率分析",
@@ -520,11 +520,11 @@ def render_pregame_lite(prediction: dict, header_kind: str = "final") -> str:
     medals = ["🥇", "🥈", "🥉", "4️⃣", "5️⃣"]
     if _is_scoreline_sport:                 # NBA 等非 Poisson → 不顯示比分區塊（不留 N/A、不顯示假比分）
         tops = score.get("top_scorelines") or []
-        out += [_DREAM_DIV, "🏆 最可能出現的比分", ""]
+        out += [_DREAM_DIV, "🏆 最可能出現的比分"]
         for i in range(5):
             if i < len(tops):
                 s = tops[i]
-                out.append(f"{medals[i]} {away} {s['away']}–{s['home']} {home}（{s['prob'] * 100:.1f}%）")
+                out.append(f"{medals[i]} {home} {s['home']}-{s['away']} {away}（{s['prob'] * 100:.1f}%）")
             else:
                 out.append(f"{medals[i]} N/A")
 
@@ -566,7 +566,7 @@ def render_pregame_lite(prediction: dict, header_kind: str = "final") -> str:
         out += [_DREAM_DIV] + _tg
 
     out += [
-        _DREAM_DIV, "💰 台灣運彩實戰建議", "",
+        _DREAM_DIV, "💰 台灣運彩實戰建議",
         f"🔮【主推】{main}",
         f"💎【次要】{ou_pick}",
         f"⭐【備選】{hcap_pick}",
