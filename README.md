@@ -217,7 +217,7 @@ V3 是執行層、已凍結；V4 在其上**加一層唯讀的資料回饋與觀
 
 - 不使用 webhook（Odds API 僅 polling）。
 - 不做 bracket / 冠軍模擬（無賽程結構，避免造假機率）。
-- 不做個人獎項（金球/金靴/金手套，無球員資料源）。
+- 不建立球員資料模型推估個人獎項；目前僅顯示市場隱含機率，若無盤口則 N/A，不生成任何預測。
 - 不生成未驗證機率模型（缺資料一律 N/A，永不捏造）。
 - 不修改核心：score_model / monte_carlo / prediction_engine / kelly / Edge / Risk / result_verifier（含 `main_direction`）。新功能一律 additive overlay。
 
@@ -227,8 +227,7 @@ V3 是執行層、已凍結；V4 在其上**加一層唯讀的資料回饋與觀
 
 - `pytest -q` → **230 passed**；CI 必須全綠才可 merge。
 - **Secrets**：`ODDS_API_KEY_1`(必)、`ODDS_API_KEY_2`、`TG_TOKEN`(必)、`TG_CHAT`(必)；`bot.yml` 須 `DRY_RUN: "false"`（未設預設 true＝只 log）。
-- **Overlay bundle**（新分支 + PR，CI 綠才 merge）：
-  `src/notifier.py`(覆蓋)、`src/sports_prediction.py`(覆蓋)、`src/total_goals.py`(新)、`src/worldcup_batch.py`(新)、`tests/test_total_goals.py`(新)、`tests/test_worldcup_batch.py`(新)、`tests/test_postgame.py`(保留)。
+- **Deployment status**：All overlay modules have been merged into the production branch. Refer to Git history for implementation details.
 
 -----
 
