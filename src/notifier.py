@@ -176,7 +176,7 @@ def render_postgame_eval(verification: dict, prediction: dict, result: dict) -> 
     out = [
         "📊 比賽結果驗證（單場）",
         f"📅 台灣時間 {_fmt_date_tw(prediction.get('start_time', '') or verification.get('verified_at', ''))}",
-        f"🏆 {prediction.get('sport', '')}",
+        f"{_SPORT_EMOJI.get(prediction.get('sport', ''), '🏟')} {prediction.get('sport', '')}",
         f"{home} 🆚 {away}",
     ]
 
@@ -189,7 +189,7 @@ def render_postgame_eval(verification: dict, prediction: dict, result: dict) -> 
         score_total = len(sl)
         score_hit = sum(1 for s in sl if s.get("home") == hs and s.get("away") == aws)
         s_pct = round(score_hit / score_total * 100) if score_total else 0
-        out += [_DREAM_DIV, "🥅 比分預測", f"🎯命中：{score_hit}/{score_total} （{s_pct}%）", ""]
+        out += [_DREAM_DIV, "📋 比分預測", f"🎯命中：{score_hit}/{score_total} （{s_pct}%）"]
         for i, s in enumerate(sl):
             sh, sa = s.get("home"), s.get("away")
             ok = (sh == hs and sa == aws)
