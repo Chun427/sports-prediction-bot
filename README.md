@@ -62,7 +62,7 @@ Detroit Tigers 63.2% ｜ Chicago White Sox 24.7%
 ⚾️ MLB
 Detroit Tigers 🆚 Chicago White Sox
 ━━━━━━━━━━━━━━━━
-🥅 比分預測
+📋 比分預測
 🎯命中：1/5 （20%）
 🥇 Detroit Tigers 4-3 Chicago White Sox ❌
 🥈 Detroit Tigers 5-3 Chicago White Sox ✅
