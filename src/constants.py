@@ -109,6 +109,8 @@ ODDS_KEY_ENVS = (ENV_ODDS_API_KEY_1, ENV_ODDS_API_KEY_2)
 
 ENV_TG_TOKEN = "TG_TOKEN"
 ENV_TG_CHAT = "TG_CHAT"
+# Admin 告警頻道（opt-in；未設 → 漏推對帳 no-op，不影響任何既有行為）
+ENV_TG_ADMIN_CHAT = "TG_ADMIN_CHAT"
 ENV_DEBUG_API_SCHEMA = "DEBUG_API_SCHEMA"
 
 # 缺少任一即 Fail Fast (見 README Fail-safe 表)。
