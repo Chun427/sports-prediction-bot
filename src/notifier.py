@@ -180,22 +180,20 @@ def render_postgame_eval(verification: dict, prediction: dict, result: dict) -> 
         f"{home} 🆚 {away}",
     ]
 
-    # 1. 比分 5 組（僅 Poisson 類 FIFA/MLB 有；NBA 等非 Poisson → 整段隱藏，不顯示 N/A/假比分）
+    # 1. 比分（Poisson 類 FIFA/MLB 才有；NBA 整段隱藏）。命中以「中／沒中」二元計：5 組任一中 → 1/1，否則 0/1。
     _is_scoreline_sport = str(prediction.get("sport", "")).upper() in ("FIFA", "MLB")
     sl = (score.get("top_scorelines") or [])[:5]
-    score_hit = score_total = 0
     score_available = bool(_is_scoreline_sport and sl and has_score)
+    score_bin = 0
     if score_available:
-        score_total = len(sl)
-        score_hit = sum(1 for s in sl if s.get("home") == hs and s.get("away") == aws)
-        s_pct = round(score_hit / score_total * 100) if score_total else 0
-        out += [_DREAM_DIV, "📋 比分預測", f"🎯命中：{score_hit}/{score_total} （{s_pct}%）"]
+        score_bin = 1 if any(s.get("home") == hs and s.get("away") == aws for s in sl) else 0
+        out += [_DREAM_DIV, "📋 比分預測", f"🎯命中：{score_bin}/1（{score_bin * 100}%）"]
         for i, s in enumerate(sl):
             sh, sa = s.get("home"), s.get("away")
             ok = (sh == hs and sa == aws)
             out.append(f"{medals[i]} {home} {sh}-{sa} {away} {'✅' if ok else '❌'}")
 
-    # 2. 台灣運彩投注：ML / AH / OU（OU 與 verified_enrich 同一推薦規則，確保畫面與寫入一致）
+    # 2. 台灣運彩投注：ML → O/U → AH（OU 與 verified_enrich 同一推薦規則，確保畫面與寫入一致）
     market = prediction.get("market")
     ah_res = _market.verify_handicap(market, hs, aws) if market else None
 
@@ -215,56 +213,60 @@ def render_postgame_eval(verification: dict, prediction: dict, result: dict) -> 
 
     ou_hit = _ou_rec_hit()
     ou_available = isinstance(market, dict) and market.get("over_under") is not None and has_score
+    ou_side = None
+    if ou_available:
+        _et = score.get("expected_total")
+        ou_side = "大分" if (isinstance(_et, (int, float)) and _et > score.get("market_total", _et)) else "小分"
 
     def _verdict(ok):
         return "✅" if ok is True else "❌"   # 命中→✅；未中或走盤→❌
 
-    # 市場命中：只統計「有盤口」的投注項（ML/AH/OU）
+    # 盤口命中：只統計「有盤口」的投注項（ML / O/U / AH）
     market_flags = []
     if pick:
         market_flags.append(hit is True)
-    if ah_res is not None:
-        market_flags.append(ah_res[1] is True)
     if ou_available:
         market_flags.append(ou_hit is True)
+    if ah_res is not None:
+        market_flags.append(ah_res[1] is True)
     m_total = len(market_flags)
     m_hit = sum(market_flags)
     m_pct = round(m_hit / m_total * 100) if m_total else 0
 
     out += [_DREAM_DIV, "💰 台灣運彩投注"]
     if m_total:
-        out.append(f"🎯命中：{m_hit}/{m_total} （{m_pct}%）")
+        out.append(f"🎯命中：{m_hit}/{m_total}（{m_pct}%）")
     if pick:
-        out.append(f"獨贏（ML）：{'✅' if hit else '❌'}")
+        pick_lbl = f"{home} 勝出" if pick == "home" else (f"{away} 勝出" if pick == "away" else "平手")
+        out.append(f"獨贏（ML）：{'✅' if hit else '❌'} {pick_lbl}")
+    if ou_available:
+        out.append(f"大小（O/U）：{_verdict(ou_hit)} {ou_side}（{market.get('over_under')}）")
     if ah_res is not None:
         label, ok = ah_res
-        out.append(f"讓分（AH）（{label}）：{_verdict(ok)}")
-    if ou_available:
-        out.append(f"大小（O/U）（線{market.get('over_under')}）：{_verdict(ou_hit)}")
+        fav = home if str(label).startswith("主") else away
+        out.append(f"讓分（AH）：{_verdict(ok)} {fav}（{label}）")
 
-    # 3. 單場結論：overall = 各「類別」是否命中（比分視為 1 類：≥1 組中即算命中）÷ 可用類別數。
-    #    比分(5 組打包成 1 類) 與 3 個市場盤口難度不同，混為單一 overall 僅供概覽；
-    #    下方仍保留「比分命中 X/5」「市場命中 X/3」分層真值，避免誤讀。
+    # 3. 單場結論：overall = 各「類別」是否命中（比分為 1 類：5 組任一中即算命中）÷ 可用類別數。
     cats = []
     if score_available:
-        cats.append(score_hit >= 1)
+        cats.append(score_bin == 1)
     if pick:
         cats.append(hit is True)
-    if ah_res is not None:
-        cats.append(ah_res[1] is True)
     if ou_available:
         cats.append(ou_hit is True)
+    if ah_res is not None:
+        cats.append(ah_res[1] is True)
     o_total = len(cats)
     o_hit = sum(cats)
     o_pct = round(o_hit / o_total * 100) if o_total else 0
 
     out += [_DREAM_DIV, "📌 單場結論"]
     if o_total:
-        out.append(f"🎯命中：{o_hit}/{o_total} （{o_pct}%）")
+        out.append(f"🎯命中：{o_hit}/{o_total}（{o_pct}%）")
     if score_available:
-        out.append(f"比分命中：{score_hit}/{score_total}")
+        out.append(f"比分命中：{score_bin}/1（{score_bin * 100}%）")
     if m_total:
-        out.append(f"市場命中：{m_hit}/{m_total}")
+        out.append(f"盤口命中：{m_hit}/{m_total}（{m_pct}%）")
     return "\n".join(out)
 
 
