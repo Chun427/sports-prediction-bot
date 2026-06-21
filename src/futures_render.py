@@ -40,7 +40,7 @@ def render_json(data: dict | None) -> str:
 # ── 合併獎項呈現（render only：Rule 2，不排序/不判 N/A/不抓 API）────
 _MEDALS = ["🥇", "🥈", "🥉", "4️⃣", "5️⃣"]
 _DIV = "━━━━━━━━━━━━━━━━"
-_FOOTER = ["📡 數據來源：AI模型+真實數據+賠率", "⚠️ 請理性投注。"]
+_FOOTER = ["📡 數據來源：AI模型+真實數據+賠率", "⚠️ 請理性投注"]
 
 
 def render_awards(results: list | None, *, header: str | None = None) -> str:
