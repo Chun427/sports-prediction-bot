@@ -413,7 +413,7 @@ def render_weekly_report(report: dict) -> str:
         f"  🏀 {_sport('NBA')}",
         f"  ⚾ {_sport('MLB')}",
         "━━━━━━━━━━━━━━━━",
-        "⚠️ 數據分析，請理性投注。",
+        "⚠️ 數據分析，請理性投注",
     ]
     return "\n".join(out)
 
@@ -485,8 +485,8 @@ def render_pregame_lite(prediction: dict, header_kind: str = "final") -> str:
                     if isinstance(score.get("supremacy"), (int, float)) else "N/A")
 
     # 標題：依使用者新版 UI，兩者皆 🕐；early=12小時、final=40分鐘（純顯示，不改任何邏輯）
-    _title2 = ("🕐 量化預測模型（賽前 12小時 預測）" if header_kind == "early"
-               else f"🕐 量化預測模型（賽前 {PREGAME_WINDOW_MIN}分鐘 預測）")
+    _title2 = ("🕐 量化預測模型（賽前12小時預測）" if header_kind == "early"
+               else f"🕐 量化預測模型（賽前{PREGAME_WINDOW_MIN}分鐘預測）")
 
     # 勝率列：FIFA 三路（主勝／平手／客勝）；MLB/NBA 兩路（主勝／客勝），不顯示和局。
     # 依監督者指定順序＝主先（與標題/比分列的客先順序不同）；純顯示，不碰任何機率計算。
@@ -574,7 +574,7 @@ def render_pregame_lite(prediction: dict, header_kind: str = "final") -> str:
         f"⭐【備選】{hcap_pick}",
         _DREAM_DIV,
         "📡 數據來源：AI模型+真實數據+賠率",
-        "⚠️ 請理性投注。",
+        "⚠️ 請理性投注",
     ]
     return "\n".join(out)
 
