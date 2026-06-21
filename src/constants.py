@@ -20,6 +20,9 @@ SPORT_NBA = "NBA"
 SPORT_MLB = "MLB"
 SPORT_FIFA = "FIFA"
 SUPPORTED_SPORTS = (SPORT_NBA, SPORT_MLB, SPORT_FIFA)
+# 只有這些運動有「正確比分（Correct Score）」投注玩法 → 才顯示/驗證比分。
+# 台彩運彩：FIFA 有正確比分；MLB/NBA 無（僅獨贏/讓分/大小）→ 不顯示比分、不計 scoreline_hit。
+CORRECT_SCORE_SPORTS = (SPORT_FIFA,)
 
 # ── 賽事池抓取視野 (Phase 1 Rolling Pool) ────────────
 # 決策2：取消各運動差異化視野，NBA / MLB / FIFA 一律抓「未來 48 小時」賽事。
