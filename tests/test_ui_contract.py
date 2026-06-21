@@ -45,7 +45,7 @@ WEEKLY_ANCHORS = [
 
 def test_pregame_contract_order():
     pred = {
-        "sport": "MLB", "home": "Mariners", "away": "Tigers",
+        "sport": "FIFA", "home": "Mariners", "away": "Tigers",
         "start_time": "2026-06-07T01:11:00+08:00",
         "fair_prob": {"home": 0.5, "away": 0.5}, "best_odds": {"home": 1.8, "away": 2.1},
         "edge": {"home": -0.03, "away": 0.03},
