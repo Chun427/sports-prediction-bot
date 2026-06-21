@@ -6,7 +6,7 @@
 ![Python](https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white)
 ![Telegram](https://img.shields.io/badge/Telegram-Bot-26A5E4?logo=telegram&logoColor=white)
 
-> 狀態：**v3 stable baseline（Production / Observation Mode）**。核心 / 三推播 / 每日戰報 / 賽後驗證 / 漏推對帳 流程皆完成且運行。測試 **243 passed**。工程與維運細節見 [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md)。
+> 狀態：**v3 stable baseline（Production / Observation Mode）**。核心 / 三推播 / 每日戰報 / 賽後驗證 / 漏推對帳 流程皆完成且運行。測試 **244 passed**。工程與維運細節見 [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md)。
 > 支援：⚾ MLB · 🏀 NBA · ⚽ FIFA。
 
 -----
@@ -160,6 +160,8 @@ commit-back 狀態檔（[skip ci] update bot state）
 
 **核心設計：State + Idempotency + Full Scan**（非 Queue / Event Bus）。
 
+**推播可靠性（Never-Miss）**：六種推播（early / pregame / postgame / daily / awards / reconcile）全部 **success-gated**——送出成功才 `mark`，失敗不 mark、下一個 tick 自動重送至成功（partial failure 逐場隔離）。賽後驗證為 **event-driven**（賽果 `completed` 當下那個 tick 即推，**非固定 30 分鐘**）。漏推原因可由 obs log 診斷（`postgame.no_result` / `not_completed` / `verify_none` / `evict_stale`）；超過 recovery boundary 仍漏 → `push_reconcile` 發 admin 告警。不重複：`is_pushed` flags + concurrency 序列化。詳見 [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md)。
+
 -----
 
 ## 🔄 預測流程
@@ -241,7 +243,7 @@ V3 是執行層、已凍結；V4 在其上**加一層唯讀的資料回饋與觀
 
 ## 🧪 測試 & 部署
 
-- `pytest -q` → **243 passed**；CI 必須全綠才可 merge。
+- `pytest -q` → **244 passed**；CI 必須全綠才可 merge。
 - **Secrets**：`ODDS_API_KEY_1`(必)、`ODDS_API_KEY_2`、`TG_TOKEN`(必)、`TG_CHAT`(必)、`TG_ADMIN_CHAT`(選；設了才啟用漏推告警，未設則 no-op)；`bot.yml` 須 `DRY_RUN: "false"`（未設預設 true＝只 log）。
 - **Deployment status**：All overlay modules have been merged into the production branch. Refer to Git history for implementation details.
 
