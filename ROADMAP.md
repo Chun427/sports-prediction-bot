@@ -1,4 +1,4 @@
-# V4 ROADMAP — 規劃（先規劃，不急著寫）
+# ROADMAP — 回饋觀測層規劃（先規劃，不急著寫）
 
 > 原則：全部 **additive overlay**，讀 `data_manager.normalized_verified_view()`，**不碰 Core**（見 RELEASE_NOTES 凍結清單）。
 > 每階段都應：有資料才有意義（KPI 需每運動 ≥100 場）、無資料顯示 N/A、不捏造、附測試、CI 全綠。
@@ -7,7 +7,7 @@
 
 ## Phase 1 — 資料層 ✅ completed
 - `verified_enrich`（21 欄 truth layer）、`data_manager` 正規化、`normalized_verified_view()`。
-- 已上線，作為後續所有 V4 分析的單一資料來源。
+- 已上線，作為後續所有分析的單一資料來源。
 
 ## Phase 2 — Audit Engine（下一步）
 - 目標：基於 `normalized_verified_view()` 算 KPI baseline（命中率 / 報酬 / 樣本數），分運動。
