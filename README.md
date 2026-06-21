@@ -6,7 +6,7 @@
 ![Python](https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white)
 ![Telegram](https://img.shields.io/badge/Telegram-Bot-26A5E4?logo=telegram&logoColor=white)
 
-> 狀態：**v3 stable baseline（Production / Observation Mode）**。核心 / 三推播 / 每日戰報 / 賽後驗證 / 漏推對帳 流程皆完成且運行。測試 **244 passed**。工程與維運細節見 [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md)。
+> 狀態：**v3 stable baseline（Production / Observation Mode）**。核心 / 三推播 / 每日戰報 / 賽後驗證 / 漏推對帳 流程皆完成且運行。測試 **248 passed**。工程與維運細節見 [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md)。
 > 支援：⚾ MLB · 🏀 NBA · ⚽ FIFA。
 
 -----
@@ -243,7 +243,7 @@ V3 是執行層、已凍結；V4 在其上**加一層唯讀的資料回饋與觀
 
 ## 🧪 測試 & 部署
 
-- `pytest -q` → **244 passed**；CI 必須全綠才可 merge。
+- `pytest -q` → **248 passed**；CI 必須全綠才可 merge。
 - **Secrets**：`ODDS_API_KEY_1`(必)、`ODDS_API_KEY_2`、`TG_TOKEN`(必)、`TG_CHAT`(必)、`TG_ADMIN_CHAT`(選；設了才啟用漏推告警，未設則 no-op)；`bot.yml` 須 `DRY_RUN: "false"`（未設預設 true＝只 log）。
 - **Deployment status**：All overlay modules have been merged into the production branch. Refer to Git history for implementation details.
 
