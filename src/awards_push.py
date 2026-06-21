@@ -33,6 +33,10 @@ def run_awards_push(pusher, *, now=None, getter=None, capabilities=None, builder
     results = build_awards(capabilities, getter=getter)
 
     if not any(r.get("available") for r in results):
+        obs.warn("awards.skipped_all_na",                 # 全 N/A：彙總每能力 na_reason（上游已逐層 log）
+                 date=gid,
+                 detail=[{"capability": r.get("capability"), "na_reason": r.get("na_reason")}
+                         for r in results])
         dm.mark_pushed(gid, _STAGE)               # 全 N/A：無內容可送，標記避免每 tick 重抓 API
         return None
 
