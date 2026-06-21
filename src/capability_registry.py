@@ -24,10 +24,11 @@ class Capability:
 _REGISTRY: dict[str, Capability] = {
     # 已知存在的市場 key（runtime 仍會驗證有無回盤）
     "Champion":      Capability("Champion", "soccer_fifa_world_cup_winner", "odds_api_outrights", None),
-    # 候選 key：未經實測。validate_outright_key 會在 runtime gate；無盤 → 自動 N/A（不寫死、不捏造）
-    "TopGoalscorer": Capability("TopGoalscorer", "soccer_fifa_world_cup_top_goalscorer", "odds_api_outrights", None),
-    "GoldenBoot":    Capability("GoldenBoot", "soccer_fifa_world_cup_top_goalscorer", "odds_api_outrights", None),
-    "GoldenGlove":   Capability("GoldenGlove", "soccer_fifa_world_cup_best_goalkeeper", "odds_api_outrights", None),
+    # 官方證據（the-odds-api.com /sports 清單）：世足 outright 僅 soccer_fifa_world_cup_winner 一個 key。
+    # top_goalscorer / best_goalkeeper 在官方清單「不存在」→ 設 permanent_na（誠實 N/A、不空打無效 key、不捏造）。
+    "TopGoalscorer": Capability("TopGoalscorer", None, "odds_api_outrights", "The Odds API 無此 outright sport key（官方清單僅 soccer_fifa_world_cup_winner）"),
+    "GoldenBoot":    Capability("GoldenBoot", None, "odds_api_outrights", "The Odds API 無金靴 outright sport key（官方清單僅 soccer_fifa_world_cup_winner）"),
+    "GoldenGlove":   Capability("GoldenGlove", None, "odds_api_outrights", "The Odds API 無金手套 outright sport key（官方清單僅 soccer_fifa_world_cup_winner）"),
     # 待 API key（尚無候選 key）→ 無 key → N/A
     "GroupWinner":   Capability("GroupWinner", None, None, None),
     "Qualified":     Capability("Qualified", None, None, None),
