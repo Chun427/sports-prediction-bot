@@ -178,6 +178,8 @@ commit-back 狀態檔（[skip ci] update bot state）
 
 賽前兩推成功皆 `save_prediction` 落盤 → 賽後驗證不依賴 40m 窄窗命中。
 
+> ⚙️ 註：上述時間窗、刷新時點、過期門檻等**運行參數**皆定義於 `src/constants.py`（如 `EARLY_WINDOW_MIN` / `PREGAME_WINDOW_MIN` / `POSTGAME_WINDOW_MIN` / `REFRESH_HOURS_TW`），文件數值為當前預設、可依部署調整。**All values are runtime-config driven and may vary per deployment.**（測試數等 repo 事實不在此列。）
+
 -----
 
 ## 🧩 Overlay 層（addon，不碰核心）
