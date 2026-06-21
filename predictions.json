@@ -1988,5 +1988,114 @@
       "phase": "early_12h"
     },
     "pre_pushed_at": "2026-06-21T21:12:54+08:00"
+  },
+  "7f1c3f57ba34142cb47323252198021a": {
+    "prediction": {
+      "game_id": "7f1c3f57ba34142cb47323252198021a",
+      "sport": "MLB",
+      "home": "Arizona Diamondbacks",
+      "away": "Minnesota Twins",
+      "start_time": "2026-06-22T03:16:00+08:00",
+      "market": {
+        "asian_handicap": -1.5,
+        "over_under": 9.5,
+        "odds_source": "the-odds-api/consensus",
+        "timestamp": "2026-06-21T16:46:03.839730+00:00"
+      },
+      "bookmaker_count": 9,
+      "fair_prob": {
+        "home": 0.5509,
+        "away": 0.4491
+      },
+      "best_odds": {
+        "home": 1.77,
+        "away": 2.18
+      },
+      "edge": {
+        "home": -0.0249,
+        "away": -0.021
+      },
+      "best_pick": null,
+      "avg_overround": 0.038,
+      "model": "market_implied_v1",
+      "generated_at": "2026-06-22T00:46:03+08:00",
+      "model_score": {
+        "type": "poisson",
+        "sport": "MLB",
+        "lambda_home": 5.5,
+        "lambda_away": 4.0,
+        "expected_total": 9.5,
+        "supremacy": 1.5,
+        "outcome_probs": {
+          "home": 0.6248,
+          "draw": 0.1178,
+          "away": 0.2574
+        },
+        "top_scorelines": [
+          {
+            "home": 5,
+            "away": 3,
+            "prob": 0.0336
+          },
+          {
+            "home": 5,
+            "away": 4,
+            "prob": 0.0336
+          },
+          {
+            "home": 6,
+            "away": 3,
+            "prob": 0.0308
+          },
+          {
+            "home": 6,
+            "away": 4,
+            "prob": 0.0308
+          },
+          {
+            "home": 4,
+            "away": 3,
+            "prob": 0.0306
+          }
+        ]
+      },
+      "model_mc": {
+        "n": 20000,
+        "win_prob": {
+          "home": 0.627,
+          "draw": 0.1172,
+          "away": 0.2559
+        },
+        "top_scorelines": [
+          {
+            "home": 5,
+            "away": 3,
+            "prob": 0.0338
+          },
+          {
+            "home": 5,
+            "away": 4,
+            "prob": 0.0328
+          },
+          {
+            "home": 4,
+            "away": 3,
+            "prob": 0.0314
+          },
+          {
+            "home": 6,
+            "away": 3,
+            "prob": 0.0302
+          },
+          {
+            "home": 6,
+            "away": 4,
+            "prob": 0.0296
+          }
+        ]
+      },
+      "phase": "early_12h"
+    },
+    "pre_pushed_at": "2026-06-22T00:46:03+08:00"
   }
 }
