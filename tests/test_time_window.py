@@ -247,3 +247,35 @@ def test_tick_end_to_end(tmp_path, monkeypatch):
     pushed = sp.tick(BASE, fetcher, pusher)  # 12:00 刷新 → 抓到 g1 → 推播
     assert pushed == ["g1"]
     assert pusher.count == 1
+
+
+# ── 賽後驗證指數退避（v8.6）─────────────────────────
+def test_postgame_backoff_schedule_is_increasing():
+    # 額外累積延遲：第0次0、第1次+30、第2次+90、第3次+210，之後每次再+120
+    assert sp._postgame_backoff_extra_min(0) == 0
+    assert sp._postgame_backoff_extra_min(1) == 30
+    assert sp._postgame_backoff_extra_min(2) == 90
+    assert sp._postgame_backoff_extra_min(3) == 210
+    assert sp._postgame_backoff_extra_min(4) == 330
+    assert sp._postgame_backoff_extra_min(5) == 450
+
+
+def test_postgame_backoff_skips_until_threshold(tmp_path, monkeypatch):
+    monkeypatch.chdir(tmp_path)
+    start = BASE - timedelta(minutes=105)  # FIFA min_dur=100 → 第0次門檻達標
+    dm.save_prediction("g", {"sport": "FIFA", "home": "A", "away": "B",
+                             "start_time": start.isoformat()})
+    calls = []
+
+    def scores(sport, ids):
+        calls.append(list(ids))
+        return {}  # 一律未回賽果 → not completed
+
+    sp.run_postgame_verify(start + timedelta(minutes=105), scores, lambda m: True)  # 第0次→抓
+    assert calls == [["g"]]
+    assert dm.load_predictions()["g"]["post_attempts"] == 1
+    sp.run_postgame_verify(start + timedelta(minutes=115), scores, lambda m: True)  # 115<130→退避跳過
+    assert calls == [["g"]]
+    sp.run_postgame_verify(start + timedelta(minutes=135), scores, lambda m: True)  # >130→第1次→抓
+    assert calls == [["g"], ["g"]]
+    assert dm.load_predictions()["g"]["post_attempts"] == 2
