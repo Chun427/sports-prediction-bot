@@ -101,9 +101,11 @@ def ensure_pool(now: datetime, fetcher: Fetcher) -> list[dict]:
     updated_at 以「邏輯 tick 時間 now」落盤，確保同一刷新小時內僅刷一次
     （即使 */15 在 12:00/12:15/12:30/12:45 連續觸發）。
 
-    決策2：刷新失敗（如兩把 key 都不可用 → AllKeysUnavailable）時，不吞例外、
-    不沿用舊快取、不落盤，直接向上傳遞給 tick() 跳過本輪
-    （API 完全失效時續推可能用到過期資料，寧可跳過一次）。
+    決策2（修正）：刷新失敗（兩把 key 都不可用 → AllKeysUnavailable）時，
+    若本地有可用快取 → 退回沿用快取續推（早盤/賽前僅需已快取賠率，
+    刷新為一天 4 次，快取至多數小時、用於 12 小時外的早盤完全可接受），
+    不再跳過整輪、以免把「已快取、待推」的賽事一起漏掉；
+    僅在完全無快取（冷啟動）時才向上傳遞給 tick() 跳過本輪。
     """
     pool = dm.load_pool()
     cached = pool.get("games", [])
@@ -121,7 +123,17 @@ def ensure_pool(now: datetime, fetcher: Fetcher) -> list[dict]:
 
     if slot_due or stale_due:
         reason = "slot" if slot_due else "stale"
-        games = fetcher(POOL_FETCH_HOURS_AHEAD)  # 失敗則向上傳遞（不在此吞）
+        try:
+            games = fetcher(POOL_FETCH_HOURS_AHEAD)
+        except AllKeysUnavailable as exc:
+            # 永久修正（根因）：刷新失敗（金鑰全不可用）時，若有可用快取 → 退回快取續推，
+            # 不再跳過整個 tick；否則會連已快取、待推的賽事（如 Norway/Senegal 早盤）一起漏掉。
+            # 僅在完全無快取（冷啟動）時才向上傳遞跳過。
+            if cached:
+                obs.warn("pool.refresh_failed_use_cache", err=str(exc),
+                         count=len(cached), age_hours=age_h, reason=reason)
+                return cached
+            raise
         stamp = _parse_dt(now).astimezone(TW_TZ).isoformat(timespec="seconds")
         dm.save_pool(games, updated_at=stamp)
         obs.info("pool.refreshed", count=len(games), hours_ahead=POOL_FETCH_HOURS_AHEAD,
@@ -297,6 +309,11 @@ def run_early_push(
 
 
 # ── 賽後驗證（C-4，與 pre 路徑獨立 fail-safe）────────
+# 各運動「預估最早完賽時間」（分鐘）：開賽後未達此時長前不抓賽果（賽中 completed 不可能為真）。
+# 保守取偏短值，避免延誤抓到提早結束的賽果；達此時間後才每 tick 輪詢直到完賽。
+_POSTGAME_MIN_DURATION_MIN = {"MLB": 150, "NBA": 130, "FIFA": 100}
+
+
 def run_postgame_verify(now: datetime, scores_fetcher: ScoresFetcher,
                         post_pusher: PostPusher, verifier=None) -> list[str]:
     """
@@ -320,11 +337,16 @@ def run_postgame_verify(now: datetime, scores_fetcher: ScoresFetcher,
             start = None
         if start is not None and start > now:
             continue  # 尚未開賽 → 不抓
+        sport = pred.get("sport")
+        # 配額節流：未到「預估最早完賽時間」前不抓賽果（賽中 completed 不可能為真 → 每 tick 輪詢純浪費 Odds API 配額）。
+        _min_dur = _POSTGAME_MIN_DURATION_MIN.get(str(sport).upper(), 120)
+        if start is not None and now < start + timedelta(minutes=_min_dur):
+            obs.info("postgame.too_early_skip_fetch", game_id=gid, sport=sport)
+            continue
         if start is not None and start < stale_cutoff and not dm.is_pushed(gid, "post"):
             dm.remove_prediction(gid)  # TD11 過期驅逐
             obs.warn("postgame.evict_stale", game_id=gid)
             continue
-        sport = pred.get("sport")
         if sport:
             by_sport.setdefault(sport, []).append(gid)
 
