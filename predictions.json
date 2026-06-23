@@ -107,7 +107,7 @@
       "phase": "pre_match_40m"
     },
     "pre_pushed_at": "2026-06-23T07:05:01+08:00",
-    "post_attempts": 4
+    "post_attempts": 5
   },
   "8ba93d190f1f934e33862a97a6353a6e": {
     "prediction": {
@@ -224,5 +224,121 @@
       "phase": "early_12h"
     },
     "pre_pushed_at": "2026-06-23T13:15:20+08:00"
+  },
+  "2f49dd8deae3079dc4eb2d634d18a99c": {
+    "prediction": {
+      "game_id": "2f49dd8deae3079dc4eb2d634d18a99c",
+      "sport": "FIFA",
+      "home": "England",
+      "away": "Ghana",
+      "start_time": "2026-06-24T04:00:00+08:00",
+      "market": {
+        "asian_handicap": -2.0,
+        "over_under": 2.5,
+        "odds_source": "the-odds-api/consensus",
+        "timestamp": "2026-06-23T08:06:29.447156+00:00"
+      },
+      "bookmaker_count": 9,
+      "fair_prob": {
+        "away": 0.0673,
+        "home": 0.7909,
+        "draw": 0.1418
+      },
+      "best_odds": {
+        "home": 1.22,
+        "away": 16.0,
+        "draw": 7.0
+      },
+      "edge": {
+        "away": 0.0763,
+        "home": -0.0351,
+        "draw": -0.0073
+      },
+      "best_pick": {
+        "outcome": "away",
+        "edge": 0.0763,
+        "odds": 16.0
+      },
+      "avg_overround": 0.0489,
+      "model": "market_implied_v1",
+      "generated_at": "2026-06-23T16:06:28+08:00",
+      "model_score": {
+        "type": "poisson",
+        "sport": "FIFA",
+        "lambda_home": 2.25,
+        "lambda_away": 0.25,
+        "expected_total": 2.5,
+        "supremacy": 2.0,
+        "outcome_probs": {
+          "home": 0.8346,
+          "draw": 0.1352,
+          "away": 0.0302
+        },
+        "top_scorelines": [
+          {
+            "home": 2,
+            "away": 0,
+            "prob": 0.2078
+          },
+          {
+            "home": 1,
+            "away": 0,
+            "prob": 0.1847
+          },
+          {
+            "home": 3,
+            "away": 0,
+            "prob": 0.1558
+          },
+          {
+            "home": 4,
+            "away": 0,
+            "prob": 0.0877
+          },
+          {
+            "home": 0,
+            "away": 0,
+            "prob": 0.0821
+          }
+        ]
+      },
+      "model_mc": {
+        "n": 20000,
+        "win_prob": {
+          "home": 0.8347,
+          "draw": 0.1358,
+          "away": 0.0295
+        },
+        "top_scorelines": [
+          {
+            "home": 2,
+            "away": 0,
+            "prob": 0.2092
+          },
+          {
+            "home": 1,
+            "away": 0,
+            "prob": 0.1812
+          },
+          {
+            "home": 3,
+            "away": 0,
+            "prob": 0.1557
+          },
+          {
+            "home": 4,
+            "away": 0,
+            "prob": 0.0853
+          },
+          {
+            "home": 0,
+            "away": 0,
+            "prob": 0.0828
+          }
+        ]
+      },
+      "phase": "early_12h"
+    },
+    "pre_pushed_at": "2026-06-23T16:06:29+08:00"
   }
 }
