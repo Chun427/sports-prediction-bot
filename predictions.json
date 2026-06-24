@@ -107,117 +107,7 @@
       "phase": "pre_match_40m"
     },
     "pre_pushed_at": "2026-06-23T07:05:01+08:00",
-    "post_attempts": 14
-  },
-  "ecaca218ecf0785d923b1039900110d0": {
-    "prediction": {
-      "game_id": "ecaca218ecf0785d923b1039900110d0",
-      "sport": "MLB",
-      "home": "San Diego Padres",
-      "away": "Atlanta Braves",
-      "start_time": "2026-06-24T09:40:00+08:00",
-      "market": {
-        "asian_handicap": 1.5,
-        "over_under": 8.0,
-        "odds_source": "the-odds-api/consensus",
-        "timestamp": "2026-06-23T14:00:35.924870+00:00"
-      },
-      "bookmaker_count": 7,
-      "fair_prob": {
-        "home": 0.4909,
-        "away": 0.5091
-      },
-      "best_odds": {
-        "home": 2.02,
-        "away": 1.91
-      },
-      "edge": {
-        "home": -0.0083,
-        "away": -0.0277
-      },
-      "best_pick": null,
-      "avg_overround": 0.0434,
-      "model": "market_implied_v1",
-      "generated_at": "2026-06-23T22:00:35+08:00",
-      "model_score": {
-        "type": "poisson",
-        "sport": "MLB",
-        "lambda_home": 3.25,
-        "lambda_away": 4.75,
-        "expected_total": 8.0,
-        "supremacy": -1.5,
-        "outcome_probs": {
-          "home": 0.2376,
-          "draw": 0.1258,
-          "away": 0.6366
-        },
-        "top_scorelines": [
-          {
-            "home": 3,
-            "away": 4,
-            "prob": 0.0408
-          },
-          {
-            "home": 3,
-            "away": 5,
-            "prob": 0.0387
-          },
-          {
-            "home": 2,
-            "away": 4,
-            "prob": 0.0376
-          },
-          {
-            "home": 2,
-            "away": 5,
-            "prob": 0.0357
-          },
-          {
-            "home": 3,
-            "away": 3,
-            "prob": 0.0343
-          }
-        ]
-      },
-      "model_mc": {
-        "n": 20000,
-        "win_prob": {
-          "home": 0.2366,
-          "draw": 0.124,
-          "away": 0.6395
-        },
-        "top_scorelines": [
-          {
-            "home": 3,
-            "away": 4,
-            "prob": 0.0423
-          },
-          {
-            "home": 3,
-            "away": 5,
-            "prob": 0.0377
-          },
-          {
-            "home": 2,
-            "away": 4,
-            "prob": 0.0374
-          },
-          {
-            "home": 2,
-            "away": 5,
-            "prob": 0.036
-          },
-          {
-            "home": 3,
-            "away": 3,
-            "prob": 0.0332
-          }
-        ]
-      },
-      "phase": "early_12h"
-    },
-    "pre_pushed_at": "2026-06-23T22:00:35+08:00",
-    "post_attempts": 1
+    "post_attempts": 15
   },
   "6493d60c5df2964d50009d111534865e": {
     "prediction": {
@@ -327,5 +217,451 @@
       "phase": "early_12h"
     },
     "pre_pushed_at": "2026-06-24T12:36:36+08:00"
+  },
+  "1f144a9853388d9cfff4f46b16fb544f": {
+    "prediction": {
+      "game_id": "1f144a9853388d9cfff4f46b16fb544f",
+      "sport": "MLB",
+      "home": "Chicago White Sox",
+      "away": "Cleveland Guardians",
+      "start_time": "2026-06-25T02:11:00+08:00",
+      "market": {
+        "asian_handicap": 1.5,
+        "over_under": 8.5,
+        "odds_source": "the-odds-api/consensus",
+        "timestamp": "2026-06-24T08:02:10.414161+00:00"
+      },
+      "bookmaker_count": 9,
+      "fair_prob": {
+        "away": 0.5263,
+        "home": 0.4737
+      },
+      "best_odds": {
+        "home": 2.08,
+        "away": 1.85
+      },
+      "edge": {
+        "away": -0.0264,
+        "home": -0.0146
+      },
+      "best_pick": null,
+      "avg_overround": 0.0372,
+      "model": "market_implied_v1",
+      "generated_at": "2026-06-24T16:02:09+08:00",
+      "model_score": {
+        "type": "poisson",
+        "sport": "MLB",
+        "lambda_home": 3.5,
+        "lambda_away": 5.0,
+        "expected_total": 8.5,
+        "supremacy": -1.5,
+        "outcome_probs": {
+          "home": 0.2446,
+          "draw": 0.1229,
+          "away": 0.6325
+        },
+        "top_scorelines": [
+          {
+            "home": 3,
+            "away": 4,
+            "prob": 0.0379
+          },
+          {
+            "home": 3,
+            "away": 5,
+            "prob": 0.0379
+          },
+          {
+            "home": 4,
+            "away": 4,
+            "prob": 0.0332
+          },
+          {
+            "home": 4,
+            "away": 5,
+            "prob": 0.0332
+          },
+          {
+            "home": 2,
+            "away": 4,
+            "prob": 0.0325
+          }
+        ]
+      },
+      "model_mc": {
+        "n": 20000,
+        "win_prob": {
+          "home": 0.2461,
+          "draw": 0.128,
+          "away": 0.6259
+        },
+        "top_scorelines": [
+          {
+            "home": 3,
+            "away": 5,
+            "prob": 0.0371
+          },
+          {
+            "home": 3,
+            "away": 4,
+            "prob": 0.0356
+          },
+          {
+            "home": 4,
+            "away": 4,
+            "prob": 0.0355
+          },
+          {
+            "home": 2,
+            "away": 5,
+            "prob": 0.0328
+          },
+          {
+            "home": 4,
+            "away": 5,
+            "prob": 0.0321
+          }
+        ]
+      },
+      "phase": "early_12h"
+    },
+    "pre_pushed_at": "2026-06-24T16:02:10+08:00"
+  },
+  "74a9d15be6f7e75b97c7d220010253bd": {
+    "prediction": {
+      "game_id": "74a9d15be6f7e75b97c7d220010253bd",
+      "sport": "MLB",
+      "home": "Colorado Rockies",
+      "away": "Boston Red Sox",
+      "start_time": "2026-06-25T03:11:00+08:00",
+      "market": {
+        "asian_handicap": 1.5,
+        "over_under": 11.0,
+        "odds_source": "the-odds-api/consensus",
+        "timestamp": "2026-06-24T08:02:11.171381+00:00"
+      },
+      "bookmaker_count": 9,
+      "fair_prob": {
+        "away": 0.6045,
+        "home": 0.3955
+      },
+      "best_odds": {
+        "home": 2.49,
+        "away": 1.61
+      },
+      "edge": {
+        "away": -0.0268,
+        "home": -0.0152
+      },
+      "best_pick": null,
+      "avg_overround": 0.0399,
+      "model": "market_implied_v1",
+      "generated_at": "2026-06-24T16:02:10+08:00",
+      "model_score": {
+        "type": "poisson",
+        "sport": "MLB",
+        "lambda_home": 4.75,
+        "lambda_away": 6.25,
+        "expected_total": 11.0,
+        "supremacy": -1.5,
+        "outcome_probs": {
+          "home": 0.2742,
+          "draw": 0.1119,
+          "away": 0.6139
+        },
+        "top_scorelines": [
+          {
+            "home": 4,
+            "away": 6,
+            "prob": 0.0297
+          },
+          {
+            "home": 4,
+            "away": 5,
+            "prob": 0.0285
+          },
+          {
+            "home": 5,
+            "away": 6,
+            "prob": 0.0282
+          },
+          {
+            "home": 5,
+            "away": 5,
+            "prob": 0.0271
+          },
+          {
+            "home": 4,
+            "away": 7,
+            "prob": 0.0265
+          }
+        ]
+      },
+      "model_mc": {
+        "n": 20000,
+        "win_prob": {
+          "home": 0.2722,
+          "draw": 0.1134,
+          "away": 0.6144
+        },
+        "top_scorelines": [
+          {
+            "home": 4,
+            "away": 6,
+            "prob": 0.0291
+          },
+          {
+            "home": 4,
+            "away": 5,
+            "prob": 0.0281
+          },
+          {
+            "home": 5,
+            "away": 7,
+            "prob": 0.0273
+          },
+          {
+            "home": 4,
+            "away": 7,
+            "prob": 0.0266
+          },
+          {
+            "home": 5,
+            "away": 6,
+            "prob": 0.0265
+          }
+        ]
+      },
+      "phase": "early_12h"
+    },
+    "pre_pushed_at": "2026-06-24T16:02:11+08:00"
+  },
+  "512ac18beb5aa936a59f7ea3e497ada2": {
+    "prediction": {
+      "game_id": "512ac18beb5aa936a59f7ea3e497ada2",
+      "sport": "FIFA",
+      "home": "Bosnia & Herzegovina",
+      "away": "Qatar",
+      "start_time": "2026-06-25T03:00:00+08:00",
+      "market": {
+        "asian_handicap": -1.25,
+        "over_under": 3.0,
+        "odds_source": "the-odds-api/consensus",
+        "timestamp": "2026-06-24T08:02:11.734399+00:00"
+      },
+      "bookmaker_count": 9,
+      "fair_prob": {
+        "away": 0.1315,
+        "home": 0.6831,
+        "draw": 0.1855
+      },
+      "best_odds": {
+        "home": 1.42,
+        "away": 8.0,
+        "draw": 5.3
+      },
+      "edge": {
+        "away": 0.0517,
+        "home": -0.03,
+        "draw": -0.0171
+      },
+      "best_pick": {
+        "outcome": "away",
+        "edge": 0.0517,
+        "odds": 8.0
+      },
+      "avg_overround": 0.0476,
+      "model": "market_implied_v1",
+      "generated_at": "2026-06-24T16:02:11+08:00",
+      "model_score": {
+        "type": "poisson",
+        "sport": "FIFA",
+        "lambda_home": 2.125,
+        "lambda_away": 0.875,
+        "expected_total": 3.0,
+        "supremacy": 1.25,
+        "outcome_probs": {
+          "home": 0.6611,
+          "draw": 0.1954,
+          "away": 0.1435
+        },
+        "top_scorelines": [
+          {
+            "home": 2,
+            "away": 0,
+            "prob": 0.1124
+          },
+          {
+            "home": 1,
+            "away": 0,
+            "prob": 0.1058
+          },
+          {
+            "home": 2,
+            "away": 1,
+            "prob": 0.0984
+          },
+          {
+            "home": 1,
+            "away": 1,
+            "prob": 0.0926
+          },
+          {
+            "home": 3,
+            "away": 0,
+            "prob": 0.0796
+          }
+        ]
+      },
+      "model_mc": {
+        "n": 20000,
+        "win_prob": {
+          "home": 0.6582,
+          "draw": 0.1968,
+          "away": 0.1451
+        },
+        "top_scorelines": [
+          {
+            "home": 2,
+            "away": 0,
+            "prob": 0.1115
+          },
+          {
+            "home": 1,
+            "away": 0,
+            "prob": 0.1051
+          },
+          {
+            "home": 2,
+            "away": 1,
+            "prob": 0.0996
+          },
+          {
+            "home": 1,
+            "away": 1,
+            "prob": 0.0925
+          },
+          {
+            "home": 3,
+            "away": 0,
+            "prob": 0.0799
+          }
+        ]
+      },
+      "phase": "early_12h"
+    },
+    "pre_pushed_at": "2026-06-24T16:02:11+08:00"
+  },
+  "c9ef5822ee64fd5275f7c73251bb56c7": {
+    "prediction": {
+      "game_id": "c9ef5822ee64fd5275f7c73251bb56c7",
+      "sport": "FIFA",
+      "home": "Switzerland",
+      "away": "Canada",
+      "start_time": "2026-06-25T03:00:00+08:00",
+      "market": {
+        "asian_handicap": -0.5,
+        "over_under": 2.5,
+        "odds_source": "the-odds-api/consensus",
+        "timestamp": "2026-06-24T08:02:12.306349+00:00"
+      },
+      "bookmaker_count": 9,
+      "fair_prob": {
+        "away": 0.2844,
+        "home": 0.4066,
+        "draw": 0.309
+      },
+      "best_odds": {
+        "home": 2.4,
+        "away": 3.42,
+        "draw": 3.12
+      },
+      "edge": {
+        "away": -0.0275,
+        "home": -0.0242,
+        "draw": -0.0358
+      },
+      "best_pick": null,
+      "avg_overround": 0.0494,
+      "model": "market_implied_v1",
+      "generated_at": "2026-06-24T16:02:11+08:00",
+      "model_score": {
+        "type": "poisson",
+        "sport": "FIFA",
+        "lambda_home": 1.5,
+        "lambda_away": 1.0,
+        "expected_total": 2.5,
+        "supremacy": 0.5,
+        "outcome_probs": {
+          "home": 0.4879,
+          "draw": 0.2598,
+          "away": 0.2522
+        },
+        "top_scorelines": [
+          {
+            "home": 1,
+            "away": 0,
+            "prob": 0.1231
+          },
+          {
+            "home": 1,
+            "away": 1,
+            "prob": 0.1231
+          },
+          {
+            "home": 2,
+            "away": 0,
+            "prob": 0.0923
+          },
+          {
+            "home": 2,
+            "away": 1,
+            "prob": 0.0923
+          },
+          {
+            "home": 0,
+            "away": 0,
+            "prob": 0.0821
+          }
+        ]
+      },
+      "model_mc": {
+        "n": 20000,
+        "win_prob": {
+          "home": 0.4844,
+          "draw": 0.2591,
+          "away": 0.2564
+        },
+        "top_scorelines": [
+          {
+            "home": 1,
+            "away": 1,
+            "prob": 0.1246
+          },
+          {
+            "home": 1,
+            "away": 0,
+            "prob": 0.1235
+          },
+          {
+            "home": 2,
+            "away": 0,
+            "prob": 0.0918
+          },
+          {
+            "home": 2,
+            "away": 1,
+            "prob": 0.0881
+          },
+          {
+            "home": 0,
+            "away": 0,
+            "prob": 0.0824
+          }
+        ]
+      },
+      "phase": "early_12h"
+    },
+    "pre_pushed_at": "2026-06-24T16:02:12+08:00"
   }
 }
