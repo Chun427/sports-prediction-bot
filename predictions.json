@@ -119,25 +119,25 @@
         "asian_handicap": 1.5,
         "over_under": 8.5,
         "odds_source": "the-odds-api/consensus",
-        "timestamp": "2026-06-24T08:02:10.414161+00:00"
+        "timestamp": "2026-06-24T17:45:24.449609+00:00"
       },
       "bookmaker_count": 9,
       "fair_prob": {
-        "away": 0.5263,
-        "home": 0.4737
+        "home": 0.4825,
+        "away": 0.5175
       },
       "best_odds": {
-        "home": 2.08,
-        "away": 1.85
+        "home": 2.01,
+        "away": 1.9
       },
       "edge": {
-        "away": -0.0264,
-        "home": -0.0146
+        "home": -0.0301,
+        "away": -0.0168
       },
       "best_pick": null,
-      "avg_overround": 0.0372,
+      "avg_overround": 0.0393,
       "model": "market_implied_v1",
-      "generated_at": "2026-06-24T16:02:09+08:00",
+      "generated_at": "2026-06-25T01:45:22+08:00",
       "model_score": {
         "type": "poisson",
         "sport": "MLB",
@@ -181,41 +181,41 @@
       "model_mc": {
         "n": 20000,
         "win_prob": {
-          "home": 0.2461,
-          "draw": 0.128,
-          "away": 0.6259
+          "home": 0.2457,
+          "draw": 0.1232,
+          "away": 0.631
         },
         "top_scorelines": [
           {
             "home": 3,
-            "away": 5,
-            "prob": 0.0371
+            "away": 4,
+            "prob": 0.0404
           },
           {
             "home": 3,
-            "away": 4,
-            "prob": 0.0356
+            "away": 5,
+            "prob": 0.0398
           },
           {
-            "home": 4,
+            "home": 2,
             "away": 4,
-            "prob": 0.0355
+            "prob": 0.0333
           },
           {
             "home": 2,
             "away": 5,
-            "prob": 0.0328
+            "prob": 0.0323
           },
           {
             "home": 4,
-            "away": 5,
+            "away": 4,
             "prob": 0.0321
           }
         ]
       },
-      "phase": "early_12h"
+      "phase": "pre_match_40m"
     },
-    "pre_pushed_at": "2026-06-24T16:02:10+08:00"
+    "pre_pushed_at": "2026-06-25T01:45:24+08:00"
   },
   "74a9d15be6f7e75b97c7d220010253bd": {
     "prediction": {
