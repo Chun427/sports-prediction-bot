@@ -107,7 +107,7 @@
       "phase": "pre_match_40m"
     },
     "pre_pushed_at": "2026-06-26T07:38:09+08:00",
-    "post_attempts": 6
+    "post_attempts": 7
   },
   "b86b4d60f773e9e3c46c00e9a6496e79": {
     "prediction": {
@@ -2094,5 +2094,114 @@
       "phase": "early_12h"
     },
     "pre_pushed_at": "2026-06-26T21:56:05+08:00"
+  },
+  "ffc9895ee406538679c2fdd5097dbbf6": {
+    "prediction": {
+      "game_id": "ffc9895ee406538679c2fdd5097dbbf6",
+      "sport": "MLB",
+      "home": "San Francisco Giants",
+      "away": "Atlanta Braves",
+      "start_time": "2026-06-27T10:16:00+08:00",
+      "market": {
+        "asian_handicap": 1.5,
+        "over_under": 7.5,
+        "odds_source": "the-odds-api/consensus",
+        "timestamp": "2026-06-26T14:43:01.952559+00:00"
+      },
+      "bookmaker_count": 6,
+      "fair_prob": {
+        "away": 0.5217,
+        "home": 0.4783
+      },
+      "best_odds": {
+        "home": 2.05,
+        "away": 1.87
+      },
+      "edge": {
+        "away": -0.0245,
+        "home": -0.0194
+      },
+      "best_pick": null,
+      "avg_overround": 0.042,
+      "model": "market_implied_v1",
+      "generated_at": "2026-06-26T22:43:01+08:00",
+      "model_score": {
+        "type": "poisson",
+        "sport": "MLB",
+        "lambda_home": 3.0,
+        "lambda_away": 4.5,
+        "expected_total": 7.5,
+        "supremacy": -1.5,
+        "outcome_probs": {
+          "home": 0.23,
+          "draw": 0.1289,
+          "away": 0.641
+        },
+        "top_scorelines": [
+          {
+            "home": 2,
+            "away": 4,
+            "prob": 0.0426
+          },
+          {
+            "home": 3,
+            "away": 4,
+            "prob": 0.0426
+          },
+          {
+            "home": 2,
+            "away": 5,
+            "prob": 0.0383
+          },
+          {
+            "home": 3,
+            "away": 5,
+            "prob": 0.0383
+          },
+          {
+            "home": 2,
+            "away": 3,
+            "prob": 0.0378
+          }
+        ]
+      },
+      "model_mc": {
+        "n": 20000,
+        "win_prob": {
+          "home": 0.2286,
+          "draw": 0.13,
+          "away": 0.6414
+        },
+        "top_scorelines": [
+          {
+            "home": 2,
+            "away": 4,
+            "prob": 0.0436
+          },
+          {
+            "home": 3,
+            "away": 4,
+            "prob": 0.0426
+          },
+          {
+            "home": 3,
+            "away": 5,
+            "prob": 0.04
+          },
+          {
+            "home": 2,
+            "away": 3,
+            "prob": 0.0395
+          },
+          {
+            "home": 3,
+            "away": 3,
+            "prob": 0.0382
+          }
+        ]
+      },
+      "phase": "early_12h"
+    },
+    "pre_pushed_at": "2026-06-26T22:43:01+08:00"
   }
 }
