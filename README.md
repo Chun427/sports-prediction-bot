@@ -1,8 +1,11 @@
 # 🎯全自動體育賽事預測系統 sports-prediction-bot
+
 全自動體育賽事預測機器人，透過 GitHub Actions 定期（每 5 分鐘）自動執行：建立賽事池 → 統計／機率模型預測（去Vig + Poisson/常態 + 蒙特卡羅）→ 推播 Telegram → 賽後逐場驗證命中 → 累積賽後驗證紀錄（verified_history）。
+
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-自動排程-2088FF?logo=github-actions&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white)
 ![Telegram](https://img.shields.io/badge/Telegram-Bot-26A5E4?logo=telegram&logoColor=white)
+
 > 狀態：**v0 stable baseline（Production / Observation Mode）**。核心 / 三推播 / 每日戰報 / 賽後驗證 / 漏推對帳 流程皆完成且運行。測試 **251 passed**。賽前/早盤推播以快取為基礎驅動、Pool 刷新失敗安全退回快取、賽後驗證指數退避。工程與維運細節見 [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md)、[`docs/release_notes.md`](docs/release_notes.md)。
 > 支援：⚾ MLB · 🏀 NBA · ⚽ FIFA。
 > ⚙️ **部署可靠性建議（觸發層）**：GitHub Actions 的 `schedule` 為 best-effort，排程可能延遲或被丟棄。本專案 `bot.yml` 為 single-tick（每 5 分鐘一次乾淨執行）；賽前/早盤推播以**快取驅動 + 刷新失敗退回快取**為基礎，即使某次漏跑或金鑰暫時耗盡，下一個 tick 仍能用快取補推。若要更高送達保證，**可再加一個外部排程器**每 5 分鐘觸發 `workflow_dispatch`。Recommended: optionally add an external scheduler (cron-job.org or Cloudflare Worker) to trigger `workflow_dispatch` every 5 minutes. 推播本身為 idempotent + success-gated（重送不重複、送失敗才重試）。
