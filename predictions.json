@@ -106,7 +106,8 @@
       },
       "phase": "early_12h"
     },
-    "pre_pushed_at": "2026-06-28T16:19:32+08:00"
+    "pre_pushed_at": "2026-06-28T16:19:32+08:00",
+    "post_attempts": 1
   },
   "96653b1a620b1d84fb7516df76775020": {
     "prediction": {
@@ -215,7 +216,8 @@
       },
       "phase": "early_12h"
     },
-    "pre_pushed_at": "2026-06-28T16:19:33+08:00"
+    "pre_pushed_at": "2026-06-28T16:19:33+08:00",
+    "post_attempts": 1
   },
   "7da2c68d4bb6ced0bd38a8226817c0de": {
     "prediction": {
@@ -324,116 +326,8 @@
       },
       "phase": "early_12h"
     },
-    "pre_pushed_at": "2026-06-28T16:19:33+08:00"
-  },
-  "a5bdd330fe41a8697bc2e1d33bfbf7c0": {
-    "prediction": {
-      "game_id": "a5bdd330fe41a8697bc2e1d33bfbf7c0",
-      "sport": "MLB",
-      "home": "Tampa Bay Rays",
-      "away": "Arizona Diamondbacks",
-      "start_time": "2026-06-29T01:41:00+08:00",
-      "market": {
-        "asian_handicap": -1.5,
-        "over_under": 7.5,
-        "odds_source": "the-odds-api/consensus",
-        "timestamp": "2026-06-28T08:19:34.261197+00:00"
-      },
-      "bookmaker_count": 9,
-      "fair_prob": {
-        "away": 0.3746,
-        "home": 0.6254
-      },
-      "best_odds": {
-        "home": 1.56,
-        "away": 2.62
-      },
-      "edge": {
-        "away": -0.0185,
-        "home": -0.0244
-      },
-      "best_pick": null,
-      "avg_overround": 0.0384,
-      "model": "market_implied_v1",
-      "generated_at": "2026-06-28T16:19:33+08:00",
-      "model_score": {
-        "type": "poisson",
-        "sport": "MLB",
-        "lambda_home": 4.5,
-        "lambda_away": 3.0,
-        "expected_total": 7.5,
-        "supremacy": 1.5,
-        "outcome_probs": {
-          "home": 0.641,
-          "draw": 0.1289,
-          "away": 0.23
-        },
-        "top_scorelines": [
-          {
-            "home": 4,
-            "away": 2,
-            "prob": 0.0426
-          },
-          {
-            "home": 4,
-            "away": 3,
-            "prob": 0.0426
-          },
-          {
-            "home": 5,
-            "away": 2,
-            "prob": 0.0383
-          },
-          {
-            "home": 5,
-            "away": 3,
-            "prob": 0.0383
-          },
-          {
-            "home": 3,
-            "away": 2,
-            "prob": 0.0378
-          }
-        ]
-      },
-      "model_mc": {
-        "n": 20000,
-        "win_prob": {
-          "home": 0.6498,
-          "draw": 0.124,
-          "away": 0.2261
-        },
-        "top_scorelines": [
-          {
-            "home": 4,
-            "away": 2,
-            "prob": 0.0445
-          },
-          {
-            "home": 4,
-            "away": 3,
-            "prob": 0.0423
-          },
-          {
-            "home": 5,
-            "away": 2,
-            "prob": 0.0384
-          },
-          {
-            "home": 3,
-            "away": 2,
-            "prob": 0.0384
-          },
-          {
-            "home": 5,
-            "away": 3,
-            "prob": 0.0382
-          }
-        ]
-      },
-      "phase": "early_12h"
-    },
-    "pre_pushed_at": "2026-06-28T16:19:34+08:00"
+    "pre_pushed_at": "2026-06-28T16:19:33+08:00",
+    "post_attempts": 1
   },
   "640afea5c10f2033d54c2b11f9e2a745": {
     "prediction": {
@@ -542,7 +436,8 @@
       },
       "phase": "early_12h"
     },
-    "pre_pushed_at": "2026-06-28T16:19:34+08:00"
+    "pre_pushed_at": "2026-06-28T16:19:34+08:00",
+    "post_attempts": 1
   },
   "6cb0db3997eb4e05f4e7575bed2ed448": {
     "prediction": {
@@ -651,7 +546,8 @@
       },
       "phase": "early_12h"
     },
-    "pre_pushed_at": "2026-06-28T16:19:35+08:00"
+    "pre_pushed_at": "2026-06-28T16:19:35+08:00",
+    "post_attempts": 1
   },
   "f156eda99a47c2d2e05bc9c5061b9fd1": {
     "prediction": {
@@ -760,7 +656,8 @@
       },
       "phase": "early_12h"
     },
-    "pre_pushed_at": "2026-06-28T16:19:35+08:00"
+    "pre_pushed_at": "2026-06-28T16:19:35+08:00",
+    "post_attempts": 1
   },
   "9b4d594f5f7a6f6897b17090857664fb": {
     "prediction": {
