@@ -1,113 +1,4 @@
 {
-  "2bbaa286b732c0af8947d273e164f15e": {
-    "prediction": {
-      "game_id": "2bbaa286b732c0af8947d273e164f15e",
-      "sport": "MLB",
-      "home": "Milwaukee Brewers",
-      "away": "Cincinnati Reds",
-      "start_time": "2026-07-03T02:11:00+08:00",
-      "market": {
-        "asian_handicap": -1.5,
-        "over_under": 6.5,
-        "odds_source": "the-odds-api/consensus",
-        "timestamp": "2026-07-02T07:53:40.758616+00:00"
-      },
-      "bookmaker_count": 9,
-      "fair_prob": {
-        "away": 0.3646,
-        "home": 0.6354
-      },
-      "best_odds": {
-        "home": 1.53,
-        "away": 2.71
-      },
-      "edge": {
-        "away": -0.0118,
-        "home": -0.0279
-      },
-      "best_pick": null,
-      "avg_overround": 0.0386,
-      "model": "market_implied_v1",
-      "generated_at": "2026-07-02T15:53:40+08:00",
-      "model_score": {
-        "type": "poisson",
-        "sport": "MLB",
-        "lambda_home": 4.0,
-        "lambda_away": 2.5,
-        "expected_total": 6.5,
-        "supremacy": 1.5,
-        "outcome_probs": {
-          "home": 0.6511,
-          "draw": 0.1361,
-          "away": 0.2129
-        },
-        "top_scorelines": [
-          {
-            "home": 3,
-            "away": 2,
-            "prob": 0.0501
-          },
-          {
-            "home": 4,
-            "away": 2,
-            "prob": 0.0501
-          },
-          {
-            "home": 3,
-            "away": 3,
-            "prob": 0.0418
-          },
-          {
-            "home": 4,
-            "away": 3,
-            "prob": 0.0418
-          },
-          {
-            "home": 3,
-            "away": 1,
-            "prob": 0.0401
-          }
-        ]
-      },
-      "model_mc": {
-        "n": 20000,
-        "win_prob": {
-          "home": 0.6468,
-          "draw": 0.1386,
-          "away": 0.2145
-        },
-        "top_scorelines": [
-          {
-            "home": 4,
-            "away": 2,
-            "prob": 0.0513
-          },
-          {
-            "home": 3,
-            "away": 2,
-            "prob": 0.0491
-          },
-          {
-            "home": 4,
-            "away": 3,
-            "prob": 0.0429
-          },
-          {
-            "home": 3,
-            "away": 3,
-            "prob": 0.0416
-          },
-          {
-            "home": 3,
-            "away": 1,
-            "prob": 0.0405
-          }
-        ]
-      },
-      "phase": "early_12h"
-    },
-    "pre_pushed_at": "2026-07-02T15:53:40+08:00"
-  },
   "bf902b3b8ba731d8cf4b422470319439": {
     "prediction": {
       "game_id": "bf902b3b8ba731d8cf4b422470319439",
@@ -331,7 +222,8 @@
       },
       "phase": "early_12h"
     },
-    "pre_pushed_at": "2026-07-02T15:53:41+08:00"
+    "pre_pushed_at": "2026-07-02T15:53:41+08:00",
+    "post_attempts": 1
   },
   "6f7b9d64e494097e8646d88ca4c33577": {
     "prediction": {
