@@ -110,5 +110,230 @@
       "phase": "early_12h"
     },
     "pre_pushed_at": "2026-07-03T15:57:20+08:00"
+  },
+  "471b2b7bb19f52be5e618aec359cd8e5": {
+    "prediction": {
+      "game_id": "471b2b7bb19f52be5e618aec359cd8e5",
+      "sport": "MLB",
+      "home": "Chicago Cubs",
+      "away": "St. Louis Cardinals",
+      "start_time": "2026-07-04T04:06:00+08:00",
+      "market": {
+        "asian_handicap": -1.5,
+        "over_under": 10.5,
+        "odds_source": "the-odds-api/consensus",
+        "timestamp": "2026-07-03T10:24:23.962002+00:00"
+      },
+      "bookmaker_count": 9,
+      "fair_prob": {
+        "away": 0.4581,
+        "home": 0.5419
+      },
+      "best_odds": {
+        "home": 1.8,
+        "away": 2.14
+      },
+      "edge": {
+        "away": -0.0197,
+        "home": -0.0245
+      },
+      "best_pick": null,
+      "avg_overround": 0.0381,
+      "model": "market_implied_v1",
+      "generated_at": "2026-07-03T18:24:23+08:00",
+      "model_score": {
+        "type": "poisson",
+        "sport": "MLB",
+        "lambda_home": 6.0,
+        "lambda_away": 4.5,
+        "expected_total": 10.5,
+        "supremacy": 1.5,
+        "outcome_probs": {
+          "home": 0.6175,
+          "draw": 0.1136,
+          "away": 0.2688
+        },
+        "top_scorelines": [
+          {
+            "home": 5,
+            "away": 4,
+            "prob": 0.0308
+          },
+          {
+            "home": 6,
+            "away": 4,
+            "prob": 0.0308
+          },
+          {
+            "home": 5,
+            "away": 5,
+            "prob": 0.0277
+          },
+          {
+            "home": 6,
+            "away": 5,
+            "prob": 0.0277
+          },
+          {
+            "home": 5,
+            "away": 3,
+            "prob": 0.0274
+          }
+        ]
+      },
+      "model_mc": {
+        "n": 20000,
+        "win_prob": {
+          "home": 0.6245,
+          "draw": 0.1105,
+          "away": 0.2651
+        },
+        "top_scorelines": [
+          {
+            "home": 6,
+            "away": 4,
+            "prob": 0.031
+          },
+          {
+            "home": 5,
+            "away": 4,
+            "prob": 0.0309
+          },
+          {
+            "home": 6,
+            "away": 3,
+            "prob": 0.028
+          },
+          {
+            "home": 6,
+            "away": 5,
+            "prob": 0.0278
+          },
+          {
+            "home": 5,
+            "away": 3,
+            "prob": 0.0275
+          }
+        ]
+      },
+      "phase": "early_12h"
+    },
+    "pre_pushed_at": "2026-07-03T18:24:23+08:00"
+  },
+  "3e161b2448ed76d6b0c0f5bda6fd5bf2": {
+    "prediction": {
+      "game_id": "3e161b2448ed76d6b0c0f5bda6fd5bf2",
+      "sport": "FIFA",
+      "home": "Argentina",
+      "away": "Cape Verde",
+      "start_time": "2026-07-04T06:00:00+08:00",
+      "market": {
+        "asian_handicap": -2.0,
+        "over_under": 3.0,
+        "odds_source": "the-odds-api/consensus",
+        "timestamp": "2026-07-03T10:24:24.656546+00:00"
+      },
+      "bookmaker_count": 8,
+      "fair_prob": {
+        "draw": 0.1126,
+        "home": 0.8438,
+        "away": 0.0436
+      },
+      "best_odds": {
+        "home": 1.15,
+        "away": 51.81,
+        "draw": 9.74
+      },
+      "edge": {
+        "draw": 0.0963,
+        "home": -0.0296,
+        "away": 1.2602
+      },
+      "best_pick": {
+        "outcome": "away",
+        "edge": 1.2602,
+        "odds": 51.81
+      },
+      "avg_overround": 0.0481,
+      "model": "market_implied_v1",
+      "generated_at": "2026-07-03T18:24:23+08:00",
+      "model_score": {
+        "type": "poisson",
+        "sport": "FIFA",
+        "lambda_home": 2.5,
+        "lambda_away": 0.5,
+        "expected_total": 3.0,
+        "supremacy": 2.0,
+        "outcome_probs": {
+          "home": 0.8107,
+          "draw": 0.1344,
+          "away": 0.0549
+        },
+        "top_scorelines": [
+          {
+            "home": 2,
+            "away": 0,
+            "prob": 0.1556
+          },
+          {
+            "home": 3,
+            "away": 0,
+            "prob": 0.1297
+          },
+          {
+            "home": 1,
+            "away": 0,
+            "prob": 0.1245
+          },
+          {
+            "home": 4,
+            "away": 0,
+            "prob": 0.081
+          },
+          {
+            "home": 2,
+            "away": 1,
+            "prob": 0.0778
+          }
+        ]
+      },
+      "model_mc": {
+        "n": 20000,
+        "win_prob": {
+          "home": 0.8121,
+          "draw": 0.1358,
+          "away": 0.052
+        },
+        "top_scorelines": [
+          {
+            "home": 2,
+            "away": 0,
+            "prob": 0.1587
+          },
+          {
+            "home": 3,
+            "away": 0,
+            "prob": 0.132
+          },
+          {
+            "home": 1,
+            "away": 0,
+            "prob": 0.1213
+          },
+          {
+            "home": 4,
+            "away": 0,
+            "prob": 0.0823
+          },
+          {
+            "home": 2,
+            "away": 1,
+            "prob": 0.0769
+          }
+        ]
+      },
+      "phase": "early_12h"
+    },
+    "pre_pushed_at": "2026-07-03T18:24:24+08:00"
   }
 }
