@@ -217,3 +217,61 @@ def test_worth_modify_yes_when_queue_ready(tmp_path):
                          "improvement": {"declined_vs_week": False}})
     r2 = br.build_daily_report(target_date=D, persist=False)
     assert r2["improvement"]["worth_modifying_model"] == "YES"
+
+
+# ── Layer 3 Channel-aware Renderer（mobile-first，短細線 ─）──
+def test_render_channel_divider_lengths(tmp_path):
+    _sample(tmp_path)
+    r = br.build_daily_report(target_date=D, persist=False)
+    for ch, expect in [("line", 14), ("telegram", 18), ("cli", 20)]:
+        txt = br.render_battle_report_text(r, channel=ch)
+        divs = [ln for ln in txt.splitlines() if set(ln) == {"─"}]
+        assert divs and all(len(ln) == expect for ln in divs), ch
+
+
+def test_render_unknown_channel_default(tmp_path):
+    _sample(tmp_path)
+    r = br.build_daily_report(target_date=D, persist=False)
+    txt = br.render_battle_report_text(r, channel="x")
+    divs = [ln for ln in txt.splitlines() if set(ln) == {"─"}]
+    assert all(len(ln) == 16 for ln in divs)
+
+
+def test_render_no_wall_line_is_short(tmp_path):
+    _sample(tmp_path)
+    r = br.build_daily_report(target_date=D, persist=False)
+    txt = br.render_battle_report_text(r, channel="line")
+    # 手機友善：LINE 分隔線不得超過 16 字元（避免整面牆）
+    divs = [ln for ln in txt.splitlines() if set(ln) == {"─"}]
+    assert divs and max(len(ln) for ln in divs) <= 16
+
+
+def test_render_truncates_long_match_id(tmp_path):
+    os.chdir(tmp_path)
+    at = dt.datetime(2026, 7, 3, 10, 0, tzinfo=TZ).isoformat()
+    _write("verified_history.csv", [
+        {"verified_at": at, "game_id": "ec4b853359310a5bcf7395eeb51dc121",
+         "sport": "MLB", "winner": "home", "pick_outcome": "home",
+         "moneyline_hit": "True", "expected_total": "8.5", "actual_total": "3"}])
+    import json as _j
+    _j.dump({}, open("flags.json", "w"))
+    r = br.build_daily_report(target_date=D, persist=False)
+    txt = br.render_battle_report_text(r, channel="line")
+    assert "ec4b853359310a5bcf7395eeb51dc121" not in txt  # 完整雜湊不得出現
+
+
+def test_render_does_not_mutate(tmp_path):
+    _sample(tmp_path)
+    r = br.build_daily_report(target_date=D, persist=False)
+    snap = r["per_sport"]["all_time"].copy()
+    br.render_battle_report_text(r, channel="line")
+    assert r["per_sport"]["all_time"] == snap
+
+
+def test_render_missing_dash(tmp_path):
+    os.chdir(tmp_path)
+    _write("verified_history.csv", [])
+    import json as _j
+    _j.dump({}, open("flags.json", "w"))
+    r = br.build_daily_report(target_date=D, persist=False)
+    assert "—" in br.render_battle_report_text(r, channel="line")
