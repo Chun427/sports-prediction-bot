@@ -429,6 +429,96 @@ def run_battle_report(target_date=None):
     return rep
 
 
+# ────────── Layer 3：Channel-aware 文字 Renderer（純輸出，不碰 notifier）──────────
+# 設計原則（mobile-first）：
+#  - 只吃 build_daily_report() 產出的 report dict，不改任何既有邏輯 / JSON 結構
+#  - 分隔線「只求剛好分段」，不是越長越好：手機/LINE 掃描最佳約 12–20 字元
+#  - 缺值顯示 "—"，不捏造；與 notifier 推播格式（frozen core）完全獨立
+#
+# 真實推播管道：Telegram + LINE。'cli' 僅供開發 / log 檢視，非產品推播對象。
+
+CHANNEL_DIVIDER = {
+    "line": 14,       # LINE 比例字體最窄，短線避免變成整面牆
+    "telegram": 18,   # Telegram 接近等寬
+    "cli": 20,        # 開發檢視上限
+}
+DEFAULT_DIVIDER = 16
+
+
+def divider_len(channel):
+    """依管道回傳建議分隔線長度（mobile-first，短而剛好分段）。"""
+    return CHANNEL_DIVIDER.get((channel or "").lower(), DEFAULT_DIVIDER)
+
+
+def _fmt_rate(cell):
+    if not cell or not cell.get("pushed"):
+        return "—"
+    r = cell.get("rate")
+    pct = f"{round(r * 100, 1)}%" if r is not None else "—"
+    return f"{cell['hits']}/{cell['pushed']}（{pct}）"
+
+
+def render_battle_report_text(report, channel="line", divider_len_override=None):
+    """
+    Battle Report dict → 對齊、易掃的純文字（Layer 3）。
+    channel: 'line' | 'telegram' | 'cli'（決定分隔線長度）。
+    不修改 report、不影響 notifier。
+    """
+    dl = divider_len_override or divider_len(channel)
+    line = "─" * dl          # 用細線 ─（U+2500）較不壓迫；長度短
+    per = report.get("per_sport", {})
+    sports = ["FIFA", "MLB", "NBA"]
+    periods = [("今日", "today"), ("昨日", "yesterday"),
+               ("本週", "this_week"), ("本月", "this_month"),
+               ("歷史", "all_time")]
+
+    out = []
+    out.append("📊 每日戰報 Battle Report")
+    out.append(f"📅 {report.get('date', '—')}")
+    out.append(line)
+
+    for sp in sports:
+        out.append(f"🏆 {sp}")
+        for label, key in periods:
+            out.append(f"　{label}：{_fmt_rate(per.get(key, {}).get(sp))}")
+        out.append(line)
+
+    miss = report.get("miss_analysis", {})
+    dist = miss.get("distribution", {})
+    out.append("🔍 未命中 Root Cause")
+    if dist:
+        for rc, n in sorted(dist.items(), key=lambda kv: -kv[1]):
+            out.append(f"　{rc}：{n}")
+    else:
+        out.append("　（今日無未命中或無資料）")
+    out.append(line)
+
+    imp = report.get("improvement", {})
+    out.append("📈 Improvement")
+    tr = imp.get("today_overall_rate")
+    wr = imp.get("week_overall_rate")
+    out.append(f"　今日整體：{'—' if tr is None else str(round(tr*100,1))+'%'}")
+    out.append(f"　本週整體：{'—' if wr is None else str(round(wr*100,1))+'%'}")
+    out.append(f"　主要失敗類別：{imp.get('top_failure_root_cause', '—')}")
+    we = imp.get("largest_error_game")
+    if we:
+        mid = str(we.get("match_id", "—"))
+        mid = mid[:8] if len(mid) > 8 else mid   # 手機友善：長雜湊只顯示前8碼
+        out.append(f"　最大誤差：{mid}"
+                   f"（{we.get('expected_total')} → {we.get('actual_total')}）")
+    out.append(f"　是否改模型：{imp.get('worth_modifying_model', 'NO')}")
+    out.append(line)
+
+    fw = miss.get("framework", {})
+    out.append("🧠 Framework")
+    out.append(f"　已接入：{len(fw.get('available_providers', []))}"
+               f"/{len(fw.get('providers', []))} providers")
+    out.append(line)
+    out.append("📡 來源：verified_history")
+    out.append("⚠️ Evidence First：無證據不臆測，單日不改模型")
+    return "\n".join(out)
+
+
 if __name__ == "__main__":
     r = run_battle_report()
-    print(json.dumps(r, ensure_ascii=False, indent=2)[:1500])
+    print(render_battle_report_text(r, channel="line"))
