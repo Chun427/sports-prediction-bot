@@ -70,8 +70,8 @@ def test_window_boundaries():
     assert sp.in_pregame_window(BASE + timedelta(minutes=20), BASE) is True
     assert sp.in_pregame_window(BASE + timedelta(minutes=PREGAME_WINDOW_MIN), BASE) is True
     # 邊界外
-    assert sp.in_pregame_window(BASE + timedelta(minutes=41), BASE) is False
-    assert sp.in_pregame_window(BASE + timedelta(minutes=40, seconds=1), BASE) is False
+    assert sp.in_pregame_window(BASE + timedelta(minutes=61), BASE) is False
+    assert sp.in_pregame_window(BASE + timedelta(minutes=60, seconds=1), BASE) is False
     # 已開賽（delta < 0）
     assert sp.in_pregame_window(BASE - timedelta(minutes=1), BASE) is False
 
@@ -91,7 +91,7 @@ def test_outside_window_no_push(tmp_path, monkeypatch):
     monkeypatch.chdir(tmp_path)
     pusher = FakePusher()
     games = [
-        _game("future", BASE + timedelta(minutes=50)),  # 太早
+        _game("future", BASE + timedelta(minutes=90)),  # 太早(窗60)
         _game("started", BASE - timedelta(minutes=5)),  # 已開賽
     ]
     pushed = sp.run_pregame_push(BASE, games, pusher)
@@ -149,14 +149,14 @@ def test_15min_tick_always_covers(tmp_path, monkeypatch):
         assert pusher.count == 1, f"offset={offset} 推了 {pusher.count} 次"
 
 
-def test_hourly_cron_would_miss(tmp_path, monkeypatch):
+def test_sparse_cron_would_miss(tmp_path, monkeypatch):
     monkeypatch.chdir(tmp_path)
     # 對照組：hourly（60 分）會漏掉落在兩 tick 間的 40 分鐘窗
     # 開賽 12:50，窗 12:10–12:50；ticks 12:00 / 13:00 皆在窗外
     start = BASE + timedelta(minutes=50)
     pusher = FakePusher()
-    _sweep(start, "miss", step_min=60, pusher=pusher)
-    assert pusher.count == 0  # 證明 hourly 會整場漏推 → 故改 */15
+    _sweep(start, "miss", step_min=120, pusher=pusher, first=BASE - timedelta(minutes=60))
+    assert pusher.count == 0  # 過稀疏cron漏窗
 
 
 # ── 5. pool refresh slot guard ───────────────────────

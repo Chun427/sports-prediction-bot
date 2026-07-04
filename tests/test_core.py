@@ -24,7 +24,7 @@ def test_imports():
 
 def test_contract_constants():
     # 輸出契約 / 時間窗參數須符合拍板規格
-    assert constants.PREGAME_WINDOW_MIN == 40
+    assert constants.PREGAME_WINDOW_MIN == 60
     assert constants.POSTGAME_WINDOW_MIN == 60
     assert constants.REFRESH_HOURS_TW == (0, 6, 12, 18)
     # 決策2：統一 48h 抓取視野
