@@ -27,7 +27,7 @@
 
 ## 📱 推播畫面長什麼樣
 
-### ① 賽前推播（12 小時早盤 / 40 分鐘最終，版面相同）
+### ① 賽前推播（12 小時早盤 / 60 分鐘最終，版面相同）
 
 > 下列數字為**版面示意**，實際由當下盤口 + 蒙特卡羅即時算出。
 
@@ -156,18 +156,20 @@ Pool（weekly_games.json）
 
 | 時點 | 窗口 | 進入點 | 用途 |
 |---|---|---|---|
-| 早盤 | 賽前 40〜720 分（≤12h） | `run_early_push` | 方向性提示 |
-| 最終 | 賽前 0〜40 分 | `run_pregame_push` | 最終預測（可選近賽刷新） |
+| 早盤 | 賽前 60〜720 分（≤12h） | `run_early_push` | 方向性提示 |
+| 最終 | 賽前 0〜60 分 | `run_pregame_push` | 最終預測（可選近賽刷新） |
 | 賽後 | 完賽後 | `run_postgame_verify` | 真實比分驗證命中 |
 
-> early 窗 `>40`、final 窗 `≤40`，**互不重疊**，同一 tick 不會同時觸發。
+> early 窗 `>60`、final 窗 `≤60`，**互不重疊、無空窗**（共用邊界，改一個常數兩窗自動對齊），同一 tick 不會同時觸發。
+>
+> **窗口 40→60 分（v-latest）**：賽前最終推播窗由 40 分放寬為 60 分，緩解 GitHub Actions 排程抖動導致的漏推（離線 Monte-Carlo replay 校準：命中率約 45%→55%；`notifier` 文字動態讀常數，自動顯示「賽前 60 分鐘」）。
 
 ---
 
 ## 🆕 主要功能（皆 additive / 可 rollback / 可 flag 關閉）
 
-- **近賽選擇性刷新（near_match_refresh）**：40 分鐘賽前窗，**只對「即將推播的那幾場」**重抓 2h 短窗最新盤口，再讓既有模型自然重算。
-  > 啟用時 40m 推播**會**為近賽場呼叫一次 Odds API（短窗、量小、失敗自動退回快取）。設 `ENABLE_NEAR_MATCH_REFRESH=False` 即關閉，回到「推播時點純讀快取、不呼叫 API」。
+- **近賽選擇性刷新（near_match_refresh）**：60 分鐘賽前窗，**只對「即將推播的那幾場」**重抓 2h 短窗最新盤口，再讓既有模型自然重算。
+  > 啟用時 60m 推播**會**為近賽場呼叫一次 Odds API（短窗、量小、失敗自動退回快取）。設 `ENABLE_NEAR_MATCH_REFRESH=False` 即關閉，回到「推播時點純讀快取、不呼叫 API」。
 - **賽後比分顯示（postgame_formatter）**：賽後加入真實最終比分（FIFA/MLB/NBA 通用，無比分不捏造）；notifier 核心格式不動。
 - **每日戰報 Never-Miss**：主路徑（當日全部驗證完 + 靜置 30 分）→ 同日 23:30 保險 → 跨午夜補送。
 - **FIFA 冠軍/個人獎項**：目前**停用**（`AWARDS_ENABLED=False`，可逆）；FIFA 單場賽事預測不受影響。
@@ -179,11 +181,13 @@ Pool（weekly_games.json）
 | `ensure_pool` | 賽事池 slot 刷新 / 讀快取 / 失敗退回 | 一天 4 次刷新，抓 48h |
 | `prediction_engine.predict` | 市場去 Vig（market_implied_v1） | 凍結 |
 | `score_model` / `monte_carlo_engine` | Poisson 比分 + 蒙特卡羅 | deterministic / 無 cache |
-| `near_match_refresh` | 40m 近賽選擇性刷新 | flag / guarded / 只動目標場 |
+| `near_match_refresh` | 60m 近賽選擇性刷新 | flag / guarded / 只動目標場 |
 | `notifier` | 三推播 render（純輸出） | 凍結格式 |
 | `postgame_formatter` | 賽後比分 UI 層 | 不碰 notifier 核心 |
 | `daily_report` | 每日戰報（Never-Miss） | — |
 | `push_reconcile` | 漏推對帳 | — |
+| `battle_report` | 每日戰報 + Root Cause + Learning + Validation Queue | **additive**；永久保存不覆蓋 |
+| `providers/` | Root Cause 資料源介面層（Strategy Pattern） | 8 個 Provider；資料源接入不改 battle_report |
 | `awards`（futures） | FIFA 冠軍/個人獎項 | **停用中（可逆）** |
 
 ## 🔒 設計原則（鐵律）
@@ -202,16 +206,49 @@ Pool（weekly_games.json）
 - **特徵純度（Feature Purity）**：每個指標需「可獨立解讀、跨運動安全、重跑可重現」。未來任何運動擴充（NBA 進階數據、MLB props…）都不得污染 FIFA schema。
 - **顯示層 vs 來源層**：`daily_report` 的 FIFA-only 過濾是顯示層防火牆；真正的源頭乾淨由 `verified_enrich` 保證。兩層都守。
 
+## 🧠 每日戰報 · Root Cause · 自我成長框架（Battle Report Framework）
+
+`battle_report.py` 是**純新增、不碰凍結核心**的分析與學習層，全部以 `verified_history.csv` 為真實來源。
+
+**① 命中率戰報**：各運動（NBA/MLB/FIFA）today / 昨日 / 本週 / 本月 / 歷史 命中率對比。
+
+**② Root Cause Framework（Provider 架構）**：每一場未命中都試圖判定失敗原因，透過 `providers/` 的判定鏈（Strategy Pattern）產生 **Evidence**（含 `evidence` / `confidence` / `source` / `unavailable_reason`）。
+
+| Provider | Root Cause | 狀態 |
+|---|---|---|
+| `CutoffProvider` | `CUTOFF`（賽前未推） | ✅ 已接入（flags） |
+| `ModelDirectionProvider` | `MODEL_DIRECTION_ERROR`（方向相反） | ✅ 已接入（verified_history） |
+| `InjuryProvider` | `INJURY` | ⏳ 待接入傷兵 API |
+| `LineupProvider` | `LINEUP_CHANGE` | ⏳ 待接入陣容 API |
+| `LineMovementProvider` | `LINE_MOVEMENT` | ⏳ 待接入盤口雙時點快照 |
+| `OddsMovementProvider` | `ODDS_MOVEMENT` | ⏳ 待接入盤口雙時點快照 |
+| `MarketChangeProvider` | `MARKET_CHANGE` | ⏳ 待接入市場事件流 |
+| `DataDelayProvider` | `DATA_DELAY` | ⏳ 待接入 Actions 時序 |
+
+> **Evidence First**：待接入的 Provider 一律回 `available=False` + 明確 `unavailable_reason`，**絕不臆測**；判不出來才 fallback `UNKNOWN`。未來接 API＝在 `build_context()` 塞快照 + 該 Provider 實作 `evaluate()`，**battle_report 零改動**。
+
+**③ Improvement Report**：今日下降原因、最大總分誤差場、`top_failure_root_cause`、`worth_modifying_model`（**依 validation_queue 是否有 `READY_FOR_PR` 動態判定**，非寫死）。
+
+**④ Learning**：跨日累積各 Root Cause 出現次數、最易致敗類別、`effectiveness`（每類改善的 `observed / fixed / improved` → 哪些策略真正有效）。
+
+**⑤ Validation Queue（不即時改模型）**：模型修改建議先入 `validation_queue.json`，需**連續 3~5 次驗證支持同一方向**才 `READY_FOR_PR`（可提 PR）；中途一次不支持即 `DISCARDED`。
+
+**⑥ 永久保存**：每日戰報逐日一檔存於 `battle_reports/`，同日重跑加時間戳，**append-only、不覆蓋、不刪除**（作為 AI 自我成長資料）。
+
+**鐵律**：Evidence First / Validation First / Statistics First — 沒有證據不猜、單日不改模型。
+
 ## 🔭 觀察 / 待累積（Roadmap）
 
 - **MLB 模型**：目前為 market-implied（無 feature 模型）。待 `verified_history` 累積 **300–500 場**後再評估離線特徵建模（投手 ERA/FIP、牛棚、打線…）；**唯有離線回測勝過現行模型才考慮上線，且版本化、不覆蓋**。
 - **每日戰報**：Never-Miss 已部署，待實際 `daily-YYYYMMDD` flag 確認首次送出。
 - **near_match_refresh**：上線後可由 `near_refresh.scan` / `near_refresh.applied` log 觀察刷新頻率與盤口漂移。
+- **Root Cause 資料源接入**：傷兵 / 陣容 / 盤口雙時點快照 API 接入後，對應 Provider 即可從 `UNKNOWN` 升級為真證據判定，Learning 自動開始累積成效。
+- **賽前推播命中率**：窗口已放寬至 60 分；如仍不足，可加外部排程器（每 5 分鐘 `workflow_dispatch`）進一步逼近 12h 早盤的觸發率。
 
 ## 🧪 測試
 
 ```bash
-pytest -q        # 251 passed
+pytest -q        # 269 passed
 ```
 release_gate 通過。
 
