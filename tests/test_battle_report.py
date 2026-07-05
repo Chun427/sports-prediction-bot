@@ -219,31 +219,34 @@ def test_worth_modify_yes_when_queue_ready(tmp_path):
     assert r2["improvement"]["worth_modifying_model"] == "YES"
 
 
-# ── Layer 3 Channel-aware Renderer（mobile-first，短細線 ─）──
-def test_render_channel_divider_lengths(tmp_path):
+# ── Layer 3 Renderer（單一固定 ━ 分隔線，所有區塊一致）──
+def test_render_single_fixed_divider(tmp_path):
     _sample(tmp_path)
     r = br.build_daily_report(target_date=D, persist=False)
-    for ch, expect in [("line", 14), ("telegram", 18), ("cli", 20)]:
-        txt = br.render_battle_report_text(r, channel=ch)
-        divs = [ln for ln in txt.splitlines() if set(ln) == {"─"}]
-        assert divs and all(len(ln) == expect for ln in divs), ch
+    txt = br.render_battle_report_text(r)
+    divs = [ln for ln in txt.splitlines() if set(ln) == {"━"}]
+    # 全部分隔線同字元 ━、同長度（DIVIDER_LEN）
+    assert divs
+    assert all(len(ln) == br.DIVIDER_LEN for ln in divs)
+    # 不得出現細線 ─ 分隔線
+    assert not [ln for ln in txt.splitlines() if set(ln) == {"─"}]
 
 
-def test_render_unknown_channel_default(tmp_path):
+def test_render_no_channel_param(tmp_path):
     _sample(tmp_path)
     r = br.build_daily_report(target_date=D, persist=False)
-    txt = br.render_battle_report_text(r, channel="x")
-    divs = [ln for ln in txt.splitlines() if set(ln) == {"─"}]
-    assert all(len(ln) == 16 for ln in divs)
+    # 不吃 channel 參數（單一樣式）；override 仍可手動指定
+    txt = br.render_battle_report_text(r, divider_len_override=20)
+    divs = [ln for ln in txt.splitlines() if set(ln) == {"━"}]
+    assert all(len(ln) == 20 for ln in divs)
 
 
-def test_render_no_wall_line_is_short(tmp_path):
+def test_render_does_not_mutate(tmp_path):
     _sample(tmp_path)
     r = br.build_daily_report(target_date=D, persist=False)
-    txt = br.render_battle_report_text(r, channel="line")
-    # 手機友善：LINE 分隔線不得超過 16 字元（避免整面牆）
-    divs = [ln for ln in txt.splitlines() if set(ln) == {"─"}]
-    assert divs and max(len(ln) for ln in divs) <= 16
+    snap = r["per_sport"]["all_time"].copy()
+    br.render_battle_report_text(r)
+    assert r["per_sport"]["all_time"] == snap
 
 
 def test_render_truncates_long_match_id(tmp_path):
@@ -256,16 +259,7 @@ def test_render_truncates_long_match_id(tmp_path):
     import json as _j
     _j.dump({}, open("flags.json", "w"))
     r = br.build_daily_report(target_date=D, persist=False)
-    txt = br.render_battle_report_text(r, channel="line")
-    assert "ec4b853359310a5bcf7395eeb51dc121" not in txt  # 完整雜湊不得出現
-
-
-def test_render_does_not_mutate(tmp_path):
-    _sample(tmp_path)
-    r = br.build_daily_report(target_date=D, persist=False)
-    snap = r["per_sport"]["all_time"].copy()
-    br.render_battle_report_text(r, channel="line")
-    assert r["per_sport"]["all_time"] == snap
+    assert "ec4b853359310a5bcf7395eeb51dc121" not in br.render_battle_report_text(r)
 
 
 def test_render_missing_dash(tmp_path):
@@ -274,4 +268,4 @@ def test_render_missing_dash(tmp_path):
     import json as _j
     _j.dump({}, open("flags.json", "w"))
     r = br.build_daily_report(target_date=D, persist=False)
-    assert "—" in br.render_battle_report_text(r, channel="line")
+    assert "—" in br.render_battle_report_text(r)
