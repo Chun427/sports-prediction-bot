@@ -428,26 +428,19 @@ def run_battle_report(target_date=None):
     review_queue(rep)        # ⑤ 檢核 validation queue
     return rep
 
+# ────────── Layer 3：文字 Renderer（純輸出，不碰 notifier / frozen core）──────────
+# 分隔線樣式：恢復 channel-aware 之前的「單一固定粗線 ━」版本。
+#  - 所有區塊（FIFA / MLB / NBA / Root Cause / Improvement / Framework）共用同一條線
+#  - 不依 LINE / Telegram / CLI 變長度，不做 adaptive
+#  - 粗線 ━ 為 40 分鐘時期全系統實際使用的字元（daily_report._DIV 亦為 ━）
+#  - 只需改 DIVIDER_LEN 一個常數即可調整長度
+#  - 與 notifier 推播格式（frozen core）完全獨立
 
-# ────────── Layer 3：Channel-aware 文字 Renderer（純輸出，不碰 notifier）──────────
-# 設計原則（mobile-first）：
-#  - 只吃 build_daily_report() 產出的 report dict，不改任何既有邏輯 / JSON 結構
-#  - 分隔線「只求剛好分段」，不是越長越好：手機/LINE 掃描最佳約 12–20 字元
-#  - 缺值顯示 "—"，不捏造；與 notifier 推播格式（frozen core）完全獨立
-#
-# 真實推播管道：Telegram + LINE。'cli' 僅供開發 / log 檢視，非產品推播對象。
-
-CHANNEL_DIVIDER = {
-    "line": 14,       # LINE 比例字體最窄，短線避免變成整面牆
-    "telegram": 18,   # Telegram 接近等寬
-    "cli": 20,        # 開發檢視上限
-}
-DEFAULT_DIVIDER = 16
+DIVIDER_LEN = 30          # 單一固定長度（所有區塊共用）
 
 
-def divider_len(channel):
-    """依管道回傳建議分隔線長度（mobile-first，短而剛好分段）。"""
-    return CHANNEL_DIVIDER.get((channel or "").lower(), DEFAULT_DIVIDER)
+def _divider():
+    return "━" * DIVIDER_LEN
 
 
 def _fmt_rate(cell):
@@ -458,14 +451,14 @@ def _fmt_rate(cell):
     return f"{cell['hits']}/{cell['pushed']}（{pct}）"
 
 
-def render_battle_report_text(report, channel="line", divider_len_override=None):
+def render_battle_report_text(report, divider_len_override=None):
     """
-    Battle Report dict → 對齊、易掃的純文字（Layer 3）。
-    channel: 'line' | 'telegram' | 'cli'（決定分隔線長度）。
-    不修改 report、不影響 notifier。
+    Battle Report dict → 對齊純文字（Layer 3）。
+    單一固定粗線 ━ 分隔線，所有區塊一致；不修改 report、不影響 notifier。
+    divider_len_override：僅供需要時手動指定長度（預設用 DIVIDER_LEN）。
     """
-    dl = divider_len_override or divider_len(channel)
-    line = "─" * dl          # 用細線 ─（U+2500）較不壓迫；長度短
+    dl = divider_len_override or DIVIDER_LEN
+    line = "━" * dl
     per = report.get("per_sport", {})
     sports = ["FIFA", "MLB", "NBA"]
     periods = [("今日", "today"), ("昨日", "yesterday"),
@@ -503,7 +496,7 @@ def render_battle_report_text(report, channel="line", divider_len_override=None)
     we = imp.get("largest_error_game")
     if we:
         mid = str(we.get("match_id", "—"))
-        mid = mid[:8] if len(mid) > 8 else mid   # 手機友善：長雜湊只顯示前8碼
+        mid = mid[:8] if len(mid) > 8 else mid
         out.append(f"　最大誤差：{mid}"
                    f"（{we.get('expected_total')} → {we.get('actual_total')}）")
     out.append(f"　是否改模型：{imp.get('worth_modifying_model', 'NO')}")
@@ -521,4 +514,4 @@ def render_battle_report_text(report, channel="line", divider_len_override=None)
 
 if __name__ == "__main__":
     r = run_battle_report()
-    print(render_battle_report_text(r, channel="line"))
+    print(render_battle_report_text(r))
