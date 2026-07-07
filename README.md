@@ -6,7 +6,7 @@
 ![Python](https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white)
 ![Telegram](https://img.shields.io/badge/Telegram-Bot-26A5E4?logo=telegram&logoColor=white)
 
-> 狀態：**v0 stable baseline（Production / Observation Mode）**。核心 / 三推播 / 每日戰報 / 賽後驗證 / 漏推對帳 流程皆完成且運行。測試 **251 passed**。賽前/早盤推播以快取為基礎驅動、Pool 刷新失敗安全退回快取、賽後驗證指數退避。工程與維運細節見 [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md)、[`docs/release_notes.md`](docs/release_notes.md)。
+> 狀態：**v0 stable baseline（Production / Observation Mode）**。核心 / 三推播 / 每日戰報 / 賽後驗證 / 漏推對帳 流程皆完成且運行。測試 **274 passed**。賽前/早盤推播以快取為基礎驅動、Pool 刷新失敗安全退回快取、賽後驗證指數退避。工程與維運細節見 [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md)、[`docs/release_notes.md`](docs/release_notes.md)。
 > 支援：⚾ MLB · 🏀 NBA · ⚽ FIFA。
 > ⚙️ **部署可靠性建議（觸發層）**：GitHub Actions 的 `schedule` 為 best-effort，排程可能延遲或被丟棄。本專案 `bot.yml` 為 single-tick（每 5 分鐘一次乾淨執行）；賽前/早盤推播以**快取驅動 + 刷新失敗退回快取**為基礎，即使某次漏跑或金鑰暫時耗盡，下一個 tick 仍能用快取補推。若要更高送達保證，**可再加一個外部排程器**每 5 分鐘觸發 `workflow_dispatch`。Recommended: optionally add an external scheduler (cron-job.org or Cloudflare Worker) to trigger `workflow_dispatch` every 5 minutes. 推播本身為 idempotent + success-gated（重送不重複、送失敗才重試）。
 
@@ -212,6 +212,52 @@ Pool（weekly_games.json）
 
 **① 命中率戰報**：各運動（NBA/MLB/FIFA）today / 昨日 / 本週 / 本月 / 歷史 命中率對比。
 
+**推播畫面（Layer 3 文字 renderer）**：`render_battle_report_text(report)` 產生。分隔線為**單一固定粗線 `━`（長度 `DIVIDER_LEN`，預設 30），所有區塊一致**（不做 channel-aware、不做 adaptive）；長 game_id 只顯示前 8 碼。**與 notifier 推播格式（frozen core）完全獨立。**
+
+```
+📊 每日戰報 Battle Report
+📅 2026-07-05
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🏆 FIFA
+　今日：2/2（100.0%）
+　昨日：2/3（66.7%）
+　本週：15/18（83.3%）
+　本月：13/14（92.9%）
+　歷史：57/76（75.0%）
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🏆 MLB
+　今日：3/4（75.0%）
+　昨日：9/13（69.2%）
+　本週：51/83（61.5%）
+　本月：34/55（61.8%）
+　歷史：142/246（57.7%）
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🏆 NBA
+　今日：—
+　昨日：—
+　本週：—
+　本月：—
+　歷史：—
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🔍 未命中 Root Cause
+　CUTOFF：1
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📈 Improvement
+　今日整體：83.3%
+　本週整體：65.3%
+　主要失敗類別：CUTOFF
+　最大誤差：ec4b8533（8.5 → 3.0）
+　是否改模型：NO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🧠 Framework
+　已接入：2/8 providers
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📡 來源：verified_history
+⚠️ Evidence First：無證據不臆測，單日不改模型
+```
+
+> 需要時可用 `divider_len_override` 手動指定線長；或直接改 `DIVIDER_LEN` 常數。
+
 **② Root Cause Framework（Provider 架構）**：每一場未命中都試圖判定失敗原因，透過 `providers/` 的判定鏈（Strategy Pattern）產生 **Evidence**（含 `evidence` / `confidence` / `source` / `unavailable_reason`）。
 
 | Provider | Root Cause | 狀態 |
@@ -248,7 +294,7 @@ Pool（weekly_games.json）
 ## 🧪 測試
 
 ```bash
-pytest -q        # 269 passed
+pytest -q        # 274 passed
 ```
 release_gate 通過。
 
