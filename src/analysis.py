@@ -23,22 +23,97 @@ _INSUFFICIENT = "Evidence 不足，目前無法判定"
 _INSUFFICIENT_FIX = "目前 Evidence 不足，建議先保存更多資料後再修改模型。"
 
 
+# ══════════ 集中式 Root Cause Metadata（單一真相來源）══════════
+# 監督建議①：human / weight hint / 短標籤 集中一份，未來新增 Root Cause
+# （如 WEATHER / REFEREE）只需在此加一列，renderer / hint 全部共用。
+# 欄位：
+#   human        LINE 顯示的白話原因
+#   short_label  「尚未接入」清單用的短名（None 表示非待接入類別）
+#   improve      白話改善方向（None 表示無方向性可講）
+#   weight_raise / weight_lower / weight_note  工程版權重建議（可判定類別才有）
+ROOT_CAUSE_META = {
+    "MODEL_DIRECTION_ERROR": {
+        "human": "模型看錯了勝方（高估了實際落敗的一方）",
+        "short_label": None,
+        "improve": "先累積更多相同類型（模型與市場方向分歧）的比賽；"
+                   "若同類型錯誤持續發生，再評估是否調整模型。",
+        "weight_raise": ["市場共識勝率（devig_winprob）"],
+        "weight_lower": ["模型自身方向權重（model_winprob）"],
+        "weight_note": "方向與實際相反：市場隱含機率的相對可信度應提高",
+    },
+    "CUTOFF": {
+        "human": "賽前推播未發出（排程／窗口問題，非模型判斷錯誤）",
+        "short_label": None,
+        "improve": "屬賽前推播未觸發，與模型無關；改善方向為觸發穩定度（排程），非模型。",
+        "weight_raise": [],
+        "weight_lower": [],
+        "weight_note": "非模型問題：賽前推播未觸發（排程/窗口），與權重無關",
+    },
+    "UNKNOWN": {
+        "human": "目前資料不足，暫時無法判斷真正原因",
+        "short_label": None,
+        "improve": None,
+        "weight_raise": None, "weight_lower": None, "weight_note": None,
+    },
+    "INJURY": {
+        "human": "可能有傷兵影響（尚未接入傷兵資料）",
+        "short_label": "傷兵資料",
+        "improve": None,
+        "weight_raise": None, "weight_lower": None, "weight_note": None,
+    },
+    "LINEUP_CHANGE": {
+        "human": "可能有先發陣容異動（尚未接入陣容資料）",
+        "short_label": "先發名單",
+        "improve": None,
+        "weight_raise": None, "weight_lower": None, "weight_note": None,
+    },
+    "LINE_MOVEMENT": {
+        "human": "賽前讓分線可能移動（尚未接入盤口快照）",
+        "short_label": "即時盤口（讓分線）",
+        "improve": None,
+        "weight_raise": None, "weight_lower": None, "weight_note": None,
+    },
+    "ODDS_MOVEMENT": {
+        "human": "賽前賠率可能變動（尚未接入盤口快照）",
+        "short_label": "即時盤口（賠率）",
+        "improve": None,
+        "weight_raise": None, "weight_lower": None, "weight_note": None,
+    },
+    "MARKET_CHANGE": {
+        "human": "市場結構可能變動（尚未接入市場資料）",
+        "short_label": "市場結構資料",
+        "improve": None,
+        "weight_raise": None, "weight_lower": None, "weight_note": None,
+    },
+    "DATA_DELAY": {
+        "human": "資料延遲（尚未接入執行時序資料）",
+        "short_label": "執行時序資料",
+        "improve": None,
+        "weight_raise": None, "weight_lower": None, "weight_note": None,
+    },
+}
+
+# 健康度星等門檻（監督建議②：不散落 magic number）
+# (門檻分數, 星數)，由高到低；分數 >= 門檻即取該星數。
+STAR_THRESHOLDS = [(70, 5), (60, 4), (50, 3), (40, 2), (0, 1)]
+
+
+def _meta(code):
+    return ROOT_CAUSE_META.get(code, {})
+
+
+# 工程版權重建議：由集中 META 衍生（僅保留有 weight_raise/lower 的可判定類別）
+_WEIGHT_HINTS = {
+    code: {"raise": m["weight_raise"], "lower": m["weight_lower"],
+           "note": m["weight_note"]}
+    for code, m in ROOT_CAUSE_META.items()
+    if m.get("weight_raise") is not None
+}
+
+
 # ────────── 權重方向建議（只依已判定的 Root Cause，不臆測）──────────
 # 每個「可判定」的 Root Cause → 對應的權重調整方向建議（純規則，依 Evidence 類型）。
 # 待接入的 Root Cause 不在此表 → 一律回「資料不足」。
-_WEIGHT_HINTS = {
-    "MODEL_DIRECTION_ERROR": {
-        "raise": ["市場共識勝率（devig_winprob）"],
-        "lower": ["模型自身方向權重（model_winprob）"],
-        "note": "方向與實際相反：市場隱含機率的相對可信度應提高",
-    },
-    "CUTOFF": {
-        "raise": [],
-        "lower": [],
-        "note": "非模型問題：賽前推播未觸發（排程/窗口），屬基礎設施，"
-                "與權重無關；改善方向見 improvement_suggestions",
-    },
-}
 
 
 def analyze_single_game(record, providers=None, context=None):
@@ -172,6 +247,7 @@ def improvement_suggestions(report, learning=None, queue=None):
         "lower_weight": sorted(set(lower_weight)),
         "providers_not_connected": not_connected,
         "ready_for_pr": ready,
+        "ready_count": len(ready),   # 抽象化：renderer 只需數量
         "validated_effective_strategies": effective,
     }
 
@@ -268,12 +344,145 @@ def render_daily_analysis_text(daily, suggestions, divider_len_override=None):
         if eff:
             out.append("　已驗證有效策略：" +
                        "、".join(f"{k}({v})" for k, v in eff.items()))
-        ready = suggestions.get("ready_for_pr") or []
-        if ready:
-            out.append(f"　可提 PR（已通過驗證）：{len(ready)} 項")
+        if suggestions.get("ready_count", 0):
+            out.append(f"　可提 PR（已通過驗證）：{suggestions['ready_count']} 項")
     # 未接入 Provider
     nc = suggestions.get("providers_not_connected", [])
     if nc:
         out.append("　尚未接入 Provider：" +
                    "、".join(x["root_cause"] for x in nc))
+    return "\n".join(out)
+
+
+# ══════════ 人類語言層（Patch：LINE 用白話，JSON 保留原碼）══════════
+# 依監督修正範圍：只把既有 Evidence 翻成好讀說明；
+# 禁止產生 Elo / xG / 壓迫強度 / 主客場權重% / 勝率±% 等系統不存在的內容。
+
+# Root Cause → 人類語言（LINE 顯示用；JSON 仍存原碼）
+
+# 可判定類別 → 白話改善方向（不含任何捏造權重數字）
+
+
+def human_cause(root_cause):
+    """Root Cause 原碼 → 人類語言（讀集中 META）。未知碼原樣回傳（不臆測）。"""
+    return _meta(root_cause).get("human", root_cause)
+
+
+def render_single_analysis_human(analysis, divider_len_override=None):
+    """
+    功能一・白話版（LINE 用）。只呈現既有 Evidence，翻成好讀語言。
+    不輸出工程碼、不產生不存在的權重/進階數據。
+    """
+    line = _line(divider_len_override)
+    cause = analysis.get("root_cause")
+    out = ["🧠 AI 賽後分析", line]
+    out.append("未命中原因：")
+    out.append(f"・{human_cause(cause)}")
+    ev = analysis.get("evidence")
+    if ev and cause != "UNKNOWN":
+        out.append(f"・依據：{ev}")
+    out.append(line)
+
+    out.append("如果重新預測：")
+    wa = analysis.get("weight_advice", {})
+    if wa.get("insufficient"):
+        out.append("・目前 Evidence 不足，暫時無法給出調整方向")
+    else:
+        imp = _meta(cause).get('improve')
+        if imp:
+            out.append(f"・{imp}")
+        # 只有 MODEL_DIRECTION_ERROR 有方向性可講（市場vs模型），不給數字
+        if cause == "MODEL_DIRECTION_ERROR":
+            out.append("・本場模型較市場更偏離結果，市場共識的相對可信度較高")
+    out.append(line)
+    out.append("模型學習：")
+    out.append("・本場已記入 Learning Store（跨日累積，用於統計最易致敗類型）")
+    return "\n".join(out)
+
+
+def render_daily_analysis_human(daily, suggestions, divider_len_override=None):
+    """
+    功能二＋三・白話版（LINE 用）。全部依既有資料，翻成好讀語言。
+    """
+    line = _line(divider_len_override)
+    out = ["📈 今日命中率下降分析", f"📅 {daily.get('date','—')}", line]
+
+    tr = daily.get("today_overall_rate")
+    wr = daily.get("week_overall_rate")
+    if daily.get("declined_vs_week"):
+        out.append("今日整體命中率較本週下降。")
+    else:
+        out.append("今日整體命中率未較本週下降（屬正常波動）。")
+    out.append(f"　今日：{'—' if tr is None else str(round(tr*100,1))+'%'}"
+               f"　本週：{'—' if wr is None else str(round(wr*100,1))+'%'}")
+    out.append(line)
+
+    out.append("主要原因：")
+    ranking = daily.get("root_cause_ranking", [])
+    if ranking:
+        for i, r in enumerate(ranking, 1):
+            pct = "—" if r["pct"] is None else f"{r['pct']}%"
+            out.append(f"{i}. {human_cause(r['root_cause'])}")
+            out.append(f"　　{r['count']} 場（約佔今日失敗 {pct}）")
+    else:
+        out.append("　今日無未命中或無資料")
+    out.append(line)
+
+    out.append("改善建議：")
+    out.append(f"　是否修改模型：{daily.get('worth_modifying_model','NO')}")
+    if daily.get("worth_modifying_model") == "NO":
+        out.append("　目前暫不建議修改模型，建議：")
+        out.append("　・持續累積相同類型案例")
+        out.append("　・等改善建議通過連續驗證後再評估")
+    else:
+        out.append(f"　已有 {suggestions.get('ready_count', 0)} 項通過驗證，可評估提出")
+    nc = suggestions.get("providers_not_connected", [])
+    if nc:
+        out.append("　尚未接入的分析來源（補上後可判定更多原因）：")
+        labels = [(_meta(x["root_cause"]).get("short_label")
+                   or x["root_cause"]) for x in nc]
+        for lb in labels:
+            out.append(f"　・{lb}")
+    return "\n".join(out)
+
+
+# ══════════ 模型健康度（用真實命中率＋誤差，無捏造）══════════
+def model_health(report, learning=None):
+    """
+    以既有真實數據計算模型健康度：
+      - 今日 vs 本週整體命中率差
+      - 星等（依今日整體命中率分級）
+    不使用任何不存在的指標。
+    """
+    imp = report.get("improvement", {})
+    tr = imp.get("today_overall_rate")
+    wr = imp.get("week_overall_rate")
+    score = None if tr is None else round(tr * 100, 1)
+    delta = None
+    if tr is not None and wr is not None:
+        delta = round((tr - wr) * 100, 1)
+    # 星等：依今日整體命中率（純命中率，無其他捏造因子）
+    stars = None
+    if score is not None:
+        for threshold, n in STAR_THRESHOLDS:
+            if score >= threshold:
+                stars = n
+                break
+    return {"score_pct": score, "delta_vs_week": delta, "stars": stars,
+            "basis": "今日整體命中率 vs 本週（真實數據，無其他指標）"}
+
+
+def render_model_health_text(health, divider_len_override=None):
+    line = _line(divider_len_override)
+    out = ["🩺 今日模型健康度", line]
+    s = health.get("score_pct")
+    st = health.get("stars")
+    out.append(f"　命中率：{'—' if s is None else str(s)+'%'}")
+    if st:
+        out.append("　評等：" + "⭐" * st + "☆" * (5 - st))
+    d = health.get("delta_vs_week")
+    if d is not None:
+        arrow = "↑" if d > 0 else ("↓" if d < 0 else "→")
+        out.append(f"　較本週平均：{arrow} {abs(d)}%")
+    out.append(f"　依據：{health.get('basis')}")
     return "\n".join(out)
