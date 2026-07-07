@@ -142,3 +142,117 @@ def test_suggestions_render_insufficient_text(tmp_path):
     s = an.improvement_suggestions(rep)
     txt = an.render_daily_analysis_text(d, s)
     assert isinstance(txt, str) and len(txt) > 0
+
+
+# ── 人類語言層（白話版）──
+def test_human_cause_translation():
+    assert an.human_cause("MODEL_DIRECTION_ERROR") != "MODEL_DIRECTION_ERROR"
+    assert "模型" in an.human_cause("MODEL_DIRECTION_ERROR")
+    # 未知碼原樣回傳
+    assert an.human_cause("WEIRD_CODE") == "WEIRD_CODE"
+
+
+def test_single_human_no_engineering_terms(tmp_path):
+    _sample(tmp_path)
+    rec = {"game_id": "f2", "sport": "FIFA", "pick_outcome": "home",
+           "winner": "away"}
+    a = an.analyze_single_game(rec, context=br.build_context({"f2": {"pre": True}}, rec))
+    txt = an.render_single_analysis_human(a)
+    # LINE 白話版不得出現工程碼
+    for code in ["MODEL_DIRECTION_ERROR", "CUTOFF", "UNKNOWN", "confidence",
+                 "source"]:
+        assert code not in txt
+    # 也不得出現捏造的進階指標
+    for fake in ["Elo", "xG", "壓迫", "主場權重", "+8%", "-4%"]:
+        assert fake not in txt
+
+
+def test_daily_human_no_engineering_terms(tmp_path):
+    _sample(tmp_path)
+    rep = br.build_daily_report(target_date=D, persist=False)
+    d = an.analyze_daily(rep)
+    s = an.improvement_suggestions(rep)
+    txt = an.render_daily_analysis_human(d, s)
+    for code in ["MODEL_DIRECTION_ERROR", "UNKNOWN", "READY_FOR_PR"]:
+        assert code not in txt
+    for fake in ["Elo", "xG", "壓迫", "勝率+", "權重-"]:
+        assert fake not in txt
+    assert "改善建議" in txt
+
+
+def test_daily_human_shows_pct(tmp_path):
+    _sample(tmp_path)
+    rep = br.build_daily_report(target_date=D, persist=False)
+    d = an.analyze_daily(rep)
+    s = an.improvement_suggestions(rep)
+    txt = an.render_daily_analysis_human(d, s)
+    assert "%" in txt and "場" in txt
+
+
+# ── 模型健康度 ──
+def test_model_health_real_numbers(tmp_path):
+    _sample(tmp_path)
+    rep = br.build_daily_report(target_date=D, persist=False)
+    h = an.model_health(rep)
+    # 星等 1~5 或 None；分數為真實命中率
+    assert h["stars"] in (None, 1, 2, 3, 4, 5)
+    assert "命中率" in h["basis"]
+
+
+def test_model_health_no_fake_metrics(tmp_path):
+    _sample(tmp_path)
+    rep = br.build_daily_report(target_date=D, persist=False)
+    h = an.model_health(rep)
+    txt = an.render_model_health_text(h)
+    for fake in ["Elo", "xG", "壓迫", "進攻效率"]:
+        assert fake not in txt
+
+
+# ── 重構後：集中 metadata 一致性（監督建議①②③④⑤）──
+def test_meta_covers_all_root_causes():
+    from providers import ROOT_CAUSES
+    for rc in ROOT_CAUSES:
+        assert rc in an.ROOT_CAUSE_META, rc
+        assert an.ROOT_CAUSE_META[rc].get("human")
+
+
+def test_human_cause_reads_meta():
+    for rc, m in an.ROOT_CAUSE_META.items():
+        assert an.human_cause(rc) == m["human"]
+
+
+def test_star_thresholds_no_magic_numbers():
+    assert an.STAR_THRESHOLDS[0] == (70, 5)
+    assert an.STAR_THRESHOLDS[-1][1] == 1
+
+
+def test_providers_use_short_label(tmp_path):
+    _sample(tmp_path)
+    rep = br.build_daily_report(target_date=D, persist=False)
+    d = an.analyze_daily(rep)
+    s = an.improvement_suggestions(rep)
+    txt = an.render_daily_analysis_human(d, s)
+    assert "傷兵資料" in txt
+    assert "可能有傷兵影響（尚未接入傷兵資料）" not in txt
+
+
+def test_ready_count_abstraction(tmp_path):
+    _sample(tmp_path)
+    rep = br.build_daily_report(target_date=D, persist=False)
+    s = an.improvement_suggestions(rep)
+    assert "ready_count" in s and isinstance(s["ready_count"], int)
+
+
+def test_health_delta_text_says_average(tmp_path):
+    os.chdir(tmp_path)
+    at = dt.datetime(2026, 7, 3, 10, 0, tzinfo=TZ).isoformat()
+    _write("verified_history.csv", [
+        {"verified_at": at, "game_id": "a", "sport": "FIFA", "winner": "home",
+         "pick_outcome": "home", "moneyline_hit": "True",
+         "expected_total": "3", "actual_total": "2"}])
+    json.dump({}, open("flags.json", "w"))
+    rep = br.build_daily_report(target_date=D, persist=False)
+    h = an.model_health(rep)
+    txt = an.render_model_health_text(h)
+    if h.get("delta_vs_week") is not None:
+        assert "較本週平均" in txt
