@@ -114,5 +114,223 @@
       "phase": "early_12h"
     },
     "pre_pushed_at": "2026-07-10T15:53:14+08:00"
+  },
+  "895dfbfbbb57ff9ecc3cb430a9c69076": {
+    "prediction": {
+      "game_id": "895dfbfbbb57ff9ecc3cb430a9c69076",
+      "sport": "MLB",
+      "home": "Detroit Tigers",
+      "away": "Philadelphia Phillies",
+      "start_time": "2026-07-11T06:41:00+08:00",
+      "market": {
+        "asian_handicap": -1.5,
+        "over_under": 8.5,
+        "odds_source": "the-odds-api/consensus",
+        "timestamp": "2026-07-10T10:43:02.070693+00:00"
+      },
+      "bookmaker_count": 9,
+      "fair_prob": {
+        "away": 0.4706,
+        "home": 0.5294
+      },
+      "best_odds": {
+        "home": 1.85,
+        "away": 2.08
+      },
+      "edge": {
+        "away": -0.0212,
+        "home": -0.0205
+      },
+      "best_pick": null,
+      "avg_overround": 0.0373,
+      "model": "market_implied_v1",
+      "generated_at": "2026-07-10T18:43:01+08:00",
+      "model_score": {
+        "type": "poisson",
+        "sport": "MLB",
+        "lambda_home": 5.0,
+        "lambda_away": 3.5,
+        "expected_total": 8.5,
+        "supremacy": 1.5,
+        "outcome_probs": {
+          "home": 0.6325,
+          "draw": 0.1229,
+          "away": 0.2446
+        },
+        "top_scorelines": [
+          {
+            "home": 4,
+            "away": 3,
+            "prob": 0.0379
+          },
+          {
+            "home": 5,
+            "away": 3,
+            "prob": 0.0379
+          },
+          {
+            "home": 4,
+            "away": 4,
+            "prob": 0.0332
+          },
+          {
+            "home": 5,
+            "away": 4,
+            "prob": 0.0332
+          },
+          {
+            "home": 4,
+            "away": 2,
+            "prob": 0.0325
+          }
+        ]
+      },
+      "model_mc": {
+        "n": 20000,
+        "win_prob": {
+          "home": 0.6317,
+          "draw": 0.1217,
+          "away": 0.2467
+        },
+        "top_scorelines": [
+          {
+            "home": 4,
+            "away": 3,
+            "prob": 0.0389
+          },
+          {
+            "home": 5,
+            "away": 3,
+            "prob": 0.036
+          },
+          {
+            "home": 5,
+            "away": 4,
+            "prob": 0.0337
+          },
+          {
+            "home": 4,
+            "away": 2,
+            "prob": 0.0328
+          },
+          {
+            "home": 5,
+            "away": 2,
+            "prob": 0.0327
+          }
+        ]
+      },
+      "phase": "early_12h"
+    },
+    "pre_pushed_at": "2026-07-10T18:43:02+08:00"
+  },
+  "f308816130f3007f771929f15d62862c": {
+    "prediction": {
+      "game_id": "f308816130f3007f771929f15d62862c",
+      "sport": "MLB",
+      "home": "Pittsburgh Pirates",
+      "away": "Milwaukee Brewers",
+      "start_time": "2026-07-11T06:41:00+08:00",
+      "market": {
+        "asian_handicap": -1.5,
+        "over_under": 8.0,
+        "odds_source": "the-odds-api/consensus",
+        "timestamp": "2026-07-10T10:43:02.624624+00:00"
+      },
+      "bookmaker_count": 9,
+      "fair_prob": {
+        "away": 0.4584,
+        "home": 0.5416
+      },
+      "best_odds": {
+        "home": 1.8,
+        "away": 2.16
+      },
+      "edge": {
+        "away": -0.0099,
+        "home": -0.0251
+      },
+      "best_pick": null,
+      "avg_overround": 0.0381,
+      "model": "market_implied_v1",
+      "generated_at": "2026-07-10T18:43:02+08:00",
+      "model_score": {
+        "type": "poisson",
+        "sport": "MLB",
+        "lambda_home": 4.75,
+        "lambda_away": 3.25,
+        "expected_total": 8.0,
+        "supremacy": 1.5,
+        "outcome_probs": {
+          "home": 0.6366,
+          "draw": 0.1258,
+          "away": 0.2376
+        },
+        "top_scorelines": [
+          {
+            "home": 4,
+            "away": 3,
+            "prob": 0.0408
+          },
+          {
+            "home": 5,
+            "away": 3,
+            "prob": 0.0387
+          },
+          {
+            "home": 4,
+            "away": 2,
+            "prob": 0.0376
+          },
+          {
+            "home": 5,
+            "away": 2,
+            "prob": 0.0357
+          },
+          {
+            "home": 3,
+            "away": 3,
+            "prob": 0.0343
+          }
+        ]
+      },
+      "model_mc": {
+        "n": 20000,
+        "win_prob": {
+          "home": 0.6332,
+          "draw": 0.1341,
+          "away": 0.2328
+        },
+        "top_scorelines": [
+          {
+            "home": 4,
+            "away": 3,
+            "prob": 0.0408
+          },
+          {
+            "home": 4,
+            "away": 2,
+            "prob": 0.0379
+          },
+          {
+            "home": 3,
+            "away": 3,
+            "prob": 0.0369
+          },
+          {
+            "home": 5,
+            "away": 3,
+            "prob": 0.0367
+          },
+          {
+            "home": 4,
+            "away": 4,
+            "prob": 0.0362
+          }
+        ]
+      },
+      "phase": "early_12h"
+    },
+    "pre_pushed_at": "2026-07-10T18:43:02+08:00"
   }
 }
