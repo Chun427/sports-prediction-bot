@@ -106,7 +106,8 @@
       },
       "phase": "pre_match_40m"
     },
-    "pre_pushed_at": "2026-07-13T01:17:27+08:00"
+    "pre_pushed_at": "2026-07-13T01:17:27+08:00",
+    "post_attempts": 1
   },
   "32eb2951f81d870c61eae4eb3afb7ea8": {
     "prediction": {
@@ -215,116 +216,8 @@
       },
       "phase": "pre_match_40m"
     },
-    "pre_pushed_at": "2026-07-13T01:17:28+08:00"
-  },
-  "fd0e4e074c09a0148b633ff72e4450d7": {
-    "prediction": {
-      "game_id": "fd0e4e074c09a0148b633ff72e4450d7",
-      "sport": "MLB",
-      "home": "New York Mets",
-      "away": "Boston Red Sox",
-      "start_time": "2026-07-13T01:41:00+08:00",
-      "market": {
-        "asian_handicap": 1.5,
-        "over_under": 8.0,
-        "odds_source": "the-odds-api/consensus",
-        "timestamp": "2026-07-12T17:17:29.264287+00:00"
-      },
-      "bookmaker_count": 9,
-      "fair_prob": {
-        "away": 0.5068,
-        "home": 0.4932
-      },
-      "best_odds": {
-        "home": 1.98,
-        "away": 1.93
-      },
-      "edge": {
-        "away": -0.0219,
-        "home": -0.0234
-      },
-      "best_pick": null,
-      "avg_overround": 0.0388,
-      "model": "market_implied_v1",
-      "generated_at": "2026-07-13T01:17:28+08:00",
-      "model_score": {
-        "type": "poisson",
-        "sport": "MLB",
-        "lambda_home": 3.25,
-        "lambda_away": 4.75,
-        "expected_total": 8.0,
-        "supremacy": -1.5,
-        "outcome_probs": {
-          "home": 0.2376,
-          "draw": 0.1258,
-          "away": 0.6366
-        },
-        "top_scorelines": [
-          {
-            "home": 3,
-            "away": 4,
-            "prob": 0.0408
-          },
-          {
-            "home": 3,
-            "away": 5,
-            "prob": 0.0387
-          },
-          {
-            "home": 2,
-            "away": 4,
-            "prob": 0.0376
-          },
-          {
-            "home": 2,
-            "away": 5,
-            "prob": 0.0357
-          },
-          {
-            "home": 3,
-            "away": 3,
-            "prob": 0.0343
-          }
-        ]
-      },
-      "model_mc": {
-        "n": 20000,
-        "win_prob": {
-          "home": 0.2392,
-          "draw": 0.127,
-          "away": 0.6338
-        },
-        "top_scorelines": [
-          {
-            "home": 3,
-            "away": 5,
-            "prob": 0.0387
-          },
-          {
-            "home": 3,
-            "away": 4,
-            "prob": 0.0387
-          },
-          {
-            "home": 2,
-            "away": 4,
-            "prob": 0.0366
-          },
-          {
-            "home": 2,
-            "away": 5,
-            "prob": 0.0357
-          },
-          {
-            "home": 3,
-            "away": 3,
-            "prob": 0.0336
-          }
-        ]
-      },
-      "phase": "pre_match_40m"
-    },
-    "pre_pushed_at": "2026-07-13T01:17:29+08:00"
+    "pre_pushed_at": "2026-07-13T01:17:28+08:00",
+    "post_attempts": 1
   },
   "07753111ee3b354abbe8fab4987bb817": {
     "prediction": {
@@ -433,7 +326,8 @@
       },
       "phase": "pre_match_40m"
     },
-    "pre_pushed_at": "2026-07-13T01:17:29+08:00"
+    "pre_pushed_at": "2026-07-13T01:17:29+08:00",
+    "post_attempts": 1
   },
   "fe2a389f5cf40c61156a794804ec0fff": {
     "prediction": {
@@ -542,7 +436,8 @@
       },
       "phase": "pre_match_40m"
     },
-    "pre_pushed_at": "2026-07-13T01:17:30+08:00"
+    "pre_pushed_at": "2026-07-13T01:17:30+08:00",
+    "post_attempts": 1
   },
   "44263373c8152cfeef60f3501f9f0cbc": {
     "prediction": {
@@ -651,7 +546,8 @@
       },
       "phase": "pre_match_40m"
     },
-    "pre_pushed_at": "2026-07-13T01:17:31+08:00"
+    "pre_pushed_at": "2026-07-13T01:17:31+08:00",
+    "post_attempts": 1
   },
   "a154d97ebad5a9a06417fe7578e7402f": {
     "prediction": {
@@ -760,7 +656,8 @@
       },
       "phase": "pre_match_40m"
     },
-    "pre_pushed_at": "2026-07-13T01:17:31+08:00"
+    "pre_pushed_at": "2026-07-13T01:17:31+08:00",
+    "post_attempts": 1
   },
   "161be820330ad3e3e7e2ab5b0add2ff4": {
     "prediction": {
