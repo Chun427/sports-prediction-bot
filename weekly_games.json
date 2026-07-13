@@ -1,6 +1,106 @@
 {
   "games": [
     {
+      "id": "7fecfdecc539334a88781da1943c5e9a",
+      "sport": "MLB",
+      "sport_key": "baseball_mlb",
+      "home": "National League",
+      "away": "American League",
+      "start_time": "2026-07-15T08:01:00+08:00",
+      "commence_time_utc": "2026-07-15T00:01:00Z",
+      "odds_h2h": [
+        {
+          "book": "fanduel",
+          "home": 1.7,
+          "away": 2.2,
+          "draw": null
+        },
+        {
+          "book": "betonlineag",
+          "home": 1.75,
+          "away": 2.22,
+          "draw": null
+        },
+        {
+          "book": "betus",
+          "home": 1.75,
+          "away": 2.22,
+          "draw": null
+        },
+        {
+          "book": "lowvig",
+          "home": 1.75,
+          "away": 2.22,
+          "draw": null
+        },
+        {
+          "book": "betmgm",
+          "home": 1.71,
+          "away": 2.15,
+          "draw": null
+        }
+      ],
+      "odds_totals": [
+        {
+          "book": "fanduel",
+          "line": 7.5,
+          "over": 1.91,
+          "under": 1.91
+        },
+        {
+          "book": "betonlineag",
+          "line": 8.0,
+          "over": 2.03,
+          "under": 1.81
+        },
+        {
+          "book": "betus",
+          "line": 7.5,
+          "over": 1.83,
+          "under": 2.0
+        },
+        {
+          "book": "lowvig",
+          "line": 8.0,
+          "over": 2.06,
+          "under": 1.83
+        },
+        {
+          "book": "betmgm",
+          "line": 8.0,
+          "over": 2.0,
+          "under": 1.83
+        }
+      ],
+      "odds_spreads": [
+        {
+          "book": "fanduel",
+          "home_point": -1.5,
+          "away_point": 1.5
+        },
+        {
+          "book": "betonlineag",
+          "home_point": -1.5,
+          "away_point": 1.5
+        },
+        {
+          "book": "betus",
+          "home_point": -1.5,
+          "away_point": 1.5
+        },
+        {
+          "book": "lowvig",
+          "home_point": -1.5,
+          "away_point": 1.5
+        },
+        {
+          "book": "betmgm",
+          "home_point": -1.5,
+          "away_point": 1.5
+        }
+      ]
+    },
+    {
       "id": "f9aa13a662d1658e5a02cfc06d6a2d73",
       "sport": "FIFA",
       "sport_key": "soccer_fifa_world_cup",
@@ -13,7 +113,7 @@
           "book": "betrivers",
           "home": 2.33,
           "away": 3.25,
-          "draw": 3.2
+          "draw": 3.15
         },
         {
           "book": "mybookieag",
@@ -23,15 +123,15 @@
         },
         {
           "book": "betmgm",
-          "home": 2.25,
-          "away": 3.2,
-          "draw": 3.2
+          "home": 2.3,
+          "away": 3.25,
+          "draw": 3.1
         },
         {
           "book": "fanduel",
           "home": 2.35,
           "away": 3.2,
-          "draw": 3.2
+          "draw": 3.1
         },
         {
           "book": "lowvig",
@@ -48,8 +148,8 @@
         {
           "book": "bovada",
           "home": 2.35,
-          "away": 3.2,
-          "draw": 3.25
+          "away": 3.3,
+          "draw": 3.15
         },
         {
           "book": "betus",
@@ -60,8 +160,8 @@
         {
           "book": "draftkings",
           "home": 2.35,
-          "away": 3.2,
-          "draw": 3.2
+          "away": 3.25,
+          "draw": 3.15
         }
       ],
       "odds_totals": [
@@ -137,5 +237,5 @@
       ]
     }
   ],
-  "updated_at": "2026-07-13T06:07:02+08:00"
+  "updated_at": "2026-07-13T14:45:33+08:00"
 }
