@@ -87,4 +87,11 @@ def verify(prediction: dict, result: dict) -> dict | None:
         "realized_return": realized_return,
         "fair_prob_winner": fair_prob_winner,
         "model": prediction.get("model", ""),
+        # ADR-002 Ground Truth Contract
+        # Evidence-based：runtime 無法取得 90 分鐘比分（Provider 限制），
+        # 故不以「賽制」臆測污染（淘汰賽多數為正規時間分勝負，標記會誤殺乾淨資料）。
+        # 污染僅由 contamination_registry.json（Evidence）事後標記。
+        "result_status": "NORMAL",
+        "verification_source": "THE_ODDS",
+        "verification_note": "",
     }

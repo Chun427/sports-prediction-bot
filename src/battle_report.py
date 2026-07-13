@@ -62,6 +62,12 @@ def _istrue(r, k):
     return None if v is None else v.lower() in ("true", "1")
 
 
+def is_contaminated(r):
+    """ADR-002：非 NORMAL 的列不計入命中率/ROI（資料保留，僅排除於指標）。"""
+    st = _s(r, "result_status")
+    return st is not None and st != "NORMAL"
+
+
 def _num(r, k):
     v = _s(r, k)
     try:
@@ -92,6 +98,8 @@ def _norm_sport(v):
 def _tally(rows):
     out = {s: {"pushed": 0, "hits": 0} for s in SPORTS}
     for r in rows:
+        if is_contaminated(r):      # ADR-002：污染列不計入指標
+            continue
         sp = _norm_sport(_s(r, "sport"))
         out.setdefault(sp, {"pushed": 0, "hits": 0})
         ml = _istrue(r, "moneyline_hit")
@@ -165,6 +173,8 @@ def classify_miss(record, providers, context):
 def miss_analysis(rows, providers, flags):
     misses = []
     for r in rows:
+        if is_contaminated(r):      # ADR-002：污染列不計入失敗分析
+            continue
         if _istrue(r, "moneyline_hit") is False:
             ctx = build_context(flags, r)   # 未接入的快照為 None
             misses.append(classify_miss(r, providers, ctx))

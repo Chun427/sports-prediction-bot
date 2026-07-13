@@ -47,7 +47,15 @@ def _has(v) -> bool:
     return str(v).strip().lower() not in ("", "none")
 
 
+def _is_contaminated(r: dict) -> bool:
+    """ADR-002：非 NORMAL 的列不計入戰報指標（資料保留，僅排除於統計）。"""
+    st = r.get("result_status")
+    st = str(st).strip() if st is not None else ""
+    return st not in ("", "None", "NORMAL")
+
+
 def _rate(rows: list[dict], col: str) -> tuple[int, int]:
+    rows = [r for r in rows if not _is_contaminated(r)]   # ADR-002
     vals = [r.get(col) for r in rows if _has(r.get(col))]
     return sum(1 for v in vals if _istrue(v)), len(vals)
 

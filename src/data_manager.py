@@ -197,6 +197,11 @@ VERIFIED_FIELDS = _LEGACY_VERIFIED_FIELDS + [
     "ah_hit", "ou_hit", "scoreline_hit", "total_goals_hit",
     "edge", "confidence", "model_winprob", "devig_winprob",
     "expected_total", "actual_total", "phase",
+    # ADR-002 Ground Truth Contract — additive（舊列自動補空）
+    # result_status: NORMAL / CONFIRMED_ET / SUSPECTED_ET / UNVERIFIED
+    # verification_source: THE_ODDS / GIT_HISTORY / SECOND_PROVIDER / MANUAL
+    # verification_note: 自由文字（debug 用，如 regular_time_draw）
+    "result_status", "verification_source", "verification_note",
 ]
 
 # Schema guard：舊欄位必須是新 schema 的前綴（順序/名稱不得被改），否則升級會 silent break。
