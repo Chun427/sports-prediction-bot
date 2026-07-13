@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "generated_by": "scripts/mark_contamination.py",
+  "last_updated": "2026-07-13",
+  "_ssot_notice": "本檔為污染樣本的唯一人工確認來源（Single Source of Truth）。任何新增污染案例，不得直接修改 verified_history.csv，必須先更新本 Registry，再重新執行 scripts/mark_contamination.py --apply。CI 會驗證 Registry 筆數與 CSV 中 CONFIRMED_ET 筆數一致，不一致即 fail。",
+  "_schema": {
+    "game_id_prefix": "verified_history.csv 中 game_id 的前綴（可為完整 id）",
+    "result_status": "CONFIRMED_ET / SUSPECTED_ET / UNVERIFIED",
+    "verification_source": "GIT_HISTORY / SECOND_PROVIDER / MANUAL",
+    "verification_note": "自由文字，debug 用",
+    "expected_actual_total": "交叉驗證用：若 CSV 的 actual_total 與此不符，腳本中止（防止改錯列）"
+  },
+  "items": [
+    {
+      "game_id_prefix": "658ac8cb",
+      "match": "Belgium vs Senegal (2026-07-01)",
+      "regular_time": "2-2",
+      "final": "3-2 (AET)",
+      "correct_1x2": "draw",
+      "result_status": "CONFIRMED_ET",
+      "verification_source": "GIT_HISTORY",
+      "verification_note": "regular_time_draw",
+      "expected_actual_total": 5
+    },
+    {
+      "game_id_prefix": "3e161b24",
+      "match": "Argentina vs Cape Verde (2026-07-03)",
+      "regular_time": "2-2",
+      "final": "3-2 (AET)",
+      "correct_1x2": "draw",
+      "result_status": "CONFIRMED_ET",
+      "verification_source": "GIT_HISTORY",
+      "verification_note": "regular_time_draw",
+      "expected_actual_total": 5
+    },
+    {
+      "game_id_prefix": "e66e4478",
+      "match": "Norway vs England (2026-07-11)",
+      "regular_time": "1-1",
+      "final": "2-1 (AET)",
+      "correct_1x2": "draw",
+      "result_status": "CONFIRMED_ET",
+      "verification_source": "GIT_HISTORY",
+      "verification_note": "regular_time_draw",
+      "expected_actual_total": 3
+    },
+    {
+      "game_id_prefix": "200d9cd5",
+      "match": "Argentina vs Switzerland (2026-07-11)",
+      "regular_time": "1-1",
+      "final": "3-1 (AET)",
+      "correct_1x2": "draw",
+      "result_status": "CONFIRMED_ET",
+      "verification_source": "GIT_HISTORY",
+      "verification_note": "regular_time_draw",
+      "expected_actual_total": 4
+    }
+  ]
+}
