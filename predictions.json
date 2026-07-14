@@ -110,5 +110,114 @@
       "phase": "early_12h"
     },
     "pre_pushed_at": "2026-07-14T15:54:49+08:00"
+  },
+  "7fecfdecc539334a88781da1943c5e9a": {
+    "prediction": {
+      "game_id": "7fecfdecc539334a88781da1943c5e9a",
+      "sport": "MLB",
+      "home": "National League",
+      "away": "American League",
+      "start_time": "2026-07-15T08:01:00+08:00",
+      "market": {
+        "asian_handicap": -1.5,
+        "over_under": 8.0,
+        "odds_source": "the-odds-api/consensus",
+        "timestamp": "2026-07-14T12:41:04.377034+00:00"
+      },
+      "bookmaker_count": 5,
+      "fair_prob": {
+        "away": 0.449,
+        "home": 0.551
+      },
+      "best_odds": {
+        "home": 1.78,
+        "away": 2.21
+      },
+      "edge": {
+        "away": -0.0078,
+        "home": -0.0191
+      },
+      "best_pick": null,
+      "avg_overround": 0.0324,
+      "model": "market_implied_v1",
+      "generated_at": "2026-07-14T20:41:03+08:00",
+      "model_score": {
+        "type": "poisson",
+        "sport": "MLB",
+        "lambda_home": 4.75,
+        "lambda_away": 3.25,
+        "expected_total": 8.0,
+        "supremacy": 1.5,
+        "outcome_probs": {
+          "home": 0.6366,
+          "draw": 0.1258,
+          "away": 0.2376
+        },
+        "top_scorelines": [
+          {
+            "home": 4,
+            "away": 3,
+            "prob": 0.0408
+          },
+          {
+            "home": 5,
+            "away": 3,
+            "prob": 0.0387
+          },
+          {
+            "home": 4,
+            "away": 2,
+            "prob": 0.0376
+          },
+          {
+            "home": 5,
+            "away": 2,
+            "prob": 0.0357
+          },
+          {
+            "home": 3,
+            "away": 3,
+            "prob": 0.0343
+          }
+        ]
+      },
+      "model_mc": {
+        "n": 20000,
+        "win_prob": {
+          "home": 0.6411,
+          "draw": 0.1247,
+          "away": 0.2341
+        },
+        "top_scorelines": [
+          {
+            "home": 4,
+            "away": 3,
+            "prob": 0.0423
+          },
+          {
+            "home": 5,
+            "away": 3,
+            "prob": 0.0376
+          },
+          {
+            "home": 5,
+            "away": 2,
+            "prob": 0.0369
+          },
+          {
+            "home": 4,
+            "away": 2,
+            "prob": 0.0368
+          },
+          {
+            "home": 3,
+            "away": 3,
+            "prob": 0.0345
+          }
+        ]
+      },
+      "phase": "early_12h"
+    },
+    "pre_pushed_at": "2026-07-14T20:41:04+08:00"
   }
 }
