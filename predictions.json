@@ -1,1 +1,114 @@
-{}
+{
+  "f9aa13a662d1658e5a02cfc06d6a2d73": {
+    "prediction": {
+      "game_id": "f9aa13a662d1658e5a02cfc06d6a2d73",
+      "sport": "FIFA",
+      "home": "France",
+      "away": "Spain",
+      "start_time": "2026-07-15T03:00:00+08:00",
+      "market": {
+        "asian_handicap": 0.0,
+        "over_under": 2.5,
+        "odds_source": "the-odds-api/consensus",
+        "timestamp": "2026-07-14T07:54:49.504406+00:00"
+      },
+      "bookmaker_count": 9,
+      "fair_prob": {
+        "draw": 0.3009,
+        "home": 0.4004,
+        "away": 0.2988
+      },
+      "best_odds": {
+        "home": 2.43,
+        "away": 3.26,
+        "draw": 3.25
+      },
+      "edge": {
+        "draw": -0.0222,
+        "home": -0.0271,
+        "away": -0.026
+      },
+      "best_pick": null,
+      "avg_overround": 0.0488,
+      "model": "market_implied_v1",
+      "generated_at": "2026-07-14T15:54:48+08:00",
+      "model_score": {
+        "type": "poisson",
+        "sport": "FIFA",
+        "lambda_home": 1.25,
+        "lambda_away": 1.25,
+        "expected_total": 2.5,
+        "supremacy": -0.0,
+        "outcome_probs": {
+          "home": 0.365,
+          "draw": 0.27,
+          "away": 0.365
+        },
+        "top_scorelines": [
+          {
+            "home": 1,
+            "away": 1,
+            "prob": 0.1283
+          },
+          {
+            "home": 0,
+            "away": 1,
+            "prob": 0.1026
+          },
+          {
+            "home": 1,
+            "away": 0,
+            "prob": 0.1026
+          },
+          {
+            "home": 0,
+            "away": 0,
+            "prob": 0.0821
+          },
+          {
+            "home": 1,
+            "away": 2,
+            "prob": 0.0802
+          }
+        ]
+      },
+      "model_mc": {
+        "n": 20000,
+        "win_prob": {
+          "home": 0.366,
+          "draw": 0.2672,
+          "away": 0.3668
+        },
+        "top_scorelines": [
+          {
+            "home": 1,
+            "away": 1,
+            "prob": 0.1284
+          },
+          {
+            "home": 0,
+            "away": 1,
+            "prob": 0.1051
+          },
+          {
+            "home": 1,
+            "away": 0,
+            "prob": 0.1013
+          },
+          {
+            "home": 0,
+            "away": 0,
+            "prob": 0.0811
+          },
+          {
+            "home": 1,
+            "away": 2,
+            "prob": 0.081
+          }
+        ]
+      },
+      "phase": "early_12h"
+    },
+    "pre_pushed_at": "2026-07-14T15:54:49+08:00"
+  }
+}
