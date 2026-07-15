@@ -33,7 +33,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Tick + commit state
+      - name: Tick (push)
         env:
           DRY_RUN: "false"
           ODDS_API_KEY_1: ${{ secrets.ODDS_API_KEY_1 }}
@@ -41,9 +41,17 @@ jobs:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
           TG_CHAT: ${{ secrets.TG_CHAT }}
         run: |
+          python src/sports_prediction.py push
+
+      # 狀態持久化：即使上一步失敗仍須執行。
+      # 原因：mark_pushed() 送出即落盤，flags.json 為去重依據；
+      # 若失敗時不 commit，下一輪將重讀舊 flags → 重複推播。
+      # 本步驟僅執行 git 操作，不得含任何 runtime 行為。
+      - name: Commit state
+        if: always()
+        run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          python src/sports_prediction.py push || true
           for f in flags.json weekly_games.json predictions.json key_state.json verified_history.csv; do
             [ -f "$f" ] && git add -- "$f" || true
           done
