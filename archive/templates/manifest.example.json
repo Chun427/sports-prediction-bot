@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "year": 2026,
+  "event": "fifa-worldcup",
+  "source_file": "verified_history.csv",
+  "period": {
+    "from": "2026-06-15",
+    "to": "2026-07-19"
+  },
+  "filter": {
+    "sport": "FIFA",
+    "date_field": "verified_at"
+  },
+  "record_count": 88,
+  "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "generated_by": "scripts/archive_season.py",
+  "generated_at": "2026-07-20T00:00:00+08:00",
+  "immutable": true,
+  "notes": "封存快照為唯讀；原始 verified_history.csv 未被修改。checksum 針對封存後的 csv 檔內容計算。"
+}
