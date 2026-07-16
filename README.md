@@ -214,18 +214,24 @@ Pool（weekly_games.json）
 docs/
 ├── research/
 │   └── alpha_evaluation_2026-07.md   ADR-001  市場基準與 Alpha 評估
+├── archive.md                         封存哲學與生命週期
 └── adr/
-    └── ADR-002-prediction-contract.md         Prediction Contract（Ground Truth）
+    ├── ADR-002-prediction-contract.md          Prediction Contract（Ground Truth）
+    └── ADR-003-season-data-architecture.md     Season-based Data Architecture
 ```
 
 | 文件 | 回答什麼問題 |
 |---|---|
 | **ADR-001** 市場基準與 Alpha 評估 | 60% 命中率是模型厲害，還是市場本來就這樣？（結論：目前**無法證明**存在 alpha；pick 由市場驅動） |
 | **ADR-002** Prediction Contract | **什麼叫「命中」？** 定義 per-sport 結算規則（足球 1X2 = 正規 90 分鐘；MLB/NBA = 含延長局/OT），並確立 **Ground Truth Priority：Sport Rule > Market Settlement Rule > Provider Data** |
+| **ADR-003** Season-based Data Architecture | **多年度／多賽事資料如何長期累積？** 採 **Archive-on-Read**：runtime 永遠只讀寫根目錄單一 workspace，年度／賽事分層為 `archive/` 唯讀封存層，非 runtime 儲存結構 |
 
 **ADR-002 重點**：`contamination_registry.json` 為污染樣本的**唯一人工確認來源（SSOT）**——
 不得直接修改 `verified_history.csv`，必須更新 Registry 後執行 `scripts/mark_contamination.py --apply`。
 CI 會驗證 Registry 與 CSV 一致性，漂移即 fail。
+
+**ADR-003 重點**：歷史封存放 `archive/YYYY/<event>/`，唯讀（immutable）、附 checksum；
+封存用 `scripts/archive_season.py`（只複製、不改原檔）。詳見 [`docs/archive.md`](docs/archive.md)。
 
 ---
 
