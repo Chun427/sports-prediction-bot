@@ -17,20 +17,20 @@
         },
         {
           "book": "betonlineag",
-          "home": 1.78,
-          "away": 2.16,
+          "home": 1.79,
+          "away": 2.14,
           "draw": null
         },
         {
           "book": "lowvig",
-          "home": 1.78,
-          "away": 2.16,
+          "home": 1.79,
+          "away": 2.14,
           "draw": null
         },
         {
           "book": "betus",
-          "home": 1.78,
-          "away": 2.17,
+          "home": 1.79,
+          "away": 2.15,
           "draw": null
         },
         {
@@ -41,20 +41,26 @@
         },
         {
           "book": "mybookieag",
-          "home": 1.76,
-          "away": 2.12,
+          "home": 1.78,
+          "away": 2.1,
           "draw": null
         },
         {
           "book": "bovada",
           "home": 1.75,
-          "away": 2.11,
+          "away": 2.12,
           "draw": null
         },
         {
           "book": "draftkings",
-          "home": 1.74,
-          "away": 2.13,
+          "home": 1.76,
+          "away": 2.09,
+          "draw": null
+        },
+        {
+          "book": "betrivers",
+          "home": 1.76,
+          "away": 2.12,
           "draw": null
         }
       ],
@@ -68,14 +74,14 @@
         {
           "book": "betonlineag",
           "line": 9.5,
-          "over": 1.91,
-          "under": 1.91
+          "over": 1.93,
+          "under": 1.89
         },
         {
           "book": "lowvig",
           "line": 9.5,
-          "over": 1.93,
-          "under": 1.93
+          "over": 1.95,
+          "under": 1.92
         },
         {
           "book": "betus",
@@ -92,20 +98,26 @@
         {
           "book": "mybookieag",
           "line": 9.5,
-          "over": 1.86,
-          "under": 1.95
-        },
-        {
-          "book": "bovada",
-          "line": 9.5,
           "over": 1.91,
           "under": 1.91
         },
         {
+          "book": "bovada",
+          "line": 9.5,
+          "over": 1.87,
+          "under": 1.95
+        },
+        {
           "book": "draftkings",
           "line": 9.5,
-          "over": 1.85,
-          "under": 1.97
+          "over": 1.9,
+          "under": 1.92
+        },
+        {
+          "book": "betrivers",
+          "line": 9.5,
+          "over": 1.91,
+          "under": 1.88
         }
       ],
       "odds_spreads": [
@@ -148,9 +160,90 @@
           "book": "draftkings",
           "home_point": -1.5,
           "away_point": 1.5
+        },
+        {
+          "book": "betrivers",
+          "home_point": -1.5,
+          "away_point": 1.5
         }
       ]
+    },
+    {
+      "id": "f20d3f5cf3efbb324f11686e68db809c",
+      "sport": "MLB",
+      "sport_key": "baseball_mlb",
+      "home": "New York Yankees",
+      "away": "Los Angeles Dodgers",
+      "start_time": "2026-07-18T07:06:00+08:00",
+      "commence_time_utc": "2026-07-17T23:06:00Z",
+      "odds_h2h": [
+        {
+          "book": "fanduel",
+          "home": 1.93,
+          "away": 1.93,
+          "draw": null
+        }
+      ],
+      "odds_totals": [],
+      "odds_spreads": []
+    },
+    {
+      "id": "c137da348b9193a96f85af78c01a1aca",
+      "sport": "MLB",
+      "sport_key": "baseball_mlb",
+      "home": "Cleveland Guardians",
+      "away": "Pittsburgh Pirates",
+      "start_time": "2026-07-18T07:11:00+08:00",
+      "commence_time_utc": "2026-07-17T23:11:00Z",
+      "odds_h2h": [
+        {
+          "book": "fanduel",
+          "home": 1.81,
+          "away": 2.06,
+          "draw": null
+        }
+      ],
+      "odds_totals": [],
+      "odds_spreads": []
+    },
+    {
+      "id": "cfb2e85cbd19eb03e617782d90d2c60e",
+      "sport": "MLB",
+      "sport_key": "baseball_mlb",
+      "home": "Toronto Blue Jays",
+      "away": "Chicago White Sox",
+      "start_time": "2026-07-18T07:16:00+08:00",
+      "commence_time_utc": "2026-07-17T23:16:00Z",
+      "odds_h2h": [
+        {
+          "book": "fanduel",
+          "home": 1.76,
+          "away": 2.12,
+          "draw": null
+        }
+      ],
+      "odds_totals": [],
+      "odds_spreads": []
+    },
+    {
+      "id": "704ba175e571a9f003f1c83cd86e48e6",
+      "sport": "MLB",
+      "sport_key": "baseball_mlb",
+      "home": "Kansas City Royals",
+      "away": "San Diego Padres",
+      "start_time": "2026-07-18T08:11:00+08:00",
+      "commence_time_utc": "2026-07-18T00:11:00Z",
+      "odds_h2h": [
+        {
+          "book": "fanduel",
+          "home": 1.83,
+          "away": 2.02,
+          "draw": null
+        }
+      ],
+      "odds_totals": [],
+      "odds_spreads": []
     }
   ],
-  "updated_at": "2026-07-16T06:17:23+08:00"
+  "updated_at": "2026-07-16T14:02:28+08:00"
 }
