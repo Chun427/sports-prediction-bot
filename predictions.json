@@ -761,5 +761,441 @@
       "phase": "early_12h"
     },
     "pre_pushed_at": "2026-07-17T19:49:32+08:00"
+  },
+  "7d92a7dff1e2a4e0569b73cf9069f2e3": {
+    "prediction": {
+      "game_id": "7d92a7dff1e2a4e0569b73cf9069f2e3",
+      "sport": "MLB",
+      "home": "Chicago Cubs",
+      "away": "Minnesota Twins",
+      "start_time": "2026-07-18T08:06:00+08:00",
+      "market": {
+        "asian_handicap": -1.5,
+        "over_under": 10.5,
+        "odds_source": "the-odds-api/consensus",
+        "timestamp": "2026-07-17T12:52:22.420692+00:00"
+      },
+      "bookmaker_count": 9,
+      "fair_prob": {
+        "home": 0.5593,
+        "away": 0.4407
+      },
+      "best_odds": {
+        "home": 1.75,
+        "away": 2.21
+      },
+      "edge": {
+        "home": -0.0211,
+        "away": -0.0262
+      },
+      "best_pick": null,
+      "avg_overround": 0.0369,
+      "model": "market_implied_v1",
+      "generated_at": "2026-07-17T20:52:21+08:00",
+      "model_score": {
+        "type": "poisson",
+        "sport": "MLB",
+        "lambda_home": 6.0,
+        "lambda_away": 4.5,
+        "expected_total": 10.5,
+        "supremacy": 1.5,
+        "outcome_probs": {
+          "home": 0.6175,
+          "draw": 0.1136,
+          "away": 0.2688
+        },
+        "top_scorelines": [
+          {
+            "home": 5,
+            "away": 4,
+            "prob": 0.0308
+          },
+          {
+            "home": 6,
+            "away": 4,
+            "prob": 0.0308
+          },
+          {
+            "home": 5,
+            "away": 5,
+            "prob": 0.0277
+          },
+          {
+            "home": 6,
+            "away": 5,
+            "prob": 0.0277
+          },
+          {
+            "home": 5,
+            "away": 3,
+            "prob": 0.0274
+          }
+        ]
+      },
+      "model_mc": {
+        "n": 20000,
+        "win_prob": {
+          "home": 0.6246,
+          "draw": 0.1105,
+          "away": 0.265
+        },
+        "top_scorelines": [
+          {
+            "home": 5,
+            "away": 4,
+            "prob": 0.0318
+          },
+          {
+            "home": 6,
+            "away": 5,
+            "prob": 0.0294
+          },
+          {
+            "home": 6,
+            "away": 4,
+            "prob": 0.029
+          },
+          {
+            "home": 6,
+            "away": 3,
+            "prob": 0.0286
+          },
+          {
+            "home": 5,
+            "away": 3,
+            "prob": 0.0278
+          }
+        ]
+      },
+      "phase": "early_12h"
+    },
+    "pre_pushed_at": "2026-07-17T20:52:22+08:00"
+  },
+  "dbf668de78fe1352520d4e2011c77603": {
+    "prediction": {
+      "game_id": "dbf668de78fe1352520d4e2011c77603",
+      "sport": "MLB",
+      "home": "Houston Astros",
+      "away": "Baltimore Orioles",
+      "start_time": "2026-07-18T08:11:00+08:00",
+      "market": {
+        "asian_handicap": 1.5,
+        "over_under": 8.5,
+        "odds_source": "the-odds-api/consensus",
+        "timestamp": "2026-07-17T12:52:22.935152+00:00"
+      },
+      "bookmaker_count": 8,
+      "fair_prob": {
+        "home": 0.5036,
+        "away": 0.4964
+      },
+      "best_odds": {
+        "home": 1.95,
+        "away": 1.96
+      },
+      "edge": {
+        "home": -0.018,
+        "away": -0.027
+      },
+      "best_pick": null,
+      "avg_overround": 0.0398,
+      "model": "market_implied_v1",
+      "generated_at": "2026-07-17T20:52:22+08:00",
+      "model_score": {
+        "type": "poisson",
+        "sport": "MLB",
+        "lambda_home": 3.5,
+        "lambda_away": 5.0,
+        "expected_total": 8.5,
+        "supremacy": -1.5,
+        "outcome_probs": {
+          "home": 0.2446,
+          "draw": 0.1229,
+          "away": 0.6325
+        },
+        "top_scorelines": [
+          {
+            "home": 3,
+            "away": 4,
+            "prob": 0.0379
+          },
+          {
+            "home": 3,
+            "away": 5,
+            "prob": 0.0379
+          },
+          {
+            "home": 4,
+            "away": 4,
+            "prob": 0.0332
+          },
+          {
+            "home": 4,
+            "away": 5,
+            "prob": 0.0332
+          },
+          {
+            "home": 2,
+            "away": 4,
+            "prob": 0.0325
+          }
+        ]
+      },
+      "model_mc": {
+        "n": 20000,
+        "win_prob": {
+          "home": 0.2472,
+          "draw": 0.1244,
+          "away": 0.6285
+        },
+        "top_scorelines": [
+          {
+            "home": 3,
+            "away": 5,
+            "prob": 0.0357
+          },
+          {
+            "home": 3,
+            "away": 4,
+            "prob": 0.0356
+          },
+          {
+            "home": 2,
+            "away": 4,
+            "prob": 0.0345
+          },
+          {
+            "home": 4,
+            "away": 4,
+            "prob": 0.0325
+          },
+          {
+            "home": 4,
+            "away": 5,
+            "prob": 0.0325
+          }
+        ]
+      },
+      "phase": "early_12h"
+    },
+    "pre_pushed_at": "2026-07-17T20:52:22+08:00"
+  },
+  "704ba175e571a9f003f1c83cd86e48e6": {
+    "prediction": {
+      "game_id": "704ba175e571a9f003f1c83cd86e48e6",
+      "sport": "MLB",
+      "home": "Kansas City Royals",
+      "away": "San Diego Padres",
+      "start_time": "2026-07-18T08:11:00+08:00",
+      "market": {
+        "asian_handicap": 1.5,
+        "over_under": 10.0,
+        "odds_source": "the-odds-api/consensus",
+        "timestamp": "2026-07-17T12:52:23.440279+00:00"
+      },
+      "bookmaker_count": 9,
+      "fair_prob": {
+        "home": 0.4915,
+        "away": 0.5085
+      },
+      "best_odds": {
+        "home": 2.0,
+        "away": 1.93
+      },
+      "edge": {
+        "home": -0.017,
+        "away": -0.0186
+      },
+      "best_pick": null,
+      "avg_overround": 0.037,
+      "model": "market_implied_v1",
+      "generated_at": "2026-07-17T20:52:22+08:00",
+      "model_score": {
+        "type": "poisson",
+        "sport": "MLB",
+        "lambda_home": 4.25,
+        "lambda_away": 5.75,
+        "expected_total": 10.0,
+        "supremacy": -1.5,
+        "outcome_probs": {
+          "home": 0.2632,
+          "draw": 0.1156,
+          "away": 0.6211
+        },
+        "top_scorelines": [
+          {
+            "home": 4,
+            "away": 5,
+            "prob": 0.0325
+          },
+          {
+            "home": 4,
+            "away": 6,
+            "prob": 0.0312
+          },
+          {
+            "home": 3,
+            "away": 5,
+            "prob": 0.0306
+          },
+          {
+            "home": 3,
+            "away": 6,
+            "prob": 0.0294
+          },
+          {
+            "home": 4,
+            "away": 4,
+            "prob": 0.0283
+          }
+        ]
+      },
+      "model_mc": {
+        "n": 20000,
+        "win_prob": {
+          "home": 0.2619,
+          "draw": 0.1121,
+          "away": 0.626
+        },
+        "top_scorelines": [
+          {
+            "home": 4,
+            "away": 5,
+            "prob": 0.0348
+          },
+          {
+            "home": 4,
+            "away": 6,
+            "prob": 0.0311
+          },
+          {
+            "home": 3,
+            "away": 5,
+            "prob": 0.0299
+          },
+          {
+            "home": 3,
+            "away": 6,
+            "prob": 0.0296
+          },
+          {
+            "home": 4,
+            "away": 4,
+            "prob": 0.0293
+          }
+        ]
+      },
+      "phase": "early_12h"
+    },
+    "pre_pushed_at": "2026-07-17T20:52:23+08:00"
+  },
+  "e9c736dab72b5dc33dd4f665870c8f2b": {
+    "prediction": {
+      "game_id": "e9c736dab72b5dc33dd4f665870c8f2b",
+      "sport": "MLB",
+      "home": "Colorado Rockies",
+      "away": "Cincinnati Reds",
+      "start_time": "2026-07-18T08:41:00+08:00",
+      "market": {
+        "asian_handicap": 1.5,
+        "over_under": 12.0,
+        "odds_source": "the-odds-api/consensus",
+        "timestamp": "2026-07-17T12:52:23.944750+00:00"
+      },
+      "bookmaker_count": 9,
+      "fair_prob": {
+        "home": 0.5137,
+        "away": 0.4863
+      },
+      "best_odds": {
+        "home": 1.89,
+        "away": 2.02
+      },
+      "edge": {
+        "home": -0.0292,
+        "away": -0.0176
+      },
+      "best_pick": null,
+      "avg_overround": 0.0375,
+      "model": "market_implied_v1",
+      "generated_at": "2026-07-17T20:52:23+08:00",
+      "model_score": {
+        "type": "poisson",
+        "sport": "MLB",
+        "lambda_home": 5.25,
+        "lambda_away": 6.75,
+        "expected_total": 12.0,
+        "supremacy": -1.5,
+        "outcome_probs": {
+          "home": 0.2845,
+          "draw": 0.109,
+          "away": 0.6065
+        },
+        "top_scorelines": [
+          {
+            "home": 5,
+            "away": 6,
+            "prob": 0.0275
+          },
+          {
+            "home": 5,
+            "away": 7,
+            "prob": 0.0265
+          },
+          {
+            "home": 4,
+            "away": 6,
+            "prob": 0.0262
+          },
+          {
+            "home": 4,
+            "away": 7,
+            "prob": 0.0252
+          },
+          {
+            "home": 5,
+            "away": 5,
+            "prob": 0.0244
+          }
+        ]
+      },
+      "model_mc": {
+        "n": 20000,
+        "win_prob": {
+          "home": 0.2833,
+          "draw": 0.1047,
+          "away": 0.6119
+        },
+        "top_scorelines": [
+          {
+            "home": 5,
+            "away": 6,
+            "prob": 0.0262
+          },
+          {
+            "home": 4,
+            "away": 7,
+            "prob": 0.0255
+          },
+          {
+            "home": 5,
+            "away": 7,
+            "prob": 0.0248
+          },
+          {
+            "home": 4,
+            "away": 6,
+            "prob": 0.0244
+          },
+          {
+            "home": 5,
+            "away": 5,
+            "prob": 0.0242
+          }
+        ]
+      },
+      "phase": "early_12h"
+    },
+    "pre_pushed_at": "2026-07-17T20:52:23+08:00"
   }
 }
