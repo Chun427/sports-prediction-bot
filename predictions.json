@@ -107,7 +107,7 @@
       "phase": "early_12h"
     },
     "pre_pushed_at": "2026-07-17T19:49:30+08:00",
-    "post_attempts": 5
+    "post_attempts": 6
   },
   "d8bf9cd37db11dd5e36f7b8d846883b4": {
     "prediction": {
@@ -1419,5 +1419,114 @@
       "phase": "early_12h"
     },
     "pre_pushed_at": "2026-07-18T17:02:29+08:00"
+  },
+  "1b7f4086b3b3d2a039917465354f741b": {
+    "prediction": {
+      "game_id": "1b7f4086b3b3d2a039917465354f741b",
+      "sport": "MLB",
+      "home": "Cleveland Guardians",
+      "away": "Pittsburgh Pirates",
+      "start_time": "2026-07-19T07:10:00+08:00",
+      "market": {
+        "asian_handicap": 1.5,
+        "over_under": 8.0,
+        "odds_source": "the-odds-api/consensus",
+        "timestamp": "2026-07-18T11:29:27.761237+00:00"
+      },
+      "bookmaker_count": 7,
+      "fair_prob": {
+        "away": 0.5031,
+        "home": 0.4969
+      },
+      "best_odds": {
+        "home": 1.97,
+        "away": 1.93
+      },
+      "edge": {
+        "away": -0.0289,
+        "home": -0.0212
+      },
+      "best_pick": null,
+      "avg_overround": 0.0376,
+      "model": "market_implied_v1",
+      "generated_at": "2026-07-18T19:29:27+08:00",
+      "model_score": {
+        "type": "poisson",
+        "sport": "MLB",
+        "lambda_home": 3.25,
+        "lambda_away": 4.75,
+        "expected_total": 8.0,
+        "supremacy": -1.5,
+        "outcome_probs": {
+          "home": 0.2376,
+          "draw": 0.1258,
+          "away": 0.6366
+        },
+        "top_scorelines": [
+          {
+            "home": 3,
+            "away": 4,
+            "prob": 0.0408
+          },
+          {
+            "home": 3,
+            "away": 5,
+            "prob": 0.0387
+          },
+          {
+            "home": 2,
+            "away": 4,
+            "prob": 0.0376
+          },
+          {
+            "home": 2,
+            "away": 5,
+            "prob": 0.0357
+          },
+          {
+            "home": 3,
+            "away": 3,
+            "prob": 0.0343
+          }
+        ]
+      },
+      "model_mc": {
+        "n": 20000,
+        "win_prob": {
+          "home": 0.2356,
+          "draw": 0.1285,
+          "away": 0.6359
+        },
+        "top_scorelines": [
+          {
+            "home": 3,
+            "away": 4,
+            "prob": 0.041
+          },
+          {
+            "home": 2,
+            "away": 4,
+            "prob": 0.0391
+          },
+          {
+            "home": 3,
+            "away": 3,
+            "prob": 0.0386
+          },
+          {
+            "home": 3,
+            "away": 5,
+            "prob": 0.0363
+          },
+          {
+            "home": 2,
+            "away": 5,
+            "prob": 0.0348
+          }
+        ]
+      },
+      "phase": "early_12h"
+    },
+    "pre_pushed_at": "2026-07-18T19:29:27+08:00"
   }
 }
