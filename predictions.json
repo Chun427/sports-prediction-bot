@@ -1,1 +1,987 @@
-{}
+{
+  "fadc6a3080af39afc5de586f3e2945a3": {
+    "prediction": {
+      "game_id": "fadc6a3080af39afc5de586f3e2945a3",
+      "sport": "MLB",
+      "home": "Baltimore Orioles",
+      "away": "Los Angeles Angels",
+      "start_time": "2026-08-05T06:36:00+08:00",
+      "market": {
+        "asian_handicap": -1.5,
+        "over_under": 8.5,
+        "odds_source": "the-odds-api/consensus",
+        "timestamp": "2026-08-04T11:51:21.354873+00:00"
+      },
+      "bookmaker_count": 9,
+      "fair_prob": {
+        "away": 0.4201,
+        "home": 0.5799
+      },
+      "best_odds": {
+        "home": 1.7,
+        "away": 2.34
+      },
+      "edge": {
+        "away": -0.0169,
+        "home": -0.0142
+      },
+      "best_pick": null,
+      "avg_overround": 0.0341,
+      "model": "market_implied_v1",
+      "generated_at": "2026-08-04T19:51:20+08:00",
+      "model_score": {
+        "type": "poisson",
+        "sport": "MLB",
+        "lambda_home": 5.0,
+        "lambda_away": 3.5,
+        "expected_total": 8.5,
+        "supremacy": 1.5,
+        "outcome_probs": {
+          "home": 0.6325,
+          "draw": 0.1229,
+          "away": 0.2446
+        },
+        "top_scorelines": [
+          {
+            "home": 4,
+            "away": 3,
+            "prob": 0.0379
+          },
+          {
+            "home": 5,
+            "away": 3,
+            "prob": 0.0379
+          },
+          {
+            "home": 4,
+            "away": 4,
+            "prob": 0.0332
+          },
+          {
+            "home": 5,
+            "away": 4,
+            "prob": 0.0332
+          },
+          {
+            "home": 4,
+            "away": 2,
+            "prob": 0.0325
+          }
+        ]
+      },
+      "model_mc": {
+        "n": 20000,
+        "win_prob": {
+          "home": 0.6335,
+          "draw": 0.1233,
+          "away": 0.2432
+        },
+        "top_scorelines": [
+          {
+            "home": 4,
+            "away": 3,
+            "prob": 0.0385
+          },
+          {
+            "home": 5,
+            "away": 3,
+            "prob": 0.0382
+          },
+          {
+            "home": 5,
+            "away": 2,
+            "prob": 0.0336
+          },
+          {
+            "home": 6,
+            "away": 3,
+            "prob": 0.0328
+          },
+          {
+            "home": 4,
+            "away": 4,
+            "prob": 0.0325
+          }
+        ]
+      },
+      "phase": "early_12h"
+    },
+    "pre_pushed_at": "2026-08-04T19:51:21+08:00"
+  },
+  "f79dec5ded280dbf4ef07225e03ccd7e": {
+    "prediction": {
+      "game_id": "f79dec5ded280dbf4ef07225e03ccd7e",
+      "sport": "MLB",
+      "home": "Cincinnati Reds",
+      "away": "Athletics",
+      "start_time": "2026-08-05T06:40:00+08:00",
+      "market": {
+        "asian_handicap": -1.5,
+        "over_under": 9.0,
+        "odds_source": "the-odds-api/consensus",
+        "timestamp": "2026-08-04T11:51:21.860309+00:00"
+      },
+      "bookmaker_count": 9,
+      "fair_prob": {
+        "away": 0.4486,
+        "home": 0.5514
+      },
+      "best_odds": {
+        "home": 1.78,
+        "away": 2.2
+      },
+      "edge": {
+        "away": -0.0131,
+        "home": -0.0185
+      },
+      "best_pick": null,
+      "avg_overround": 0.0338,
+      "model": "market_implied_v1",
+      "generated_at": "2026-08-04T19:51:21+08:00",
+      "model_score": {
+        "type": "poisson",
+        "sport": "MLB",
+        "lambda_home": 5.25,
+        "lambda_away": 3.75,
+        "expected_total": 9.0,
+        "supremacy": 1.5,
+        "outcome_probs": {
+          "home": 0.6286,
+          "draw": 0.1202,
+          "away": 0.2512
+        },
+        "top_scorelines": [
+          {
+            "home": 5,
+            "away": 3,
+            "prob": 0.0362
+          },
+          {
+            "home": 4,
+            "away": 3,
+            "prob": 0.0344
+          },
+          {
+            "home": 5,
+            "away": 4,
+            "prob": 0.0339
+          },
+          {
+            "home": 4,
+            "away": 4,
+            "prob": 0.0323
+          },
+          {
+            "home": 6,
+            "away": 3,
+            "prob": 0.0316
+          }
+        ]
+      },
+      "model_mc": {
+        "n": 20000,
+        "win_prob": {
+          "home": 0.6251,
+          "draw": 0.1231,
+          "away": 0.2517
+        },
+        "top_scorelines": [
+          {
+            "home": 5,
+            "away": 3,
+            "prob": 0.0355
+          },
+          {
+            "home": 4,
+            "away": 4,
+            "prob": 0.035
+          },
+          {
+            "home": 5,
+            "away": 4,
+            "prob": 0.0342
+          },
+          {
+            "home": 4,
+            "away": 3,
+            "prob": 0.0327
+          },
+          {
+            "home": 6,
+            "away": 3,
+            "prob": 0.0307
+          }
+        ]
+      },
+      "phase": "early_12h"
+    },
+    "pre_pushed_at": "2026-08-04T19:51:21+08:00"
+  },
+  "c242db575b7b666cd549f31569266d89": {
+    "prediction": {
+      "game_id": "c242db575b7b666cd549f31569266d89",
+      "sport": "MLB",
+      "home": "Cleveland Guardians",
+      "away": "New York Mets",
+      "start_time": "2026-08-05T06:40:00+08:00",
+      "market": {
+        "asian_handicap": -1.5,
+        "over_under": 7.5,
+        "odds_source": "the-odds-api/consensus",
+        "timestamp": "2026-08-04T11:51:22.389075+00:00"
+      },
+      "bookmaker_count": 9,
+      "fair_prob": {
+        "away": 0.4189,
+        "home": 0.5811
+      },
+      "best_odds": {
+        "home": 1.69,
+        "away": 2.36
+      },
+      "edge": {
+        "away": -0.0115,
+        "home": -0.0179
+      },
+      "best_pick": null,
+      "avg_overround": 0.0347,
+      "model": "market_implied_v1",
+      "generated_at": "2026-08-04T19:51:21+08:00",
+      "model_score": {
+        "type": "poisson",
+        "sport": "MLB",
+        "lambda_home": 4.5,
+        "lambda_away": 3.0,
+        "expected_total": 7.5,
+        "supremacy": 1.5,
+        "outcome_probs": {
+          "home": 0.641,
+          "draw": 0.1289,
+          "away": 0.23
+        },
+        "top_scorelines": [
+          {
+            "home": 4,
+            "away": 2,
+            "prob": 0.0426
+          },
+          {
+            "home": 4,
+            "away": 3,
+            "prob": 0.0426
+          },
+          {
+            "home": 5,
+            "away": 2,
+            "prob": 0.0383
+          },
+          {
+            "home": 5,
+            "away": 3,
+            "prob": 0.0383
+          },
+          {
+            "home": 3,
+            "away": 2,
+            "prob": 0.0378
+          }
+        ]
+      },
+      "model_mc": {
+        "n": 20000,
+        "win_prob": {
+          "home": 0.6431,
+          "draw": 0.13,
+          "away": 0.2269
+        },
+        "top_scorelines": [
+          {
+            "home": 4,
+            "away": 2,
+            "prob": 0.044
+          },
+          {
+            "home": 4,
+            "away": 3,
+            "prob": 0.0428
+          },
+          {
+            "home": 3,
+            "away": 2,
+            "prob": 0.0393
+          },
+          {
+            "home": 3,
+            "away": 3,
+            "prob": 0.0388
+          },
+          {
+            "home": 5,
+            "away": 2,
+            "prob": 0.038
+          }
+        ]
+      },
+      "phase": "early_12h"
+    },
+    "pre_pushed_at": "2026-08-04T19:51:22+08:00"
+  },
+  "9d696e41666e6fc76dc4b83ced2e8996": {
+    "prediction": {
+      "game_id": "9d696e41666e6fc76dc4b83ced2e8996",
+      "sport": "MLB",
+      "home": "Philadelphia Phillies",
+      "away": "Washington Nationals",
+      "start_time": "2026-08-05T06:40:00+08:00",
+      "market": {
+        "asian_handicap": -1.5,
+        "over_under": 9.0,
+        "odds_source": "the-odds-api/consensus",
+        "timestamp": "2026-08-04T11:51:22.904545+00:00"
+      },
+      "bookmaker_count": 9,
+      "fair_prob": {
+        "away": 0.3078,
+        "home": 0.6922
+      },
+      "best_odds": {
+        "home": 1.41,
+        "away": 3.3
+      },
+      "edge": {
+        "away": 0.0158,
+        "home": -0.024
+      },
+      "best_pick": {
+        "outcome": "away",
+        "edge": 0.0158,
+        "odds": 3.3
+      },
+      "avg_overround": 0.0345,
+      "model": "market_implied_v1",
+      "generated_at": "2026-08-04T19:51:22+08:00",
+      "model_score": {
+        "type": "poisson",
+        "sport": "MLB",
+        "lambda_home": 5.25,
+        "lambda_away": 3.75,
+        "expected_total": 9.0,
+        "supremacy": 1.5,
+        "outcome_probs": {
+          "home": 0.6286,
+          "draw": 0.1202,
+          "away": 0.2512
+        },
+        "top_scorelines": [
+          {
+            "home": 5,
+            "away": 3,
+            "prob": 0.0362
+          },
+          {
+            "home": 4,
+            "away": 3,
+            "prob": 0.0344
+          },
+          {
+            "home": 5,
+            "away": 4,
+            "prob": 0.0339
+          },
+          {
+            "home": 4,
+            "away": 4,
+            "prob": 0.0323
+          },
+          {
+            "home": 6,
+            "away": 3,
+            "prob": 0.0316
+          }
+        ]
+      },
+      "model_mc": {
+        "n": 20000,
+        "win_prob": {
+          "home": 0.6325,
+          "draw": 0.1221,
+          "away": 0.2454
+        },
+        "top_scorelines": [
+          {
+            "home": 5,
+            "away": 3,
+            "prob": 0.0367
+          },
+          {
+            "home": 4,
+            "away": 3,
+            "prob": 0.0336
+          },
+          {
+            "home": 5,
+            "away": 4,
+            "prob": 0.0328
+          },
+          {
+            "home": 4,
+            "away": 4,
+            "prob": 0.0323
+          },
+          {
+            "home": 6,
+            "away": 3,
+            "prob": 0.0322
+          }
+        ]
+      },
+      "phase": "early_12h"
+    },
+    "pre_pushed_at": "2026-08-04T19:51:22+08:00"
+  },
+  "2279edd120dc52c88defa2a54e0e107d": {
+    "prediction": {
+      "game_id": "2279edd120dc52c88defa2a54e0e107d",
+      "sport": "MLB",
+      "home": "New York Yankees",
+      "away": "St. Louis Cardinals",
+      "start_time": "2026-08-05T07:06:00+08:00",
+      "market": {
+        "asian_handicap": -1.5,
+        "over_under": 8.5,
+        "odds_source": "the-odds-api/consensus",
+        "timestamp": "2026-08-04T11:51:23.419014+00:00"
+      },
+      "bookmaker_count": 9,
+      "fair_prob": {
+        "away": 0.3929,
+        "home": 0.6071
+      },
+      "best_odds": {
+        "home": 1.61,
+        "away": 2.5
+      },
+      "edge": {
+        "away": -0.0178,
+        "home": -0.0225
+      },
+      "best_pick": null,
+      "avg_overround": 0.0353,
+      "model": "market_implied_v1",
+      "generated_at": "2026-08-04T19:51:22+08:00",
+      "model_score": {
+        "type": "poisson",
+        "sport": "MLB",
+        "lambda_home": 5.0,
+        "lambda_away": 3.5,
+        "expected_total": 8.5,
+        "supremacy": 1.5,
+        "outcome_probs": {
+          "home": 0.6325,
+          "draw": 0.1229,
+          "away": 0.2446
+        },
+        "top_scorelines": [
+          {
+            "home": 4,
+            "away": 3,
+            "prob": 0.0379
+          },
+          {
+            "home": 5,
+            "away": 3,
+            "prob": 0.0379
+          },
+          {
+            "home": 4,
+            "away": 4,
+            "prob": 0.0332
+          },
+          {
+            "home": 5,
+            "away": 4,
+            "prob": 0.0332
+          },
+          {
+            "home": 4,
+            "away": 2,
+            "prob": 0.0325
+          }
+        ]
+      },
+      "model_mc": {
+        "n": 20000,
+        "win_prob": {
+          "home": 0.6346,
+          "draw": 0.122,
+          "away": 0.2434
+        },
+        "top_scorelines": [
+          {
+            "home": 5,
+            "away": 3,
+            "prob": 0.0377
+          },
+          {
+            "home": 4,
+            "away": 3,
+            "prob": 0.0374
+          },
+          {
+            "home": 4,
+            "away": 2,
+            "prob": 0.0331
+          },
+          {
+            "home": 4,
+            "away": 4,
+            "prob": 0.0328
+          },
+          {
+            "home": 5,
+            "away": 2,
+            "prob": 0.0312
+          }
+        ]
+      },
+      "phase": "early_12h"
+    },
+    "pre_pushed_at": "2026-08-04T19:51:23+08:00"
+  },
+  "00828e81b6bef980ada2777528d99f93": {
+    "prediction": {
+      "game_id": "00828e81b6bef980ada2777528d99f93",
+      "sport": "MLB",
+      "home": "Boston Red Sox",
+      "away": "Chicago White Sox",
+      "start_time": "2026-08-05T07:11:00+08:00",
+      "market": {
+        "asian_handicap": -1.5,
+        "over_under": 9.0,
+        "odds_source": "the-odds-api/consensus",
+        "timestamp": "2026-08-04T11:51:23.945758+00:00"
+      },
+      "bookmaker_count": 9,
+      "fair_prob": {
+        "away": 0.4535,
+        "home": 0.5465
+      },
+      "best_odds": {
+        "home": 1.79,
+        "away": 2.18
+      },
+      "edge": {
+        "away": -0.0114,
+        "home": -0.0217
+      },
+      "best_pick": null,
+      "avg_overround": 0.0339,
+      "model": "market_implied_v1",
+      "generated_at": "2026-08-04T19:51:23+08:00",
+      "model_score": {
+        "type": "poisson",
+        "sport": "MLB",
+        "lambda_home": 5.25,
+        "lambda_away": 3.75,
+        "expected_total": 9.0,
+        "supremacy": 1.5,
+        "outcome_probs": {
+          "home": 0.6286,
+          "draw": 0.1202,
+          "away": 0.2512
+        },
+        "top_scorelines": [
+          {
+            "home": 5,
+            "away": 3,
+            "prob": 0.0362
+          },
+          {
+            "home": 4,
+            "away": 3,
+            "prob": 0.0344
+          },
+          {
+            "home": 5,
+            "away": 4,
+            "prob": 0.0339
+          },
+          {
+            "home": 4,
+            "away": 4,
+            "prob": 0.0323
+          },
+          {
+            "home": 6,
+            "away": 3,
+            "prob": 0.0316
+          }
+        ]
+      },
+      "model_mc": {
+        "n": 20000,
+        "win_prob": {
+          "home": 0.6263,
+          "draw": 0.1201,
+          "away": 0.2535
+        },
+        "top_scorelines": [
+          {
+            "home": 5,
+            "away": 3,
+            "prob": 0.0389
+          },
+          {
+            "home": 5,
+            "away": 4,
+            "prob": 0.0345
+          },
+          {
+            "home": 4,
+            "away": 3,
+            "prob": 0.0332
+          },
+          {
+            "home": 4,
+            "away": 4,
+            "prob": 0.0322
+          },
+          {
+            "home": 6,
+            "away": 3,
+            "prob": 0.0306
+          }
+        ]
+      },
+      "phase": "early_12h"
+    },
+    "pre_pushed_at": "2026-08-04T19:51:23+08:00"
+  },
+  "b78e7c3194121b22ad94556a6db3048c": {
+    "prediction": {
+      "game_id": "b78e7c3194121b22ad94556a6db3048c",
+      "sport": "MLB",
+      "home": "Atlanta Braves",
+      "away": "Miami Marlins",
+      "start_time": "2026-08-05T07:16:00+08:00",
+      "market": {
+        "asian_handicap": -1.5,
+        "over_under": 9.0,
+        "odds_source": "the-odds-api/consensus",
+        "timestamp": "2026-08-04T11:51:24.500765+00:00"
+      },
+      "bookmaker_count": 9,
+      "fair_prob": {
+        "away": 0.423,
+        "home": 0.577
+      },
+      "best_odds": {
+        "home": 1.7,
+        "away": 2.32
+      },
+      "edge": {
+        "away": -0.0186,
+        "home": -0.0191
+      },
+      "best_pick": null,
+      "avg_overround": 0.0345,
+      "model": "market_implied_v1",
+      "generated_at": "2026-08-04T19:51:23+08:00",
+      "model_score": {
+        "type": "poisson",
+        "sport": "MLB",
+        "lambda_home": 5.25,
+        "lambda_away": 3.75,
+        "expected_total": 9.0,
+        "supremacy": 1.5,
+        "outcome_probs": {
+          "home": 0.6286,
+          "draw": 0.1202,
+          "away": 0.2512
+        },
+        "top_scorelines": [
+          {
+            "home": 5,
+            "away": 3,
+            "prob": 0.0362
+          },
+          {
+            "home": 4,
+            "away": 3,
+            "prob": 0.0344
+          },
+          {
+            "home": 5,
+            "away": 4,
+            "prob": 0.0339
+          },
+          {
+            "home": 4,
+            "away": 4,
+            "prob": 0.0323
+          },
+          {
+            "home": 6,
+            "away": 3,
+            "prob": 0.0316
+          }
+        ]
+      },
+      "model_mc": {
+        "n": 20000,
+        "win_prob": {
+          "home": 0.6313,
+          "draw": 0.1207,
+          "away": 0.2479
+        },
+        "top_scorelines": [
+          {
+            "home": 5,
+            "away": 3,
+            "prob": 0.0349
+          },
+          {
+            "home": 5,
+            "away": 4,
+            "prob": 0.0344
+          },
+          {
+            "home": 4,
+            "away": 3,
+            "prob": 0.0333
+          },
+          {
+            "home": 6,
+            "away": 3,
+            "prob": 0.0316
+          },
+          {
+            "home": 4,
+            "away": 4,
+            "prob": 0.0307
+          }
+        ]
+      },
+      "phase": "early_12h"
+    },
+    "pre_pushed_at": "2026-08-04T19:51:24+08:00"
+  },
+  "9981a2df41e94c5547e84ff3f9979beb": {
+    "prediction": {
+      "game_id": "9981a2df41e94c5547e84ff3f9979beb",
+      "sport": "MLB",
+      "home": "Milwaukee Brewers",
+      "away": "Pittsburgh Pirates",
+      "start_time": "2026-08-05T07:40:00+08:00",
+      "market": {
+        "asian_handicap": -1.5,
+        "over_under": 7.5,
+        "odds_source": "the-odds-api/consensus",
+        "timestamp": "2026-08-04T11:51:25.073596+00:00"
+      },
+      "bookmaker_count": 9,
+      "fair_prob": {
+        "away": 0.4036,
+        "home": 0.5964
+      },
+      "best_odds": {
+        "home": 1.65,
+        "away": 2.45
+      },
+      "edge": {
+        "away": -0.0112,
+        "home": -0.0159
+      },
+      "best_pick": null,
+      "avg_overround": 0.0351,
+      "model": "market_implied_v1",
+      "generated_at": "2026-08-04T19:51:24+08:00",
+      "model_score": {
+        "type": "poisson",
+        "sport": "MLB",
+        "lambda_home": 4.5,
+        "lambda_away": 3.0,
+        "expected_total": 7.5,
+        "supremacy": 1.5,
+        "outcome_probs": {
+          "home": 0.641,
+          "draw": 0.1289,
+          "away": 0.23
+        },
+        "top_scorelines": [
+          {
+            "home": 4,
+            "away": 2,
+            "prob": 0.0426
+          },
+          {
+            "home": 4,
+            "away": 3,
+            "prob": 0.0426
+          },
+          {
+            "home": 5,
+            "away": 2,
+            "prob": 0.0383
+          },
+          {
+            "home": 5,
+            "away": 3,
+            "prob": 0.0383
+          },
+          {
+            "home": 3,
+            "away": 2,
+            "prob": 0.0378
+          }
+        ]
+      },
+      "model_mc": {
+        "n": 20000,
+        "win_prob": {
+          "home": 0.6462,
+          "draw": 0.1289,
+          "away": 0.2249
+        },
+        "top_scorelines": [
+          {
+            "home": 4,
+            "away": 3,
+            "prob": 0.0449
+          },
+          {
+            "home": 5,
+            "away": 3,
+            "prob": 0.041
+          },
+          {
+            "home": 4,
+            "away": 2,
+            "prob": 0.0405
+          },
+          {
+            "home": 3,
+            "away": 2,
+            "prob": 0.0386
+          },
+          {
+            "home": 3,
+            "away": 3,
+            "prob": 0.0382
+          }
+        ]
+      },
+      "phase": "early_12h"
+    },
+    "pre_pushed_at": "2026-08-04T19:51:25+08:00"
+  },
+  "9c77a3a4edfe3bf897bbe0330b1edbb7": {
+    "prediction": {
+      "game_id": "9c77a3a4edfe3bf897bbe0330b1edbb7",
+      "sport": "MLB",
+      "home": "Kansas City Royals",
+      "away": "Minnesota Twins",
+      "start_time": "2026-08-05T07:41:00+08:00",
+      "market": {
+        "asian_handicap": 1.5,
+        "over_under": 9.0,
+        "odds_source": "the-odds-api/consensus",
+        "timestamp": "2026-08-04T11:51:25.617542+00:00"
+      },
+      "bookmaker_count": 9,
+      "fair_prob": {
+        "away": 0.5719,
+        "home": 0.4281
+      },
+      "best_odds": {
+        "home": 2.3,
+        "away": 1.71
+      },
+      "edge": {
+        "away": -0.0221,
+        "home": -0.0154
+      },
+      "best_pick": null,
+      "avg_overround": 0.0348,
+      "model": "market_implied_v1",
+      "generated_at": "2026-08-04T19:51:25+08:00",
+      "model_score": {
+        "type": "poisson",
+        "sport": "MLB",
+        "lambda_home": 3.75,
+        "lambda_away": 5.25,
+        "expected_total": 9.0,
+        "supremacy": -1.5,
+        "outcome_probs": {
+          "home": 0.2512,
+          "draw": 0.1202,
+          "away": 0.6286
+        },
+        "top_scorelines": [
+          {
+            "home": 3,
+            "away": 5,
+            "prob": 0.0362
+          },
+          {
+            "home": 3,
+            "away": 4,
+            "prob": 0.0344
+          },
+          {
+            "home": 4,
+            "away": 5,
+            "prob": 0.0339
+          },
+          {
+            "home": 4,
+            "away": 4,
+            "prob": 0.0323
+          },
+          {
+            "home": 3,
+            "away": 6,
+            "prob": 0.0316
+          }
+        ]
+      },
+      "model_mc": {
+        "n": 20000,
+        "win_prob": {
+          "home": 0.2522,
+          "draw": 0.1197,
+          "away": 0.628
+        },
+        "top_scorelines": [
+          {
+            "home": 3,
+            "away": 5,
+            "prob": 0.0346
+          },
+          {
+            "home": 4,
+            "away": 5,
+            "prob": 0.0345
+          },
+          {
+            "home": 4,
+            "away": 4,
+            "prob": 0.0335
+          },
+          {
+            "home": 3,
+            "away": 4,
+            "prob": 0.0333
+          },
+          {
+            "home": 3,
+            "away": 6,
+            "prob": 0.0325
+          }
+        ]
+      },
+      "phase": "early_12h"
+    },
+    "pre_pushed_at": "2026-08-04T19:51:25+08:00"
+  }
+}
