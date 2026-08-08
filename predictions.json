@@ -10,25 +10,25 @@
         "asian_handicap": 1.5,
         "over_under": 7.5,
         "odds_source": "the-odds-api/consensus",
-        "timestamp": "2026-08-08T07:28:49.036531+00:00"
+        "timestamp": "2026-08-08T18:51:06.790299+00:00"
       },
       "bookmaker_count": 9,
       "fair_prob": {
-        "away": 0.56,
-        "home": 0.44
+        "away": 0.5789,
+        "home": 0.4211
       },
       "best_odds": {
-        "home": 2.24,
-        "away": 1.75
+        "home": 2.35,
+        "away": 1.71
       },
       "edge": {
-        "away": -0.02,
-        "home": -0.0144
+        "away": -0.01,
+        "home": -0.0105
       },
       "best_pick": null,
-      "avg_overround": 0.0371,
+      "avg_overround": 0.0303,
       "model": "market_implied_v1",
-      "generated_at": "2026-08-08T15:28:48+08:00",
+      "generated_at": "2026-08-09T02:51:06+08:00",
       "model_score": {
         "type": "poisson",
         "sport": "MLB",
@@ -72,25 +72,25 @@
       "model_mc": {
         "n": 20000,
         "win_prob": {
-          "home": 0.2328,
-          "draw": 0.131,
-          "away": 0.6362
+          "home": 0.2288,
+          "draw": 0.1301,
+          "away": 0.6411
         },
         "top_scorelines": [
           {
             "home": 2,
             "away": 4,
-            "prob": 0.0432
+            "prob": 0.0423
           },
           {
             "home": 3,
             "away": 4,
-            "prob": 0.0411
+            "prob": 0.0394
           },
           {
-            "home": 3,
-            "away": 5,
-            "prob": 0.0392
+            "home": 2,
+            "away": 3,
+            "prob": 0.0389
           },
           {
             "home": 2,
@@ -98,15 +98,15 @@
             "prob": 0.0387
           },
           {
-            "home": 2,
-            "away": 3,
-            "prob": 0.0383
+            "home": 3,
+            "away": 5,
+            "prob": 0.0379
           }
         ]
       },
-      "phase": "early_12h"
+      "phase": "pre_match_40m"
     },
-    "pre_pushed_at": "2026-08-08T15:28:49+08:00"
+    "pre_pushed_at": "2026-08-09T02:51:06+08:00"
   },
   "62272079b123c3878cf52a664914a57f": {
     "prediction": {
