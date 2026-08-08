@@ -652,5 +652,223 @@
       "phase": "early_12h"
     },
     "pre_pushed_at": "2026-08-08T18:47:08+08:00"
+  },
+  "f55697bcdc0241e9015625a0b5281355": {
+    "prediction": {
+      "game_id": "f55697bcdc0241e9015625a0b5281355",
+      "sport": "MLB",
+      "home": "Kansas City Royals",
+      "away": "Chicago Cubs",
+      "start_time": "2026-08-09T07:10:00+08:00",
+      "market": {
+        "asian_handicap": 1.5,
+        "over_under": 9.5,
+        "odds_source": "the-odds-api/consensus",
+        "timestamp": "2026-08-08T11:13:05.330208+00:00"
+      },
+      "bookmaker_count": 9,
+      "fair_prob": {
+        "home": 0.3935,
+        "away": 0.6065
+      },
+      "best_odds": {
+        "home": 2.54,
+        "away": 1.61
+      },
+      "edge": {
+        "home": -0.0006,
+        "away": -0.0235
+      },
+      "best_pick": null,
+      "avg_overround": 0.0364,
+      "model": "market_implied_v1",
+      "generated_at": "2026-08-08T19:13:04+08:00",
+      "model_score": {
+        "type": "poisson",
+        "sport": "MLB",
+        "lambda_home": 4.0,
+        "lambda_away": 5.5,
+        "expected_total": 9.5,
+        "supremacy": -1.5,
+        "outcome_probs": {
+          "home": 0.2574,
+          "draw": 0.1178,
+          "away": 0.6248
+        },
+        "top_scorelines": [
+          {
+            "home": 3,
+            "away": 5,
+            "prob": 0.0336
+          },
+          {
+            "home": 4,
+            "away": 5,
+            "prob": 0.0336
+          },
+          {
+            "home": 3,
+            "away": 6,
+            "prob": 0.0308
+          },
+          {
+            "home": 4,
+            "away": 6,
+            "prob": 0.0308
+          },
+          {
+            "home": 3,
+            "away": 4,
+            "prob": 0.0306
+          }
+        ]
+      },
+      "model_mc": {
+        "n": 20000,
+        "win_prob": {
+          "home": 0.2581,
+          "draw": 0.1166,
+          "away": 0.6254
+        },
+        "top_scorelines": [
+          {
+            "home": 3,
+            "away": 5,
+            "prob": 0.0338
+          },
+          {
+            "home": 4,
+            "away": 5,
+            "prob": 0.0336
+          },
+          {
+            "home": 3,
+            "away": 4,
+            "prob": 0.031
+          },
+          {
+            "home": 3,
+            "away": 6,
+            "prob": 0.0306
+          },
+          {
+            "home": 4,
+            "away": 4,
+            "prob": 0.0299
+          }
+        ]
+      },
+      "phase": "early_12h"
+    },
+    "pre_pushed_at": "2026-08-08T19:13:05+08:00"
+  },
+  "ac5e921307945f0cd2dcd651f4209604": {
+    "prediction": {
+      "game_id": "ac5e921307945f0cd2dcd651f4209604",
+      "sport": "MLB",
+      "home": "Milwaukee Brewers",
+      "away": "Minnesota Twins",
+      "start_time": "2026-08-09T07:11:00+08:00",
+      "market": {
+        "asian_handicap": -1.5,
+        "over_under": 8.0,
+        "odds_source": "the-odds-api/consensus",
+        "timestamp": "2026-08-08T11:13:06.016930+00:00"
+      },
+      "bookmaker_count": 8,
+      "fair_prob": {
+        "home": 0.5793,
+        "away": 0.4207
+      },
+      "best_odds": {
+        "home": 1.69,
+        "away": 2.31
+      },
+      "edge": {
+        "home": -0.021,
+        "away": -0.0282
+      },
+      "best_pick": null,
+      "avg_overround": 0.0369,
+      "model": "market_implied_v1",
+      "generated_at": "2026-08-08T19:13:05+08:00",
+      "model_score": {
+        "type": "poisson",
+        "sport": "MLB",
+        "lambda_home": 4.75,
+        "lambda_away": 3.25,
+        "expected_total": 8.0,
+        "supremacy": 1.5,
+        "outcome_probs": {
+          "home": 0.6366,
+          "draw": 0.1258,
+          "away": 0.2376
+        },
+        "top_scorelines": [
+          {
+            "home": 4,
+            "away": 3,
+            "prob": 0.0408
+          },
+          {
+            "home": 5,
+            "away": 3,
+            "prob": 0.0387
+          },
+          {
+            "home": 4,
+            "away": 2,
+            "prob": 0.0376
+          },
+          {
+            "home": 5,
+            "away": 2,
+            "prob": 0.0357
+          },
+          {
+            "home": 3,
+            "away": 3,
+            "prob": 0.0343
+          }
+        ]
+      },
+      "model_mc": {
+        "n": 20000,
+        "win_prob": {
+          "home": 0.6429,
+          "draw": 0.1232,
+          "away": 0.2339
+        },
+        "top_scorelines": [
+          {
+            "home": 4,
+            "away": 3,
+            "prob": 0.042
+          },
+          {
+            "home": 5,
+            "away": 3,
+            "prob": 0.0364
+          },
+          {
+            "home": 3,
+            "away": 3,
+            "prob": 0.0362
+          },
+          {
+            "home": 5,
+            "away": 2,
+            "prob": 0.0358
+          },
+          {
+            "home": 4,
+            "away": 2,
+            "prob": 0.0358
+          }
+        ]
+      },
+      "phase": "early_12h"
+    },
+    "pre_pushed_at": "2026-08-08T19:13:06+08:00"
   }
 }
