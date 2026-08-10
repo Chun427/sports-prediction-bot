@@ -979,5 +979,114 @@
       "phase": "early_12h"
     },
     "pre_pushed_at": "2026-08-10T21:55:47+08:00"
+  },
+  "73ef1f850670696ba58e162fd6a974c5": {
+    "prediction": {
+      "game_id": "73ef1f850670696ba58e162fd6a974c5",
+      "sport": "MLB",
+      "home": "Los Angeles Dodgers",
+      "away": "Kansas City Royals",
+      "start_time": "2026-08-11T10:10:00+08:00",
+      "market": {
+        "asian_handicap": -1.5,
+        "over_under": 7.5,
+        "odds_source": "the-odds-api/consensus",
+        "timestamp": "2026-08-10T14:53:52.517415+00:00"
+      },
+      "bookmaker_count": 9,
+      "fair_prob": {
+        "away": 0.2688,
+        "home": 0.7312
+      },
+      "best_odds": {
+        "home": 1.33,
+        "away": 3.69
+      },
+      "edge": {
+        "away": -0.008,
+        "home": -0.0276
+      },
+      "best_pick": null,
+      "avg_overround": 0.0371,
+      "model": "market_implied_v1",
+      "generated_at": "2026-08-10T22:53:51+08:00",
+      "model_score": {
+        "type": "poisson",
+        "sport": "MLB",
+        "lambda_home": 4.5,
+        "lambda_away": 3.0,
+        "expected_total": 7.5,
+        "supremacy": 1.5,
+        "outcome_probs": {
+          "home": 0.641,
+          "draw": 0.1289,
+          "away": 0.23
+        },
+        "top_scorelines": [
+          {
+            "home": 4,
+            "away": 2,
+            "prob": 0.0426
+          },
+          {
+            "home": 4,
+            "away": 3,
+            "prob": 0.0426
+          },
+          {
+            "home": 5,
+            "away": 2,
+            "prob": 0.0383
+          },
+          {
+            "home": 5,
+            "away": 3,
+            "prob": 0.0383
+          },
+          {
+            "home": 3,
+            "away": 2,
+            "prob": 0.0378
+          }
+        ]
+      },
+      "model_mc": {
+        "n": 20000,
+        "win_prob": {
+          "home": 0.6415,
+          "draw": 0.127,
+          "away": 0.2314
+        },
+        "top_scorelines": [
+          {
+            "home": 4,
+            "away": 3,
+            "prob": 0.0447
+          },
+          {
+            "home": 4,
+            "away": 2,
+            "prob": 0.0416
+          },
+          {
+            "home": 5,
+            "away": 2,
+            "prob": 0.0396
+          },
+          {
+            "home": 3,
+            "away": 2,
+            "prob": 0.0381
+          },
+          {
+            "home": 5,
+            "away": 3,
+            "prob": 0.0372
+          }
+        ]
+      },
+      "phase": "early_12h"
+    },
+    "pre_pushed_at": "2026-08-10T22:53:52+08:00"
   }
 }
