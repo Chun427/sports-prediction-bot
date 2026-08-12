@@ -1,111 +1,111 @@
 {
-  "2e165d36c5dd97967e8e9d1e53290d71": {
+  "382fb88aee61d73f9cc4f47fabd2c7e7": {
     "prediction": {
-      "game_id": "2e165d36c5dd97967e8e9d1e53290d71",
+      "game_id": "382fb88aee61d73f9cc4f47fabd2c7e7",
       "sport": "MLB",
-      "home": "Los Angeles Dodgers",
-      "away": "Kansas City Royals",
-      "start_time": "2026-08-12T10:11:00+08:00",
+      "home": "Minnesota Twins",
+      "away": "Baltimore Orioles",
+      "start_time": "2026-08-13T01:40:00+08:00",
       "market": {
-        "asian_handicap": -1.5,
-        "over_under": 8.0,
+        "asian_handicap": 1.5,
+        "over_under": 8.5,
         "odds_source": "the-odds-api/consensus",
-        "timestamp": "2026-08-11T14:35:16.579549+00:00"
+        "timestamp": "2026-08-12T05:56:13.692087+00:00"
       },
       "bookmaker_count": 9,
       "fair_prob": {
-        "home": 0.6993,
-        "away": 0.3007
+        "away": 0.4909,
+        "home": 0.5091
       },
       "best_odds": {
-        "home": 1.4,
-        "away": 3.25
+        "home": 1.91,
+        "away": 2.0
       },
       "edge": {
-        "home": -0.0209,
-        "away": -0.0229
+        "away": -0.0181,
+        "home": -0.0277
       },
       "best_pick": null,
-      "avg_overround": 0.0371,
+      "avg_overround": 0.0376,
       "model": "market_implied_v1",
-      "generated_at": "2026-08-11T22:35:15+08:00",
+      "generated_at": "2026-08-12T13:56:13+08:00",
       "model_score": {
         "type": "poisson",
         "sport": "MLB",
-        "lambda_home": 4.75,
-        "lambda_away": 3.25,
-        "expected_total": 8.0,
-        "supremacy": 1.5,
+        "lambda_home": 3.5,
+        "lambda_away": 5.0,
+        "expected_total": 8.5,
+        "supremacy": -1.5,
         "outcome_probs": {
-          "home": 0.6366,
-          "draw": 0.1258,
-          "away": 0.2376
+          "home": 0.2446,
+          "draw": 0.1229,
+          "away": 0.6325
         },
         "top_scorelines": [
           {
-            "home": 4,
-            "away": 3,
-            "prob": 0.0408
-          },
-          {
-            "home": 5,
-            "away": 3,
-            "prob": 0.0387
-          },
-          {
-            "home": 4,
-            "away": 2,
-            "prob": 0.0376
-          },
-          {
-            "home": 5,
-            "away": 2,
-            "prob": 0.0357
+            "home": 3,
+            "away": 4,
+            "prob": 0.0379
           },
           {
             "home": 3,
-            "away": 3,
-            "prob": 0.0343
+            "away": 5,
+            "prob": 0.0379
+          },
+          {
+            "home": 4,
+            "away": 4,
+            "prob": 0.0332
+          },
+          {
+            "home": 4,
+            "away": 5,
+            "prob": 0.0332
+          },
+          {
+            "home": 2,
+            "away": 4,
+            "prob": 0.0325
           }
         ]
       },
       "model_mc": {
         "n": 20000,
         "win_prob": {
-          "home": 0.6408,
-          "draw": 0.1211,
-          "away": 0.2382
+          "home": 0.2451,
+          "draw": 0.1257,
+          "away": 0.6292
         },
         "top_scorelines": [
           {
-            "home": 4,
-            "away": 3,
-            "prob": 0.0429
-          },
-          {
-            "home": 4,
-            "away": 2,
-            "prob": 0.0386
-          },
-          {
-            "home": 5,
-            "away": 3,
-            "prob": 0.0385
-          },
-          {
-            "home": 5,
-            "away": 2,
-            "prob": 0.0365
+            "home": 3,
+            "away": 5,
+            "prob": 0.0377
           },
           {
             "home": 3,
-            "away": 3,
-            "prob": 0.0338
+            "away": 4,
+            "prob": 0.0369
+          },
+          {
+            "home": 2,
+            "away": 4,
+            "prob": 0.0347
+          },
+          {
+            "home": 4,
+            "away": 5,
+            "prob": 0.0344
+          },
+          {
+            "home": 4,
+            "away": 4,
+            "prob": 0.0334
           }
         ]
       },
       "phase": "early_12h"
     },
-    "pre_pushed_at": "2026-08-11T22:35:16+08:00"
+    "pre_pushed_at": "2026-08-12T13:56:13+08:00"
   }
 }
