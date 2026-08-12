@@ -1310,5 +1310,114 @@
       "phase": "early_12h"
     },
     "pre_pushed_at": "2026-08-12T19:33:29+08:00"
+  },
+  "e7c0a434cffb5f56a2446383ebb2e3ad": {
+    "prediction": {
+      "game_id": "e7c0a434cffb5f56a2446383ebb2e3ad",
+      "sport": "MLB",
+      "home": "Chicago White Sox",
+      "away": "Cincinnati Reds",
+      "start_time": "2026-08-13T07:40:00+08:00",
+      "market": {
+        "asian_handicap": -1.5,
+        "over_under": 9.0,
+        "odds_source": "the-odds-api/consensus",
+        "timestamp": "2026-08-12T12:28:05.777146+00:00"
+      },
+      "bookmaker_count": 9,
+      "fair_prob": {
+        "away": 0.4349,
+        "home": 0.5651
+      },
+      "best_odds": {
+        "home": 1.74,
+        "away": 2.24
+      },
+      "edge": {
+        "away": -0.0258,
+        "home": -0.0167
+      },
+      "best_pick": null,
+      "avg_overround": 0.0364,
+      "model": "market_implied_v1",
+      "generated_at": "2026-08-12T20:28:04+08:00",
+      "model_score": {
+        "type": "poisson",
+        "sport": "MLB",
+        "lambda_home": 5.25,
+        "lambda_away": 3.75,
+        "expected_total": 9.0,
+        "supremacy": 1.5,
+        "outcome_probs": {
+          "home": 0.6286,
+          "draw": 0.1202,
+          "away": 0.2512
+        },
+        "top_scorelines": [
+          {
+            "home": 5,
+            "away": 3,
+            "prob": 0.0362
+          },
+          {
+            "home": 4,
+            "away": 3,
+            "prob": 0.0344
+          },
+          {
+            "home": 5,
+            "away": 4,
+            "prob": 0.0339
+          },
+          {
+            "home": 4,
+            "away": 4,
+            "prob": 0.0323
+          },
+          {
+            "home": 6,
+            "away": 3,
+            "prob": 0.0316
+          }
+        ]
+      },
+      "model_mc": {
+        "n": 20000,
+        "win_prob": {
+          "home": 0.6269,
+          "draw": 0.1214,
+          "away": 0.2517
+        },
+        "top_scorelines": [
+          {
+            "home": 5,
+            "away": 3,
+            "prob": 0.0362
+          },
+          {
+            "home": 4,
+            "away": 4,
+            "prob": 0.0343
+          },
+          {
+            "home": 5,
+            "away": 4,
+            "prob": 0.0338
+          },
+          {
+            "home": 4,
+            "away": 3,
+            "prob": 0.0335
+          },
+          {
+            "home": 6,
+            "away": 4,
+            "prob": 0.0312
+          }
+        ]
+      },
+      "phase": "early_12h"
+    },
+    "pre_pushed_at": "2026-08-12T20:28:05+08:00"
   }
 }
