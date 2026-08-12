@@ -107,5 +107,114 @@
       "phase": "early_12h"
     },
     "pre_pushed_at": "2026-08-12T13:56:13+08:00"
+  },
+  "99d0aa9944cae60f4cd020c7b883b0e9": {
+    "prediction": {
+      "game_id": "99d0aa9944cae60f4cd020c7b883b0e9",
+      "sport": "MLB",
+      "home": "St. Louis Cardinals",
+      "away": "Philadelphia Phillies",
+      "start_time": "2026-08-13T02:15:00+08:00",
+      "market": {
+        "asian_handicap": 1.5,
+        "over_under": 8.5,
+        "odds_source": "the-odds-api/consensus",
+        "timestamp": "2026-08-12T07:19:26.313820+00:00"
+      },
+      "bookmaker_count": 9,
+      "fair_prob": {
+        "away": 0.5938,
+        "home": 0.4062
+      },
+      "best_odds": {
+        "home": 2.45,
+        "away": 1.65
+      },
+      "edge": {
+        "away": -0.0203,
+        "home": -0.0047
+      },
+      "best_pick": null,
+      "avg_overround": 0.0377,
+      "model": "market_implied_v1",
+      "generated_at": "2026-08-12T15:19:25+08:00",
+      "model_score": {
+        "type": "poisson",
+        "sport": "MLB",
+        "lambda_home": 3.5,
+        "lambda_away": 5.0,
+        "expected_total": 8.5,
+        "supremacy": -1.5,
+        "outcome_probs": {
+          "home": 0.2446,
+          "draw": 0.1229,
+          "away": 0.6325
+        },
+        "top_scorelines": [
+          {
+            "home": 3,
+            "away": 4,
+            "prob": 0.0379
+          },
+          {
+            "home": 3,
+            "away": 5,
+            "prob": 0.0379
+          },
+          {
+            "home": 4,
+            "away": 4,
+            "prob": 0.0332
+          },
+          {
+            "home": 4,
+            "away": 5,
+            "prob": 0.0332
+          },
+          {
+            "home": 2,
+            "away": 4,
+            "prob": 0.0325
+          }
+        ]
+      },
+      "model_mc": {
+        "n": 20000,
+        "win_prob": {
+          "home": 0.2452,
+          "draw": 0.1247,
+          "away": 0.63
+        },
+        "top_scorelines": [
+          {
+            "home": 3,
+            "away": 5,
+            "prob": 0.0384
+          },
+          {
+            "home": 3,
+            "away": 4,
+            "prob": 0.0372
+          },
+          {
+            "home": 4,
+            "away": 4,
+            "prob": 0.0355
+          },
+          {
+            "home": 2,
+            "away": 4,
+            "prob": 0.0344
+          },
+          {
+            "home": 4,
+            "away": 5,
+            "prob": 0.0339
+          }
+        ]
+      },
+      "phase": "early_12h"
+    },
+    "pre_pushed_at": "2026-08-12T15:19:26+08:00"
   }
 }
