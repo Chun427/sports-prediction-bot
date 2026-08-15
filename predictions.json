@@ -1,118 +1,4 @@
 {
-  "f1e49b28e98e693eaa5d5a27c58ece19": {
-    "prediction": {
-      "game_id": "f1e49b28e98e693eaa5d5a27c58ece19",
-      "sport": "MLB",
-      "home": "Tampa Bay Rays",
-      "away": "Baltimore Orioles",
-      "start_time": "2026-08-15T07:11:00+08:00",
-      "market": {
-        "asian_handicap": -1.5,
-        "over_under": 8.0,
-        "odds_source": "the-odds-api/consensus",
-        "timestamp": "2026-08-14T22:26:30.366736+00:00"
-      },
-      "bookmaker_count": 9,
-      "fair_prob": {
-        "home": 0.5973,
-        "away": 0.4027
-      },
-      "best_odds": {
-        "home": 1.68,
-        "away": 2.45
-      },
-      "edge": {
-        "home": 0.0035,
-        "away": -0.0134
-      },
-      "best_pick": {
-        "outcome": "home",
-        "edge": 0.0035,
-        "odds": 1.68
-      },
-      "avg_overround": 0.0316,
-      "model": "market_implied_v1",
-      "generated_at": "2026-08-15T06:26:29+08:00",
-      "model_score": {
-        "type": "poisson",
-        "sport": "MLB",
-        "lambda_home": 4.75,
-        "lambda_away": 3.25,
-        "expected_total": 8.0,
-        "supremacy": 1.5,
-        "outcome_probs": {
-          "home": 0.6366,
-          "draw": 0.1258,
-          "away": 0.2376
-        },
-        "top_scorelines": [
-          {
-            "home": 4,
-            "away": 3,
-            "prob": 0.0408
-          },
-          {
-            "home": 5,
-            "away": 3,
-            "prob": 0.0387
-          },
-          {
-            "home": 4,
-            "away": 2,
-            "prob": 0.0376
-          },
-          {
-            "home": 5,
-            "away": 2,
-            "prob": 0.0357
-          },
-          {
-            "home": 3,
-            "away": 3,
-            "prob": 0.0343
-          }
-        ]
-      },
-      "model_mc": {
-        "n": 20000,
-        "win_prob": {
-          "home": 0.638,
-          "draw": 0.1234,
-          "away": 0.2387
-        },
-        "top_scorelines": [
-          {
-            "home": 4,
-            "away": 3,
-            "prob": 0.0394
-          },
-          {
-            "home": 5,
-            "away": 3,
-            "prob": 0.037
-          },
-          {
-            "home": 5,
-            "away": 2,
-            "prob": 0.0364
-          },
-          {
-            "home": 4,
-            "away": 2,
-            "prob": 0.0352
-          },
-          {
-            "home": 4,
-            "away": 4,
-            "prob": 0.0338
-          }
-        ]
-      },
-      "phase": "pre_match_40m"
-    },
-    "pre_pushed_at": "2026-08-15T06:26:30+08:00",
-    "post_attempts": 1
-  },
   "460030cd885edbe6318ada07a319efb4": {
     "prediction": {
       "game_id": "460030cd885edbe6318ada07a319efb4",
@@ -220,7 +106,8 @@
       },
       "phase": "pre_match_40m"
     },
-    "pre_pushed_at": "2026-08-15T07:32:51+08:00"
+    "pre_pushed_at": "2026-08-15T07:32:51+08:00",
+    "post_attempts": 1
   },
   "9d19aea6561484f2c862df00e4ddb562": {
     "prediction": {
