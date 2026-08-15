@@ -1528,5 +1528,114 @@
       "phase": "early_12h"
     },
     "pre_pushed_at": "2026-08-15T21:38:49+08:00"
+  },
+  "1145a9db8d138b13599e168a340ad3c7": {
+    "prediction": {
+      "game_id": "1145a9db8d138b13599e168a340ad3c7",
+      "sport": "MLB",
+      "home": "Athletics",
+      "away": "Texas Rangers",
+      "start_time": "2026-08-16T09:40:00+08:00",
+      "market": {
+        "asian_handicap": 1.5,
+        "over_under": 9.5,
+        "odds_source": "the-odds-api/consensus",
+        "timestamp": "2026-08-15T13:57:27.484714+00:00"
+      },
+      "bookmaker_count": 9,
+      "fair_prob": {
+        "home": 0.4519,
+        "away": 0.5481
+      },
+      "best_odds": {
+        "home": 2.18,
+        "away": 1.79
+      },
+      "edge": {
+        "home": -0.0148,
+        "away": -0.019
+      },
+      "best_pick": null,
+      "avg_overround": 0.037,
+      "model": "market_implied_v1",
+      "generated_at": "2026-08-15T21:57:26+08:00",
+      "model_score": {
+        "type": "poisson",
+        "sport": "MLB",
+        "lambda_home": 4.0,
+        "lambda_away": 5.5,
+        "expected_total": 9.5,
+        "supremacy": -1.5,
+        "outcome_probs": {
+          "home": 0.2574,
+          "draw": 0.1178,
+          "away": 0.6248
+        },
+        "top_scorelines": [
+          {
+            "home": 3,
+            "away": 5,
+            "prob": 0.0336
+          },
+          {
+            "home": 4,
+            "away": 5,
+            "prob": 0.0336
+          },
+          {
+            "home": 3,
+            "away": 6,
+            "prob": 0.0308
+          },
+          {
+            "home": 4,
+            "away": 6,
+            "prob": 0.0308
+          },
+          {
+            "home": 3,
+            "away": 4,
+            "prob": 0.0306
+          }
+        ]
+      },
+      "model_mc": {
+        "n": 20000,
+        "win_prob": {
+          "home": 0.2526,
+          "draw": 0.1188,
+          "away": 0.6285
+        },
+        "top_scorelines": [
+          {
+            "home": 4,
+            "away": 5,
+            "prob": 0.0325
+          },
+          {
+            "home": 3,
+            "away": 4,
+            "prob": 0.0324
+          },
+          {
+            "home": 4,
+            "away": 6,
+            "prob": 0.0316
+          },
+          {
+            "home": 3,
+            "away": 5,
+            "prob": 0.0315
+          },
+          {
+            "home": 4,
+            "away": 4,
+            "prob": 0.0307
+          }
+        ]
+      },
+      "phase": "early_12h"
+    },
+    "pre_pushed_at": "2026-08-15T21:57:27+08:00"
   }
 }
