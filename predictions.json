@@ -990,30 +990,34 @@
       "sport": "MLB",
       "home": "Chicago Cubs",
       "away": "St. Louis Cardinals",
-      "start_time": "2026-08-17T03:11:00+08:00",
+      "start_time": "2026-08-17T03:16:00+08:00",
       "market": {
         "asian_handicap": -1.5,
         "over_under": 9.0,
         "odds_source": "the-odds-api/consensus",
-        "timestamp": "2026-08-16T07:38:21.379372+00:00"
+        "timestamp": "2026-08-16T18:28:39.978427+00:00"
       },
       "bookmaker_count": 9,
       "fair_prob": {
-        "home": 0.5904,
-        "away": 0.4096
+        "home": 0.6133,
+        "away": 0.3867
       },
       "best_odds": {
-        "home": 1.67,
-        "away": 2.4
+        "home": 1.61,
+        "away": 2.6
       },
       "edge": {
-        "home": -0.0141,
-        "away": -0.0169
+        "home": -0.0125,
+        "away": 0.0054
       },
-      "best_pick": null,
-      "avg_overround": 0.0365,
+      "best_pick": {
+        "outcome": "away",
+        "edge": 0.0054,
+        "odds": 2.6
+      },
+      "avg_overround": 0.0307,
       "model": "market_implied_v1",
-      "generated_at": "2026-08-16T15:38:20+08:00",
+      "generated_at": "2026-08-17T02:28:39+08:00",
       "model_score": {
         "type": "poisson",
         "sport": "MLB",
@@ -1057,41 +1061,41 @@
       "model_mc": {
         "n": 20000,
         "win_prob": {
-          "home": 0.6327,
-          "draw": 0.1163,
-          "away": 0.251
+          "home": 0.6227,
+          "draw": 0.1174,
+          "away": 0.26
         },
         "top_scorelines": [
           {
             "home": 5,
             "away": 3,
-            "prob": 0.0367
+            "prob": 0.0357
           },
           {
-            "home": 6,
+            "home": 4,
             "away": 3,
             "prob": 0.0336
           },
           {
+            "home": 4,
+            "away": 4,
+            "prob": 0.033
+          },
+          {
             "home": 5,
             "away": 4,
-            "prob": 0.0326
+            "prob": 0.031
           },
           {
-            "home": 4,
-            "away": 3,
-            "prob": 0.0309
-          },
-          {
-            "home": 4,
+            "home": 6,
             "away": 4,
-            "prob": 0.0307
+            "prob": 0.03
           }
         ]
       },
-      "phase": "early_12h"
+      "phase": "pre_match_40m"
     },
-    "pre_pushed_at": "2026-08-16T15:38:21+08:00"
+    "pre_pushed_at": "2026-08-17T02:28:39+08:00"
   },
   "7cbc2fdbcb76365df956f2fb706f3017": {
     "prediction": {
