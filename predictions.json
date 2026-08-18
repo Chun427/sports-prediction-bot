@@ -1,1 +1,111 @@
-{}
+{
+  "125ac4ae06bb1ca6b1fcc189bd321490": {
+    "prediction": {
+      "game_id": "125ac4ae06bb1ca6b1fcc189bd321490",
+      "sport": "MLB",
+      "home": "Baltimore Orioles",
+      "away": "New York Yankees",
+      "start_time": "2026-08-19T06:36:00+08:00",
+      "market": {
+        "asian_handicap": 1.5,
+        "over_under": 8.5,
+        "odds_source": "the-odds-api/consensus",
+        "timestamp": "2026-08-18T10:38:24.384423+00:00"
+      },
+      "bookmaker_count": 9,
+      "fair_prob": {
+        "away": 0.5165,
+        "home": 0.4835
+      },
+      "best_odds": {
+        "home": 2.02,
+        "away": 1.89
+      },
+      "edge": {
+        "away": -0.0237,
+        "home": -0.0234
+      },
+      "best_pick": null,
+      "avg_overround": 0.0372,
+      "model": "market_implied_v1",
+      "generated_at": "2026-08-18T18:38:23+08:00",
+      "model_score": {
+        "type": "poisson",
+        "sport": "MLB",
+        "lambda_home": 3.5,
+        "lambda_away": 5.0,
+        "expected_total": 8.5,
+        "supremacy": -1.5,
+        "outcome_probs": {
+          "home": 0.2446,
+          "draw": 0.1229,
+          "away": 0.6325
+        },
+        "top_scorelines": [
+          {
+            "home": 3,
+            "away": 4,
+            "prob": 0.0379
+          },
+          {
+            "home": 3,
+            "away": 5,
+            "prob": 0.0379
+          },
+          {
+            "home": 4,
+            "away": 4,
+            "prob": 0.0332
+          },
+          {
+            "home": 4,
+            "away": 5,
+            "prob": 0.0332
+          },
+          {
+            "home": 2,
+            "away": 4,
+            "prob": 0.0325
+          }
+        ]
+      },
+      "model_mc": {
+        "n": 20000,
+        "win_prob": {
+          "home": 0.2406,
+          "draw": 0.1244,
+          "away": 0.6351
+        },
+        "top_scorelines": [
+          {
+            "home": 3,
+            "away": 4,
+            "prob": 0.0401
+          },
+          {
+            "home": 3,
+            "away": 5,
+            "prob": 0.0386
+          },
+          {
+            "home": 4,
+            "away": 4,
+            "prob": 0.036
+          },
+          {
+            "home": 4,
+            "away": 5,
+            "prob": 0.035
+          },
+          {
+            "home": 2,
+            "away": 4,
+            "prob": 0.0312
+          }
+        ]
+      },
+      "phase": "early_12h"
+    },
+    "pre_pushed_at": "2026-08-18T18:38:24+08:00"
+  }
+}
