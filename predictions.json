@@ -1,114 +1,4 @@
 {
-  "50d18f8917581bd44447b6d3d754aaf4": {
-    "prediction": {
-      "game_id": "50d18f8917581bd44447b6d3d754aaf4",
-      "sport": "MLB",
-      "home": "Minnesota Twins",
-      "away": "Atlanta Braves",
-      "start_time": "2026-08-18T07:41:00+08:00",
-      "market": {
-        "asian_handicap": 1.5,
-        "over_under": 9.0,
-        "odds_source": "the-odds-api/consensus",
-        "timestamp": "2026-08-17T22:59:26.992622+00:00"
-      },
-      "bookmaker_count": 9,
-      "fair_prob": {
-        "away": 0.5483,
-        "home": 0.4517
-      },
-      "best_odds": {
-        "home": 2.19,
-        "away": 1.79
-      },
-      "edge": {
-        "away": -0.0185,
-        "home": -0.0108
-      },
-      "best_pick": null,
-      "avg_overround": 0.0305,
-      "model": "market_implied_v1",
-      "generated_at": "2026-08-18T06:59:26+08:00",
-      "model_score": {
-        "type": "poisson",
-        "sport": "MLB",
-        "lambda_home": 3.75,
-        "lambda_away": 5.25,
-        "expected_total": 9.0,
-        "supremacy": -1.5,
-        "outcome_probs": {
-          "home": 0.2512,
-          "draw": 0.1202,
-          "away": 0.6286
-        },
-        "top_scorelines": [
-          {
-            "home": 3,
-            "away": 5,
-            "prob": 0.0362
-          },
-          {
-            "home": 3,
-            "away": 4,
-            "prob": 0.0344
-          },
-          {
-            "home": 4,
-            "away": 5,
-            "prob": 0.0339
-          },
-          {
-            "home": 4,
-            "away": 4,
-            "prob": 0.0323
-          },
-          {
-            "home": 3,
-            "away": 6,
-            "prob": 0.0316
-          }
-        ]
-      },
-      "model_mc": {
-        "n": 20000,
-        "win_prob": {
-          "home": 0.2503,
-          "draw": 0.1195,
-          "away": 0.6302
-        },
-        "top_scorelines": [
-          {
-            "home": 3,
-            "away": 5,
-            "prob": 0.0369
-          },
-          {
-            "home": 4,
-            "away": 5,
-            "prob": 0.0357
-          },
-          {
-            "home": 3,
-            "away": 6,
-            "prob": 0.0328
-          },
-          {
-            "home": 4,
-            "away": 4,
-            "prob": 0.0316
-          },
-          {
-            "home": 4,
-            "away": 6,
-            "prob": 0.0314
-          }
-        ]
-      },
-      "phase": "pre_match_40m"
-    },
-    "pre_pushed_at": "2026-08-18T06:59:26+08:00",
-    "post_attempts": 1
-  },
   "8ccc90357b1b20ca35a6c2da51638dbc": {
     "prediction": {
       "game_id": "8ccc90357b1b20ca35a6c2da51638dbc",
@@ -217,7 +107,7 @@
       "phase": "pre_match_40m"
     },
     "pre_pushed_at": "2026-08-18T07:28:08+08:00",
-    "post_attempts": 1
+    "post_attempts": 2
   },
   "84c8b9f4c2aee2ab9c8fc52bc1f0011b": {
     "prediction": {
@@ -330,6 +220,7 @@
       },
       "phase": "pre_match_40m"
     },
-    "pre_pushed_at": "2026-08-18T07:48:13+08:00"
+    "pre_pushed_at": "2026-08-18T07:48:13+08:00",
+    "post_attempts": 1
   }
 }
