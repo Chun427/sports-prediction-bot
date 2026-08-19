@@ -106,7 +106,8 @@
       },
       "phase": "pre_match_40m"
     },
-    "pre_pushed_at": "2026-08-20T03:23:01+08:00"
+    "pre_pushed_at": "2026-08-20T03:23:01+08:00",
+    "post_attempts": 1
   },
   "6d6d28fd44922349f17b60e2eb9dc487": {
     "prediction": {
@@ -666,109 +667,105 @@
       "start_time": "2026-08-20T07:40:00+08:00",
       "market": {
         "asian_handicap": -1.5,
-        "over_under": 7.0,
+        "over_under": 7.5,
         "odds_source": "the-odds-api/consensus",
-        "timestamp": "2026-08-19T11:59:12.519302+00:00"
+        "timestamp": "2026-08-19T22:44:50.209860+00:00"
       },
       "bookmaker_count": 9,
       "fair_prob": {
-        "away": 0.4693,
-        "home": 0.5307
+        "away": 0.4671,
+        "home": 0.5329
       },
       "best_odds": {
         "home": 1.85,
-        "away": 2.15
+        "away": 2.14
       },
       "edge": {
-        "away": 0.0091,
-        "home": -0.0183
+        "away": -0.0004,
+        "home": -0.0142
       },
-      "best_pick": {
-        "outcome": "away",
-        "edge": 0.0091,
-        "odds": 2.15
-      },
-      "avg_overround": 0.0369,
+      "best_pick": null,
+      "avg_overround": 0.03,
       "model": "market_implied_v1",
-      "generated_at": "2026-08-19T19:59:11+08:00",
+      "generated_at": "2026-08-20T06:44:49+08:00",
       "model_score": {
         "type": "poisson",
         "sport": "MLB",
-        "lambda_home": 4.25,
-        "lambda_away": 2.75,
-        "expected_total": 7.0,
+        "lambda_home": 4.5,
+        "lambda_away": 3.0,
+        "expected_total": 7.5,
         "supremacy": 1.5,
         "outcome_probs": {
-          "home": 0.6458,
-          "draw": 0.1323,
-          "away": 0.2218
+          "home": 0.641,
+          "draw": 0.1289,
+          "away": 0.23
         },
         "top_scorelines": [
           {
             "home": 4,
             "away": 2,
-            "prob": 0.0469
-          },
-          {
-            "home": 3,
-            "away": 2,
-            "prob": 0.0441
+            "prob": 0.0426
           },
           {
             "home": 4,
             "away": 3,
-            "prob": 0.043
-          },
-          {
-            "home": 3,
-            "away": 3,
-            "prob": 0.0405
+            "prob": 0.0426
           },
           {
             "home": 5,
             "away": 2,
-            "prob": 0.0399
+            "prob": 0.0383
+          },
+          {
+            "home": 5,
+            "away": 3,
+            "prob": 0.0383
+          },
+          {
+            "home": 3,
+            "away": 2,
+            "prob": 0.0378
           }
         ]
       },
       "model_mc": {
         "n": 20000,
         "win_prob": {
-          "home": 0.6484,
-          "draw": 0.1341,
-          "away": 0.2174
+          "home": 0.6399,
+          "draw": 0.1333,
+          "away": 0.2268
         },
         "top_scorelines": [
           {
-            "home": 3,
-            "away": 2,
-            "prob": 0.0469
-          },
-          {
-            "home": 4,
-            "away": 2,
-            "prob": 0.0461
-          },
-          {
             "home": 4,
             "away": 3,
-            "prob": 0.0435
+            "prob": 0.0439
+          },
+          {
+            "home": 4,
+            "away": 2,
+            "prob": 0.0428
+          },
+          {
+            "home": 3,
+            "away": 2,
+            "prob": 0.0399
+          },
+          {
+            "home": 3,
+            "away": 3,
+            "prob": 0.0393
           },
           {
             "home": 5,
-            "away": 2,
-            "prob": 0.0406
-          },
-          {
-            "home": 3,
             "away": 3,
             "prob": 0.0386
           }
         ]
       },
-      "phase": "early_12h"
+      "phase": "pre_match_40m"
     },
-    "pre_pushed_at": "2026-08-19T19:59:12+08:00"
+    "pre_pushed_at": "2026-08-20T06:44:50+08:00"
   },
   "3072a6e1e725ce3eaeb47ad41548628f": {
     "prediction": {
@@ -781,25 +778,25 @@
         "asian_handicap": -1.5,
         "over_under": 8.5,
         "odds_source": "the-odds-api/consensus",
-        "timestamp": "2026-08-19T11:59:13.191021+00:00"
+        "timestamp": "2026-08-19T22:44:50.799128+00:00"
       },
-      "bookmaker_count": 4,
+      "bookmaker_count": 9,
       "fair_prob": {
-        "away": 0.4459,
-        "home": 0.5541
+        "away": 0.3725,
+        "home": 0.6275
       },
       "best_odds": {
-        "home": 1.74,
-        "away": 2.16
+        "home": 1.57,
+        "away": 2.68
       },
       "edge": {
-        "away": -0.0369,
-        "home": -0.0358
+        "away": -0.0016,
+        "home": -0.0149
       },
       "best_pick": null,
-      "avg_overround": 0.0432,
+      "avg_overround": 0.0313,
       "model": "market_implied_v1",
-      "generated_at": "2026-08-19T19:59:12+08:00",
+      "generated_at": "2026-08-20T06:44:50+08:00",
       "model_score": {
         "type": "poisson",
         "sport": "MLB",
@@ -843,25 +840,25 @@
       "model_mc": {
         "n": 20000,
         "win_prob": {
-          "home": 0.631,
-          "draw": 0.1267,
-          "away": 0.2423
+          "home": 0.6372,
+          "draw": 0.1226,
+          "away": 0.2402
         },
         "top_scorelines": [
           {
             "home": 5,
             "away": 3,
-            "prob": 0.0382
+            "prob": 0.0371
           },
           {
             "home": 4,
             "away": 3,
-            "prob": 0.0378
+            "prob": 0.0355
           },
           {
             "home": 4,
             "away": 4,
-            "prob": 0.0352
+            "prob": 0.034
           },
           {
             "home": 5,
@@ -871,13 +868,13 @@
           {
             "home": 5,
             "away": 2,
-            "prob": 0.0326
+            "prob": 0.0332
           }
         ]
       },
-      "phase": "early_12h"
+      "phase": "pre_match_40m"
     },
-    "pre_pushed_at": "2026-08-19T19:59:13+08:00"
+    "pre_pushed_at": "2026-08-20T06:44:50+08:00"
   },
   "8a02d651eed1b9025dca5ab193f2fb68": {
     "prediction": {
