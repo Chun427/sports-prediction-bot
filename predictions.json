@@ -1,114 +1,4 @@
 {
-  "c0a1041457ba1cf76c5f2a1ac9eb70bc": {
-    "prediction": {
-      "game_id": "c0a1041457ba1cf76c5f2a1ac9eb70bc",
-      "sport": "MLB",
-      "home": "Pittsburgh Pirates",
-      "away": "Detroit Tigers",
-      "start_time": "2026-08-20T00:36:00+08:00",
-      "market": {
-        "asian_handicap": -1.5,
-        "over_under": 8.5,
-        "odds_source": "the-odds-api/consensus",
-        "timestamp": "2026-08-19T15:59:07.180983+00:00"
-      },
-      "bookmaker_count": 9,
-      "fair_prob": {
-        "away": 0.4085,
-        "home": 0.5915
-      },
-      "best_odds": {
-        "home": 1.66,
-        "away": 2.42
-      },
-      "edge": {
-        "away": -0.0114,
-        "home": -0.0182
-      },
-      "best_pick": null,
-      "avg_overround": 0.0296,
-      "model": "market_implied_v1",
-      "generated_at": "2026-08-19T23:59:06+08:00",
-      "model_score": {
-        "type": "poisson",
-        "sport": "MLB",
-        "lambda_home": 5.0,
-        "lambda_away": 3.5,
-        "expected_total": 8.5,
-        "supremacy": 1.5,
-        "outcome_probs": {
-          "home": 0.6325,
-          "draw": 0.1229,
-          "away": 0.2446
-        },
-        "top_scorelines": [
-          {
-            "home": 4,
-            "away": 3,
-            "prob": 0.0379
-          },
-          {
-            "home": 5,
-            "away": 3,
-            "prob": 0.0379
-          },
-          {
-            "home": 4,
-            "away": 4,
-            "prob": 0.0332
-          },
-          {
-            "home": 5,
-            "away": 4,
-            "prob": 0.0332
-          },
-          {
-            "home": 4,
-            "away": 2,
-            "prob": 0.0325
-          }
-        ]
-      },
-      "model_mc": {
-        "n": 20000,
-        "win_prob": {
-          "home": 0.629,
-          "draw": 0.1237,
-          "away": 0.2473
-        },
-        "top_scorelines": [
-          {
-            "home": 4,
-            "away": 3,
-            "prob": 0.0397
-          },
-          {
-            "home": 5,
-            "away": 3,
-            "prob": 0.0376
-          },
-          {
-            "home": 4,
-            "away": 4,
-            "prob": 0.0336
-          },
-          {
-            "home": 5,
-            "away": 2,
-            "prob": 0.0331
-          },
-          {
-            "home": 5,
-            "away": 4,
-            "prob": 0.0328
-          }
-        ]
-      },
-      "phase": "pre_match_40m"
-    },
-    "pre_pushed_at": "2026-08-19T23:59:07+08:00",
-    "post_attempts": 1
-  },
   "68cb74d6a042f0c12d3b2e066f58bee6": {
     "prediction": {
       "game_id": "68cb74d6a042f0c12d3b2e066f58bee6",
@@ -216,7 +106,8 @@
       },
       "phase": "pre_match_40m"
     },
-    "pre_pushed_at": "2026-08-20T00:36:02+08:00"
+    "pre_pushed_at": "2026-08-20T00:36:02+08:00",
+    "post_attempts": 1
   },
   "ebe3d5c684fd83932e02698e22564f7b": {
     "prediction": {
