@@ -1872,25 +1872,25 @@
         "asian_handicap": 1.5,
         "over_under": 8.0,
         "odds_source": "the-odds-api/consensus",
-        "timestamp": "2026-08-20T10:43:29.931727+00:00"
+        "timestamp": "2026-08-20T21:57:48.070526+00:00"
       },
       "bookmaker_count": 5,
       "fair_prob": {
-        "away": 0.5266,
-        "home": 0.4734
+        "home": 0.4734,
+        "away": 0.5266
       },
       "best_odds": {
         "home": 2.09,
         "away": 1.85
       },
       "edge": {
-        "away": -0.0259,
-        "home": -0.0105
+        "home": -0.0105,
+        "away": -0.0259
       },
       "best_pick": null,
       "avg_overround": 0.0368,
       "model": "market_implied_v1",
-      "generated_at": "2026-08-20T18:43:29+08:00",
+      "generated_at": "2026-08-21T05:57:47+08:00",
       "model_score": {
         "type": "poisson",
         "sport": "MLB",
@@ -1934,41 +1934,41 @@
       "model_mc": {
         "n": 20000,
         "win_prob": {
-          "home": 0.2412,
-          "draw": 0.1253,
-          "away": 0.6335
+          "home": 0.2313,
+          "draw": 0.1275,
+          "away": 0.6411
         },
         "top_scorelines": [
           {
             "home": 3,
             "away": 4,
-            "prob": 0.0387
+            "prob": 0.0413
           },
           {
             "home": 3,
             "away": 5,
-            "prob": 0.038
+            "prob": 0.0381
           },
           {
             "home": 2,
             "away": 5,
-            "prob": 0.0371
+            "prob": 0.0376
           },
           {
             "home": 2,
             "away": 4,
-            "prob": 0.0364
+            "prob": 0.0359
           },
           {
             "home": 3,
             "away": 3,
-            "prob": 0.0355
+            "prob": 0.0354
           }
         ]
       },
-      "phase": "early_12h"
+      "phase": "pre_match_40m"
     },
-    "pre_pushed_at": "2026-08-20T18:43:29+08:00"
+    "pre_pushed_at": "2026-08-21T05:57:48+08:00"
   },
   "3ea3ed4f9423dd9e4a95e0e6fa3e4cb3": {
     "prediction": {
