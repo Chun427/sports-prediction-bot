@@ -8,105 +8,105 @@
       "start_time": "2026-09-06T04:11:00+08:00",
       "market": {
         "asian_handicap": 1.5,
-        "over_under": 8.0,
+        "over_under": 8.5,
         "odds_source": "the-odds-api/consensus",
-        "timestamp": "2026-09-05T09:23:24.365845+00:00"
+        "timestamp": "2026-09-05T19:29:03.913410+00:00"
       },
-      "bookmaker_count": 8,
+      "bookmaker_count": 9,
       "fair_prob": {
-        "home": 0.4516,
-        "away": 0.5484
+        "away": 0.5402,
+        "home": 0.4598
       },
       "best_odds": {
-        "home": 2.18,
-        "away": 1.77
+        "home": 2.14,
+        "away": 1.81
       },
       "edge": {
-        "home": -0.0156,
-        "away": -0.0293
+        "away": -0.0223,
+        "home": -0.016
       },
       "best_pick": null,
       "avg_overround": 0.0369,
       "model": "market_implied_v1",
-      "generated_at": "2026-09-05T17:23:23+08:00",
+      "generated_at": "2026-09-06T03:29:03+08:00",
       "model_score": {
         "type": "poisson",
         "sport": "MLB",
-        "lambda_home": 3.25,
-        "lambda_away": 4.75,
-        "expected_total": 8.0,
+        "lambda_home": 3.5,
+        "lambda_away": 5.0,
+        "expected_total": 8.5,
         "supremacy": -1.5,
         "outcome_probs": {
-          "home": 0.2376,
-          "draw": 0.1258,
-          "away": 0.6366
+          "home": 0.2446,
+          "draw": 0.1229,
+          "away": 0.6325
         },
         "top_scorelines": [
           {
             "home": 3,
             "away": 4,
-            "prob": 0.0408
+            "prob": 0.0379
           },
           {
             "home": 3,
             "away": 5,
-            "prob": 0.0387
+            "prob": 0.0379
+          },
+          {
+            "home": 4,
+            "away": 4,
+            "prob": 0.0332
+          },
+          {
+            "home": 4,
+            "away": 5,
+            "prob": 0.0332
           },
           {
             "home": 2,
             "away": 4,
-            "prob": 0.0376
-          },
-          {
-            "home": 2,
-            "away": 5,
-            "prob": 0.0357
-          },
-          {
-            "home": 3,
-            "away": 3,
-            "prob": 0.0343
+            "prob": 0.0325
           }
         ]
       },
       "model_mc": {
         "n": 20000,
         "win_prob": {
-          "home": 0.2356,
-          "draw": 0.1267,
-          "away": 0.6378
+          "home": 0.246,
+          "draw": 0.1242,
+          "away": 0.6299
         },
         "top_scorelines": [
           {
             "home": 3,
+            "away": 5,
+            "prob": 0.0408
+          },
+          {
+            "home": 3,
             "away": 4,
-            "prob": 0.0398
+            "prob": 0.0403
+          },
+          {
+            "home": 4,
+            "away": 4,
+            "prob": 0.0336
+          },
+          {
+            "home": 3,
+            "away": 6,
+            "prob": 0.0326
           },
           {
             "home": 2,
             "away": 4,
-            "prob": 0.0383
-          },
-          {
-            "home": 3,
-            "away": 5,
-            "prob": 0.0375
-          },
-          {
-            "home": 3,
-            "away": 3,
-            "prob": 0.0352
-          },
-          {
-            "home": 2,
-            "away": 5,
-            "prob": 0.035
+            "prob": 0.0321
           }
         ]
       },
-      "phase": "early_12h"
+      "phase": "pre_match_40m"
     },
-    "pre_pushed_at": "2026-09-05T17:23:24+08:00"
+    "pre_pushed_at": "2026-09-06T03:29:03+08:00"
   },
   "c5b03415dadb8213241501d56b4926bc": {
     "prediction": {
@@ -119,25 +119,25 @@
         "asian_handicap": -1.5,
         "over_under": 8.0,
         "odds_source": "the-odds-api/consensus",
-        "timestamp": "2026-09-05T09:23:24.910223+00:00"
+        "timestamp": "2026-09-05T19:29:04.611672+00:00"
       },
       "bookmaker_count": 9,
       "fair_prob": {
-        "home": 0.6235,
-        "away": 0.3765
+        "away": 0.3965,
+        "home": 0.6035
       },
       "best_odds": {
-        "home": 1.57,
-        "away": 2.63
+        "home": 1.61,
+        "away": 2.5
       },
       "edge": {
-        "home": -0.0211,
-        "away": -0.0098
+        "away": -0.0087,
+        "home": -0.0284
       },
       "best_pick": null,
-      "avg_overround": 0.0386,
+      "avg_overround": 0.0372,
       "model": "market_implied_v1",
-      "generated_at": "2026-09-05T17:23:24+08:00",
+      "generated_at": "2026-09-06T03:29:03+08:00",
       "model_score": {
         "type": "poisson",
         "sport": "MLB",
@@ -181,41 +181,41 @@
       "model_mc": {
         "n": 20000,
         "win_prob": {
-          "home": 0.6379,
-          "draw": 0.1258,
-          "away": 0.2364
+          "home": 0.632,
+          "draw": 0.1293,
+          "away": 0.2388
         },
         "top_scorelines": [
           {
             "home": 4,
             "away": 3,
-            "prob": 0.04
+            "prob": 0.0399
           },
           {
             "home": 5,
             "away": 3,
-            "prob": 0.0394
+            "prob": 0.0382
           },
           {
             "home": 4,
             "away": 2,
-            "prob": 0.0386
+            "prob": 0.037
           },
           {
-            "home": 3,
-            "away": 3,
-            "prob": 0.0364
+            "home": 4,
+            "away": 4,
+            "prob": 0.035
           },
           {
             "home": 5,
             "away": 2,
-            "prob": 0.0339
+            "prob": 0.0347
           }
         ]
       },
-      "phase": "early_12h"
+      "phase": "pre_match_40m"
     },
-    "pre_pushed_at": "2026-09-05T17:23:24+08:00"
+    "pre_pushed_at": "2026-09-06T03:29:04+08:00"
   },
   "335cdc2989ec57b83bd603b5beeb7fcc": {
     "prediction": {
