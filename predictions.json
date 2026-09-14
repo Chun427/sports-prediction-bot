@@ -1,1 +1,220 @@
-{}
+{
+  "2a828119814add28306d706ccb802ac3": {
+    "prediction": {
+      "game_id": "2a828119814add28306d706ccb802ac3",
+      "sport": "MLB",
+      "home": "Cleveland Guardians",
+      "away": "Chicago White Sox",
+      "start_time": "2026-09-15T06:41:00+08:00",
+      "market": {
+        "asian_handicap": -1.5,
+        "over_under": 7.0,
+        "odds_source": "the-odds-api/consensus",
+        "timestamp": "2026-09-14T10:45:02.712698+00:00"
+      },
+      "bookmaker_count": 9,
+      "fair_prob": {
+        "away": 0.4228,
+        "home": 0.5772
+      },
+      "best_odds": {
+        "home": 1.68,
+        "away": 2.32
+      },
+      "edge": {
+        "away": -0.019,
+        "home": -0.0304
+      },
+      "best_pick": null,
+      "avg_overround": 0.0369,
+      "model": "market_implied_v1",
+      "generated_at": "2026-09-14T18:45:02+08:00",
+      "model_score": {
+        "type": "poisson",
+        "sport": "MLB",
+        "lambda_home": 4.25,
+        "lambda_away": 2.75,
+        "expected_total": 7.0,
+        "supremacy": 1.5,
+        "outcome_probs": {
+          "home": 0.6458,
+          "draw": 0.1323,
+          "away": 0.2218
+        },
+        "top_scorelines": [
+          {
+            "home": 4,
+            "away": 2,
+            "prob": 0.0469
+          },
+          {
+            "home": 3,
+            "away": 2,
+            "prob": 0.0441
+          },
+          {
+            "home": 4,
+            "away": 3,
+            "prob": 0.043
+          },
+          {
+            "home": 3,
+            "away": 3,
+            "prob": 0.0405
+          },
+          {
+            "home": 5,
+            "away": 2,
+            "prob": 0.0399
+          }
+        ]
+      },
+      "model_mc": {
+        "n": 20000,
+        "win_prob": {
+          "home": 0.6474,
+          "draw": 0.131,
+          "away": 0.2215
+        },
+        "top_scorelines": [
+          {
+            "home": 4,
+            "away": 2,
+            "prob": 0.0458
+          },
+          {
+            "home": 4,
+            "away": 3,
+            "prob": 0.0448
+          },
+          {
+            "home": 3,
+            "away": 2,
+            "prob": 0.0445
+          },
+          {
+            "home": 3,
+            "away": 3,
+            "prob": 0.0406
+          },
+          {
+            "home": 5,
+            "away": 2,
+            "prob": 0.0398
+          }
+        ]
+      },
+      "phase": "early_12h"
+    },
+    "pre_pushed_at": "2026-09-14T18:45:02+08:00"
+  },
+  "fd0c792d70a4325cb16c03c7af9a089a": {
+    "prediction": {
+      "game_id": "fd0c792d70a4325cb16c03c7af9a089a",
+      "sport": "MLB",
+      "home": "Cincinnati Reds",
+      "away": "Los Angeles Dodgers",
+      "start_time": "2026-09-15T06:41:00+08:00",
+      "market": {
+        "asian_handicap": 1.5,
+        "over_under": 8.0,
+        "odds_source": "the-odds-api/consensus",
+        "timestamp": "2026-09-14T10:45:03.314119+00:00"
+      },
+      "bookmaker_count": 9,
+      "fair_prob": {
+        "away": 0.6625,
+        "home": 0.3375
+      },
+      "best_odds": {
+        "home": 2.93,
+        "away": 1.47
+      },
+      "edge": {
+        "away": -0.0261,
+        "home": -0.0111
+      },
+      "best_pick": null,
+      "avg_overround": 0.0379,
+      "model": "market_implied_v1",
+      "generated_at": "2026-09-14T18:45:02+08:00",
+      "model_score": {
+        "type": "poisson",
+        "sport": "MLB",
+        "lambda_home": 3.25,
+        "lambda_away": 4.75,
+        "expected_total": 8.0,
+        "supremacy": -1.5,
+        "outcome_probs": {
+          "home": 0.2376,
+          "draw": 0.1258,
+          "away": 0.6366
+        },
+        "top_scorelines": [
+          {
+            "home": 3,
+            "away": 4,
+            "prob": 0.0408
+          },
+          {
+            "home": 3,
+            "away": 5,
+            "prob": 0.0387
+          },
+          {
+            "home": 2,
+            "away": 4,
+            "prob": 0.0376
+          },
+          {
+            "home": 2,
+            "away": 5,
+            "prob": 0.0357
+          },
+          {
+            "home": 3,
+            "away": 3,
+            "prob": 0.0343
+          }
+        ]
+      },
+      "model_mc": {
+        "n": 20000,
+        "win_prob": {
+          "home": 0.2417,
+          "draw": 0.1249,
+          "away": 0.6335
+        },
+        "top_scorelines": [
+          {
+            "home": 3,
+            "away": 4,
+            "prob": 0.0428
+          },
+          {
+            "home": 3,
+            "away": 5,
+            "prob": 0.0375
+          },
+          {
+            "home": 2,
+            "away": 4,
+            "prob": 0.0374
+          },
+          {
+            "home": 2,
+            "away": 5,
+            "prob": 0.0355
+          },
+          {
+            "home": 3,
+            "away": 3,
+            "prob": 0.0352
+          }
+        ]
+      },
+      "phase": "early_12h"
+    },
+    "pre_pushed_at": "2026-09-14T18:45:03+08:00"
+  }
+}
