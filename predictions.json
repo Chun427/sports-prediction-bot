@@ -1528,5 +1528,114 @@
       "phase": "early_12h"
     },
     "pre_pushed_at": "2026-09-18T21:57:39+08:00"
+  },
+  "ceb78c18c34b6f6922ac73e4cb32b373": {
+    "prediction": {
+      "game_id": "ceb78c18c34b6f6922ac73e4cb32b373",
+      "sport": "MLB",
+      "home": "Los Angeles Dodgers",
+      "away": "San Francisco Giants",
+      "start_time": "2026-09-19T10:15:00+08:00",
+      "market": {
+        "asian_handicap": -1.5,
+        "over_under": 8.0,
+        "odds_source": "the-odds-api/consensus",
+        "timestamp": "2026-09-18T17:32:32.826258+00:00"
+      },
+      "bookmaker_count": 8,
+      "fair_prob": {
+        "home": 0.7253,
+        "away": 0.2747
+      },
+      "best_odds": {
+        "home": 1.34,
+        "away": 3.57
+      },
+      "edge": {
+        "home": -0.0281,
+        "away": -0.0193
+      },
+      "best_pick": null,
+      "avg_overround": 0.0377,
+      "model": "market_implied_v1",
+      "generated_at": "2026-09-19T01:32:32+08:00",
+      "model_score": {
+        "type": "poisson",
+        "sport": "MLB",
+        "lambda_home": 4.75,
+        "lambda_away": 3.25,
+        "expected_total": 8.0,
+        "supremacy": 1.5,
+        "outcome_probs": {
+          "home": 0.6366,
+          "draw": 0.1258,
+          "away": 0.2376
+        },
+        "top_scorelines": [
+          {
+            "home": 4,
+            "away": 3,
+            "prob": 0.0408
+          },
+          {
+            "home": 5,
+            "away": 3,
+            "prob": 0.0387
+          },
+          {
+            "home": 4,
+            "away": 2,
+            "prob": 0.0376
+          },
+          {
+            "home": 5,
+            "away": 2,
+            "prob": 0.0357
+          },
+          {
+            "home": 3,
+            "away": 3,
+            "prob": 0.0343
+          }
+        ]
+      },
+      "model_mc": {
+        "n": 20000,
+        "win_prob": {
+          "home": 0.6361,
+          "draw": 0.1266,
+          "away": 0.2373
+        },
+        "top_scorelines": [
+          {
+            "home": 4,
+            "away": 3,
+            "prob": 0.0411
+          },
+          {
+            "home": 5,
+            "away": 3,
+            "prob": 0.0388
+          },
+          {
+            "home": 4,
+            "away": 2,
+            "prob": 0.0387
+          },
+          {
+            "home": 3,
+            "away": 3,
+            "prob": 0.0347
+          },
+          {
+            "home": 4,
+            "away": 4,
+            "prob": 0.0343
+          }
+        ]
+      },
+      "phase": "early_12h"
+    },
+    "pre_pushed_at": "2026-09-19T01:32:32+08:00"
   }
 }
