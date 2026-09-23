@@ -11,113 +11,113 @@
       "odds_h2h": [
         {
           "book": "fanduel",
-          "home": 1.54,
-          "away": 2.54,
+          "home": 1.6,
+          "away": 2.4,
           "draw": null
         },
         {
           "book": "bovada",
-          "home": 1.56,
-          "away": 2.47,
+          "home": 1.61,
+          "away": 2.39,
           "draw": null
         },
         {
           "book": "betmgm",
-          "home": 1.54,
-          "away": 2.5,
+          "home": 1.59,
+          "away": 2.4,
           "draw": null
         },
         {
           "book": "betrivers",
-          "home": 1.51,
-          "away": 2.6,
+          "home": 1.57,
+          "away": 2.43,
           "draw": null
         },
         {
           "book": "mybookieag",
-          "home": 1.56,
-          "away": 2.5,
+          "home": 1.62,
+          "away": 2.36,
           "draw": null
         },
         {
           "book": "lowvig",
-          "home": 1.59,
-          "away": 2.54,
+          "home": 1.65,
+          "away": 2.39,
           "draw": null
         },
         {
           "book": "betonlineag",
-          "home": 1.59,
-          "away": 2.54,
+          "home": 1.65,
+          "away": 2.39,
           "draw": null
         },
         {
           "book": "betus",
-          "home": 1.59,
-          "away": 2.5,
+          "home": 1.65,
+          "away": 2.38,
           "draw": null
         },
         {
           "book": "draftkings",
-          "home": 1.56,
-          "away": 2.48,
+          "home": 1.59,
+          "away": 2.39,
           "draw": null
         }
       ],
       "odds_totals": [
         {
           "book": "fanduel",
-          "line": 8.5,
-          "over": 2.04,
-          "under": 1.78
+          "line": 7.5,
+          "over": 1.87,
+          "under": 1.95
         },
         {
           "book": "bovada",
-          "line": 8.5,
-          "over": 1.95,
-          "under": 1.87
+          "line": 7.5,
+          "over": 1.87,
+          "under": 1.95
         },
         {
           "book": "betmgm",
-          "line": 8.0,
+          "line": 7.5,
+          "over": 1.85,
+          "under": 1.98
+        },
+        {
+          "book": "betrivers",
+          "line": 7.5,
+          "over": 1.88,
+          "under": 1.93
+        },
+        {
+          "book": "mybookieag",
+          "line": 7.5,
+          "over": 1.88,
+          "under": 1.93
+        },
+        {
+          "book": "lowvig",
+          "line": 7.5,
+          "over": 1.93,
+          "under": 1.93
+        },
+        {
+          "book": "betonlineag",
+          "line": 7.5,
           "over": 1.91,
           "under": 1.91
         },
         {
-          "book": "betrivers",
-          "line": 8.0,
-          "over": 1.87,
-          "under": 1.81
-        },
-        {
-          "book": "mybookieag",
-          "line": 8.5,
-          "over": 1.98,
-          "under": 1.84
-        },
-        {
-          "book": "lowvig",
-          "line": 8.0,
-          "over": 1.88,
-          "under": 1.98
-        },
-        {
-          "book": "betonlineag",
-          "line": 8.0,
-          "over": 1.87,
-          "under": 1.95
-        },
-        {
           "book": "betus",
-          "line": 8.0,
-          "over": 1.87,
-          "under": 1.95
+          "line": 7.5,
+          "over": 1.91,
+          "under": 1.91
         },
         {
           "book": "draftkings",
-          "line": 8.0,
-          "over": 1.85,
-          "under": 1.97
+          "line": 7.5,
+          "over": 1.88,
+          "under": 1.93
         }
       ],
       "odds_spreads": [
@@ -185,14 +185,14 @@
         },
         {
           "book": "bovada",
-          "home": 1.78,
-          "away": 2.07,
+          "home": 1.76,
+          "away": 2.09,
           "draw": null
         },
         {
           "book": "betrivers",
-          "home": 1.82,
-          "away": 2.02,
+          "home": 1.75,
+          "away": 2.12,
           "draw": null
         },
         {
@@ -212,44 +212,80 @@
           "home": 1.76,
           "away": 2.09,
           "draw": null
+        },
+        {
+          "book": "betonlineag",
+          "home": 1.8,
+          "away": 2.13,
+          "draw": null
+        },
+        {
+          "book": "lowvig",
+          "home": 1.8,
+          "away": 2.13,
+          "draw": null
+        },
+        {
+          "book": "betus",
+          "home": 1.8,
+          "away": 2.14,
+          "draw": null
         }
       ],
       "odds_totals": [
         {
           "book": "fanduel",
           "line": 7.5,
-          "over": 1.95,
-          "under": 1.87
+          "over": 1.96,
+          "under": 1.85
         },
         {
           "book": "bovada",
           "line": 7.5,
-          "over": 1.95,
-          "under": 1.87
+          "over": 1.91,
+          "under": 1.91
         },
         {
           "book": "betrivers",
           "line": 7.5,
-          "over": 1.94,
-          "under": 1.87
+          "over": 2.02,
+          "under": 1.81
         },
         {
           "book": "betmgm",
           "line": 7.5,
-          "over": 2.0,
-          "under": 1.83
+          "over": 1.98,
+          "under": 1.85
         },
         {
           "book": "mybookieag",
-          "line": 7.0,
-          "over": 1.81,
-          "under": 2.01
+          "line": 7.5,
+          "over": 2.0,
+          "under": 1.82
         },
         {
           "book": "draftkings",
+          "line": 7.5,
+          "over": 1.98,
+          "under": 1.85
+        },
+        {
+          "book": "betonlineag",
           "line": 7.0,
-          "over": 1.87,
-          "under": 1.95
+          "over": 1.78,
+          "under": 2.08
+        },
+        {
+          "book": "lowvig",
+          "line": 7.0,
+          "over": 1.79,
+          "under": 2.1
+        },
+        {
+          "book": "betus",
+          "line": 7.5,
+          "over": 2.0,
+          "under": 1.83
         }
       ],
       "odds_spreads": [
@@ -280,6 +316,21 @@
         },
         {
           "book": "draftkings",
+          "home_point": -1.5,
+          "away_point": 1.5
+        },
+        {
+          "book": "betonlineag",
+          "home_point": -1.5,
+          "away_point": 1.5
+        },
+        {
+          "book": "lowvig",
+          "home_point": -1.5,
+          "away_point": 1.5
+        },
+        {
+          "book": "betus",
           "home_point": -1.5,
           "away_point": 1.5
         }
@@ -296,56 +347,56 @@
       "odds_h2h": [
         {
           "book": "fanduel",
-          "home": 2.28,
-          "away": 1.66,
-          "draw": null
-        },
-        {
-          "book": "bovada",
-          "home": 2.24,
-          "away": 1.68,
-          "draw": null
-        },
-        {
-          "book": "mybookieag",
-          "home": 2.25,
-          "away": 1.68,
-          "draw": null
-        },
-        {
-          "book": "betmgm",
-          "home": 2.25,
+          "home": 2.3,
           "away": 1.65,
           "draw": null
         },
         {
+          "book": "bovada",
+          "home": 2.32,
+          "away": 1.63,
+          "draw": null
+        },
+        {
+          "book": "mybookieag",
+          "home": 2.29,
+          "away": 1.66,
+          "draw": null
+        },
+        {
+          "book": "betmgm",
+          "home": 2.35,
+          "away": 1.62,
+          "draw": null
+        },
+        {
           "book": "lowvig",
-          "home": 2.27,
-          "away": 1.71,
+          "home": 2.4,
+          "away": 1.65,
           "draw": null
         },
         {
           "book": "betonlineag",
-          "home": 2.27,
-          "away": 1.71,
+          "home": 2.4,
+          "away": 1.65,
           "draw": null
         },
         {
           "book": "betrivers",
-          "home": 2.25,
-          "away": 1.67,
+          "home": 2.23,
+          "away": 1.68,
           "draw": null
         },
         {
           "book": "betus",
-          "home": 2.26,
-          "away": 1.71,
+          "home": 2.38,
+          "away": 1.65,
           "draw": null
         },
         {
           "book": "draftkings",
-          "home": 2.23,
-          "away": 1.67,
+          "home": 2.31,
+          "away": 1.63,
           "draw": null
         }
       ],
@@ -353,56 +404,56 @@
         {
           "book": "fanduel",
           "line": 7.5,
-          "over": 1.85,
-          "under": 1.96
+          "over": 1.78,
+          "under": 2.04
         },
         {
           "book": "bovada",
-          "line": 7.5,
-          "over": 1.87,
-          "under": 1.95
+          "line": 8.0,
+          "over": 1.91,
+          "under": 1.91
         },
         {
           "book": "mybookieag",
           "line": 8.0,
-          "over": 1.98,
-          "under": 1.83
+          "over": 1.97,
+          "under": 1.84
         },
         {
           "book": "betmgm",
-          "line": 7.5,
-          "over": 1.85,
-          "under": 1.98
+          "line": 8.0,
+          "over": 1.95,
+          "under": 1.87
         },
         {
           "book": "lowvig",
-          "line": 7.5,
-          "over": 1.85,
-          "under": 2.03
+          "line": 8.0,
+          "over": 1.98,
+          "under": 1.88
         },
         {
           "book": "betonlineag",
-          "line": 7.5,
-          "over": 1.83,
-          "under": 2.0
+          "line": 8.0,
+          "over": 1.95,
+          "under": 1.87
         },
         {
           "book": "betrivers",
-          "line": 7.5,
-          "over": 1.88,
-          "under": 1.93
+          "line": 8.0,
+          "over": 1.85,
+          "under": 1.82
         },
         {
           "book": "betus",
-          "line": 7.5,
-          "over": 1.83,
-          "under": 2.0
+          "line": 8.0,
+          "over": 1.95,
+          "under": 1.87
         },
         {
           "book": "draftkings",
-          "line": 7.5,
-          "over": 1.85,
-          "under": 1.98
+          "line": 8.0,
+          "over": 1.95,
+          "under": 1.88
         }
       ],
       "odds_spreads": [
@@ -454,6 +505,123 @@
       ]
     },
     {
+      "id": "94d0c4d70e74a3ca8f70abe5a0859ea1",
+      "sport": "MLB",
+      "sport_key": "baseball_mlb",
+      "home": "Baltimore Orioles",
+      "away": "Toronto Blue Jays",
+      "start_time": "2026-09-24T06:36:00+08:00",
+      "commence_time_utc": "2026-09-23T22:36:00Z",
+      "odds_h2h": [
+        {
+          "book": "fanduel",
+          "home": 1.82,
+          "away": 2.04,
+          "draw": null
+        },
+        {
+          "book": "draftkings",
+          "home": 1.82,
+          "away": 2.02,
+          "draw": null
+        },
+        {
+          "book": "bovada",
+          "home": 1.81,
+          "away": 2.03,
+          "draw": null
+        },
+        {
+          "book": "betmgm",
+          "home": 1.77,
+          "away": 2.05,
+          "draw": null
+        },
+        {
+          "book": "betrivers",
+          "home": 1.81,
+          "away": 2.04,
+          "draw": null
+        },
+        {
+          "book": "mybookieag",
+          "home": 1.81,
+          "away": 2.05,
+          "draw": null
+        }
+      ],
+      "odds_totals": [
+        {
+          "book": "fanduel",
+          "line": 8.5,
+          "over": 2.08,
+          "under": 1.76
+        },
+        {
+          "book": "draftkings",
+          "line": 8.0,
+          "over": 1.89,
+          "under": 1.93
+        },
+        {
+          "book": "bovada",
+          "line": 7.5,
+          "over": 1.8,
+          "under": 2.05
+        },
+        {
+          "book": "betmgm",
+          "line": 8.0,
+          "over": 1.95,
+          "under": 1.87
+        },
+        {
+          "book": "betrivers",
+          "line": 8.5,
+          "over": 2.02,
+          "under": 1.81
+        },
+        {
+          "book": "mybookieag",
+          "line": 8.0,
+          "over": 1.87,
+          "under": 1.94
+        }
+      ],
+      "odds_spreads": [
+        {
+          "book": "fanduel",
+          "home_point": -1.5,
+          "away_point": 1.5
+        },
+        {
+          "book": "draftkings",
+          "home_point": 1.5,
+          "away_point": -1.5
+        },
+        {
+          "book": "bovada",
+          "home_point": -1.5,
+          "away_point": 1.5
+        },
+        {
+          "book": "betmgm",
+          "home_point": -1.5,
+          "away_point": 1.5
+        },
+        {
+          "book": "betrivers",
+          "home_point": -1.0,
+          "away_point": 1.0
+        },
+        {
+          "book": "mybookieag",
+          "home_point": -1.5,
+          "away_point": 1.5
+        }
+      ]
+    },
+    {
       "id": "6de7fdec72dbabadc09e788561c89a32",
       "sport": "MLB",
       "sport_key": "baseball_mlb",
@@ -464,56 +632,56 @@
       "odds_h2h": [
         {
           "book": "fanduel",
-          "home": 2.18,
-          "away": 1.72,
+          "home": 2.1,
+          "away": 1.77,
           "draw": null
         },
         {
           "book": "lowvig",
-          "home": 2.27,
-          "away": 1.71,
+          "home": 2.12,
+          "away": 1.81,
           "draw": null
         },
         {
           "book": "betonlineag",
-          "home": 2.27,
-          "away": 1.71,
+          "home": 2.12,
+          "away": 1.81,
           "draw": null
         },
         {
           "book": "mybookieag",
-          "home": 2.2,
-          "away": 1.71,
+          "home": 2.09,
+          "away": 1.78,
           "draw": null
         },
         {
           "book": "bovada",
-          "home": 2.22,
-          "away": 1.69,
+          "home": 2.07,
+          "away": 1.78,
           "draw": null
         },
         {
           "book": "betmgm",
-          "home": 2.2,
-          "away": 1.69,
-          "draw": null
-        },
-        {
-          "book": "draftkings",
-          "home": 2.2,
-          "away": 1.69,
-          "draw": null
-        },
-        {
-          "book": "betrivers",
-          "home": 2.14,
+          "home": 2.1,
           "away": 1.74,
           "draw": null
         },
         {
+          "book": "draftkings",
+          "home": 2.11,
+          "away": 1.75,
+          "draw": null
+        },
+        {
+          "book": "betrivers",
+          "home": 2.15,
+          "away": 1.73,
+          "draw": null
+        },
+        {
           "book": "betus",
-          "home": 2.26,
-          "away": 1.71,
+          "home": 2.12,
+          "away": 1.81,
           "draw": null
         }
       ],
@@ -521,44 +689,44 @@
         {
           "book": "fanduel",
           "line": 7.5,
-          "over": 1.94,
-          "under": 1.88
+          "over": 2.02,
+          "under": 1.81
         },
         {
           "book": "lowvig",
           "line": 7.5,
-          "over": 1.98,
-          "under": 1.88
+          "over": 2.07,
+          "under": 1.81
         },
         {
           "book": "betonlineag",
           "line": 7.5,
-          "over": 1.95,
-          "under": 1.87
+          "over": 2.05,
+          "under": 1.8
         },
         {
           "book": "mybookieag",
-          "line": 7.5,
-          "over": 1.94,
-          "under": 1.86
+          "line": 7.0,
+          "over": 1.81,
+          "under": 2.01
         },
         {
           "book": "bovada",
           "line": 7.5,
-          "over": 1.95,
-          "under": 1.87
+          "over": 2.05,
+          "under": 1.8
         },
         {
           "book": "betmgm",
           "line": 7.5,
-          "over": 1.98,
-          "under": 1.85
+          "over": 2.05,
+          "under": 1.8
         },
         {
           "book": "draftkings",
           "line": 7.5,
-          "over": 1.95,
-          "under": 1.87
+          "over": 2.02,
+          "under": 1.81
         },
         {
           "book": "betrivers",
@@ -569,8 +737,8 @@
         {
           "book": "betus",
           "line": 7.5,
-          "over": 1.95,
-          "under": 1.87
+          "over": 2.05,
+          "under": 1.8
         }
       ],
       "odds_spreads": [
@@ -632,38 +800,56 @@
       "odds_h2h": [
         {
           "book": "fanduel",
-          "home": 1.86,
-          "away": 1.98,
+          "home": 1.75,
+          "away": 2.14,
           "draw": null
         },
         {
           "book": "bovada",
-          "home": 1.85,
-          "away": 1.97,
+          "home": 1.71,
+          "away": 2.17,
           "draw": null
         },
         {
           "book": "mybookieag",
-          "home": 1.87,
-          "away": 1.98,
+          "home": 1.74,
+          "away": 2.15,
           "draw": null
         },
         {
           "book": "betrivers",
-          "home": 1.87,
-          "away": 1.96,
+          "home": 1.76,
+          "away": 2.1,
           "draw": null
         },
         {
           "book": "betmgm",
-          "home": 1.83,
-          "away": 2.0,
+          "home": 1.71,
+          "away": 2.15,
           "draw": null
         },
         {
           "book": "draftkings",
-          "home": 1.83,
-          "away": 2.0,
+          "home": 1.73,
+          "away": 2.14,
+          "draw": null
+        },
+        {
+          "book": "lowvig",
+          "home": 1.75,
+          "away": 2.21,
+          "draw": null
+        },
+        {
+          "book": "betonlineag",
+          "home": 1.75,
+          "away": 2.21,
+          "draw": null
+        },
+        {
+          "book": "betus",
+          "home": 1.77,
+          "away": 2.18,
           "draw": null
         }
       ],
@@ -671,54 +857,78 @@
         {
           "book": "fanduel",
           "line": 7.5,
-          "over": 1.85,
-          "under": 1.96
+          "over": 2.0,
+          "under": 1.82
         },
         {
           "book": "bovada",
+          "line": 7.0,
+          "over": 1.83,
+          "under": 2.0
+        },
+        {
+          "book": "mybookieag",
           "line": 7.5,
-          "over": 1.87,
-          "under": 1.95
+          "over": 1.99,
+          "under": 1.83
         },
         {
           "book": "betrivers",
           "line": 7.5,
-          "over": 1.88,
-          "under": 1.93
+          "over": 1.97,
+          "under": 1.83
         },
         {
           "book": "betmgm",
           "line": 7.5,
-          "over": 1.87,
-          "under": 1.95
+          "over": 2.0,
+          "under": 1.83
         },
         {
           "book": "draftkings",
           "line": 7.5,
-          "over": 1.89,
-          "under": 1.93
+          "over": 2.02,
+          "under": 1.81
+        },
+        {
+          "book": "lowvig",
+          "line": 7.5,
+          "over": 2.03,
+          "under": 1.85
+        },
+        {
+          "book": "betonlineag",
+          "line": 7.5,
+          "over": 2.0,
+          "under": 1.83
+        },
+        {
+          "book": "betus",
+          "line": 7.5,
+          "over": 2.0,
+          "under": 1.83
         }
       ],
       "odds_spreads": [
         {
           "book": "fanduel",
-          "home_point": 1.5,
-          "away_point": -1.5
+          "home_point": -1.5,
+          "away_point": 1.5
         },
         {
           "book": "bovada",
-          "home_point": 1.5,
-          "away_point": -1.5
+          "home_point": -1.5,
+          "away_point": 1.5
         },
         {
           "book": "mybookieag",
-          "home_point": 1.5,
-          "away_point": -1.5
+          "home_point": -1.5,
+          "away_point": 1.5
         },
         {
           "book": "betrivers",
-          "home_point": 1.5,
-          "away_point": -1.5
+          "home_point": -1.5,
+          "away_point": 1.5
         },
         {
           "book": "betmgm",
@@ -727,6 +937,21 @@
         },
         {
           "book": "draftkings",
+          "home_point": -1.5,
+          "away_point": 1.5
+        },
+        {
+          "book": "lowvig",
+          "home_point": -1.5,
+          "away_point": 1.5
+        },
+        {
+          "book": "betonlineag",
+          "home_point": -1.5,
+          "away_point": 1.5
+        },
+        {
+          "book": "betus",
           "home_point": -1.5,
           "away_point": 1.5
         }
@@ -743,113 +968,113 @@
       "odds_h2h": [
         {
           "book": "fanduel",
-          "home": 1.63,
-          "away": 2.34,
+          "home": 1.72,
+          "away": 2.18,
           "draw": null
         },
         {
           "book": "betonlineag",
-          "home": 1.67,
-          "away": 2.36,
+          "home": 1.78,
+          "away": 2.16,
           "draw": null
         },
         {
           "book": "lowvig",
-          "home": 1.67,
-          "away": 2.36,
+          "home": 1.78,
+          "away": 2.16,
           "draw": null
         },
         {
           "book": "mybookieag",
-          "home": 1.65,
-          "away": 2.31,
+          "home": 1.75,
+          "away": 2.14,
           "draw": null
         },
         {
           "book": "bovada",
-          "home": 1.64,
-          "away": 2.31,
+          "home": 1.72,
+          "away": 2.16,
           "draw": null
         },
         {
           "book": "betmgm",
-          "home": 1.61,
-          "away": 2.35,
+          "home": 1.71,
+          "away": 2.15,
           "draw": null
         },
         {
           "book": "draftkings",
-          "home": 1.64,
-          "away": 2.29,
+          "home": 1.71,
+          "away": 2.17,
           "draw": null
         },
         {
           "book": "betrivers",
-          "home": 1.68,
-          "away": 2.23,
+          "home": 1.7,
+          "away": 2.2,
           "draw": null
         },
         {
           "book": "betus",
-          "home": 1.67,
-          "away": 2.34,
+          "home": 1.78,
+          "away": 2.17,
           "draw": null
         }
       ],
       "odds_totals": [
         {
           "book": "fanduel",
-          "line": 7.5,
-          "over": 2.14,
-          "under": 1.71
+          "line": 6.5,
+          "over": 1.91,
+          "under": 1.91
         },
         {
           "book": "betonlineag",
-          "line": 7.0,
-          "over": 1.95,
-          "under": 1.87
+          "line": 6.5,
+          "over": 2.0,
+          "under": 1.83
         },
         {
           "book": "lowvig",
-          "line": 7.0,
-          "over": 1.98,
-          "under": 1.88
+          "line": 6.5,
+          "over": 2.03,
+          "under": 1.85
         },
         {
           "book": "mybookieag",
-          "line": 7.0,
+          "line": 6.5,
           "over": 1.94,
           "under": 1.87
         },
         {
           "book": "bovada",
-          "line": 7.0,
+          "line": 6.5,
           "over": 1.91,
           "under": 1.91
         },
         {
           "book": "betmgm",
-          "line": 7.0,
-          "over": 1.87,
-          "under": 1.95
+          "line": 6.5,
+          "over": 1.91,
+          "under": 1.91
         },
         {
           "book": "draftkings",
-          "line": 7.0,
-          "over": 1.95,
-          "under": 1.88
+          "line": 6.5,
+          "over": 1.93,
+          "under": 1.89
         },
         {
           "book": "betrivers",
-          "line": 7.5,
-          "over": 2.16,
-          "under": 1.71
+          "line": 6.5,
+          "over": 1.88,
+          "under": 1.93
         },
         {
           "book": "betus",
-          "line": 7.0,
-          "over": 1.95,
-          "under": 1.87
+          "line": 6.5,
+          "over": 2.0,
+          "under": 1.83
         }
       ],
       "odds_spreads": [
@@ -917,26 +1142,26 @@
         },
         {
           "book": "lowvig",
-          "home": 1.8,
-          "away": 2.13,
+          "home": 1.76,
+          "away": 2.2,
           "draw": null
         },
         {
           "book": "betonlineag",
-          "home": 1.8,
-          "away": 2.13,
+          "home": 1.76,
+          "away": 2.2,
           "draw": null
         },
         {
           "book": "mybookieag",
-          "home": 1.77,
-          "away": 2.11,
+          "home": 1.74,
+          "away": 2.15,
           "draw": null
         },
         {
           "book": "bovada",
-          "home": 1.77,
-          "away": 2.08,
+          "home": 1.75,
+          "away": 2.11,
           "draw": null
         },
         {
@@ -947,75 +1172,75 @@
         },
         {
           "book": "draftkings",
-          "home": 1.76,
-          "away": 2.09,
+          "home": 1.73,
+          "away": 2.13,
           "draw": null
         },
         {
           "book": "betrivers",
-          "home": 1.71,
-          "away": 2.18,
+          "home": 1.81,
+          "away": 2.04,
           "draw": null
         },
         {
           "book": "betus",
-          "home": 1.8,
-          "away": 2.14,
+          "home": 1.78,
+          "away": 2.17,
           "draw": null
         }
       ],
       "odds_totals": [
         {
           "book": "fanduel",
-          "line": 7.5,
-          "over": 2.0,
-          "under": 1.82
+          "line": 6.5,
+          "over": 1.82,
+          "under": 2.0
         },
         {
           "book": "lowvig",
-          "line": 7.0,
+          "line": 6.5,
           "over": 1.88,
           "under": 1.98
         },
         {
           "book": "betonlineag",
-          "line": 7.0,
+          "line": 6.5,
           "over": 1.87,
           "under": 1.95
         },
         {
           "book": "mybookieag",
-          "line": 7.0,
-          "over": 1.83,
-          "under": 1.98
+          "line": 6.5,
+          "over": 1.84,
+          "under": 1.97
         },
         {
           "book": "bovada",
-          "line": 7.5,
-          "over": 2.05,
-          "under": 1.8
+          "line": 6.5,
+          "over": 1.83,
+          "under": 2.0
         },
         {
           "book": "betmgm",
-          "line": 7.5,
-          "over": 2.05,
-          "under": 1.8
+          "line": 6.5,
+          "over": 1.83,
+          "under": 2.0
         },
         {
           "book": "draftkings",
-          "line": 7.0,
-          "over": 1.84,
-          "under": 1.99
+          "line": 6.5,
+          "over": 1.81,
+          "under": 2.03
         },
         {
           "book": "betrivers",
-          "line": 7.5,
-          "over": 1.97,
-          "under": 1.83
+          "line": 7.0,
+          "over": 1.92,
+          "under": 1.76
         },
         {
           "book": "betus",
-          "line": 7.0,
+          "line": 6.5,
           "over": 1.87,
           "under": 1.95
         }
@@ -1085,50 +1310,50 @@
         },
         {
           "book": "betonlineag",
-          "home": 1.41,
-          "away": 3.19,
+          "home": 1.39,
+          "away": 3.27,
           "draw": null
         },
         {
           "book": "lowvig",
-          "home": 1.41,
-          "away": 3.19,
+          "home": 1.39,
+          "away": 3.27,
           "draw": null
         },
         {
           "book": "mybookieag",
-          "home": 1.44,
-          "away": 2.9,
+          "home": 1.4,
+          "away": 3.08,
           "draw": null
         },
         {
           "book": "bovada",
+          "home": 1.38,
+          "away": 3.15,
+          "draw": null
+        },
+        {
+          "book": "betmgm",
+          "home": 1.36,
+          "away": 3.2,
+          "draw": null
+        },
+        {
+          "book": "draftkings",
+          "home": 1.38,
+          "away": 3.13,
+          "draw": null
+        },
+        {
+          "book": "betrivers",
           "home": 1.4,
           "away": 3.05,
           "draw": null
         },
         {
-          "book": "betmgm",
-          "home": 1.43,
-          "away": 2.95,
-          "draw": null
-        },
-        {
-          "book": "draftkings",
-          "home": 1.39,
-          "away": 3.08,
-          "draw": null
-        },
-        {
-          "book": "betrivers",
-          "home": 1.38,
-          "away": 3.1,
-          "draw": null
-        },
-        {
           "book": "betus",
-          "home": 1.41,
-          "away": 3.1,
+          "home": 1.39,
+          "away": 3.18,
           "draw": null
         }
       ],
@@ -1136,26 +1361,26 @@
         {
           "book": "fanduel",
           "line": 7.5,
-          "over": 1.98,
-          "under": 1.83
+          "over": 2.0,
+          "under": 1.82
         },
         {
           "book": "betonlineag",
           "line": 7.5,
-          "over": 2.05,
-          "under": 1.8
+          "over": 2.0,
+          "under": 1.83
         },
         {
           "book": "lowvig",
           "line": 7.5,
-          "over": 2.07,
-          "under": 1.81
+          "over": 2.03,
+          "under": 1.85
         },
         {
           "book": "mybookieag",
           "line": 7.5,
-          "over": 2.0,
-          "under": 1.82
+          "over": 1.98,
+          "under": 1.83
         },
         {
           "book": "bovada",
@@ -1172,8 +1397,8 @@
         {
           "book": "draftkings",
           "line": 7.5,
-          "over": 2.02,
-          "under": 1.81
+          "over": 2.0,
+          "under": 1.83
         },
         {
           "book": "betrivers",
@@ -1184,8 +1409,8 @@
         {
           "book": "betus",
           "line": 7.5,
-          "over": 2.05,
-          "under": 1.8
+          "over": 2.0,
+          "under": 1.83
         }
       ],
       "odds_spreads": [
@@ -1247,20 +1472,20 @@
       "odds_h2h": [
         {
           "book": "fanduel",
-          "home": 1.56,
-          "away": 2.5,
+          "home": 1.58,
+          "away": 2.44,
           "draw": null
         },
         {
           "book": "betonlineag",
-          "home": 1.61,
-          "away": 2.49,
+          "home": 1.59,
+          "away": 2.53,
           "draw": null
         },
         {
           "book": "lowvig",
-          "home": 1.61,
-          "away": 2.49,
+          "home": 1.59,
+          "away": 2.53,
           "draw": null
         },
         {
@@ -1271,20 +1496,20 @@
         },
         {
           "book": "bovada",
-          "home": 1.57,
-          "away": 2.43,
+          "home": 1.56,
+          "away": 2.48,
           "draw": null
         },
         {
           "book": "betmgm",
-          "home": 1.57,
+          "home": 1.56,
           "away": 2.45,
           "draw": null
         },
         {
           "book": "draftkings",
-          "home": 1.57,
-          "away": 2.44,
+          "home": 1.56,
+          "away": 2.47,
           "draw": null
         },
         {
@@ -1295,8 +1520,8 @@
         },
         {
           "book": "betus",
-          "home": 1.61,
-          "away": 2.46,
+          "home": 1.59,
+          "away": 2.5,
           "draw": null
         }
       ],
@@ -1304,43 +1529,71 @@
         {
           "book": "fanduel",
           "line": 6.5,
-          "over": 1.7,
-          "under": 2.16
+          "over": 1.82,
+          "under": 2.0
+        },
+        {
+          "book": "betonlineag",
+          "line": 6.5,
+          "over": 1.83,
+          "under": 2.0
+        },
+        {
+          "book": "lowvig",
+          "line": 6.5,
+          "over": 1.85,
+          "under": 2.03
         },
         {
           "book": "mybookieag",
-          "line": 7.0,
-          "over": 1.98,
-          "under": 1.84
+          "line": 6.5,
+          "over": 1.83,
+          "under": 1.99
         },
         {
           "book": "bovada",
           "line": 6.5,
-          "over": 1.71,
-          "under": 2.2
+          "over": 1.83,
+          "under": 2.0
         },
         {
           "book": "betmgm",
-          "line": 7.0,
-          "over": 1.95,
-          "under": 1.87
+          "line": 6.5,
+          "over": 1.83,
+          "under": 2.0
         },
         {
           "book": "draftkings",
-          "line": 7.0,
-          "over": 1.94,
-          "under": 1.88
+          "line": 6.5,
+          "over": 1.83,
+          "under": 2.0
         },
         {
           "book": "betrivers",
           "line": 7.0,
+          "over": 1.92,
+          "under": 1.76
+        },
+        {
+          "book": "betus",
+          "line": 6.5,
           "over": 1.83,
-          "under": 1.83
+          "under": 2.0
         }
       ],
       "odds_spreads": [
         {
           "book": "fanduel",
+          "home_point": -1.5,
+          "away_point": 1.5
+        },
+        {
+          "book": "betonlineag",
+          "home_point": -1.5,
+          "away_point": 1.5
+        },
+        {
+          "book": "lowvig",
           "home_point": -1.5,
           "away_point": 1.5
         },
@@ -1393,50 +1646,50 @@
         },
         {
           "book": "betonlineag",
-          "home": 1.98,
-          "away": 1.93,
-          "draw": null
-        },
-        {
-          "book": "lowvig",
-          "home": 1.98,
-          "away": 1.93,
-          "draw": null
-        },
-        {
-          "book": "mybookieag",
-          "home": 1.94,
-          "away": 1.9,
-          "draw": null
-        },
-        {
-          "book": "bovada",
-          "home": 1.95,
-          "away": 1.87,
-          "draw": null
-        },
-        {
-          "book": "betmgm",
-          "home": 1.95,
-          "away": 1.87,
-          "draw": null
-        },
-        {
-          "book": "draftkings",
-          "home": 1.93,
-          "away": 1.89,
-          "draw": null
-        },
-        {
-          "book": "betrivers",
-          "home": 1.95,
+          "home": 2.03,
           "away": 1.88,
           "draw": null
         },
         {
-          "book": "betus",
+          "book": "lowvig",
+          "home": 2.03,
+          "away": 1.88,
+          "draw": null
+        },
+        {
+          "book": "mybookieag",
+          "home": 2.01,
+          "away": 1.85,
+          "draw": null
+        },
+        {
+          "book": "bovada",
           "home": 1.98,
-          "away": 1.93,
+          "away": 1.85,
+          "draw": null
+        },
+        {
+          "book": "betmgm",
+          "home": 1.98,
+          "away": 1.85,
+          "draw": null
+        },
+        {
+          "book": "draftkings",
+          "home": 1.98,
+          "away": 1.85,
+          "draw": null
+        },
+        {
+          "book": "betrivers",
+          "home": 2.06,
+          "away": 1.8,
+          "draw": null
+        },
+        {
+          "book": "betus",
+          "home": 2.05,
+          "away": 1.87,
           "draw": null
         }
       ],
@@ -1444,19 +1697,19 @@
         {
           "book": "fanduel",
           "line": 8.5,
-          "over": 1.89,
-          "under": 1.93
+          "over": 1.91,
+          "under": 1.91
         },
         {
           "book": "betonlineag",
           "line": 8.5,
-          "over": 1.95,
-          "under": 1.87
+          "over": 1.96,
+          "under": 1.86
         },
         {
           "book": "lowvig",
           "line": 8.5,
-          "over": 1.98,
+          "over": 1.99,
           "under": 1.88
         },
         {
@@ -1480,14 +1733,14 @@
         {
           "book": "draftkings",
           "line": 8.5,
-          "over": 1.93,
-          "under": 1.88
+          "over": 1.92,
+          "under": 1.91
         },
         {
           "book": "betrivers",
           "line": 8.5,
-          "over": 1.85,
-          "under": 1.95
+          "over": 1.87,
+          "under": 1.94
         },
         {
           "book": "betus",
@@ -1555,14 +1808,14 @@
       "odds_h2h": [
         {
           "book": "fanduel",
-          "home": 2.0,
-          "away": 1.85,
+          "home": 1.93,
+          "away": 1.93,
           "draw": null
         },
         {
           "book": "mybookieag",
-          "home": 1.92,
-          "away": 1.93,
+          "home": 1.9,
+          "away": 1.94,
           "draw": null
         },
         {
@@ -1573,14 +1826,38 @@
         },
         {
           "book": "bovada",
-          "home": 1.99,
-          "away": 1.84,
+          "home": 1.91,
+          "away": 1.91,
           "draw": null
         },
         {
           "book": "draftkings",
-          "home": 1.88,
+          "home": 1.89,
           "away": 1.93,
+          "draw": null
+        },
+        {
+          "book": "betrivers",
+          "home": 1.91,
+          "away": 1.92,
+          "draw": null
+        },
+        {
+          "book": "betus",
+          "home": 1.95,
+          "away": 1.95,
+          "draw": null
+        },
+        {
+          "book": "lowvig",
+          "home": 1.95,
+          "away": 1.95,
+          "draw": null
+        },
+        {
+          "book": "betonlineag",
+          "home": 1.95,
+          "away": 1.95,
           "draw": null
         }
       ],
@@ -1588,32 +1865,56 @@
         {
           "book": "fanduel",
           "line": 7.5,
-          "over": 1.87,
-          "under": 1.95
+          "over": 1.93,
+          "under": 1.89
         },
         {
           "book": "mybookieag",
+          "line": 7.5,
+          "over": 1.88,
+          "under": 1.93
+        },
+        {
+          "book": "betmgm",
+          "line": 7.5,
+          "over": 1.91,
+          "under": 1.91
+        },
+        {
+          "book": "bovada",
+          "line": 7.5,
+          "over": 1.91,
+          "under": 1.91
+        },
+        {
+          "book": "draftkings",
+          "line": 7.5,
+          "over": 1.91,
+          "under": 1.91
+        },
+        {
+          "book": "betrivers",
           "line": 7.5,
           "over": 1.89,
           "under": 1.92
         },
         {
-          "book": "betmgm",
+          "book": "betus",
           "line": 7.5,
-          "over": 1.87,
-          "under": 1.95
+          "over": 1.91,
+          "under": 1.91
         },
         {
-          "book": "bovada",
+          "book": "lowvig",
           "line": 7.5,
-          "over": 1.87,
-          "under": 1.95
-        },
-        {
-          "book": "draftkings",
-          "line": 7.5,
-          "over": 1.89,
+          "over": 1.93,
           "under": 1.93
+        },
+        {
+          "book": "betonlineag",
+          "line": 7.5,
+          "over": 1.91,
+          "under": 1.91
         }
       ],
       "odds_spreads": [
@@ -1641,6 +1942,26 @@
           "book": "draftkings",
           "home_point": 1.5,
           "away_point": -1.5
+        },
+        {
+          "book": "betrivers",
+          "home_point": 1.5,
+          "away_point": -1.5
+        },
+        {
+          "book": "betus",
+          "home_point": -1.5,
+          "away_point": 1.5
+        },
+        {
+          "book": "lowvig",
+          "home_point": -1.5,
+          "away_point": 1.5
+        },
+        {
+          "book": "betonlineag",
+          "home_point": -1.5,
+          "away_point": 1.5
         }
       ]
     },
@@ -1673,14 +1994,14 @@
         },
         {
           "book": "mybookieag",
-          "home": 2.34,
-          "away": 1.63,
+          "home": 2.3,
+          "away": 1.65,
           "draw": null
         },
         {
           "book": "bovada",
-          "home": 2.31,
-          "away": 1.64,
+          "home": 2.33,
+          "away": 1.63,
           "draw": null
         },
         {
@@ -1697,14 +2018,14 @@
         },
         {
           "book": "betrivers",
-          "home": 2.33,
-          "away": 1.63,
+          "home": 2.38,
+          "away": 1.61,
           "draw": null
         },
         {
           "book": "betus",
-          "home": 2.34,
-          "away": 1.67,
+          "home": 2.37,
+          "away": 1.65,
           "draw": null
         }
       ],
@@ -1718,20 +2039,20 @@
         {
           "book": "betonlineag",
           "line": 11.0,
-          "over": 1.87,
-          "under": 1.95
+          "over": 1.93,
+          "under": 1.89
         },
         {
           "book": "lowvig",
           "line": 11.0,
-          "over": 1.88,
-          "under": 1.98
+          "over": 1.95,
+          "under": 1.92
         },
         {
           "book": "mybookieag",
           "line": 11.0,
-          "over": 1.89,
-          "under": 1.92
+          "over": 1.9,
+          "under": 1.91
         },
         {
           "book": "bovada",
@@ -1748,20 +2069,20 @@
         {
           "book": "draftkings",
           "line": 11.0,
-          "over": 1.87,
-          "under": 1.95
+          "over": 1.9,
+          "under": 1.93
         },
         {
           "book": "betrivers",
-          "line": 10.5,
+          "line": 11.0,
           "over": 1.8,
-          "under": 2.04
+          "under": 1.88
         },
         {
           "book": "betus",
           "line": 11.0,
-          "over": 1.87,
-          "under": 1.95
+          "over": 1.91,
+          "under": 1.91
         }
       ],
       "odds_spreads": [
@@ -1829,26 +2150,26 @@
         },
         {
           "book": "betonlineag",
-          "home": 2.14,
-          "away": 1.79,
+          "home": 2.13,
+          "away": 1.8,
           "draw": null
         },
         {
           "book": "lowvig",
-          "home": 2.14,
-          "away": 1.79,
+          "home": 2.13,
+          "away": 1.8,
           "draw": null
         },
         {
           "book": "mybookieag",
-          "home": 2.1,
-          "away": 1.78,
+          "home": 2.11,
+          "away": 1.77,
           "draw": null
         },
         {
           "book": "bovada",
-          "home": 2.07,
-          "away": 1.78,
+          "home": 2.12,
+          "away": 1.75,
           "draw": null
         },
         {
@@ -1865,14 +2186,14 @@
         },
         {
           "book": "betrivers",
-          "home": 2.05,
-          "away": 1.8,
+          "home": 2.2,
+          "away": 1.7,
           "draw": null
         },
         {
           "book": "betus",
-          "home": 2.15,
-          "away": 1.79,
+          "home": 2.14,
+          "away": 1.8,
           "draw": null
         }
       ],
@@ -1886,20 +2207,20 @@
         {
           "book": "betonlineag",
           "line": 9.5,
-          "over": 1.87,
-          "under": 1.95
+          "over": 1.93,
+          "under": 1.88
         },
         {
           "book": "lowvig",
           "line": 9.5,
-          "over": 1.88,
-          "under": 1.98
+          "over": 1.96,
+          "under": 1.91
         },
         {
           "book": "mybookieag",
           "line": 9.5,
-          "over": 1.9,
-          "under": 1.91
+          "over": 1.93,
+          "under": 1.88
         },
         {
           "book": "bovada",
@@ -1910,26 +2231,26 @@
         {
           "book": "betmgm",
           "line": 9.5,
-          "over": 1.91,
-          "under": 1.91
+          "over": 1.95,
+          "under": 1.87
         },
         {
           "book": "draftkings",
           "line": 9.5,
-          "over": 1.9,
-          "under": 1.92
+          "over": 1.93,
+          "under": 1.89
         },
         {
           "book": "betrivers",
           "line": 9.5,
-          "over": 1.94,
-          "under": 1.87
+          "over": 1.88,
+          "under": 1.93
         },
         {
           "book": "betus",
           "line": 9.5,
-          "over": 1.87,
-          "under": 1.95
+          "over": 1.95,
+          "under": 1.87
         }
       ],
       "odds_spreads": [
@@ -1981,6 +2302,174 @@
       ]
     },
     {
+      "id": "7d11a20c7ec2247d0ce57f87cda008ca",
+      "sport": "MLB",
+      "sport_key": "baseball_mlb",
+      "home": "Seattle Mariners",
+      "away": "Houston Astros",
+      "start_time": "2026-09-24T10:11:00+08:00",
+      "commence_time_utc": "2026-09-24T02:11:00Z",
+      "odds_h2h": [
+        {
+          "book": "fanduel",
+          "home": 1.79,
+          "away": 2.08,
+          "draw": null
+        },
+        {
+          "book": "mybookieag",
+          "home": 1.79,
+          "away": 2.07,
+          "draw": null
+        },
+        {
+          "book": "bovada",
+          "home": 1.79,
+          "away": 2.06,
+          "draw": null
+        },
+        {
+          "book": "draftkings",
+          "home": 1.79,
+          "away": 2.06,
+          "draw": null
+        },
+        {
+          "book": "betrivers",
+          "home": 1.75,
+          "away": 2.12,
+          "draw": null
+        },
+        {
+          "book": "betmgm",
+          "home": 1.77,
+          "away": 2.05,
+          "draw": null
+        },
+        {
+          "book": "lowvig",
+          "home": 1.84,
+          "away": 2.08,
+          "draw": null
+        },
+        {
+          "book": "betonlineag",
+          "home": 1.84,
+          "away": 2.08,
+          "draw": null
+        },
+        {
+          "book": "betus",
+          "home": 1.83,
+          "away": 2.09,
+          "draw": null
+        }
+      ],
+      "odds_totals": [
+        {
+          "book": "fanduel",
+          "line": 7.5,
+          "over": 1.87,
+          "under": 1.95
+        },
+        {
+          "book": "mybookieag",
+          "line": 8.0,
+          "over": 1.97,
+          "under": 1.84
+        },
+        {
+          "book": "bovada",
+          "line": 7.5,
+          "over": 1.91,
+          "under": 1.91
+        },
+        {
+          "book": "draftkings",
+          "line": 7.5,
+          "over": 1.85,
+          "under": 1.97
+        },
+        {
+          "book": "betrivers",
+          "line": 8.0,
+          "over": 1.87,
+          "under": 1.81
+        },
+        {
+          "book": "betmgm",
+          "line": 7.5,
+          "over": 1.87,
+          "under": 1.95
+        },
+        {
+          "book": "lowvig",
+          "line": 7.5,
+          "over": 1.88,
+          "under": 1.98
+        },
+        {
+          "book": "betonlineag",
+          "line": 7.5,
+          "over": 1.87,
+          "under": 1.95
+        },
+        {
+          "book": "betus",
+          "line": 7.5,
+          "over": 1.87,
+          "under": 1.95
+        }
+      ],
+      "odds_spreads": [
+        {
+          "book": "fanduel",
+          "home_point": -1.5,
+          "away_point": 1.5
+        },
+        {
+          "book": "mybookieag",
+          "home_point": -1.5,
+          "away_point": 1.5
+        },
+        {
+          "book": "bovada",
+          "home_point": -1.5,
+          "away_point": 1.5
+        },
+        {
+          "book": "draftkings",
+          "home_point": -1.5,
+          "away_point": 1.5
+        },
+        {
+          "book": "betrivers",
+          "home_point": -1.5,
+          "away_point": 1.5
+        },
+        {
+          "book": "betmgm",
+          "home_point": -1.5,
+          "away_point": 1.5
+        },
+        {
+          "book": "lowvig",
+          "home_point": -1.5,
+          "away_point": 1.5
+        },
+        {
+          "book": "betonlineag",
+          "home_point": -1.5,
+          "away_point": 1.5
+        },
+        {
+          "book": "betus",
+          "home_point": -1.5,
+          "away_point": 1.5
+        }
+      ]
+    },
+    {
       "id": "1cc251b3308daacf4f549c56ad233607",
       "sport": "MLB",
       "sport_key": "baseball_mlb",
@@ -1991,26 +2480,26 @@
       "odds_h2h": [
         {
           "book": "fanduel",
-          "home": 1.47,
-          "away": 2.8,
-          "draw": null
-        },
-        {
-          "book": "mybookieag",
           "home": 1.45,
           "away": 2.84,
           "draw": null
         },
         {
+          "book": "mybookieag",
+          "home": 1.46,
+          "away": 2.81,
+          "draw": null
+        },
+        {
           "book": "bovada",
-          "home": 1.44,
-          "away": 2.85,
+          "home": 1.45,
+          "away": 2.8,
           "draw": null
         },
         {
           "book": "betrivers",
-          "home": 1.47,
-          "away": 2.75,
+          "home": 1.45,
+          "away": 2.8,
           "draw": null
         },
         {
@@ -2021,26 +2510,26 @@
         },
         {
           "book": "betonlineag",
-          "home": 1.48,
-          "away": 2.89,
+          "home": 1.47,
+          "away": 2.92,
           "draw": null
         },
         {
           "book": "lowvig",
-          "home": 1.48,
-          "away": 2.89,
+          "home": 1.47,
+          "away": 2.92,
           "draw": null
         },
         {
           "book": "betus",
-          "home": 1.48,
-          "away": 2.82,
+          "home": 1.47,
+          "away": 2.86,
           "draw": null
         },
         {
           "book": "draftkings",
-          "home": 1.44,
-          "away": 2.84,
+          "home": 1.45,
+          "away": 2.82,
           "draw": null
         }
       ],
@@ -2048,14 +2537,14 @@
         {
           "book": "fanduel",
           "line": 8.5,
-          "over": 2.0,
-          "under": 1.82
+          "over": 2.06,
+          "under": 1.77
         },
         {
           "book": "mybookieag",
           "line": 8.0,
-          "over": 1.85,
-          "under": 1.97
+          "over": 1.86,
+          "under": 1.94
         },
         {
           "book": "bovada",
@@ -2072,32 +2561,32 @@
         {
           "book": "betmgm",
           "line": 8.0,
-          "over": 1.83,
-          "under": 2.0
+          "over": 1.87,
+          "under": 1.95
         },
         {
           "book": "betonlineag",
-          "line": 8.5,
-          "over": 2.0,
-          "under": 1.83
+          "line": 8.0,
+          "over": 1.88,
+          "under": 1.93
         },
         {
           "book": "lowvig",
-          "line": 8.5,
-          "over": 2.03,
-          "under": 1.85
+          "line": 8.0,
+          "over": 1.91,
+          "under": 1.96
         },
         {
           "book": "betus",
-          "line": 8.5,
-          "over": 2.0,
-          "under": 1.83
+          "line": 8.0,
+          "over": 1.87,
+          "under": 1.95
         },
         {
           "book": "draftkings",
           "line": 8.0,
-          "over": 1.84,
-          "under": 1.99
+          "over": 1.88,
+          "under": 1.95
         }
       ],
       "odds_spreads": [
@@ -2149,5 +2638,5 @@
       ]
     }
   ],
-  "updated_at": "2026-09-23T12:54:24+08:00"
+  "updated_at": "2026-09-23T22:26:04+08:00"
 }
