@@ -1,1 +1,111 @@
-{}
+{
+  "62bf363a77455f7a8b48838e7792f60b": {
+    "prediction": {
+      "game_id": "62bf363a77455f7a8b48838e7792f60b",
+      "sport": "MLB",
+      "home": "Cleveland Guardians",
+      "away": "Chicago White Sox",
+      "start_time": "2026-10-11T08:01:00+08:00",
+      "market": {
+        "asian_handicap": -1.5,
+        "over_under": 7.0,
+        "odds_source": "the-odds-api/consensus",
+        "timestamp": "2026-10-10T14:41:53.119552+00:00"
+      },
+      "bookmaker_count": 9,
+      "fair_prob": {
+        "away": 0.4434,
+        "home": 0.5566
+      },
+      "best_odds": {
+        "home": 1.75,
+        "away": 2.21
+      },
+      "edge": {
+        "away": -0.0202,
+        "home": -0.0259
+      },
+      "best_pick": null,
+      "avg_overround": 0.0358,
+      "model": "market_implied_v1",
+      "generated_at": "2026-10-10T22:41:52+08:00",
+      "model_score": {
+        "type": "poisson",
+        "sport": "MLB",
+        "lambda_home": 4.25,
+        "lambda_away": 2.75,
+        "expected_total": 7.0,
+        "supremacy": 1.5,
+        "outcome_probs": {
+          "home": 0.6458,
+          "draw": 0.1323,
+          "away": 0.2218
+        },
+        "top_scorelines": [
+          {
+            "home": 4,
+            "away": 2,
+            "prob": 0.0469
+          },
+          {
+            "home": 3,
+            "away": 2,
+            "prob": 0.0441
+          },
+          {
+            "home": 4,
+            "away": 3,
+            "prob": 0.043
+          },
+          {
+            "home": 3,
+            "away": 3,
+            "prob": 0.0405
+          },
+          {
+            "home": 5,
+            "away": 2,
+            "prob": 0.0399
+          }
+        ]
+      },
+      "model_mc": {
+        "n": 20000,
+        "win_prob": {
+          "home": 0.6412,
+          "draw": 0.1347,
+          "away": 0.2241
+        },
+        "top_scorelines": [
+          {
+            "home": 4,
+            "away": 2,
+            "prob": 0.0486
+          },
+          {
+            "home": 3,
+            "away": 2,
+            "prob": 0.043
+          },
+          {
+            "home": 4,
+            "away": 3,
+            "prob": 0.0425
+          },
+          {
+            "home": 3,
+            "away": 3,
+            "prob": 0.0413
+          },
+          {
+            "home": 5,
+            "away": 2,
+            "prob": 0.0367
+          }
+        ]
+      },
+      "phase": "early_12h"
+    },
+    "pre_pushed_at": "2026-10-10T22:41:53+08:00"
+  }
+}
