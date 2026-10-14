@@ -1,1 +1,111 @@
-{}
+{
+  "622fd31d2c8178b025455656e0d2fb89": {
+    "prediction": {
+      "game_id": "622fd31d2c8178b025455656e0d2fb89",
+      "sport": "MLB",
+      "home": "Los Angeles Dodgers",
+      "away": "Milwaukee Brewers",
+      "start_time": "2026-10-15T08:00:00+08:00",
+      "market": {
+        "asian_handicap": -1.5,
+        "over_under": 7.5,
+        "odds_source": "the-odds-api/consensus",
+        "timestamp": "2026-10-14T12:15:33.140900+00:00"
+      },
+      "bookmaker_count": 9,
+      "fair_prob": {
+        "away": 0.3819,
+        "home": 0.6181
+      },
+      "best_odds": {
+        "home": 1.58,
+        "away": 2.6
+      },
+      "edge": {
+        "away": -0.0071,
+        "home": -0.0233
+      },
+      "best_pick": null,
+      "avg_overround": 0.0386,
+      "model": "market_implied_v1",
+      "generated_at": "2026-10-14T20:15:32+08:00",
+      "model_score": {
+        "type": "poisson",
+        "sport": "MLB",
+        "lambda_home": 4.5,
+        "lambda_away": 3.0,
+        "expected_total": 7.5,
+        "supremacy": 1.5,
+        "outcome_probs": {
+          "home": 0.641,
+          "draw": 0.1289,
+          "away": 0.23
+        },
+        "top_scorelines": [
+          {
+            "home": 4,
+            "away": 2,
+            "prob": 0.0426
+          },
+          {
+            "home": 4,
+            "away": 3,
+            "prob": 0.0426
+          },
+          {
+            "home": 5,
+            "away": 2,
+            "prob": 0.0383
+          },
+          {
+            "home": 5,
+            "away": 3,
+            "prob": 0.0383
+          },
+          {
+            "home": 3,
+            "away": 2,
+            "prob": 0.0378
+          }
+        ]
+      },
+      "model_mc": {
+        "n": 20000,
+        "win_prob": {
+          "home": 0.6438,
+          "draw": 0.1296,
+          "away": 0.2266
+        },
+        "top_scorelines": [
+          {
+            "home": 4,
+            "away": 2,
+            "prob": 0.0442
+          },
+          {
+            "home": 4,
+            "away": 3,
+            "prob": 0.041
+          },
+          {
+            "home": 3,
+            "away": 3,
+            "prob": 0.04
+          },
+          {
+            "home": 5,
+            "away": 3,
+            "prob": 0.0393
+          },
+          {
+            "home": 3,
+            "away": 2,
+            "prob": 0.0379
+          }
+        ]
+      },
+      "phase": "early_12h"
+    },
+    "pre_pushed_at": "2026-10-14T20:15:33+08:00"
+  }
+}
