@@ -107,6 +107,115 @@
       "phase": "pre_match_40m"
     },
     "pre_pushed_at": "2026-10-17T07:32:01+08:00",
-    "post_attempts": 2
+    "post_attempts": 3
+  },
+  "bf41baaebfa23a202d2f3a6811425ff9": {
+    "prediction": {
+      "game_id": "bf41baaebfa23a202d2f3a6811425ff9",
+      "sport": "MLB",
+      "home": "Cleveland Guardians",
+      "away": "Tampa Bay Rays",
+      "start_time": "2026-10-18T08:00:00+08:00",
+      "market": {
+        "asian_handicap": 1.5,
+        "over_under": 6.5,
+        "odds_source": "the-odds-api/consensus",
+        "timestamp": "2026-10-17T13:52:57.428548+00:00"
+      },
+      "bookmaker_count": 9,
+      "fair_prob": {
+        "away": 0.5092,
+        "home": 0.4908
+      },
+      "best_odds": {
+        "home": 1.99,
+        "away": 1.94
+      },
+      "edge": {
+        "away": -0.0121,
+        "home": -0.0234
+      },
+      "best_pick": null,
+      "avg_overround": 0.038,
+      "model": "market_implied_v1",
+      "generated_at": "2026-10-17T21:52:56+08:00",
+      "model_score": {
+        "type": "poisson",
+        "sport": "MLB",
+        "lambda_home": 2.5,
+        "lambda_away": 4.0,
+        "expected_total": 6.5,
+        "supremacy": -1.5,
+        "outcome_probs": {
+          "home": 0.2129,
+          "draw": 0.1361,
+          "away": 0.6511
+        },
+        "top_scorelines": [
+          {
+            "home": 2,
+            "away": 3,
+            "prob": 0.0501
+          },
+          {
+            "home": 2,
+            "away": 4,
+            "prob": 0.0501
+          },
+          {
+            "home": 3,
+            "away": 3,
+            "prob": 0.0418
+          },
+          {
+            "home": 3,
+            "away": 4,
+            "prob": 0.0418
+          },
+          {
+            "home": 1,
+            "away": 3,
+            "prob": 0.0401
+          }
+        ]
+      },
+      "model_mc": {
+        "n": 20000,
+        "win_prob": {
+          "home": 0.216,
+          "draw": 0.1377,
+          "away": 0.6463
+        },
+        "top_scorelines": [
+          {
+            "home": 2,
+            "away": 3,
+            "prob": 0.0516
+          },
+          {
+            "home": 2,
+            "away": 4,
+            "prob": 0.0486
+          },
+          {
+            "home": 3,
+            "away": 3,
+            "prob": 0.0415
+          },
+          {
+            "home": 1,
+            "away": 3,
+            "prob": 0.0408
+          },
+          {
+            "home": 1,
+            "away": 4,
+            "prob": 0.0402
+          }
+        ]
+      },
+      "phase": "early_12h"
+    },
+    "pre_pushed_at": "2026-10-17T21:52:57+08:00"
   }
 }
