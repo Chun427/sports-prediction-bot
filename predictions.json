@@ -102,5 +102,57 @@
       "phase": "early_12h"
     },
     "pre_pushed_at": "2026-10-20T20:10:30+08:00"
+  },
+  "bccd283de56915e29af1788beb0abfc9": {
+    "prediction": {
+      "game_id": "bccd283de56915e29af1788beb0abfc9",
+      "sport": "NBA",
+      "home": "San Antonio Spurs",
+      "away": "Oklahoma City Thunder",
+      "start_time": "2026-10-21T09:30:00+08:00",
+      "market": {
+        "asian_handicap": -1.0,
+        "over_under": 230.5,
+        "odds_source": "the-odds-api/consensus",
+        "timestamp": "2026-10-20T17:00:52.270087+00:00"
+      },
+      "bookmaker_count": 8,
+      "fair_prob": {
+        "home": 0.5074,
+        "away": 0.4926
+      },
+      "best_odds": {
+        "home": 1.91,
+        "away": 1.98
+      },
+      "edge": {
+        "home": -0.031,
+        "away": -0.0246
+      },
+      "best_pick": null,
+      "avg_overround": 0.0471,
+      "model": "market_implied_v1",
+      "generated_at": "2026-10-21T01:00:51+08:00",
+      "model_score": {
+        "type": "normal_margin",
+        "sport": "NBA",
+        "expected_margin": 1.0,
+        "expected_total": 230.5,
+        "sigma": 12.0,
+        "outcome_probs": {
+          "home": 0.5332,
+          "away": 0.4668
+        }
+      },
+      "model_mc": {
+        "n": 20000,
+        "win_prob": {
+          "home": 0.5345,
+          "away": 0.4655
+        }
+      },
+      "phase": "early_12h"
+    },
+    "pre_pushed_at": "2026-10-21T01:00:52+08:00"
   }
 }
