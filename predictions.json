@@ -1,1 +1,106 @@
-{}
+{
+  "26b036ff107f3c658258eaf4a6f26228": {
+    "prediction": {
+      "game_id": "26b036ff107f3c658258eaf4a6f26228",
+      "sport": "NBA",
+      "home": "Detroit Pistons",
+      "away": "Boston Celtics",
+      "start_time": "2026-10-21T03:00:00+08:00",
+      "market": {
+        "asian_handicap": 1.5,
+        "over_under": 222.0,
+        "odds_source": "the-odds-api/consensus",
+        "timestamp": "2026-10-20T12:10:30.320514+00:00"
+      },
+      "bookmaker_count": 9,
+      "fair_prob": {
+        "home": 0.476,
+        "away": 0.524
+      },
+      "best_odds": {
+        "home": 2.07,
+        "away": 1.85
+      },
+      "edge": {
+        "home": -0.0147,
+        "away": -0.0306
+      },
+      "best_pick": null,
+      "avg_overround": 0.0454,
+      "model": "market_implied_v1",
+      "generated_at": "2026-10-20T20:10:29+08:00",
+      "model_score": {
+        "type": "normal_margin",
+        "sport": "NBA",
+        "expected_margin": -1.5,
+        "expected_total": 222.0,
+        "sigma": 12.0,
+        "outcome_probs": {
+          "home": 0.4503,
+          "away": 0.5497
+        }
+      },
+      "model_mc": {
+        "n": 20000,
+        "win_prob": {
+          "home": 0.451,
+          "away": 0.5491
+        }
+      },
+      "phase": "early_12h"
+    },
+    "pre_pushed_at": "2026-10-20T20:10:30+08:00"
+  },
+  "2b042ddad3d3c6c6fe5b7005dc26c775": {
+    "prediction": {
+      "game_id": "2b042ddad3d3c6c6fe5b7005dc26c775",
+      "sport": "NBA",
+      "home": "New York Knicks",
+      "away": "Philadelphia 76ers",
+      "start_time": "2026-10-21T07:00:00+08:00",
+      "market": {
+        "asian_handicap": -4.5,
+        "over_under": 232.0,
+        "odds_source": "the-odds-api/consensus",
+        "timestamp": "2026-10-20T12:10:30.816388+00:00"
+      },
+      "bookmaker_count": 9,
+      "fair_prob": {
+        "home": 0.6136,
+        "away": 0.3864
+      },
+      "best_odds": {
+        "home": 1.59,
+        "away": 2.56
+      },
+      "edge": {
+        "home": -0.0244,
+        "away": -0.0107
+      },
+      "best_pick": null,
+      "avg_overround": 0.0404,
+      "model": "market_implied_v1",
+      "generated_at": "2026-10-20T20:10:30+08:00",
+      "model_score": {
+        "type": "normal_margin",
+        "sport": "NBA",
+        "expected_margin": 4.5,
+        "expected_total": 232.0,
+        "sigma": 12.0,
+        "outcome_probs": {
+          "home": 0.6462,
+          "away": 0.3538
+        }
+      },
+      "model_mc": {
+        "n": 20000,
+        "win_prob": {
+          "home": 0.6479,
+          "away": 0.3521
+        }
+      },
+      "phase": "early_12h"
+    },
+    "pre_pushed_at": "2026-10-20T20:10:30+08:00"
+  }
+}
