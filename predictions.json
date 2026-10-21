@@ -267,49 +267,49 @@
       "away": "Indiana Pacers",
       "start_time": "2026-10-22T08:10:00+08:00",
       "market": {
-        "asian_handicap": 3.5,
-        "over_under": 239.5,
+        "asian_handicap": 3.0,
+        "over_under": 238.5,
         "odds_source": "the-odds-api/consensus",
-        "timestamp": "2026-10-21T12:19:13.640945+00:00"
+        "timestamp": "2026-10-21T23:40:27.053823+00:00"
       },
       "bookmaker_count": 9,
       "fair_prob": {
-        "away": 0.5813,
-        "home": 0.4187
+        "away": 0.5663,
+        "home": 0.4337
       },
       "best_odds": {
-        "home": 2.36,
-        "away": 1.69
+        "home": 2.28,
+        "away": 1.74
       },
       "edge": {
-        "away": -0.0176,
-        "home": -0.0119
+        "away": -0.0146,
+        "home": -0.0113
       },
       "best_pick": null,
-      "avg_overround": 0.0392,
+      "avg_overround": 0.0416,
       "model": "market_implied_v1",
-      "generated_at": "2026-10-21T20:19:13+08:00",
+      "generated_at": "2026-10-22T07:40:26+08:00",
       "model_score": {
         "type": "normal_margin",
         "sport": "NBA",
-        "expected_margin": -3.5,
-        "expected_total": 239.5,
+        "expected_margin": -3.0,
+        "expected_total": 238.5,
         "sigma": 12.0,
         "outcome_probs": {
-          "home": 0.3853,
-          "away": 0.6147
+          "home": 0.4013,
+          "away": 0.5987
         }
       },
       "model_mc": {
         "n": 20000,
         "win_prob": {
-          "home": 0.3831,
-          "away": 0.6169
+          "home": 0.4006,
+          "away": 0.5994
         }
       },
-      "phase": "early_12h"
+      "phase": "pre_match_40m"
     },
-    "pre_pushed_at": "2026-10-21T20:19:13+08:00"
+    "pre_pushed_at": "2026-10-22T07:40:27+08:00"
   },
   "e6769c813dd625b622df94c14a562ce2": {
     "prediction": {
@@ -319,49 +319,49 @@
       "away": "Utah Jazz",
       "start_time": "2026-10-22T08:10:00+08:00",
       "market": {
-        "asian_handicap": -1.5,
-        "over_under": 242.0,
+        "asian_handicap": -2.0,
+        "over_under": 241.5,
         "odds_source": "the-odds-api/consensus",
-        "timestamp": "2026-10-21T12:19:14.295373+00:00"
+        "timestamp": "2026-10-21T23:40:27.561652+00:00"
       },
       "bookmaker_count": 9,
       "fair_prob": {
-        "away": 0.4748,
-        "home": 0.5252
+        "away": 0.4597,
+        "home": 0.5403
       },
       "best_odds": {
-        "home": 1.85,
-        "away": 2.05
+        "home": 1.82,
+        "away": 2.15
       },
       "edge": {
-        "away": -0.0266,
-        "home": -0.0285
+        "away": -0.0116,
+        "home": -0.0167
       },
       "best_pick": null,
-      "avg_overround": 0.0444,
+      "avg_overround": 0.0433,
       "model": "market_implied_v1",
-      "generated_at": "2026-10-21T20:19:13+08:00",
+      "generated_at": "2026-10-22T07:40:27+08:00",
       "model_score": {
         "type": "normal_margin",
         "sport": "NBA",
-        "expected_margin": 1.5,
-        "expected_total": 242.0,
+        "expected_margin": 2.0,
+        "expected_total": 241.5,
         "sigma": 12.0,
         "outcome_probs": {
-          "home": 0.5497,
-          "away": 0.4503
+          "home": 0.5662,
+          "away": 0.4338
         }
       },
       "model_mc": {
         "n": 20000,
         "win_prob": {
-          "home": 0.5511,
-          "away": 0.4489
+          "home": 0.5703,
+          "away": 0.4297
         }
       },
-      "phase": "early_12h"
+      "phase": "pre_match_40m"
     },
-    "pre_pushed_at": "2026-10-21T20:19:14+08:00"
+    "pre_pushed_at": "2026-10-22T07:40:27+08:00"
   },
   "af2f084075391e55ba2a596e7846bb40": {
     "prediction": {
@@ -371,53 +371,49 @@
       "away": "Dallas Mavericks",
       "start_time": "2026-10-22T08:40:00+08:00",
       "market": {
-        "asian_handicap": -9.0,
-        "over_under": 230.5,
+        "asian_handicap": -10.0,
+        "over_under": 230.0,
         "odds_source": "the-odds-api/consensus",
-        "timestamp": "2026-10-21T17:22:18.641099+00:00"
+        "timestamp": "2026-10-21T23:40:28.060390+00:00"
       },
       "bookmaker_count": 9,
       "fair_prob": {
-        "home": 0.7543,
-        "away": 0.2457
+        "away": 0.2256,
+        "home": 0.7744
       },
       "best_odds": {
-        "home": 1.28,
-        "away": 4.1
+        "home": 1.25,
+        "away": 4.4
       },
       "edge": {
-        "home": -0.0345,
-        "away": 0.0073
+        "away": -0.0074,
+        "home": -0.032
       },
-      "best_pick": {
-        "outcome": "away",
-        "edge": 0.0073,
-        "odds": 4.1
-      },
-      "avg_overround": 0.0421,
+      "best_pick": null,
+      "avg_overround": 0.0423,
       "model": "market_implied_v1",
-      "generated_at": "2026-10-22T01:22:17+08:00",
+      "generated_at": "2026-10-22T07:40:27+08:00",
       "model_score": {
         "type": "normal_margin",
         "sport": "NBA",
-        "expected_margin": 9.0,
-        "expected_total": 230.5,
+        "expected_margin": 10.0,
+        "expected_total": 230.0,
         "sigma": 12.0,
         "outcome_probs": {
-          "home": 0.7734,
-          "away": 0.2266
+          "home": 0.7977,
+          "away": 0.2023
         }
       },
       "model_mc": {
         "n": 20000,
         "win_prob": {
-          "home": 0.7756,
-          "away": 0.2244
+          "home": 0.8021,
+          "away": 0.1979
         }
       },
-      "phase": "early_12h"
+      "phase": "pre_match_40m"
     },
-    "pre_pushed_at": "2026-10-22T01:22:18+08:00"
+    "pre_pushed_at": "2026-10-22T07:40:28+08:00"
   },
   "6fff70f4bf196dba25060a5775a03b54": {
     "prediction": {
