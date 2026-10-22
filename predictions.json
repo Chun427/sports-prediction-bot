@@ -50,5 +50,57 @@
       "phase": "early_12h"
     },
     "pre_pushed_at": "2026-10-22T20:26:58+08:00"
+  },
+  "223b2883b9b05a67329ef246384b85f1": {
+    "prediction": {
+      "game_id": "223b2883b9b05a67329ef246384b85f1",
+      "sport": "NBA",
+      "home": "Oklahoma City Thunder",
+      "away": "Denver Nuggets",
+      "start_time": "2026-10-23T09:40:00+08:00",
+      "market": {
+        "asian_handicap": -8.0,
+        "over_under": 236.5,
+        "odds_source": "the-odds-api/consensus",
+        "timestamp": "2026-10-22T17:28:51.239144+00:00"
+      },
+      "bookmaker_count": 9,
+      "fair_prob": {
+        "home": 0.7386,
+        "away": 0.2614
+      },
+      "best_odds": {
+        "home": 1.32,
+        "away": 3.78
+      },
+      "edge": {
+        "home": -0.0251,
+        "away": -0.0118
+      },
+      "best_pick": null,
+      "avg_overround": 0.0425,
+      "model": "market_implied_v1",
+      "generated_at": "2026-10-23T01:28:50+08:00",
+      "model_score": {
+        "type": "normal_margin",
+        "sport": "NBA",
+        "expected_margin": 8.0,
+        "expected_total": 236.5,
+        "sigma": 12.0,
+        "outcome_probs": {
+          "home": 0.7475,
+          "away": 0.2525
+        }
+      },
+      "model_mc": {
+        "n": 20000,
+        "win_prob": {
+          "home": 0.7463,
+          "away": 0.2537
+        }
+      },
+      "phase": "early_12h"
+    },
+    "pre_pushed_at": "2026-10-23T01:28:51+08:00"
   }
 }
