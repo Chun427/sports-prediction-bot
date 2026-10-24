@@ -1,1 +1,54 @@
-{}
+{
+  "0abd50d04d02296b33809f9458fd47e4": {
+    "prediction": {
+      "game_id": "0abd50d04d02296b33809f9458fd47e4",
+      "sport": "NBA",
+      "home": "Charlotte Hornets",
+      "away": "Miami Heat",
+      "start_time": "2026-10-25T06:10:00+08:00",
+      "market": {
+        "asian_handicap": 3.5,
+        "over_under": 231.0,
+        "odds_source": "the-odds-api/consensus",
+        "timestamp": "2026-10-24T11:27:16.309780+00:00"
+      },
+      "bookmaker_count": 9,
+      "fair_prob": {
+        "home": 0.4162,
+        "away": 0.5838
+      },
+      "best_odds": {
+        "home": 2.36,
+        "away": 1.67
+      },
+      "edge": {
+        "home": -0.0177,
+        "away": -0.0251
+      },
+      "best_pick": null,
+      "avg_overround": 0.0397,
+      "model": "market_implied_v1",
+      "generated_at": "2026-10-24T19:27:15+08:00",
+      "model_score": {
+        "type": "normal_margin",
+        "sport": "NBA",
+        "expected_margin": -3.5,
+        "expected_total": 231.0,
+        "sigma": 12.0,
+        "outcome_probs": {
+          "home": 0.3853,
+          "away": 0.6147
+        }
+      },
+      "model_mc": {
+        "n": 20000,
+        "win_prob": {
+          "home": 0.3866,
+          "away": 0.6135
+        }
+      },
+      "phase": "early_12h"
+    },
+    "pre_pushed_at": "2026-10-24T19:27:16+08:00"
+  }
+}
