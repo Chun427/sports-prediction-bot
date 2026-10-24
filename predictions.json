@@ -1,56 +1,4 @@
 {
-  "fd0625e5807950edc0d2d31772639859": {
-    "prediction": {
-      "game_id": "fd0625e5807950edc0d2d31772639859",
-      "sport": "NBA",
-      "home": "Charlotte Hornets",
-      "away": "Atlanta Hawks",
-      "start_time": "2026-10-24T07:10:00+08:00",
-      "market": {
-        "asian_handicap": 3.0,
-        "over_under": 225.5,
-        "odds_source": "the-odds-api/consensus",
-        "timestamp": "2026-10-23T12:13:10.270166+00:00"
-      },
-      "bookmaker_count": 9,
-      "fair_prob": {
-        "home": 0.4363,
-        "away": 0.5637
-      },
-      "best_odds": {
-        "home": 2.22,
-        "away": 1.72
-      },
-      "edge": {
-        "home": -0.0313,
-        "away": -0.0305
-      },
-      "best_pick": null,
-      "avg_overround": 0.0423,
-      "model": "market_implied_v1",
-      "generated_at": "2026-10-23T20:13:09+08:00",
-      "model_score": {
-        "type": "normal_margin",
-        "sport": "NBA",
-        "expected_margin": -3.0,
-        "expected_total": 225.5,
-        "sigma": 12.0,
-        "outcome_probs": {
-          "home": 0.4013,
-          "away": 0.5987
-        }
-      },
-      "model_mc": {
-        "n": 20000,
-        "win_prob": {
-          "home": 0.4008,
-          "away": 0.5992
-        }
-      },
-      "phase": "early_12h"
-    },
-    "pre_pushed_at": "2026-10-23T20:13:10+08:00"
-  },
   "0d34c898f6cbb990077ae9f0a2773513": {
     "prediction": {
       "game_id": "0d34c898f6cbb990077ae9f0a2773513",
@@ -101,7 +49,8 @@
       },
       "phase": "early_12h"
     },
-    "pre_pushed_at": "2026-10-23T20:13:10+08:00"
+    "pre_pushed_at": "2026-10-23T20:13:10+08:00",
+    "post_attempts": 1
   },
   "d36eac2ef6bf2d6c0af0073612f6193d": {
     "prediction": {
@@ -153,111 +102,8 @@
       },
       "phase": "early_12h"
     },
-    "pre_pushed_at": "2026-10-23T20:13:11+08:00"
-  },
-  "7763ba1c6e1e163be38cbe1b880d4cd9": {
-    "prediction": {
-      "game_id": "7763ba1c6e1e163be38cbe1b880d4cd9",
-      "sport": "NBA",
-      "home": "Orlando Magic",
-      "away": "Minnesota Timberwolves",
-      "start_time": "2026-10-24T07:10:00+08:00",
-      "market": {
-        "asian_handicap": 2.0,
-        "over_under": 234.5,
-        "odds_source": "the-odds-api/consensus",
-        "timestamp": "2026-10-23T12:13:12.076238+00:00"
-      },
-      "bookmaker_count": 9,
-      "fair_prob": {
-        "home": 0.462,
-        "away": 0.538
-      },
-      "best_odds": {
-        "home": 2.12,
-        "away": 1.8
-      },
-      "edge": {
-        "home": -0.0205,
-        "away": -0.0317
-      },
-      "best_pick": null,
-      "avg_overround": 0.0418,
-      "model": "market_implied_v1",
-      "generated_at": "2026-10-23T20:13:11+08:00",
-      "model_score": {
-        "type": "normal_margin",
-        "sport": "NBA",
-        "expected_margin": -2.0,
-        "expected_total": 234.5,
-        "sigma": 12.0,
-        "outcome_probs": {
-          "home": 0.4338,
-          "away": 0.5662
-        }
-      },
-      "model_mc": {
-        "n": 20000,
-        "win_prob": {
-          "home": 0.435,
-          "away": 0.565
-        }
-      },
-      "phase": "early_12h"
-    },
-    "pre_pushed_at": "2026-10-23T20:13:12+08:00"
-  },
-  "8540b2b24fe0b2042a07c8c20452aead": {
-    "prediction": {
-      "game_id": "8540b2b24fe0b2042a07c8c20452aead",
-      "sport": "NBA",
-      "home": "Washington Wizards",
-      "away": "Toronto Raptors",
-      "start_time": "2026-10-24T07:10:00+08:00",
-      "market": {
-        "asian_handicap": 6.5,
-        "over_under": 236.5,
-        "odds_source": "the-odds-api/consensus",
-        "timestamp": "2026-10-23T12:13:12.685424+00:00"
-      },
-      "bookmaker_count": 9,
-      "fair_prob": {
-        "home": 0.3098,
-        "away": 0.6902
-      },
-      "best_odds": {
-        "home": 3.2,
-        "away": 1.42
-      },
-      "edge": {
-        "home": -0.0085,
-        "away": -0.02
-      },
-      "best_pick": null,
-      "avg_overround": 0.0425,
-      "model": "market_implied_v1",
-      "generated_at": "2026-10-23T20:13:12+08:00",
-      "model_score": {
-        "type": "normal_margin",
-        "sport": "NBA",
-        "expected_margin": -6.5,
-        "expected_total": 236.5,
-        "sigma": 12.0,
-        "outcome_probs": {
-          "home": 0.294,
-          "away": 0.706
-        }
-      },
-      "model_mc": {
-        "n": 20000,
-        "win_prob": {
-          "home": 0.2959,
-          "away": 0.7042
-        }
-      },
-      "phase": "early_12h"
-    },
-    "pre_pushed_at": "2026-10-23T20:13:12+08:00"
+    "pre_pushed_at": "2026-10-23T20:13:11+08:00",
+    "post_attempts": 1
   },
   "db951d9ee1d6777d7ced41eba05aac44": {
     "prediction": {
@@ -532,49 +378,49 @@
       "away": "Memphis Grizzlies",
       "start_time": "2026-10-24T10:10:00+08:00",
       "market": {
-        "asian_handicap": -3.0,
-        "over_under": 234.5,
+        "asian_handicap": -4.5,
+        "over_under": 237.0,
         "odds_source": "the-odds-api/consensus",
-        "timestamp": "2026-10-23T17:08:38.468008+00:00"
+        "timestamp": "2026-10-24T01:41:29.164956+00:00"
       },
       "bookmaker_count": 9,
       "fair_prob": {
-        "away": 0.4245,
-        "home": 0.5755
+        "home": 0.6047,
+        "away": 0.3953
       },
       "best_odds": {
-        "home": 1.72,
-        "away": 2.35
+        "home": 1.62,
+        "away": 2.5
       },
       "edge": {
-        "away": -0.0024,
-        "home": -0.0102
+        "home": -0.0203,
+        "away": -0.0119
       },
       "best_pick": null,
-      "avg_overround": 0.0409,
+      "avg_overround": 0.0401,
       "model": "market_implied_v1",
-      "generated_at": "2026-10-24T01:08:37+08:00",
+      "generated_at": "2026-10-24T09:41:28+08:00",
       "model_score": {
         "type": "normal_margin",
         "sport": "NBA",
-        "expected_margin": 3.0,
-        "expected_total": 234.5,
+        "expected_margin": 4.5,
+        "expected_total": 237.0,
         "sigma": 12.0,
         "outcome_probs": {
-          "home": 0.5987,
-          "away": 0.4013
+          "home": 0.6462,
+          "away": 0.3538
         }
       },
       "model_mc": {
         "n": 20000,
         "win_prob": {
-          "home": 0.5947,
-          "away": 0.4053
+          "home": 0.6436,
+          "away": 0.3564
         }
       },
-      "phase": "early_12h"
+      "phase": "pre_match_40m"
     },
-    "pre_pushed_at": "2026-10-24T01:08:38+08:00"
+    "pre_pushed_at": "2026-10-24T09:41:29+08:00"
   },
   "946d3484688886fd8d3662aee224fb5f": {
     "prediction": {
@@ -584,49 +430,49 @@
       "away": "Los Angeles Clippers",
       "start_time": "2026-10-24T10:10:00+08:00",
       "market": {
-        "asian_handicap": -9.5,
-        "over_under": 228.5,
+        "asian_handicap": -8.5,
+        "over_under": 225.5,
         "odds_source": "the-odds-api/consensus",
-        "timestamp": "2026-10-23T17:08:38.971160+00:00"
+        "timestamp": "2026-10-24T01:41:29.837409+00:00"
       },
       "bookmaker_count": 9,
       "fair_prob": {
-        "away": 0.2412,
-        "home": 0.7588
+        "home": 0.7485,
+        "away": 0.2515
       },
       "best_odds": {
-        "home": 1.27,
-        "away": 4.1
+        "home": 1.3,
+        "away": 3.95
       },
       "edge": {
-        "away": -0.0109,
-        "home": -0.0364
+        "home": -0.027,
+        "away": -0.0064
       },
       "best_pick": null,
-      "avg_overround": 0.0433,
+      "avg_overround": 0.0412,
       "model": "market_implied_v1",
-      "generated_at": "2026-10-24T01:08:38+08:00",
+      "generated_at": "2026-10-24T09:41:29+08:00",
       "model_score": {
         "type": "normal_margin",
         "sport": "NBA",
-        "expected_margin": 9.5,
-        "expected_total": 228.5,
+        "expected_margin": 8.5,
+        "expected_total": 225.5,
         "sigma": 12.0,
         "outcome_probs": {
-          "home": 0.7857,
-          "away": 0.2143
+          "home": 0.7606,
+          "away": 0.2394
         }
       },
       "model_mc": {
         "n": 20000,
         "win_prob": {
-          "home": 0.7855,
-          "away": 0.2145
+          "home": 0.7643,
+          "away": 0.2357
         }
       },
-      "phase": "early_12h"
+      "phase": "pre_match_40m"
     },
-    "pre_pushed_at": "2026-10-24T01:08:38+08:00"
+    "pre_pushed_at": "2026-10-24T09:41:29+08:00"
   },
   "93ae924d3fc473aadfa50b26a9a2115b": {
     "prediction": {
@@ -636,48 +482,52 @@
       "away": "Portland Trail Blazers",
       "start_time": "2026-10-24T10:10:00+08:00",
       "market": {
-        "asian_handicap": 8.5,
-        "over_under": 233.0,
+        "asian_handicap": 10.0,
+        "over_under": 232.5,
         "odds_source": "the-odds-api/consensus",
-        "timestamp": "2026-10-23T17:08:39.480168+00:00"
+        "timestamp": "2026-10-24T01:41:30.493446+00:00"
       },
       "bookmaker_count": 9,
       "fair_prob": {
-        "away": 0.7471,
-        "home": 0.2529
+        "home": 0.2174,
+        "away": 0.7826
       },
       "best_odds": {
-        "home": 3.9,
-        "away": 1.3
+        "home": 4.6,
+        "away": 1.24
       },
       "edge": {
-        "away": -0.0288,
-        "home": -0.0135
+        "home": 0.0001,
+        "away": -0.0296
       },
-      "best_pick": null,
-      "avg_overround": 0.0431,
+      "best_pick": {
+        "outcome": "home",
+        "edge": 0.0001,
+        "odds": 4.6
+      },
+      "avg_overround": 0.0427,
       "model": "market_implied_v1",
-      "generated_at": "2026-10-24T01:08:38+08:00",
+      "generated_at": "2026-10-24T09:41:29+08:00",
       "model_score": {
         "type": "normal_margin",
         "sport": "NBA",
-        "expected_margin": -8.5,
-        "expected_total": 233.0,
+        "expected_margin": -10.0,
+        "expected_total": 232.5,
         "sigma": 12.0,
         "outcome_probs": {
-          "home": 0.2394,
-          "away": 0.7606
+          "home": 0.2023,
+          "away": 0.7977
         }
       },
       "model_mc": {
         "n": 20000,
         "win_prob": {
-          "home": 0.2319,
-          "away": 0.7681
+          "home": 0.2001,
+          "away": 0.7999
         }
       },
-      "phase": "early_12h"
+      "phase": "pre_match_40m"
     },
-    "pre_pushed_at": "2026-10-24T01:08:39+08:00"
+    "pre_pushed_at": "2026-10-24T09:41:30+08:00"
   }
 }
