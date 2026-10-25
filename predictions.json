@@ -1,59 +1,54 @@
 {
-  "a71197130d9b661f5b29c812583fe652": {
+  "9c460fd677a660d1bc7cfea0aa1826c1": {
     "prediction": {
-      "game_id": "a71197130d9b661f5b29c812583fe652",
+      "game_id": "9c460fd677a660d1bc7cfea0aa1826c1",
       "sport": "NBA",
-      "home": "Phoenix Suns",
-      "away": "Golden State Warriors",
-      "start_time": "2026-10-25T10:10:00+08:00",
+      "home": "Utah Jazz",
+      "away": "Los Angeles Lakers",
+      "start_time": "2026-10-26T05:10:00+08:00",
       "market": {
-        "asian_handicap": -9.5,
-        "over_under": 221.5,
+        "asian_handicap": 6.0,
+        "over_under": 236.5,
         "odds_source": "the-odds-api/consensus",
-        "timestamp": "2026-10-24T14:45:24.292998+00:00"
+        "timestamp": "2026-10-25T09:19:41.538102+00:00"
       },
       "bookmaker_count": 9,
       "fair_prob": {
-        "away": 0.2377,
-        "home": 0.7623
+        "away": 0.6758,
+        "home": 0.3242
       },
       "best_odds": {
-        "home": 1.27,
-        "away": 4.3
+        "home": 3.06,
+        "away": 1.45
       },
       "edge": {
-        "away": 0.0221,
-        "home": -0.0319
+        "away": -0.0201,
+        "home": -0.008
       },
-      "best_pick": {
-        "outcome": "away",
-        "edge": 0.0221,
-        "odds": 4.3
-      },
-      "avg_overround": 0.0421,
+      "best_pick": null,
+      "avg_overround": 0.0422,
       "model": "market_implied_v1",
-      "generated_at": "2026-10-24T22:45:23+08:00",
+      "generated_at": "2026-10-25T17:19:40+08:00",
       "model_score": {
         "type": "normal_margin",
         "sport": "NBA",
-        "expected_margin": 9.5,
-        "expected_total": 221.5,
+        "expected_margin": -6.0,
+        "expected_total": 236.5,
         "sigma": 12.0,
         "outcome_probs": {
-          "home": 0.7857,
-          "away": 0.2143
+          "home": 0.3085,
+          "away": 0.6915
         }
       },
       "model_mc": {
         "n": 20000,
         "win_prob": {
-          "home": 0.784,
-          "away": 0.216
+          "home": 0.3077,
+          "away": 0.6923
         }
       },
       "phase": "early_12h"
     },
-    "pre_pushed_at": "2026-10-24T22:45:24+08:00",
-    "post_attempts": 1
+    "pre_pushed_at": "2026-10-25T17:19:41+08:00"
   }
 }
