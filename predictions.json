@@ -60,32 +60,32 @@
       "start_time": "2026-10-28T08:10:00+08:00",
       "market": {
         "asian_handicap": -4.0,
-        "over_under": 219.0,
+        "over_under": 220.5,
         "odds_source": "the-odds-api/consensus",
-        "timestamp": "2026-10-27T16:05:21.572035+00:00"
+        "timestamp": "2026-10-27T23:59:58.228084+00:00"
       },
       "bookmaker_count": 9,
       "fair_prob": {
-        "home": 0.6001,
-        "away": 0.3999
+        "away": 0.3896,
+        "home": 0.6104
       },
       "best_odds": {
-        "home": 1.65,
-        "away": 2.46
+        "home": 1.6,
+        "away": 2.52
       },
       "edge": {
-        "home": -0.0098,
-        "away": -0.0163
+        "away": -0.0182,
+        "home": -0.0234
       },
       "best_pick": null,
-      "avg_overround": 0.0395,
+      "avg_overround": 0.0399,
       "model": "market_implied_v1",
-      "generated_at": "2026-10-28T00:05:21+08:00",
+      "generated_at": "2026-10-28T07:59:57+08:00",
       "model_score": {
         "type": "normal_margin",
         "sport": "NBA",
         "expected_margin": 4.0,
-        "expected_total": 219.0,
+        "expected_total": 220.5,
         "sigma": 12.0,
         "outcome_probs": {
           "home": 0.6306,
@@ -95,13 +95,13 @@
       "model_mc": {
         "n": 20000,
         "win_prob": {
-          "home": 0.6341,
-          "away": 0.3659
+          "home": 0.6327,
+          "away": 0.3673
         }
       },
-      "phase": "early_12h"
+      "phase": "pre_match_40m"
     },
-    "pre_pushed_at": "2026-10-28T00:05:21+08:00"
+    "pre_pushed_at": "2026-10-28T07:59:58+08:00"
   },
   "7a640609d2c74cbbfd05008d0875455b": {
     "prediction": {
@@ -111,53 +111,53 @@
       "away": "Sacramento Kings",
       "start_time": "2026-10-28T08:10:00+08:00",
       "market": {
-        "asian_handicap": -18.5,
+        "asian_handicap": -19.0,
         "over_under": 232.5,
         "odds_source": "the-odds-api/consensus",
-        "timestamp": "2026-10-27T16:05:22.130520+00:00"
+        "timestamp": "2026-10-27T23:59:58.817571+00:00"
       },
       "bookmaker_count": 9,
       "fair_prob": {
-        "home": 0.9082,
-        "away": 0.0918
+        "away": 0.0903,
+        "home": 0.9097
       },
       "best_odds": {
         "home": 1.07,
-        "away": 11.4
+        "away": 12.0
       },
       "edge": {
-        "home": -0.0282,
-        "away": 0.0462
+        "away": 0.0837,
+        "home": -0.0266
       },
       "best_pick": {
         "outcome": "away",
-        "edge": 0.0462,
-        "odds": 11.4
+        "edge": 0.0837,
+        "odds": 12.0
       },
-      "avg_overround": 0.041,
+      "avg_overround": 0.0426,
       "model": "market_implied_v1",
-      "generated_at": "2026-10-28T00:05:21+08:00",
+      "generated_at": "2026-10-28T07:59:58+08:00",
       "model_score": {
         "type": "normal_margin",
         "sport": "NBA",
-        "expected_margin": 18.5,
+        "expected_margin": 19.0,
         "expected_total": 232.5,
         "sigma": 12.0,
         "outcome_probs": {
-          "home": 0.9384,
-          "away": 0.0616
+          "home": 0.9433,
+          "away": 0.0567
         }
       },
       "model_mc": {
         "n": 20000,
         "win_prob": {
-          "home": 0.9384,
-          "away": 0.0616
+          "home": 0.9444,
+          "away": 0.0556
         }
       },
-      "phase": "early_12h"
+      "phase": "pre_match_40m"
     },
-    "pre_pushed_at": "2026-10-28T00:05:22+08:00"
+    "pre_pushed_at": "2026-10-28T07:59:58+08:00"
   },
   "82afe4e028b0fbbd9f6cf92697bec6fc": {
     "prediction": {
@@ -217,107 +217,107 @@
       "sport": "MLB",
       "home": "Tampa Bay Rays",
       "away": "Milwaukee Brewers",
-      "start_time": "2026-10-28T08:00:00+08:00",
+      "start_time": "2026-10-28T08:10:00+08:00",
       "market": {
         "asian_handicap": 1.5,
-        "over_under": 7.0,
+        "over_under": 7.5,
         "odds_source": "the-odds-api/consensus",
-        "timestamp": "2026-10-27T16:05:23.165762+00:00"
+        "timestamp": "2026-10-27T23:59:59.433452+00:00"
       },
       "bookmaker_count": 9,
       "fair_prob": {
-        "home": 0.4702,
-        "away": 0.5298
+        "away": 0.5244,
+        "home": 0.4756
       },
       "best_odds": {
-        "home": 2.07,
-        "away": 1.85
+        "home": 2.05,
+        "away": 1.88
       },
       "edge": {
-        "home": -0.0267,
-        "away": -0.0198
+        "away": -0.0142,
+        "home": -0.0249
       },
       "best_pick": null,
-      "avg_overround": 0.0359,
+      "avg_overround": 0.0335,
       "model": "market_implied_v1",
-      "generated_at": "2026-10-28T00:05:22+08:00",
+      "generated_at": "2026-10-28T07:59:58+08:00",
       "model_score": {
         "type": "poisson",
         "sport": "MLB",
-        "lambda_home": 2.75,
-        "lambda_away": 4.25,
-        "expected_total": 7.0,
+        "lambda_home": 3.0,
+        "lambda_away": 4.5,
+        "expected_total": 7.5,
         "supremacy": -1.5,
         "outcome_probs": {
-          "home": 0.2218,
-          "draw": 0.1323,
-          "away": 0.6458
+          "home": 0.23,
+          "draw": 0.1289,
+          "away": 0.641
         },
         "top_scorelines": [
           {
             "home": 2,
             "away": 4,
-            "prob": 0.0469
-          },
-          {
-            "home": 2,
-            "away": 3,
-            "prob": 0.0441
+            "prob": 0.0426
           },
           {
             "home": 3,
             "away": 4,
-            "prob": 0.043
-          },
-          {
-            "home": 3,
-            "away": 3,
-            "prob": 0.0405
+            "prob": 0.0426
           },
           {
             "home": 2,
             "away": 5,
-            "prob": 0.0399
+            "prob": 0.0383
+          },
+          {
+            "home": 3,
+            "away": 5,
+            "prob": 0.0383
+          },
+          {
+            "home": 2,
+            "away": 3,
+            "prob": 0.0378
           }
         ]
       },
       "model_mc": {
         "n": 20000,
         "win_prob": {
-          "home": 0.2268,
-          "draw": 0.1333,
-          "away": 0.6399
+          "home": 0.2291,
+          "draw": 0.1293,
+          "away": 0.6415
         },
         "top_scorelines": [
           {
-            "home": 2,
-            "away": 4,
-            "prob": 0.0455
-          },
-          {
-            "home": 2,
-            "away": 3,
-            "prob": 0.0432
+            "home": 3,
+            "away": 5,
+            "prob": 0.0415
           },
           {
             "home": 3,
             "away": 4,
-            "prob": 0.0431
+            "prob": 0.0413
           },
           {
-            "home": 3,
-            "away": 3,
-            "prob": 0.042
+            "home": 2,
+            "away": 4,
+            "prob": 0.0411
           },
           {
             "home": 2,
             "away": 5,
-            "prob": 0.0399
+            "prob": 0.0378
+          },
+          {
+            "home": 3,
+            "away": 3,
+            "prob": 0.0377
           }
         ]
       },
-      "phase": "early_12h"
+      "phase": "pre_match_40m"
     },
-    "pre_pushed_at": "2026-10-28T00:05:23+08:00"
+    "pre_pushed_at": "2026-10-28T07:59:59+08:00"
   }
 }
