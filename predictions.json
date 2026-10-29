@@ -1,1 +1,158 @@
-{}
+{
+  "b123d92eb8046e43fabf95a33a676634": {
+    "prediction": {
+      "game_id": "b123d92eb8046e43fabf95a33a676634",
+      "sport": "NBA",
+      "home": "Atlanta Hawks",
+      "away": "Cleveland Cavaliers",
+      "start_time": "2026-10-30T08:10:00+08:00",
+      "market": {
+        "asian_handicap": -1.0,
+        "over_under": 238.0,
+        "odds_source": "the-odds-api/consensus",
+        "timestamp": "2026-10-29T14:12:58.093105+00:00"
+      },
+      "bookmaker_count": 8,
+      "fair_prob": {
+        "away": 0.493,
+        "home": 0.507
+      },
+      "best_odds": {
+        "home": 1.93,
+        "away": 1.96
+      },
+      "edge": {
+        "away": -0.0338,
+        "home": -0.0214
+      },
+      "best_pick": null,
+      "avg_overround": 0.0457,
+      "model": "market_implied_v1",
+      "generated_at": "2026-10-29T22:12:57+08:00",
+      "model_score": {
+        "type": "normal_margin",
+        "sport": "NBA",
+        "expected_margin": 1.0,
+        "expected_total": 238.0,
+        "sigma": 12.0,
+        "outcome_probs": {
+          "home": 0.5332,
+          "away": 0.4668
+        }
+      },
+      "model_mc": {
+        "n": 20000,
+        "win_prob": {
+          "home": 0.5304,
+          "away": 0.4696
+        }
+      },
+      "phase": "early_12h"
+    },
+    "pre_pushed_at": "2026-10-29T22:12:58+08:00"
+  },
+  "f91d27cc050b1b85073d745372c73833": {
+    "prediction": {
+      "game_id": "f91d27cc050b1b85073d745372c73833",
+      "sport": "NBA",
+      "home": "New Orleans Pelicans",
+      "away": "Sacramento Kings",
+      "start_time": "2026-10-30T08:10:00+08:00",
+      "market": {
+        "asian_handicap": -6.0,
+        "over_under": 236.5,
+        "odds_source": "the-odds-api/consensus",
+        "timestamp": "2026-10-29T14:12:58.598239+00:00"
+      },
+      "bookmaker_count": 9,
+      "fair_prob": {
+        "away": 0.3291,
+        "home": 0.6709
+      },
+      "best_odds": {
+        "home": 1.47,
+        "away": 3.0
+      },
+      "edge": {
+        "away": -0.0126,
+        "home": -0.0138
+      },
+      "best_pick": null,
+      "avg_overround": 0.0417,
+      "model": "market_implied_v1",
+      "generated_at": "2026-10-29T22:12:58+08:00",
+      "model_score": {
+        "type": "normal_margin",
+        "sport": "NBA",
+        "expected_margin": 6.0,
+        "expected_total": 236.5,
+        "sigma": 12.0,
+        "outcome_probs": {
+          "home": 0.6915,
+          "away": 0.3085
+        }
+      },
+      "model_mc": {
+        "n": 20000,
+        "win_prob": {
+          "home": 0.6935,
+          "away": 0.3065
+        }
+      },
+      "phase": "early_12h"
+    },
+    "pre_pushed_at": "2026-10-29T22:12:58+08:00"
+  },
+  "ba667ca1b0b042f0661cb9d9af56c165": {
+    "prediction": {
+      "game_id": "ba667ca1b0b042f0661cb9d9af56c165",
+      "sport": "NBA",
+      "home": "Portland Trail Blazers",
+      "away": "Memphis Grizzlies",
+      "start_time": "2026-10-30T10:10:00+08:00",
+      "market": {
+        "asian_handicap": -7.5,
+        "over_under": 232.5,
+        "odds_source": "the-odds-api/consensus",
+        "timestamp": "2026-10-29T14:12:59.504101+00:00"
+      },
+      "bookmaker_count": 9,
+      "fair_prob": {
+        "away": 0.2909,
+        "home": 0.7091
+      },
+      "best_odds": {
+        "home": 1.36,
+        "away": 3.35
+      },
+      "edge": {
+        "away": -0.0253,
+        "home": -0.0357
+      },
+      "best_pick": null,
+      "avg_overround": 0.0422,
+      "model": "market_implied_v1",
+      "generated_at": "2026-10-29T22:12:58+08:00",
+      "model_score": {
+        "type": "normal_margin",
+        "sport": "NBA",
+        "expected_margin": 7.5,
+        "expected_total": 232.5,
+        "sigma": 12.0,
+        "outcome_probs": {
+          "home": 0.734,
+          "away": 0.266
+        }
+      },
+      "model_mc": {
+        "n": 20000,
+        "win_prob": {
+          "home": 0.7329,
+          "away": 0.2671
+        }
+      },
+      "phase": "early_12h"
+    },
+    "pre_pushed_at": "2026-10-29T22:12:59+08:00"
+  }
+}
