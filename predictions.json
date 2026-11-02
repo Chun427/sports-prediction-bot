@@ -1,109 +1,4 @@
 {
-  "e8559eaac12af915cfe6597644620c13": {
-    "prediction": {
-      "game_id": "e8559eaac12af915cfe6597644620c13",
-      "sport": "NBA",
-      "home": "Orlando Magic",
-      "away": "Boston Celtics",
-      "start_time": "2026-11-02T04:40:00+08:00",
-      "market": {
-        "asian_handicap": 6.5,
-        "over_under": 222.5,
-        "odds_source": "the-odds-api/consensus",
-        "timestamp": "2026-11-01T14:59:19.033554+00:00"
-      },
-      "bookmaker_count": 9,
-      "fair_prob": {
-        "away": 0.6835,
-        "home": 0.3165
-      },
-      "best_odds": {
-        "home": 3.1,
-        "away": 1.42
-      },
-      "edge": {
-        "away": -0.0294,
-        "home": -0.0189
-      },
-      "best_pick": null,
-      "avg_overround": 0.0443,
-      "model": "market_implied_v1",
-      "generated_at": "2026-11-01T22:59:18+08:00",
-      "model_score": {
-        "type": "normal_margin",
-        "sport": "NBA",
-        "expected_margin": -6.5,
-        "expected_total": 222.5,
-        "sigma": 12.0,
-        "outcome_probs": {
-          "home": 0.294,
-          "away": 0.706
-        }
-      },
-      "model_mc": {
-        "n": 20000,
-        "win_prob": {
-          "home": 0.2934,
-          "away": 0.7066
-        }
-      },
-      "phase": "early_12h"
-    },
-    "pre_pushed_at": "2026-11-01T22:59:19+08:00",
-    "post_attempts": 1
-  },
-  "fc3e945a5be88d3f933456bc512c956d": {
-    "prediction": {
-      "game_id": "fc3e945a5be88d3f933456bc512c956d",
-      "sport": "NBA",
-      "home": "Indiana Pacers",
-      "away": "Brooklyn Nets",
-      "start_time": "2026-11-02T06:10:00+08:00",
-      "market": {
-        "asian_handicap": -3.5,
-        "over_under": 230.5,
-        "odds_source": "the-odds-api/consensus",
-        "timestamp": "2026-11-01T14:59:19.871384+00:00"
-      },
-      "bookmaker_count": 9,
-      "fair_prob": {
-        "away": 0.3944,
-        "home": 0.6056
-      },
-      "best_odds": {
-        "home": 1.61,
-        "away": 2.46
-      },
-      "edge": {
-        "away": -0.0298,
-        "home": -0.0249
-      },
-      "best_pick": null,
-      "avg_overround": 0.0423,
-      "model": "market_implied_v1",
-      "generated_at": "2026-11-01T22:59:19+08:00",
-      "model_score": {
-        "type": "normal_margin",
-        "sport": "NBA",
-        "expected_margin": 3.5,
-        "expected_total": 230.5,
-        "sigma": 12.0,
-        "outcome_probs": {
-          "home": 0.6147,
-          "away": 0.3853
-        }
-      },
-      "model_mc": {
-        "n": 20000,
-        "win_prob": {
-          "home": 0.616,
-          "away": 0.384
-        }
-      },
-      "phase": "early_12h"
-    },
-    "pre_pushed_at": "2026-11-01T22:59:19+08:00"
-  },
   "094b083ace229ca31ff360a80e35a1a8": {
     "prediction": {
       "game_id": "094b083ace229ca31ff360a80e35a1a8",
@@ -164,48 +59,48 @@
       "away": "Toronto Raptors",
       "start_time": "2026-11-02T10:10:00+08:00",
       "market": {
-        "asian_handicap": -4.5,
-        "over_under": 227.5,
+        "asian_handicap": -3.5,
+        "over_under": 224.0,
         "odds_source": "the-odds-api/consensus",
-        "timestamp": "2026-11-01T14:59:21.279581+00:00"
+        "timestamp": "2026-11-02T02:08:02.872827+00:00"
       },
       "bookmaker_count": 9,
       "fair_prob": {
-        "away": 0.3737,
-        "home": 0.6263
+        "away": 0.4005,
+        "home": 0.5995
       },
       "best_odds": {
-        "home": 1.56,
-        "away": 2.62
+        "home": 1.63,
+        "away": 2.48
       },
       "edge": {
-        "away": -0.021,
-        "home": -0.0229
+        "away": -0.0068,
+        "home": -0.0228
       },
       "best_pick": null,
-      "avg_overround": 0.0422,
+      "avg_overround": 0.0405,
       "model": "market_implied_v1",
-      "generated_at": "2026-11-01T22:59:20+08:00",
+      "generated_at": "2026-11-02T10:08:02+08:00",
       "model_score": {
         "type": "normal_margin",
         "sport": "NBA",
-        "expected_margin": 4.5,
-        "expected_total": 227.5,
+        "expected_margin": 3.5,
+        "expected_total": 224.0,
         "sigma": 12.0,
         "outcome_probs": {
-          "home": 0.6462,
-          "away": 0.3538
+          "home": 0.6147,
+          "away": 0.3853
         }
       },
       "model_mc": {
         "n": 20000,
         "win_prob": {
-          "home": 0.6444,
-          "away": 0.3556
+          "home": 0.6152,
+          "away": 0.3848
         }
       },
-      "phase": "early_12h"
+      "phase": "pre_match_40m"
     },
-    "pre_pushed_at": "2026-11-01T22:59:21+08:00"
+    "pre_pushed_at": "2026-11-02T10:08:02+08:00"
   }
 }
