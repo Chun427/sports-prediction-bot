@@ -602,25 +602,25 @@
         "asian_handicap": -4.0,
         "over_under": 231.5,
         "odds_source": "the-odds-api/consensus",
-        "timestamp": "2026-11-02T19:39:17.070195+00:00"
+        "timestamp": "2026-11-03T01:46:41.223220+00:00"
       },
       "bookmaker_count": 9,
       "fair_prob": {
-        "home": 0.607,
-        "away": 0.393
+        "away": 0.3934,
+        "home": 0.6066
       },
       "best_odds": {
         "home": 1.6,
         "away": 2.5
       },
       "edge": {
-        "home": -0.0287,
-        "away": -0.0176
+        "away": -0.0165,
+        "home": -0.0295
       },
       "best_pick": null,
-      "avg_overround": 0.0413,
+      "avg_overround": 0.0406,
       "model": "market_implied_v1",
-      "generated_at": "2026-11-03T03:39:16+08:00",
+      "generated_at": "2026-11-03T09:46:40+08:00",
       "model_score": {
         "type": "normal_margin",
         "sport": "NBA",
@@ -635,13 +635,13 @@
       "model_mc": {
         "n": 20000,
         "win_prob": {
-          "home": 0.6283,
-          "away": 0.3717
+          "home": 0.6273,
+          "away": 0.3727
         }
       },
-      "phase": "early_12h"
+      "phase": "pre_match_40m"
     },
-    "pre_pushed_at": "2026-11-03T03:39:17+08:00"
+    "pre_pushed_at": "2026-11-03T09:46:41+08:00"
   },
   "27c333f22603d4eda3b9b6a3888476dc": {
     "prediction": {
