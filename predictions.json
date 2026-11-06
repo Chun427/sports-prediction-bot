@@ -59,48 +59,48 @@
       "away": "Miami Heat",
       "start_time": "2026-11-06T11:10:00+08:00",
       "market": {
-        "asian_handicap": -7.5,
-        "over_under": 234.0,
+        "asian_handicap": -3.5,
+        "over_under": 236.5,
         "odds_source": "the-odds-api/consensus",
-        "timestamp": "2026-11-05T16:58:59.176947+00:00"
+        "timestamp": "2026-11-06T02:48:21.098636+00:00"
       },
       "bookmaker_count": 9,
       "fair_prob": {
-        "home": 0.7081,
-        "away": 0.2919
+        "home": 0.6004,
+        "away": 0.3996
       },
       "best_odds": {
-        "home": 1.37,
-        "away": 3.35
+        "home": 1.61,
+        "away": 2.46
       },
       "edge": {
-        "home": -0.0299,
-        "away": -0.022
+        "home": -0.0334,
+        "away": -0.0169
       },
       "best_pick": null,
-      "avg_overround": 0.0445,
+      "avg_overround": 0.0419,
       "model": "market_implied_v1",
-      "generated_at": "2026-11-06T00:58:58+08:00",
+      "generated_at": "2026-11-06T10:48:20+08:00",
       "model_score": {
         "type": "normal_margin",
         "sport": "NBA",
-        "expected_margin": 7.5,
-        "expected_total": 234.0,
+        "expected_margin": 3.5,
+        "expected_total": 236.5,
         "sigma": 12.0,
         "outcome_probs": {
-          "home": 0.734,
-          "away": 0.266
+          "home": 0.6147,
+          "away": 0.3853
         }
       },
       "model_mc": {
         "n": 20000,
         "win_prob": {
-          "home": 0.7257,
-          "away": 0.2743
+          "home": 0.6099,
+          "away": 0.3901
         }
       },
-      "phase": "early_12h"
+      "phase": "pre_match_40m"
     },
-    "pre_pushed_at": "2026-11-06T00:58:59+08:00"
+    "pre_pushed_at": "2026-11-06T10:48:21+08:00"
   }
 }
