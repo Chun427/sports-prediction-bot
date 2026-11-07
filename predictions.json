@@ -322,5 +322,61 @@
       "phase": "early_12h"
     },
     "pre_pushed_at": "2026-11-07T22:25:38+08:00"
+  },
+  "08d47dd5e50e83839e395e49870d6a0d": {
+    "prediction": {
+      "game_id": "08d47dd5e50e83839e395e49870d6a0d",
+      "sport": "NBA",
+      "home": "Portland Trail Blazers",
+      "away": "San Antonio Spurs",
+      "start_time": "2026-11-08T11:00:00+08:00",
+      "market": {
+        "asian_handicap": 5.0,
+        "over_under": 227.5,
+        "odds_source": "the-odds-api/consensus",
+        "timestamp": "2026-11-07T18:58:08.988091+00:00"
+      },
+      "bookmaker_count": 9,
+      "fair_prob": {
+        "away": 0.6455,
+        "home": 0.3545
+      },
+      "best_odds": {
+        "home": 2.84,
+        "away": 1.51
+      },
+      "edge": {
+        "away": -0.0253,
+        "home": 0.0068
+      },
+      "best_pick": {
+        "outcome": "home",
+        "edge": 0.0068,
+        "odds": 2.84
+      },
+      "avg_overround": 0.0414,
+      "model": "market_implied_v1",
+      "generated_at": "2026-11-08T02:58:08+08:00",
+      "model_score": {
+        "type": "normal_margin",
+        "sport": "NBA",
+        "expected_margin": -5.0,
+        "expected_total": 227.5,
+        "sigma": 12.0,
+        "outcome_probs": {
+          "home": 0.3385,
+          "away": 0.6615
+        }
+      },
+      "model_mc": {
+        "n": 20000,
+        "win_prob": {
+          "home": 0.342,
+          "away": 0.658
+        }
+      },
+      "phase": "early_12h"
+    },
+    "pre_pushed_at": "2026-11-08T02:58:08+08:00"
   }
 }
