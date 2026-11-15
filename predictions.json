@@ -1,56 +1,4 @@
 {
-  "de475830b5df0d1aae4fcd8f9bbaead9": {
-    "prediction": {
-      "game_id": "de475830b5df0d1aae4fcd8f9bbaead9",
-      "sport": "NBA",
-      "home": "Philadelphia 76ers",
-      "away": "Indiana Pacers",
-      "start_time": "2026-11-16T02:10:00+08:00",
-      "market": {
-        "asian_handicap": -7.5,
-        "over_under": 224.5,
-        "odds_source": "the-odds-api/consensus",
-        "timestamp": "2026-11-15T06:11:55.636636+00:00"
-      },
-      "bookmaker_count": 9,
-      "fair_prob": {
-        "away": 0.2887,
-        "home": 0.7113
-      },
-      "best_odds": {
-        "home": 1.36,
-        "away": 3.4
-      },
-      "edge": {
-        "away": -0.0184,
-        "home": -0.0326
-      },
-      "best_pick": null,
-      "avg_overround": 0.0431,
-      "model": "market_implied_v1",
-      "generated_at": "2026-11-15T14:11:54+08:00",
-      "model_score": {
-        "type": "normal_margin",
-        "sport": "NBA",
-        "expected_margin": 7.5,
-        "expected_total": 224.5,
-        "sigma": 12.0,
-        "outcome_probs": {
-          "home": 0.734,
-          "away": 0.266
-        }
-      },
-      "model_mc": {
-        "n": 20000,
-        "win_prob": {
-          "home": 0.729,
-          "away": 0.271
-        }
-      },
-      "phase": "early_12h"
-    },
-    "pre_pushed_at": "2026-11-15T14:11:55+08:00"
-  },
   "29b8bbf05645162d89780189eed390c2": {
     "prediction": {
       "game_id": "29b8bbf05645162d89780189eed390c2",
@@ -101,7 +49,8 @@
       },
       "phase": "early_12h"
     },
-    "pre_pushed_at": "2026-11-15T21:55:47+08:00"
+    "pre_pushed_at": "2026-11-15T21:55:47+08:00",
+    "post_attempts": 1
   },
   "db26abc3cfd070ab012227413abafeb2": {
     "prediction": {
@@ -323,53 +272,53 @@
       "away": "Houston Rockets",
       "start_time": "2026-11-16T08:10:00+08:00",
       "market": {
-        "asian_handicap": 8.5,
-        "over_under": 222.5,
+        "asian_handicap": 8.0,
+        "over_under": 223.5,
         "odds_source": "the-odds-api/consensus",
-        "timestamp": "2026-11-15T13:55:50.797912+00:00"
+        "timestamp": "2026-11-15T23:29:55.854686+00:00"
       },
       "bookmaker_count": 9,
       "fair_prob": {
-        "away": 0.7545,
-        "home": 0.2455
+        "away": 0.7351,
+        "home": 0.2649
       },
       "best_odds": {
-        "home": 4.2,
-        "away": 1.29
+        "home": 3.8,
+        "away": 1.32
       },
       "edge": {
-        "away": -0.0267,
-        "home": 0.031
+        "away": -0.0296,
+        "home": 0.0065
       },
       "best_pick": {
         "outcome": "home",
-        "edge": 0.031,
-        "odds": 4.2
+        "edge": 0.0065,
+        "odds": 3.8
       },
-      "avg_overround": 0.0419,
+      "avg_overround": 0.0411,
       "model": "market_implied_v1",
-      "generated_at": "2026-11-15T21:55:50+08:00",
+      "generated_at": "2026-11-16T07:29:55+08:00",
       "model_score": {
         "type": "normal_margin",
         "sport": "NBA",
-        "expected_margin": -8.5,
-        "expected_total": 222.5,
+        "expected_margin": -8.0,
+        "expected_total": 223.5,
         "sigma": 12.0,
         "outcome_probs": {
-          "home": 0.2394,
-          "away": 0.7606
+          "home": 0.2525,
+          "away": 0.7475
         }
       },
       "model_mc": {
         "n": 20000,
         "win_prob": {
-          "home": 0.2402,
-          "away": 0.7599
+          "home": 0.2559,
+          "away": 0.7441
         }
       },
-      "phase": "early_12h"
+      "phase": "pre_match_40m"
     },
-    "pre_pushed_at": "2026-11-15T21:55:50+08:00"
+    "pre_pushed_at": "2026-11-16T07:29:55+08:00"
   },
   "b931a21d34e414ee92b1a4b8e63774aa": {
     "prediction": {
