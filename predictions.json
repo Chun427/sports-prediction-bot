@@ -7,53 +7,53 @@
       "away": "Denver Nuggets",
       "start_time": "2026-11-15T08:10:00+08:00",
       "market": {
-        "asian_handicap": 11.5,
-        "over_under": 234.5,
+        "asian_handicap": 12.5,
+        "over_under": 236.0,
         "odds_source": "the-odds-api/consensus",
-        "timestamp": "2026-11-14T15:57:00.630193+00:00"
+        "timestamp": "2026-11-15T00:02:03.173737+00:00"
       },
-      "bookmaker_count": 7,
+      "bookmaker_count": 9,
       "fair_prob": {
-        "away": 0.8205,
-        "home": 0.1795
+        "home": 0.1675,
+        "away": 0.8325
       },
       "best_odds": {
-        "home": 5.75,
-        "away": 1.18
+        "home": 6.4,
+        "away": 1.17
       },
       "edge": {
-        "away": -0.0318,
-        "home": 0.032
+        "home": 0.0723,
+        "away": -0.026
       },
       "best_pick": {
         "outcome": "home",
-        "edge": 0.032,
-        "odds": 5.75
+        "edge": 0.0723,
+        "odds": 6.4
       },
-      "avg_overround": 0.0443,
+      "avg_overround": 0.0437,
       "model": "market_implied_v1",
-      "generated_at": "2026-11-14T23:56:59+08:00",
+      "generated_at": "2026-11-15T08:02:02+08:00",
       "model_score": {
         "type": "normal_margin",
         "sport": "NBA",
-        "expected_margin": -11.5,
-        "expected_total": 234.5,
+        "expected_margin": -12.5,
+        "expected_total": 236.0,
         "sigma": 12.0,
         "outcome_probs": {
-          "home": 0.1689,
-          "away": 0.8311
+          "home": 0.1488,
+          "away": 0.8512
         }
       },
       "model_mc": {
         "n": 20000,
         "win_prob": {
-          "home": 0.1661,
-          "away": 0.8338
+          "home": 0.1508,
+          "away": 0.8492
         }
       },
-      "phase": "early_12h"
+      "phase": "pre_match_40m"
     },
-    "pre_pushed_at": "2026-11-14T23:57:00+08:00"
+    "pre_pushed_at": "2026-11-15T08:02:03+08:00"
   },
   "2cc2c254049b0bd0a6219f70cbb0b69a": {
     "prediction": {
@@ -63,49 +63,49 @@
       "away": "Dallas Mavericks",
       "start_time": "2026-11-15T08:40:00+08:00",
       "market": {
-        "asian_handicap": -2.5,
-        "over_under": 231.5,
+        "asian_handicap": 8.5,
+        "over_under": 227.5,
         "odds_source": "the-odds-api/consensus",
-        "timestamp": "2026-11-14T15:57:01.298004+00:00"
+        "timestamp": "2026-11-15T00:02:03.676241+00:00"
       },
-      "bookmaker_count": 7,
+      "bookmaker_count": 9,
       "fair_prob": {
-        "away": 0.456,
-        "home": 0.544
+        "home": 0.2614,
+        "away": 0.7386
       },
       "best_odds": {
-        "home": 1.79,
-        "away": 2.12
+        "home": 3.78,
+        "away": 1.32
       },
       "edge": {
-        "away": -0.0333,
-        "home": -0.0263
+        "home": -0.0119,
+        "away": -0.025
       },
       "best_pick": null,
-      "avg_overround": 0.0429,
+      "avg_overround": 0.0415,
       "model": "market_implied_v1",
-      "generated_at": "2026-11-14T23:57:00+08:00",
+      "generated_at": "2026-11-15T08:02:03+08:00",
       "model_score": {
         "type": "normal_margin",
         "sport": "NBA",
-        "expected_margin": 2.5,
-        "expected_total": 231.5,
+        "expected_margin": -8.5,
+        "expected_total": 227.5,
         "sigma": 12.0,
         "outcome_probs": {
-          "home": 0.5825,
-          "away": 0.4175
+          "home": 0.2394,
+          "away": 0.7606
         }
       },
       "model_mc": {
         "n": 20000,
         "win_prob": {
-          "home": 0.583,
-          "away": 0.417
+          "home": 0.2412,
+          "away": 0.7589
         }
       },
-      "phase": "early_12h"
+      "phase": "pre_match_40m"
     },
-    "pre_pushed_at": "2026-11-14T23:57:01+08:00"
+    "pre_pushed_at": "2026-11-15T08:02:03+08:00"
   },
   "a7cb6062530bd69eb6caee84a015abd0": {
     "prediction": {
