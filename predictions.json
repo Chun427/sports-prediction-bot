@@ -1,1 +1,266 @@
-{}
+{
+  "5ff20ee6933177d35e4f8c875842a0b4": {
+    "prediction": {
+      "game_id": "5ff20ee6933177d35e4f8c875842a0b4",
+      "sport": "NBA",
+      "home": "Toronto Raptors",
+      "away": "New York Knicks",
+      "start_time": "2026-11-18T08:40:00+08:00",
+      "market": {
+        "asian_handicap": 4.0,
+        "over_under": 214.5,
+        "odds_source": "the-odds-api/consensus",
+        "timestamp": "2026-11-17T20:04:17.607213+00:00"
+      },
+      "bookmaker_count": 9,
+      "fair_prob": {
+        "home": 0.3865,
+        "away": 0.6135
+      },
+      "best_odds": {
+        "home": 2.55,
+        "away": 1.58
+      },
+      "edge": {
+        "home": -0.0144,
+        "away": -0.0307
+      },
+      "best_pick": null,
+      "avg_overround": 0.0397,
+      "model": "market_implied_v1",
+      "generated_at": "2026-11-18T04:04:17+08:00",
+      "model_score": {
+        "type": "normal_margin",
+        "sport": "NBA",
+        "expected_margin": -4.0,
+        "expected_total": 214.5,
+        "sigma": 12.0,
+        "outcome_probs": {
+          "home": 0.3694,
+          "away": 0.6306
+        }
+      },
+      "model_mc": {
+        "n": 20000,
+        "win_prob": {
+          "home": 0.3719,
+          "away": 0.6281
+        }
+      },
+      "phase": "early_12h"
+    },
+    "pre_pushed_at": "2026-11-18T04:04:17+08:00"
+  },
+  "69f0b70d1185e537c5ae4be43ebf2c9f": {
+    "prediction": {
+      "game_id": "69f0b70d1185e537c5ae4be43ebf2c9f",
+      "sport": "NBA",
+      "home": "San Antonio Spurs",
+      "away": "Detroit Pistons",
+      "start_time": "2026-11-18T09:10:00+08:00",
+      "market": {
+        "asian_handicap": -9.5,
+        "over_under": 222.5,
+        "odds_source": "the-odds-api/consensus",
+        "timestamp": "2026-11-17T20:04:18.227653+00:00"
+      },
+      "bookmaker_count": 9,
+      "fair_prob": {
+        "home": 0.7797,
+        "away": 0.2203
+      },
+      "best_odds": {
+        "home": 1.25,
+        "away": 4.55
+      },
+      "edge": {
+        "home": -0.0254,
+        "away": 0.0024
+      },
+      "best_pick": {
+        "outcome": "away",
+        "edge": 0.0024,
+        "odds": 4.55
+      },
+      "avg_overround": 0.0428,
+      "model": "market_implied_v1",
+      "generated_at": "2026-11-18T04:04:17+08:00",
+      "model_score": {
+        "type": "normal_margin",
+        "sport": "NBA",
+        "expected_margin": 9.5,
+        "expected_total": 222.5,
+        "sigma": 12.0,
+        "outcome_probs": {
+          "home": 0.7857,
+          "away": 0.2143
+        }
+      },
+      "model_mc": {
+        "n": 20000,
+        "win_prob": {
+          "home": 0.7807,
+          "away": 0.2193
+        }
+      },
+      "phase": "early_12h"
+    },
+    "pre_pushed_at": "2026-11-18T04:04:18+08:00"
+  },
+  "f1c9f0cd022cd864154413efbd9d9522": {
+    "prediction": {
+      "game_id": "f1c9f0cd022cd864154413efbd9d9522",
+      "sport": "NBA",
+      "home": "Minnesota Timberwolves",
+      "away": "Portland Trail Blazers",
+      "start_time": "2026-11-18T09:10:00+08:00",
+      "market": {
+        "asian_handicap": -3.0,
+        "over_under": 225.5,
+        "odds_source": "the-odds-api/consensus",
+        "timestamp": "2026-11-17T20:04:18.722544+00:00"
+      },
+      "bookmaker_count": 9,
+      "fair_prob": {
+        "home": 0.577,
+        "away": 0.423
+      },
+      "best_odds": {
+        "home": 1.69,
+        "away": 2.34
+      },
+      "edge": {
+        "home": -0.0249,
+        "away": -0.0101
+      },
+      "best_pick": null,
+      "avg_overround": 0.04,
+      "model": "market_implied_v1",
+      "generated_at": "2026-11-18T04:04:18+08:00",
+      "model_score": {
+        "type": "normal_margin",
+        "sport": "NBA",
+        "expected_margin": 3.0,
+        "expected_total": 225.5,
+        "sigma": 12.0,
+        "outcome_probs": {
+          "home": 0.5987,
+          "away": 0.4013
+        }
+      },
+      "model_mc": {
+        "n": 20000,
+        "win_prob": {
+          "home": 0.6012,
+          "away": 0.3988
+        }
+      },
+      "phase": "early_12h"
+    },
+    "pre_pushed_at": "2026-11-18T04:04:18+08:00"
+  },
+  "e7343c795f16a5a2a6fd93dbc58499a6": {
+    "prediction": {
+      "game_id": "e7343c795f16a5a2a6fd93dbc58499a6",
+      "sport": "NBA",
+      "home": "Los Angeles Clippers",
+      "away": "Utah Jazz",
+      "start_time": "2026-11-18T11:40:00+08:00",
+      "market": {
+        "asian_handicap": -6.5,
+        "over_under": 225.5,
+        "odds_source": "the-odds-api/consensus",
+        "timestamp": "2026-11-17T20:04:19.228222+00:00"
+      },
+      "bookmaker_count": 9,
+      "fair_prob": {
+        "home": 0.6776,
+        "away": 0.3224
+      },
+      "best_odds": {
+        "home": 1.43,
+        "away": 3.03
+      },
+      "edge": {
+        "home": -0.031,
+        "away": -0.0231
+      },
+      "best_pick": null,
+      "avg_overround": 0.0402,
+      "model": "market_implied_v1",
+      "generated_at": "2026-11-18T04:04:18+08:00",
+      "model_score": {
+        "type": "normal_margin",
+        "sport": "NBA",
+        "expected_margin": 6.5,
+        "expected_total": 225.5,
+        "sigma": 12.0,
+        "outcome_probs": {
+          "home": 0.706,
+          "away": 0.294
+        }
+      },
+      "model_mc": {
+        "n": 20000,
+        "win_prob": {
+          "home": 0.7047,
+          "away": 0.2953
+        }
+      },
+      "phase": "early_12h"
+    },
+    "pre_pushed_at": "2026-11-18T04:04:19+08:00"
+  },
+  "bed6147c75f3706f25e25f5bdfeaf1ec": {
+    "prediction": {
+      "game_id": "bed6147c75f3706f25e25f5bdfeaf1ec",
+      "sport": "NBA",
+      "home": "Los Angeles Lakers",
+      "away": "Charlotte Hornets",
+      "start_time": "2026-11-18T12:10:00+08:00",
+      "market": {
+        "asian_handicap": -7.0,
+        "over_under": 220.5,
+        "odds_source": "the-odds-api/consensus",
+        "timestamp": "2026-11-17T20:04:19.732073+00:00"
+      },
+      "bookmaker_count": 9,
+      "fair_prob": {
+        "home": 0.7146,
+        "away": 0.2854
+      },
+      "best_odds": {
+        "home": 1.35,
+        "away": 3.41
+      },
+      "edge": {
+        "home": -0.0352,
+        "away": -0.0269
+      },
+      "best_pick": null,
+      "avg_overround": 0.0426,
+      "model": "market_implied_v1",
+      "generated_at": "2026-11-18T04:04:19+08:00",
+      "model_score": {
+        "type": "normal_margin",
+        "sport": "NBA",
+        "expected_margin": 7.0,
+        "expected_total": 220.5,
+        "sigma": 12.0,
+        "outcome_probs": {
+          "home": 0.7202,
+          "away": 0.2798
+        }
+      },
+      "model_mc": {
+        "n": 20000,
+        "win_prob": {
+          "home": 0.723,
+          "away": 0.277
+        }
+      },
+      "phase": "early_12h"
+    },
+    "pre_pushed_at": "2026-11-18T04:04:19+08:00"
+  }
+}
