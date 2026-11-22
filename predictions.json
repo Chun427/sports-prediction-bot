@@ -59,49 +59,49 @@
       "away": "Oklahoma City Thunder",
       "start_time": "2026-11-23T07:10:00+08:00",
       "market": {
-        "asian_handicap": -4.0,
-        "over_under": 231.5,
+        "asian_handicap": -4.5,
+        "over_under": 226.5,
         "odds_source": "the-odds-api/consensus",
-        "timestamp": "2026-11-22T17:24:34.465349+00:00"
+        "timestamp": "2026-11-22T22:38:31.280404+00:00"
       },
       "bookmaker_count": 9,
       "fair_prob": {
-        "away": 0.3926,
-        "home": 0.6074
+        "away": 0.37,
+        "home": 0.63
       },
       "best_odds": {
-        "home": 1.6,
-        "away": 2.5
+        "home": 1.55,
+        "away": 2.66
       },
       "edge": {
-        "away": -0.0185,
-        "home": -0.0281
+        "away": -0.0158,
+        "home": -0.0235
       },
       "best_pick": null,
-      "avg_overround": 0.0399,
+      "avg_overround": 0.0391,
       "model": "market_implied_v1",
-      "generated_at": "2026-11-23T01:24:33+08:00",
+      "generated_at": "2026-11-23T06:38:30+08:00",
       "model_score": {
         "type": "normal_margin",
         "sport": "NBA",
-        "expected_margin": 4.0,
-        "expected_total": 231.5,
+        "expected_margin": 4.5,
+        "expected_total": 226.5,
         "sigma": 12.0,
         "outcome_probs": {
-          "home": 0.6306,
-          "away": 0.3694
+          "home": 0.6462,
+          "away": 0.3538
         }
       },
       "model_mc": {
         "n": 20000,
         "win_prob": {
-          "home": 0.633,
-          "away": 0.367
+          "home": 0.6442,
+          "away": 0.3558
         }
       },
-      "phase": "early_12h"
+      "phase": "pre_match_40m"
     },
-    "pre_pushed_at": "2026-11-23T01:24:34+08:00"
+    "pre_pushed_at": "2026-11-23T06:38:31+08:00"
   },
   "15a079f55e23d26237844224f258c972": {
     "prediction": {
