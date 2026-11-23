@@ -1,106 +1,106 @@
 {
-  "031fa761cc38e1b5afd9309b731b38b2": {
+  "35ca45d3e548dc7207fd7f1696ab16f5": {
     "prediction": {
-      "game_id": "031fa761cc38e1b5afd9309b731b38b2",
+      "game_id": "35ca45d3e548dc7207fd7f1696ab16f5",
       "sport": "NBA",
-      "home": "New York Knicks",
-      "away": "Indiana Pacers",
-      "start_time": "2026-11-23T09:10:00+08:00",
+      "home": "Charlotte Hornets",
+      "away": "Memphis Grizzlies",
+      "start_time": "2026-11-24T08:10:00+08:00",
       "market": {
-        "asian_handicap": -8.5,
-        "over_under": 214.0,
+        "asian_handicap": 4.0,
+        "over_under": 215.5,
         "odds_source": "the-odds-api/consensus",
-        "timestamp": "2026-11-22T17:24:37.224079+00:00"
+        "timestamp": "2026-11-23T12:19:19.625233+00:00"
       },
-      "bookmaker_count": 9,
+      "bookmaker_count": 8,
       "fair_prob": {
-        "away": 0.2545,
-        "home": 0.7455
+        "away": 0.5988,
+        "home": 0.4012
       },
       "best_odds": {
-        "home": 1.29,
-        "away": 3.82
+        "home": 2.45,
+        "away": 1.62
       },
       "edge": {
-        "away": -0.0279,
-        "home": -0.0383
+        "away": -0.03,
+        "home": -0.017
       },
       "best_pick": null,
-      "avg_overround": 0.0416,
+      "avg_overround": 0.0399,
       "model": "market_implied_v1",
-      "generated_at": "2026-11-23T01:24:36+08:00",
+      "generated_at": "2026-11-23T20:19:18+08:00",
       "model_score": {
         "type": "normal_margin",
         "sport": "NBA",
-        "expected_margin": 8.5,
-        "expected_total": 214.0,
+        "expected_margin": -4.0,
+        "expected_total": 215.5,
         "sigma": 12.0,
         "outcome_probs": {
-          "home": 0.7606,
-          "away": 0.2394
+          "home": 0.3694,
+          "away": 0.6306
         }
       },
       "model_mc": {
         "n": 20000,
         "win_prob": {
-          "home": 0.7702,
-          "away": 0.2298
+          "home": 0.3673,
+          "away": 0.6327
         }
       },
       "phase": "early_12h"
     },
-    "pre_pushed_at": "2026-11-23T01:24:37+08:00"
+    "pre_pushed_at": "2026-11-23T20:19:19+08:00"
   },
-  "b8c5bdb50209c7d050400c7d28c32e30": {
+  "ac6fb079d66ef35a2a77e22b5e94ef8d": {
     "prediction": {
-      "game_id": "b8c5bdb50209c7d050400c7d28c32e30",
+      "game_id": "ac6fb079d66ef35a2a77e22b5e94ef8d",
       "sport": "NBA",
-      "home": "Golden State Warriors",
-      "away": "Boston Celtics",
-      "start_time": "2026-11-23T09:40:00+08:00",
+      "home": "Philadelphia 76ers",
+      "away": "Portland Trail Blazers",
+      "start_time": "2026-11-24T08:10:00+08:00",
       "market": {
-        "asian_handicap": 8.5,
-        "over_under": 210.5,
+        "asian_handicap": -4.0,
+        "over_under": 230.5,
         "odds_source": "the-odds-api/consensus",
-        "timestamp": "2026-11-22T17:24:37.881346+00:00"
+        "timestamp": "2026-11-23T12:19:20.207889+00:00"
       },
       "bookmaker_count": 9,
       "fair_prob": {
-        "away": 0.7455,
-        "home": 0.2545
+        "away": 0.3905,
+        "home": 0.6095
       },
       "best_odds": {
-        "home": 3.86,
-        "away": 1.29
+        "home": 1.59,
+        "away": 2.51
       },
       "edge": {
-        "away": -0.0383,
-        "home": -0.0177
+        "away": -0.0199,
+        "home": -0.0309
       },
       "best_pick": null,
-      "avg_overround": 0.0416,
+      "avg_overround": 0.0406,
       "model": "market_implied_v1",
-      "generated_at": "2026-11-23T01:24:37+08:00",
+      "generated_at": "2026-11-23T20:19:19+08:00",
       "model_score": {
         "type": "normal_margin",
         "sport": "NBA",
-        "expected_margin": -8.5,
-        "expected_total": 210.5,
+        "expected_margin": 4.0,
+        "expected_total": 230.5,
         "sigma": 12.0,
         "outcome_probs": {
-          "home": 0.2394,
-          "away": 0.7606
+          "home": 0.6306,
+          "away": 0.3694
         }
       },
       "model_mc": {
         "n": 20000,
         "win_prob": {
-          "home": 0.2409,
-          "away": 0.7591
+          "home": 0.6317,
+          "away": 0.3683
         }
       },
       "phase": "early_12h"
     },
-    "pre_pushed_at": "2026-11-23T01:24:37+08:00"
+    "pre_pushed_at": "2026-11-23T20:19:20+08:00"
   }
 }
