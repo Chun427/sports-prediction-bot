@@ -1,56 +1,4 @@
 {
-  "42f48a4769eab3d1472d76aac0fd0fa7": {
-    "prediction": {
-      "game_id": "42f48a4769eab3d1472d76aac0fd0fa7",
-      "sport": "NBA",
-      "home": "Orlando Magic",
-      "away": "Detroit Pistons",
-      "start_time": "2026-11-25T08:11:00+08:00",
-      "market": {
-        "asian_handicap": 2.5,
-        "over_under": 212.5,
-        "odds_source": "the-odds-api/consensus",
-        "timestamp": "2026-11-24T20:21:25.568156+00:00"
-      },
-      "bookmaker_count": 9,
-      "fair_prob": {
-        "away": 0.5473,
-        "home": 0.4527
-      },
-      "best_odds": {
-        "home": 2.16,
-        "away": 1.78
-      },
-      "edge": {
-        "away": -0.0258,
-        "home": -0.0222
-      },
-      "best_pick": null,
-      "avg_overround": 0.0422,
-      "model": "market_implied_v1",
-      "generated_at": "2026-11-25T04:21:24+08:00",
-      "model_score": {
-        "type": "normal_margin",
-        "sport": "NBA",
-        "expected_margin": -2.5,
-        "expected_total": 212.5,
-        "sigma": 12.0,
-        "outcome_probs": {
-          "home": 0.4175,
-          "away": 0.5825
-        }
-      },
-      "model_mc": {
-        "n": 20000,
-        "win_prob": {
-          "home": 0.419,
-          "away": 0.581
-        }
-      },
-      "phase": "early_12h"
-    },
-    "pre_pushed_at": "2026-11-25T04:21:25+08:00"
-  },
   "3167a4072c65c9314c71d0fe49be8e28": {
     "prediction": {
       "game_id": "3167a4072c65c9314c71d0fe49be8e28",
@@ -101,7 +49,8 @@
       },
       "phase": "early_12h"
     },
-    "pre_pushed_at": "2026-11-25T04:21:26+08:00"
+    "pre_pushed_at": "2026-11-25T04:21:26+08:00",
+    "post_attempts": 1
   },
   "6bfadbd22ed8a054cf82ec1b12b78243": {
     "prediction": {
