@@ -310,5 +310,165 @@
       "phase": "early_12h"
     },
     "pre_pushed_at": "2026-11-25T21:27:00+08:00"
+  },
+  "60fd73164f7b0d1848f998d922155d87": {
+    "prediction": {
+      "game_id": "60fd73164f7b0d1848f998d922155d87",
+      "sport": "NBA",
+      "home": "Houston Rockets",
+      "away": "Phoenix Suns",
+      "start_time": "2026-11-26T09:40:00+08:00",
+      "market": {
+        "asian_handicap": -9.0,
+        "over_under": 222.5,
+        "odds_source": "the-odds-api/consensus",
+        "timestamp": "2026-11-25T22:39:53.023145+00:00"
+      },
+      "bookmaker_count": 9,
+      "fair_prob": {
+        "home": 0.7632,
+        "away": 0.2368
+      },
+      "best_odds": {
+        "home": 1.27,
+        "away": 4.21
+      },
+      "edge": {
+        "home": -0.0307,
+        "away": -0.0032
+      },
+      "best_pick": null,
+      "avg_overround": 0.0427,
+      "model": "market_implied_v1",
+      "generated_at": "2026-11-26T06:39:52+08:00",
+      "model_score": {
+        "type": "normal_margin",
+        "sport": "NBA",
+        "expected_margin": 9.0,
+        "expected_total": 222.5,
+        "sigma": 12.0,
+        "outcome_probs": {
+          "home": 0.7734,
+          "away": 0.2266
+        }
+      },
+      "model_mc": {
+        "n": 20000,
+        "win_prob": {
+          "home": 0.7741,
+          "away": 0.2259
+        }
+      },
+      "phase": "early_12h"
+    },
+    "pre_pushed_at": "2026-11-26T06:39:53+08:00"
+  },
+  "e6df92326adb480e427bb7c10f445c60": {
+    "prediction": {
+      "game_id": "e6df92326adb480e427bb7c10f445c60",
+      "sport": "NBA",
+      "home": "Golden State Warriors",
+      "away": "Sacramento Kings",
+      "start_time": "2026-11-26T11:10:00+08:00",
+      "market": {
+        "asian_handicap": -8.5,
+        "over_under": 215.5,
+        "odds_source": "the-odds-api/consensus",
+        "timestamp": "2026-11-25T22:39:53.520137+00:00"
+      },
+      "bookmaker_count": 9,
+      "fair_prob": {
+        "home": 0.7336,
+        "away": 0.2664
+      },
+      "best_odds": {
+        "home": 1.34,
+        "away": 3.9
+      },
+      "edge": {
+        "home": -0.0169,
+        "away": 0.0388
+      },
+      "best_pick": {
+        "outcome": "away",
+        "edge": 0.0388,
+        "odds": 3.9
+      },
+      "avg_overround": 0.0416,
+      "model": "market_implied_v1",
+      "generated_at": "2026-11-26T06:39:53+08:00",
+      "model_score": {
+        "type": "normal_margin",
+        "sport": "NBA",
+        "expected_margin": 8.5,
+        "expected_total": 215.5,
+        "sigma": 12.0,
+        "outcome_probs": {
+          "home": 0.7606,
+          "away": 0.2394
+        }
+      },
+      "model_mc": {
+        "n": 20000,
+        "win_prob": {
+          "home": 0.7628,
+          "away": 0.2372
+        }
+      },
+      "phase": "early_12h"
+    },
+    "pre_pushed_at": "2026-11-26T06:39:53+08:00"
+  },
+  "9aa9f220709533d70d11f85fae886771": {
+    "prediction": {
+      "game_id": "9aa9f220709533d70d11f85fae886771",
+      "sport": "NBA",
+      "home": "Portland Trail Blazers",
+      "away": "San Antonio Spurs",
+      "start_time": "2026-11-26T11:10:00+08:00",
+      "market": {
+        "asian_handicap": 3.5,
+        "over_under": 225.5,
+        "odds_source": "the-odds-api/consensus",
+        "timestamp": "2026-11-25T22:39:54.099370+00:00"
+      },
+      "bookmaker_count": 9,
+      "fair_prob": {
+        "home": 0.405,
+        "away": 0.595
+      },
+      "best_odds": {
+        "home": 2.43,
+        "away": 1.64
+      },
+      "edge": {
+        "home": -0.0159,
+        "away": -0.0242
+      },
+      "best_pick": null,
+      "avg_overround": 0.0411,
+      "model": "market_implied_v1",
+      "generated_at": "2026-11-26T06:39:53+08:00",
+      "model_score": {
+        "type": "normal_margin",
+        "sport": "NBA",
+        "expected_margin": -3.5,
+        "expected_total": 225.5,
+        "sigma": 12.0,
+        "outcome_probs": {
+          "home": 0.3853,
+          "away": 0.6147
+        }
+      },
+      "model_mc": {
+        "n": 20000,
+        "win_prob": {
+          "home": 0.384,
+          "away": 0.616
+        }
+      },
+      "phase": "early_12h"
+    },
+    "pre_pushed_at": "2026-11-26T06:39:54+08:00"
   }
 }
